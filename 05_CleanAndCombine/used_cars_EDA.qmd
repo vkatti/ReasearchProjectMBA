@@ -14,3 +14,46 @@ After the web-scraping activity is completed, we will now perform exploratory da
 ## Data Sources
 
 We have 2 CSV files in the **04_CarDetailsConsolidated** which we will ingest.
+
+::: {style="text-align: center;"}
+![CSV files to be ingested](images/clipboard-4217870750.png)
+:::
+
+### Ingestion
+
+First we load the required R libraries.
+
+```{r}
+#| label: Load Libraries
+#| warning: false
+
+library(readr)      # To cleanly ingest the CSV files
+library(dplyr)      # To wrangle with the data
+library(stringr)    # To efficiently work with character strings
+library(janitor)    # To ensure consistent naming and other utilities
+
+```
+
+Since will be cleaning and combining 2 datasets, one from *cars24* and other from *carwale*, we will perform same action twice and handle some special cases in either datasets.
+
+```{r}
+cars24 <- read_csv("../04_CarDetailsConsolidated/cars24.csv", 
+                   na = c("","NA","MISSING","Not Available"), show_col_types = FALSE)
+carwale <- read_csv("../04_CarDetailsConsolidated/carwale.csv", 
+                    na = c("","NA","MISSING","Not Available"), show_col_types = FALSE)
+
+```
+
+::: callout-note
+## "MISSING" values
+
+In our data extraction scripts from the **03_CarDetails** folder, you would've noticed that while extracting the car attributes, we set the default value to **MISSING** if the value is not available. Thus we know for a fact that **MISSING** indicates a missing value and therefore can be explicitly set to NA while reading the CSV files.
+
+After a quick manual verification of CSV files, we also understood that some attributes were *Not Available* can can be considered as `NA`.
+
+The `read_csv` function from **readr** package allows us to explicitly mention which values to be considered as `NA` while reading the data.
+:::
+
+```{r}
+
+```

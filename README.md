@@ -1,12 +1,22 @@
+---
+title: Development of "UsedCarsIndia" - an R Package for used car price
+  prediction
+toc-title: Table of contents
+---
 
+-   [Introduction](#introduction){#toc-introduction}
+-   [01_Regions](#regions){#toc-regions}
+-   [02_CarURLs](#carurls){#toc-carurls}
+-   [03_CarDetails](#cardetails){#toc-cardetails}
+-   [04_CarDetailsConsolidated](#cardetailsconsolidated){#toc-cardetailsconsolidated}
+-   [05_CleanAndCombine](#cleanandcombine){#toc-cleanandcombine}
 
-# Development of “UsedCarsIndia” - an R Package for used car price prediction
+## Introduction
 
-Preparatory work for JAIN Online MBA - Final year research project
-
-This repository contains all the code and intermediate files created to
-extract, transform and create the final used cars dataset that will be
-made available as part of the
+This repository is the preparatory work for JAIN Online MBA - Final year
+research project. It contains all the code and intermediate files
+created to extract, transform and create the final used cars dataset
+that will be made available as part of the
 [UsedCarsIndia](https://github.com/vkatti/UsedCarsIndia "Link to Github Repository")
 R Package.
 
@@ -21,7 +31,7 @@ multi-step approach.
 
 Following is a quick description of the folders in this repository.
 
-### 01_Regions
+## 01_Regions
 
 First we extracted the URLs of the webpages corresponding to the Regions
 serviced by the used car companies.
@@ -30,12 +40,10 @@ This folder contains the Jupyter (iPython) Notebooks which extracts the
 base URLs of the Regions and stores them as a pickle (.pkl) file. This
 was achieved using Pandas, Requests and BeautifulSoup libraries.
 
-<figure>
-<img src="images/clipboard-233799253.png"
-alt="A screenshot from the regions_cars24.ipynb" />
-<figcaption aria-hidden="true">A screenshot from the
-regions_cars24.ipynb</figcaption>
-</figure>
+::: {style="text-align: center;"}
+![A screenshot from the
+regions_cars24.ipynb](images/clipboard-233799253.png)
+:::
 
 ## 02_CarURLs
 
@@ -52,19 +60,14 @@ of 20-24 with each set grouped under a single URL; we has to use
 Selenium WebDriver to crawl through the search results to extract the
 data from each page of the Search Results.
 
-<figure>
-<img src="images/clipboard-2506115197.png"
-alt="A screenshot from cars_cars24.ipynb" />
-<figcaption aria-hidden="true">A screenshot from
-cars_cars24.ipynb</figcaption>
-</figure>
+::: {style="text-align: center;"}
+![A screenshot from cars_cars24.ipynb](images/clipboard-2506115197.png)
+:::
 
-<figure>
-<img src="images/clipboard-3881363627.png"
-alt="A screenshot from car_details_cars24.ipynb" />
-<figcaption aria-hidden="true">A screenshot from
-car_details_cars24.ipynb</figcaption>
-</figure>
+::: {style="text-align: center;"}
+![A screenshot from
+car_details_cars24.ipynb](images/clipboard-3881363627.png)
+:::
 
 ## 03_CarDetails
 
@@ -106,12 +109,9 @@ Once the Car URLs were available, we then extracted individual car
 details from their respective webpages. To ensure minimum loss of data,
 we saved the car details in groups of 100 in intermediate pickle files.
 
-<figure>
-<img src="images/clipboard-3736843883.png"
-alt="Intermediate Pickle (.pkl) files" />
-<figcaption aria-hidden="true">Intermediate Pickle (.pkl)
-files</figcaption>
-</figure>
+::: {style="text-align: center;"}
+![Intermediate Pickle (.pkl) files](images/clipboard-3736843883.png)
+:::
 
 ## 04_CarDetailsConsolidated
 
@@ -119,7 +119,15 @@ This folder contains the Jupyter (iPython) Notebooks which combines all
 pickle files containing car details and stores them as a Comma-delimited
 (CSV) file. This was achieved using Pandas and Glob libraries.
 
-<figure>
-<img src="images/clipboard-2497184986.png" alt="Combined Dataset" />
-<figcaption aria-hidden="true">Combined Dataset</figcaption>
-</figure>
+::: {style="text-align: center;"}
+![Combined Dataset](images/clipboard-2497184986.png)
+:::
+
+## 05_CleanAndCombine
+
+This folder contains a Quarto (.qmd) document that uses R to load the
+CSV files, perform EDA, create the necessary tables and charts to be
+included in the Project Report and finally, save the cleaned dataset
+into .Rds format so that it can be made available in the
+[UsedCarsIndia](https://github.com/vkatti/UsedCarsIndia "Link to Github Repository")
+R Package.

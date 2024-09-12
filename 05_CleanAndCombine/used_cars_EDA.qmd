@@ -1,0 +1,16 @@
+---
+title: "Exploratory Data Analysis (EDA) for Used Cars data."
+author: "Vishal Katti"
+format: 
+  html:
+    theme: darkly
+editor: visual
+---
+
+# Introduction
+
+After the web-scraping activity is completed, we will now perform exploratory data analysis on the used cars details.
+
+## Data Sources
+
+We have 2 CSV files in the **04_CarDetailsConsolidated** which we will ingest.

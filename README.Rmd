@@ -83,3 +83,7 @@ This folder contains the Jupyter (iPython) Notebooks which combines all pickle f
 ::: {style="text-align: center;"}
 ![Combined Dataset](images/clipboard-2497184986.png)
 :::
+
+## 05_CleanAndCombine
+
+This folder contains a Quarto (.qmd) document that uses R to load the CSV files, perform EDA, create the necessary tables and charts to be included in the Project Report and finally, save the cleaned dataset into .Rds format so that it can be made available in the [UsedCarsIndia](https://github.com/vkatti/UsedCarsIndia "Link to Github Repository") R Package.

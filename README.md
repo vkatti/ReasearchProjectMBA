@@ -1,5 +1,4 @@
-# Development of “UsedCarsIndia” - an R Package for used car price
-prediction
+# UsedCarsIndia - an R Package for used car price prediction
 
 
 -   [Introduction](#introduction)
@@ -18,7 +17,7 @@ that will be made available as part of the
 [UsedCarsIndia](https://github.com/vkatti/UsedCarsIndia "Link to Github Repository")
 R Package.
 
-The used cars data was extracted from following webistes:
+The used cars data was extracted from following websites:
 
 -   https://www.cars24.com
 -   https://www.carwale.com

@@ -1,5 +1,5 @@
 ---
-title: Development of "UsedCarsIndia" - an R Package for used car price prediction
+title: "UsedCarsIndia - an R Package for used car price prediction"
 format: md
 toc: true
 ---
@@ -8,7 +8,7 @@ toc: true
 
 This repository is the preparatory work for JAIN Online MBA - Final year research project. It contains all the code and intermediate files created to extract, transform and create the final used cars dataset that will be made available as part of the [UsedCarsIndia](https://github.com/vkatti/UsedCarsIndia "Link to Github Repository") R Package.
 
-The used cars data was extracted from following webistes:
+The used cars data was extracted from following websites:
 
 -   https://www.cars24.com
 -   https://www.carwale.com

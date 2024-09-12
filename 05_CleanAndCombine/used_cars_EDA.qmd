@@ -4,6 +4,7 @@ author: "Vishal Katti"
 format: 
   html:
     theme: darkly
+    code-fold: show
 editor: visual
 ---
 
@@ -21,7 +22,7 @@ We have 2 CSV files in the **04_CarDetailsConsolidated** which we will ingest.
 
 ### Ingestion
 
-First we load the required R libraries.
+First we load the required R libraries and create a utility function `f`
 
 ```{r}
 #| label: Load Libraries
@@ -30,17 +31,23 @@ First we load the required R libraries.
 library(readr)      # To cleanly ingest the CSV files
 library(dplyr)      # To wrangle with the data
 library(stringr)    # To efficiently work with character strings
+library(lubridate)  # To manage dates and times
 library(janitor)    # To ensure consistent naming and other utilities
+library(glue)       # To enable fancy printing
+library(ggplot2)    # to visualize the data
+
+f <- function(x) { print(glue(x))}
 
 ```
 
 Since will be cleaning and combining 2 datasets, one from *cars24* and other from *carwale*, we will perform same action twice and handle some special cases in either datasets.
 
 ```{r}
+#| label: Read CSV
 cars24 <- read_csv("../04_CarDetailsConsolidated/cars24.csv", 
-                   na = c("","NA","MISSING","Not Available"), show_col_types = FALSE)
+                   na = c("","NA","MISSING","Not Available", "N/A"), show_col_types = FALSE)
 carwale <- read_csv("../04_CarDetailsConsolidated/carwale.csv", 
-                    na = c("","NA","MISSING","Not Available"), show_col_types = FALSE)
+                    na = c("","NA","MISSING","Not Available","N/A"), show_col_types = FALSE)
 
 ```
 
@@ -54,6 +61,105 @@ After a quick manual verification of CSV files, we also understood that some att
 The `read_csv` function from **readr** package allows us to explicitly mention which values to be considered as `NA` while reading the data.
 :::
 
+### Duplicates
+
+First thing we will do is eliminate duplicates. We know there are duplicates since we had to restart our web-scraping scripts couple of times due to various issues.  
+We will use the `unique` function to remove duplicates.
+
 ```{r}
+#| label: Duplicates - Cars24
+#| code-fold: true
+
+preDup <- nrow(cars24)
+cars24 <- unique(cars24)
+f("Cars24
+-------------------------------------
+Before removing duplicates: {preDup}
+After removing duplicates: {nrow(cars24)}
+Total duplicates removed: {preDup - nrow(cars24)}")
+```
+```{r}
+#| label: Duplicates - carwale
+#| code-fold: true
+
+preDup <- nrow(carwale)
+carwale <- unique(carwale)
+f("Carwale
+-------------------------------------
+Before removing duplicates: {preDup}
+After removing duplicates: {nrow(carwale)}
+Total duplicates removed: {preDup - nrow(carwale)}")
+```
+
+
+### Columns and Data Types
+
+We will now look at the columns and ensure that data types of the columns are correct.
+
+```{r}
+#| label: Columns and Data Types - Cars24
+
+str(cars24)
+```
+
+In above, we can see that `fitnessUpto` column has character datatype instead of date. We also note that the utility of the `websiteUrl` column is complete and we can remove this column from the dataset.
+
+```{r}
+#| label: Columns and Data Types - Cars24 (Clean)
+cars24 <- cars24 |> 
+  select(-websiteUrl) |> 
+  mutate(fitnessUpto  = dmy(fitnessUpto))
+
+str(cars24)
+```
+
+```{r}
+#| label: Columns and Data Types - Carwale
+str(carwale)
+```
+
+In above, we can see that `fitnessUpto` column has character datatype instead of date. We also note that the utility of the `websiteUrl` column is complete and we can remove this column from the dataset. Additionally, the `ownerNumber`, `registrationYear` and `registrationMonth` columns do not match the data type in the `cars24` dataset. Let's fix this.
+
+```{r}
+#| label: Columns and Data Types - Carwale (Clean)
+#| warning: false
+carwale <- carwale |> 
+  select(-websiteUrl) |> 
+  mutate(fitnessUpto  = dmy(fitnessUpto),
+         registrationYear  = as_date(registrationYear, format = "%d/%m/%Y %H:%M:%S"),
+         registrationMonth = month(registrationYear),
+         registrationYear = year(registrationYear),
+         registrationYear = if_else(registrationYear == 1, NA_integer_, registrationYear),
+         registrationMonth = if_else(is.na(registrationYear), NA_integer_, registrationMonth),
+         ownerNumber = case_match(ownerNumber,
+                                  "First" ~ 1,
+                                  "Second" ~ 2,
+                                  "Third" ~ 3,
+                                  c("Fourth", "4 or More") ~ 4,
+                                  .default = NA_integer_)
+         )
+
+str(carwale)
+```
+
+Comparing the datatypes of the two datasets using waldo::compare function confirms that both datasets have same columns and datatypes and thus, can be combined together for futher clean-up.
+
+```{r}
+waldo::compare(sapply(cars24, typeof), sapply(carwale,typeof))
+waldo::compare(sapply(cars24, class), sapply(carwale,class))
+waldo::compare(colnames(cars24), colnames(carwale))
 
 ```
+
+## Combined Data
+
+Let us combine the 2 datasets.
+
+```{r}
+usedcars <- bind_rows(cars24, carwale)
+
+f("Number of Rows: {nrow(usedcars)}")
+```
+
+## Column-wise Analysis and clean-up
+

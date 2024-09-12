@@ -119,19 +119,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="ingestion" class="level3">
 <h3 class="anchored" data-anchor-id="ingestion">Ingestion</h3>
-<p>First we load the required R libraries.</p>
+<p>First we load the required R libraries and create a utility function <code>f</code></p>
 <div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)      <span class="co"># To cleanly ingest the CSV files</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)      <span class="co"># To wrangle with the data</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)    <span class="co"># To efficiently work with character strings</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)    <span class="co"># To ensure consistent naming and other utilities</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)  <span class="co"># To manage dates and times</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)    <span class="co"># To ensure consistent naming and other utilities</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glue)       <span class="co"># To enable fancy printing</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)    <span class="co"># to visualize the data</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x) { <span class="fu">print</span>(<span class="fu">glue</span>(x))}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Since will be cleaning and combining 2 datasets, one from <em>cars24</em> and other from <em>carwale</em>, we will perform same action twice and handle some special cases in either datasets.</p>
 <div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>cars24 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../04_CarDetailsConsolidated/cars24.csv"</span>, </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">na =</span> <span class="fu">c</span>(<span class="st">""</span>,<span class="st">"NA"</span>,<span class="st">"MISSING"</span>,<span class="st">"Not Available"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">na =</span> <span class="fu">c</span>(<span class="st">""</span>,<span class="st">"NA"</span>,<span class="st">"MISSING"</span>,<span class="st">"Not Available"</span>, <span class="st">"N/A"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>carwale <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../04_CarDetailsConsolidated/carwale.csv"</span>, </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">na =</span> <span class="fu">c</span>(<span class="st">""</span>,<span class="st">"NA"</span>,<span class="st">"MISSING"</span>,<span class="st">"Not Available"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">na =</span> <span class="fu">c</span>(<span class="st">""</span>,<span class="st">"NA"</span>,<span class="st">"MISSING"</span>,<span class="st">"Not Available"</span>,<span class="st">"N/A"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -149,6 +160,223 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
+<section id="duplicates" class="level3">
+<h3 class="anchored" data-anchor-id="duplicates">Duplicates</h3>
+<p>First thing we will do is eliminate duplicates. We know there are duplicates since we had to restart our web-scraping scripts couple of times due to various issues.<br>
+We will use the <code>unique</code> function to remove duplicates.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>preDup <span class="ot">&lt;-</span> <span class="fu">nrow</span>(cars24)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>cars24 <span class="ot">&lt;-</span> <span class="fu">unique</span>(cars24)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(<span class="st">"Cars24</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="st">-------------------------------------</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="st">Before removing duplicates: {preDup}</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="st">After removing duplicates: {nrow(cars24)}</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="st">Total duplicates removed: {preDup - nrow(cars24)}"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Cars24
+-------------------------------------
+Before removing duplicates: 6392
+After removing duplicates: 5889
+Total duplicates removed: 503</code></pre>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>preDup <span class="ot">&lt;-</span> <span class="fu">nrow</span>(carwale)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>carwale <span class="ot">&lt;-</span> <span class="fu">unique</span>(carwale)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(<span class="st">"Carwale</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="st">-------------------------------------</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="st">Before removing duplicates: {preDup}</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="st">After removing duplicates: {nrow(carwale)}</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="st">Total duplicates removed: {preDup - nrow(carwale)}"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Carwale
+-------------------------------------
+Before removing duplicates: 4764
+After removing duplicates: 4355
+Total duplicates removed: 409</code></pre>
+</div>
+</div>
+</section>
+<section id="columns-and-data-types" class="level3">
+<h3 class="anchored" data-anchor-id="columns-and-data-types">Columns and Data Types</h3>
+<p>We will now look at the columns and ensure that data types of the columns are correct.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(cars24)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [5,889 × 18] (S3: tbl_df/tbl/data.frame)
+ $ make             : chr [1:5889] "Hyundai" "Renault" "Nissan" "Hyundai" ...
+ $ model            : chr [1:5889] "Creta" "Kwid" "Micra" "Eon" ...
+ $ variant          : chr [1:5889] "SX PLUS AT 1.6 PETROL" "1.0 MARVEL IRON MAN EDITION AMT" "XV CVT" "ERA PLUS (O)" ...
+ $ year             : num [1:5889] 2017 2018 2017 2017 2012 ...
+ $ transmission     : chr [1:5889] "Automatic" "Automatic" "Automatic" "Manual" ...
+ $ bodyType         : chr [1:5889] "SUV" "Hatchback" "Hatchback" "Hatchback" ...
+ $ fuelType         : chr [1:5889] "Petrol" "Petrol" "Petrol" "Petrol" ...
+ $ ownerNumber      : num [1:5889] 1 1 2 2 1 1 1 1 2 2 ...
+ $ odometerReading  : num [1:5889] 98493 19178 35474 33963 64557 ...
+ $ cityRto          : chr [1:5889] "KA03" "KA03" "KA03" "KA05" ...
+ $ listingPrice     : num [1:5889] 973000 407000 528000 381000 463000 ...
+ $ fitnessUpto      : chr [1:5889] "29-Feb-2032" "01-Jun-2033" "06-Nov-2032" "15-Jun-2032" ...
+ $ insuranceType    : chr [1:5889] "Comprehensive" "Insurance Expired" "Comprehensive" "3rd Party" ...
+ $ duplicateKey     : logi [1:5889] FALSE FALSE NA NA TRUE FALSE ...
+ $ city             : chr [1:5889] "Bangalore" "Bangalore" "Bangalore" "Bangalore" ...
+ $ registrationYear : num [1:5889] 2017 2018 2017 2017 2012 ...
+ $ registrationMonth: num [1:5889] 3 6 11 6 4 7 11 11 6 10 ...
+ $ websiteUrl       : chr [1:5889] "https://cars24.com/buy-used-Hyundai-Creta-2017-cars-Bangalore-10250432716" "https://cars24.com/buy-used-Renault-Kwid-2018-cars-Bangalore-10263789707" "https://cars24.com/buy-used-Nissan-Micra-2017-cars-Bangalore-10273636750" "https://cars24.com/buy-used-Hyundai-Eon-2017-cars-Bangalore-11139232750" ...</code></pre>
+</div>
+</div>
+<p>In above, we can see that <code>fitnessUpto</code> column has character datatype instead of date. We also note that the utility of the <code>websiteUrl</code> column is complete and we can remove this column from the dataset.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>cars24 <span class="ot">&lt;-</span> cars24 <span class="sc">|&gt;</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>websiteUrl) <span class="sc">|&gt;</span> </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fitnessUpto  =</span> <span class="fu">dmy</span>(fitnessUpto))</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(cars24)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [5,889 × 17] (S3: tbl_df/tbl/data.frame)
+ $ make             : chr [1:5889] "Hyundai" "Renault" "Nissan" "Hyundai" ...
+ $ model            : chr [1:5889] "Creta" "Kwid" "Micra" "Eon" ...
+ $ variant          : chr [1:5889] "SX PLUS AT 1.6 PETROL" "1.0 MARVEL IRON MAN EDITION AMT" "XV CVT" "ERA PLUS (O)" ...
+ $ year             : num [1:5889] 2017 2018 2017 2017 2012 ...
+ $ transmission     : chr [1:5889] "Automatic" "Automatic" "Automatic" "Manual" ...
+ $ bodyType         : chr [1:5889] "SUV" "Hatchback" "Hatchback" "Hatchback" ...
+ $ fuelType         : chr [1:5889] "Petrol" "Petrol" "Petrol" "Petrol" ...
+ $ ownerNumber      : num [1:5889] 1 1 2 2 1 1 1 1 2 2 ...
+ $ odometerReading  : num [1:5889] 98493 19178 35474 33963 64557 ...
+ $ cityRto          : chr [1:5889] "KA03" "KA03" "KA03" "KA05" ...
+ $ listingPrice     : num [1:5889] 973000 407000 528000 381000 463000 ...
+ $ fitnessUpto      : Date[1:5889], format: "2032-02-29" "2033-06-01" ...
+ $ insuranceType    : chr [1:5889] "Comprehensive" "Insurance Expired" "Comprehensive" "3rd Party" ...
+ $ duplicateKey     : logi [1:5889] FALSE FALSE NA NA TRUE FALSE ...
+ $ city             : chr [1:5889] "Bangalore" "Bangalore" "Bangalore" "Bangalore" ...
+ $ registrationYear : num [1:5889] 2017 2018 2017 2017 2012 ...
+ $ registrationMonth: num [1:5889] 3 6 11 6 4 7 11 11 6 10 ...</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(carwale)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [4,355 × 18] (S3: tbl_df/tbl/data.frame)
+ $ make             : chr [1:4355] "Mercedes-Benz" "BMW" "Mercedes-Benz" "BMW" ...
+ $ model            : chr [1:4355] "E-Class [2017-2021]" "6 Series GT" "GLA [2017-2020]" "X7 [2019-2023]" ...
+ $ variant          : chr [1:4355] "E 200 Exclusive [2019-2019]" "630i M Sport [2021-2023]" "200 Sport" "xDrive30d DPE Signature [2019-2020]" ...
+ $ year             : num [1:4355] 2023 2021 2019 2021 2013 ...
+ $ transmission     : chr [1:4355] "Automatic - 9 Gears, Paddle Shift, Sport Mode" "Automatic (TC) - 8 Gears, Manual Override &amp; Paddle Shift, Sport Mode" "Automatic - 7 Gears, Paddle Shift, Sport Mode" "Automatic - 8 Gears, Manual Override &amp; Paddle Shift, Sport Mode" ...
+ $ bodyType         : chr [1:4355] "Sedan" "Sedan" "SUV" "SUV" ...
+ $ fuelType         : chr [1:4355] "Petrol" "Petrol" "Petrol" "Diesel" ...
+ $ ownerNumber      : chr [1:4355] "First" "First" "First" "First" ...
+ $ odometerReading  : num [1:4355] 1630 29000 25000 37500 82000 ...
+ $ cityRto          : chr [1:4355] "DL14C0018" "GJ1233444" "MH0000000" "HR269200" ...
+ $ listingPrice     : num [1:4355] 7350000 6500000 2750000 9800000 555000 ...
+ $ fitnessUpto      : logi [1:4355] NA NA NA NA NA NA ...
+ $ insuranceType    : chr [1:4355] NA "Comprehensive" "Expired" "Expired" ...
+ $ duplicateKey     : logi [1:4355] NA NA NA NA NA NA ...
+ $ city             : chr [1:4355] "Delhi" "Delhi" "Delhi" "Delhi" ...
+ $ registrationYear : chr [1:4355] "01/01/0001 00:00:00" "01/01/0001 00:00:00" "01/01/0001 00:00:00" "01/01/0001 00:00:00" ...
+ $ registrationMonth: logi [1:4355] NA NA NA NA NA NA ...
+ $ websiteUrl       : chr [1:4355] "https://www.carwale.com/used-cars/delhi/mercedes-benz-e-class/zzjgvoyd/" "https://www.carwale.com/used-cars/delhi/bmw-6-series-gt/fklf1i6m/" "https://www.carwale.com/used-cars/delhi/mercedes-benz-gla/ncv9atp4/" "https://www.carwale.com/used-cars/delhi/bmw-x7/70grqq3u/" ...</code></pre>
+</div>
+</div>
+<p>In above, we can see that <code>fitnessUpto</code> column has character datatype instead of date. We also note that the utility of the <code>websiteUrl</code> column is complete and we can remove this column from the dataset. Additionally, the <code>ownerNumber</code>, <code>registrationYear</code> and <code>registrationMonth</code> columns do not match the data type in the <code>cars24</code> dataset. Let’s fix this.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>carwale <span class="ot">&lt;-</span> carwale <span class="sc">|&gt;</span> </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>websiteUrl) <span class="sc">|&gt;</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fitnessUpto  =</span> <span class="fu">dmy</span>(fitnessUpto),</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">registrationYear  =</span> <span class="fu">as_date</span>(registrationYear, <span class="at">format =</span> <span class="st">"%d/%m/%Y %H:%M:%S"</span>),</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">registrationMonth =</span> <span class="fu">month</span>(registrationYear),</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">registrationYear =</span> <span class="fu">year</span>(registrationYear),</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">registrationYear =</span> <span class="fu">if_else</span>(registrationYear <span class="sc">==</span> <span class="dv">1</span>, <span class="cn">NA_integer_</span>, registrationYear),</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">registrationMonth =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(registrationYear), <span class="cn">NA_integer_</span>, registrationMonth),</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">ownerNumber =</span> <span class="fu">case_match</span>(ownerNumber,</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">"First"</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">"Second"</span> <span class="sc">~</span> <span class="dv">2</span>,</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">"Third"</span> <span class="sc">~</span> <span class="dv">3</span>,</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>                                  <span class="fu">c</span>(<span class="st">"Fourth"</span>, <span class="st">"4 or More"</span>) <span class="sc">~</span> <span class="dv">4</span>,</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">.default =</span> <span class="cn">NA_integer_</span>)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>         )</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(carwale)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [4,355 × 17] (S3: tbl_df/tbl/data.frame)
+ $ make             : chr [1:4355] "Mercedes-Benz" "BMW" "Mercedes-Benz" "BMW" ...
+ $ model            : chr [1:4355] "E-Class [2017-2021]" "6 Series GT" "GLA [2017-2020]" "X7 [2019-2023]" ...
+ $ variant          : chr [1:4355] "E 200 Exclusive [2019-2019]" "630i M Sport [2021-2023]" "200 Sport" "xDrive30d DPE Signature [2019-2020]" ...
+ $ year             : num [1:4355] 2023 2021 2019 2021 2013 ...
+ $ transmission     : chr [1:4355] "Automatic - 9 Gears, Paddle Shift, Sport Mode" "Automatic (TC) - 8 Gears, Manual Override &amp; Paddle Shift, Sport Mode" "Automatic - 7 Gears, Paddle Shift, Sport Mode" "Automatic - 8 Gears, Manual Override &amp; Paddle Shift, Sport Mode" ...
+ $ bodyType         : chr [1:4355] "Sedan" "Sedan" "SUV" "SUV" ...
+ $ fuelType         : chr [1:4355] "Petrol" "Petrol" "Petrol" "Diesel" ...
+ $ ownerNumber      : num [1:4355] 1 1 1 1 1 2 1 1 2 1 ...
+ $ odometerReading  : num [1:4355] 1630 29000 25000 37500 82000 ...
+ $ cityRto          : chr [1:4355] "DL14C0018" "GJ1233444" "MH0000000" "HR269200" ...
+ $ listingPrice     : num [1:4355] 7350000 6500000 2750000 9800000 555000 ...
+ $ fitnessUpto      : Date[1:4355], format: NA NA ...
+ $ insuranceType    : chr [1:4355] NA "Comprehensive" "Expired" "Expired" ...
+ $ duplicateKey     : logi [1:4355] NA NA NA NA NA NA ...
+ $ city             : chr [1:4355] "Delhi" "Delhi" "Delhi" "Delhi" ...
+ $ registrationYear : num [1:4355] NA NA NA NA NA ...
+ $ registrationMonth: num [1:4355] NA NA NA NA NA NA 12 12 6 NA ...</code></pre>
+</div>
+</div>
+<p>Comparing the datatypes of the two datasets using waldo::compare function confirms that both datasets have same columns and datatypes and thus, can be combined together for futher clean-up.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>waldo<span class="sc">::</span><span class="fu">compare</span>(<span class="fu">sapply</span>(cars24, typeof), <span class="fu">sapply</span>(carwale,typeof))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>✔ No differences</code></pre>
+</div>
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>waldo<span class="sc">::</span><span class="fu">compare</span>(<span class="fu">sapply</span>(cars24, class), <span class="fu">sapply</span>(carwale,class))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>✔ No differences</code></pre>
+</div>
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>waldo<span class="sc">::</span><span class="fu">compare</span>(<span class="fu">colnames</span>(cars24), <span class="fu">colnames</span>(carwale))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>✔ No differences</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="combined-data" class="level2">
+<h2 class="anchored" data-anchor-id="combined-data">Combined Data</h2>
+<p>Let us combine the 2 datasets.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(cars24, carwale)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(<span class="st">"Number of Rows: {nrow(usedcars)}"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of Rows: 10244</code></pre>
+</div>
+</div>
+</section>
+<section id="column-wise-analysis-and-clean-up" class="level2">
+<h2 class="anchored" data-anchor-id="column-wise-analysis-and-clean-up">Column-wise Analysis and clean-up</h2>
 </section>
 </section>
 

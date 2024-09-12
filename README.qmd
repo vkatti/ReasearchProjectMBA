@@ -1,6 +1,6 @@
 ---
 title: Development of "UsedCarsIndia" - an R Package for used car price prediction
-format: markdown
+format: md
 toc: true
 ---
 

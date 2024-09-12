@@ -1,15 +1,13 @@
----
-title: Development of "UsedCarsIndia" - an R Package for used car price
-  prediction
-toc-title: Table of contents
----
+# Development of “UsedCarsIndia” - an R Package for used car price
+prediction
 
--   [Introduction](#introduction){#toc-introduction}
--   [01_Regions](#regions){#toc-regions}
--   [02_CarURLs](#carurls){#toc-carurls}
--   [03_CarDetails](#cardetails){#toc-cardetails}
--   [04_CarDetailsConsolidated](#cardetailsconsolidated){#toc-cardetailsconsolidated}
--   [05_CleanAndCombine](#cleanandcombine){#toc-cleanandcombine}
+
+-   [Introduction](#introduction)
+-   [01_Regions](#regions)
+-   [02_CarURLs](#carurls)
+-   [03_CarDetails](#cardetails)
+-   [04_CarDetailsConsolidated](#cardetailsconsolidated)
+-   [05_CleanAndCombine](#cleanandcombine)
 
 ## Introduction
 
@@ -40,10 +38,12 @@ This folder contains the Jupyter (iPython) Notebooks which extracts the
 base URLs of the Regions and stores them as a pickle (.pkl) file. This
 was achieved using Pandas, Requests and BeautifulSoup libraries.
 
-::: {style="text-align: center;"}
-![A screenshot from the
-regions_cars24.ipynb](images/clipboard-233799253.png)
-:::
+<figure>
+<img src="images/clipboard-233799253.png"
+alt="A screenshot from the regions_cars24.ipynb" />
+<figcaption aria-hidden="true">A screenshot from the
+regions_cars24.ipynb</figcaption>
+</figure>
 
 ## 02_CarURLs
 
@@ -60,14 +60,19 @@ of 20-24 with each set grouped under a single URL; we has to use
 Selenium WebDriver to crawl through the search results to extract the
 data from each page of the Search Results.
 
-::: {style="text-align: center;"}
-![A screenshot from cars_cars24.ipynb](images/clipboard-2506115197.png)
-:::
+<figure>
+<img src="images/clipboard-2506115197.png"
+alt="A screenshot from cars_cars24.ipynb" />
+<figcaption aria-hidden="true">A screenshot from
+cars_cars24.ipynb</figcaption>
+</figure>
 
-::: {style="text-align: center;"}
-![A screenshot from
-car_details_cars24.ipynb](images/clipboard-3881363627.png)
-:::
+<figure>
+<img src="images/clipboard-3881363627.png"
+alt="A screenshot from car_details_cars24.ipynb" />
+<figcaption aria-hidden="true">A screenshot from
+car_details_cars24.ipynb</figcaption>
+</figure>
 
 ## 03_CarDetails
 
@@ -109,9 +114,12 @@ Once the Car URLs were available, we then extracted individual car
 details from their respective webpages. To ensure minimum loss of data,
 we saved the car details in groups of 100 in intermediate pickle files.
 
-::: {style="text-align: center;"}
-![Intermediate Pickle (.pkl) files](images/clipboard-3736843883.png)
-:::
+<figure>
+<img src="images/clipboard-3736843883.png"
+alt="Intermediate Pickle (.pkl) files" />
+<figcaption aria-hidden="true">Intermediate Pickle (.pkl)
+files</figcaption>
+</figure>
 
 ## 04_CarDetailsConsolidated
 
@@ -119,9 +127,10 @@ This folder contains the Jupyter (iPython) Notebooks which combines all
 pickle files containing car details and stores them as a Comma-delimited
 (CSV) file. This was achieved using Pandas and Glob libraries.
 
-::: {style="text-align: center;"}
-![Combined Dataset](images/clipboard-2497184986.png)
-:::
+<figure>
+<img src="images/clipboard-2497184986.png" alt="Combined Dataset" />
+<figcaption aria-hidden="true">Combined Dataset</figcaption>
+</figure>
 
 ## 05_CleanAndCombine
 

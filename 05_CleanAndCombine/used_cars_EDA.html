@@ -81,27 +81,70 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#table-of-figures" id="toc-table-of-figures" class="nav-link active" data-scroll-target="#table-of-figures">Table of Figures</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources"><span class="header-section-number">2</span> Data Sources</a>
   <ul class="collapse">
-  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a>
-  <ul class="collapse">
-  <li><a href="#ingestion" id="toc-ingestion" class="nav-link" data-scroll-target="#ingestion">Ingestion</a></li>
-  <li><a href="#duplicates" id="toc-duplicates" class="nav-link" data-scroll-target="#duplicates">Duplicates</a></li>
-  <li><a href="#columns-and-data-types" id="toc-columns-and-data-types" class="nav-link" data-scroll-target="#columns-and-data-types">Columns and Data Types</a></li>
+  <li><a href="#ingestion" id="toc-ingestion" class="nav-link" data-scroll-target="#ingestion"><span class="header-section-number">2.1</span> Ingestion</a></li>
+  <li><a href="#duplicates" id="toc-duplicates" class="nav-link" data-scroll-target="#duplicates"><span class="header-section-number">2.2</span> Duplicates</a></li>
+  <li><a href="#columns-and-data-types" id="toc-columns-and-data-types" class="nav-link" data-scroll-target="#columns-and-data-types"><span class="header-section-number">2.3</span> Columns and Data Types</a></li>
   </ul></li>
-  <li><a href="#combined-data" id="toc-combined-data" class="nav-link" data-scroll-target="#combined-data">Combined Data</a></li>
-  <li><a href="#column-wise-analysis-and-clean-up" id="toc-column-wise-analysis-and-clean-up" class="nav-link" data-scroll-target="#column-wise-analysis-and-clean-up">Column-wise Analysis and clean-up</a>
+  <li><a href="#combined-data" id="toc-combined-data" class="nav-link" data-scroll-target="#combined-data"><span class="header-section-number">3</span> Combined Data</a></li>
+  <li><a href="#column-wise-analysis-and-clean-up" id="toc-column-wise-analysis-and-clean-up" class="nav-link" data-scroll-target="#column-wise-analysis-and-clean-up"><span class="header-section-number">4</span> Column-wise Analysis and clean-up</a>
   <ul class="collapse">
-  <li><a href="#make" id="toc-make" class="nav-link" data-scroll-target="#make">make</a></li>
-  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">model</a></li>
-  <li><a href="#variant" id="toc-variant" class="nav-link" data-scroll-target="#variant">variant</a></li>
-  <li><a href="#year" id="toc-year" class="nav-link" data-scroll-target="#year">year</a></li>
-  <li><a href="#transmission" id="toc-transmission" class="nav-link" data-scroll-target="#transmission">transmission</a></li>
-  <li><a href="#bodytype" id="toc-bodytype" class="nav-link" data-scroll-target="#bodytype">bodyType</a></li>
-  <li><a href="#fueltype" id="toc-fueltype" class="nav-link" data-scroll-target="#fueltype">fuelType</a></li>
-  <li><a href="#ownernumber" id="toc-ownernumber" class="nav-link" data-scroll-target="#ownernumber">ownerNumber</a></li>
-  <li><a href="#odometerreading" id="toc-odometerreading" class="nav-link" data-scroll-target="#odometerreading">odometerReading</a></li>
+  <li><a href="#make" id="toc-make" class="nav-link" data-scroll-target="#make"><span class="header-section-number">4.1</span> make</a>
+  <ul class="collapse">
+  <li><a href="#observations" id="toc-observations" class="nav-link" data-scroll-target="#observations"><span class="header-section-number">4.1.1</span> Observations</a></li>
+  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning"><span class="header-section-number">4.1.2</span> Data Cleaning</a></li>
+  </ul></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model"><span class="header-section-number">4.2</span> model</a>
+  <ul class="collapse">
+  <li><a href="#observations-1" id="toc-observations-1" class="nav-link" data-scroll-target="#observations-1"><span class="header-section-number">4.2.1</span> Observations</a></li>
+  <li><a href="#data-cleaning-1" id="toc-data-cleaning-1" class="nav-link" data-scroll-target="#data-cleaning-1"><span class="header-section-number">4.2.2</span> Data Cleaning</a></li>
+  </ul></li>
+  <li><a href="#variant" id="toc-variant" class="nav-link" data-scroll-target="#variant"><span class="header-section-number">4.3</span> variant</a>
+  <ul class="collapse">
+  <li><a href="#observations-2" id="toc-observations-2" class="nav-link" data-scroll-target="#observations-2"><span class="header-section-number">4.3.1</span> Observations</a></li>
+  <li><a href="#data-cleaning-2" id="toc-data-cleaning-2" class="nav-link" data-scroll-target="#data-cleaning-2"><span class="header-section-number">4.3.2</span> Data Cleaning</a></li>
+  </ul></li>
+  <li><a href="#year" id="toc-year" class="nav-link" data-scroll-target="#year"><span class="header-section-number">4.4</span> year</a>
+  <ul class="collapse">
+  <li><a href="#observations-3" id="toc-observations-3" class="nav-link" data-scroll-target="#observations-3"><span class="header-section-number">4.4.1</span> Observations</a></li>
+  <li><a href="#data-cleaning-3" id="toc-data-cleaning-3" class="nav-link" data-scroll-target="#data-cleaning-3"><span class="header-section-number">4.4.2</span> Data Cleaning</a></li>
+  </ul></li>
+  <li><a href="#transmission" id="toc-transmission" class="nav-link" data-scroll-target="#transmission"><span class="header-section-number">4.5</span> transmission</a>
+  <ul class="collapse">
+  <li><a href="#observations-4" id="toc-observations-4" class="nav-link" data-scroll-target="#observations-4"><span class="header-section-number">4.5.1</span> Observations</a></li>
+  <li><a href="#data-cleaning-4" id="toc-data-cleaning-4" class="nav-link" data-scroll-target="#data-cleaning-4"><span class="header-section-number">4.5.2</span> Data Cleaning</a></li>
+  </ul></li>
+  <li><a href="#bodytype" id="toc-bodytype" class="nav-link" data-scroll-target="#bodytype"><span class="header-section-number">4.6</span> bodyType</a>
+  <ul class="collapse">
+  <li><a href="#observations-5" id="toc-observations-5" class="nav-link" data-scroll-target="#observations-5"><span class="header-section-number">4.6.1</span> Observations</a></li>
+  <li><a href="#data-cleaning-5" id="toc-data-cleaning-5" class="nav-link" data-scroll-target="#data-cleaning-5"><span class="header-section-number">4.6.2</span> Data Cleaning</a></li>
+  </ul></li>
+  <li><a href="#fueltype" id="toc-fueltype" class="nav-link" data-scroll-target="#fueltype"><span class="header-section-number">4.7</span> fuelType</a>
+  <ul class="collapse">
+  <li><a href="#observations-6" id="toc-observations-6" class="nav-link" data-scroll-target="#observations-6"><span class="header-section-number">4.7.1</span> Observations</a></li>
+  <li><a href="#data-cleaning-6" id="toc-data-cleaning-6" class="nav-link" data-scroll-target="#data-cleaning-6"><span class="header-section-number">4.7.2</span> Data Cleaning</a></li>
+  </ul></li>
+  <li><a href="#ownernumber" id="toc-ownernumber" class="nav-link" data-scroll-target="#ownernumber"><span class="header-section-number">4.8</span> ownerNumber</a>
+  <ul class="collapse">
+  <li><a href="#observations-7" id="toc-observations-7" class="nav-link" data-scroll-target="#observations-7"><span class="header-section-number">4.8.1</span> Observations</a></li>
+  <li><a href="#data-cleaning-7" id="toc-data-cleaning-7" class="nav-link" data-scroll-target="#data-cleaning-7"><span class="header-section-number">4.8.2</span> Data Cleaning</a></li>
+  </ul></li>
+  <li><a href="#odometerreading" id="toc-odometerreading" class="nav-link" data-scroll-target="#odometerreading"><span class="header-section-number">4.9</span> odometerReading</a>
+  <ul class="collapse">
+  <li><a href="#observations-8" id="toc-observations-8" class="nav-link" data-scroll-target="#observations-8"><span class="header-section-number">4.9.1</span> Observations</a></li>
+  <li><a href="#data-cleaning-8" id="toc-data-cleaning-8" class="nav-link" data-scroll-target="#data-cleaning-8"><span class="header-section-number">4.9.2</span> Data Cleaning</a></li>
+  </ul></li>
+  <li><a href="#cityrto" id="toc-cityrto" class="nav-link" data-scroll-target="#cityrto"><span class="header-section-number">4.10</span> cityRto</a>
+  <ul class="collapse">
+  <li><a href="#observations-9" id="toc-observations-9" class="nav-link" data-scroll-target="#observations-9"><span class="header-section-number">4.10.1</span> Observations</a></li>
+  <li><a href="#data-cleaning-9" id="toc-data-cleaning-9" class="nav-link" data-scroll-target="#data-cleaning-9"><span class="header-section-number">4.10.2</span> Data Cleaning</a></li>
+  </ul></li>
+  <li><a href="#listingprice" id="toc-listingprice" class="nav-link" data-scroll-target="#listingprice"><span class="header-section-number">4.11</span> listingPrice</a>
+  <ul class="collapse">
+  <li><a href="#observations-10" id="toc-observations-10" class="nav-link" data-scroll-target="#observations-10"><span class="header-section-number">4.11.1</span> Observations</a></li>
+  <li><a href="#data-cleaning-10" id="toc-data-cleaning-10" class="nav-link" data-scroll-target="#data-cleaning-10"><span class="header-section-number">4.11.2</span> Data Cleaning</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -140,17 +183,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="table-of-figures" class="level1">
-<h1>Table of Figures</h1>
-<div id="figures">
-
-</div>
-</section>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
 <p>After the web-scraping activity is completed, we will now perform exploratory data analysis on the used cars details.</p>
-<section id="data-sources" class="level2">
-<h2 class="anchored" data-anchor-id="data-sources">Data Sources</h2>
+</section>
+<section id="data-sources" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Data Sources</h1>
 <p>We have 2 CSV files in the <strong>04_CarDetailsConsolidated</strong> which we will ingest.</p>
 <div style="text-align: center;">
 <div class="quarto-figure quarto-figure-center">
@@ -160,8 +198,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </div>
-<section id="ingestion" class="level3">
-<h3 class="anchored" data-anchor-id="ingestion">Ingestion</h3>
+<section id="ingestion" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="ingestion"><span class="header-section-number">2.1</span> Ingestion</h2>
 <p>First we load the required R libraries and create a utility function <code>f</code></p>
 <div class="cell">
 <details open="" class="code-fold">
@@ -171,7 +209,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)    <span class="co"># To ensure consistent naming and other utilities</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glue)       <span class="co"># To enable fancy printing</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x) { <span class="fu">print</span>(<span class="fu">glue</span>(x))}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x) { <span class="fu">print</span>(<span class="fu">glue</span>(x))}</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>format_indian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  x_str <span class="ot">&lt;-</span> <span class="fu">as.character</span>(x)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  rev_x_str <span class="ot">&lt;-</span> <span class="fu">rev</span>(<span class="fu">strsplit</span>(x_str, <span class="st">""</span>)[[<span class="dv">1</span>]])</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  first_three <span class="ot">&lt;-</span> <span class="fu">c</span>(rev_x_str[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>],<span class="st">","</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  all_others <span class="ot">&lt;-</span> rev_x_str[<span class="dv">4</span><span class="sc">:</span><span class="fu">length</span>(rev_x_str)]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  grouped <span class="ot">&lt;-</span> <span class="fu">paste</span>(all_others, <span class="at">collapse =</span> <span class="st">""</span>) </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  grouped <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"([0-9]{2})(?=[0-9])"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1,"</span>, grouped, <span class="at">perl =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  first_three <span class="ot">&lt;-</span> <span class="fu">paste</span>(first_three, <span class="at">collapse =</span> <span class="st">""</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  final <span class="ot">&lt;-</span> <span class="fu">paste0</span>(first_three,grouped, <span class="at">collapse =</span> <span class="st">""</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  formatted <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="fu">rev</span>(<span class="fu">strsplit</span>(final, <span class="st">""</span>)[[<span class="dv">1</span>]]), <span class="at">collapse =</span> <span class="st">""</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(formatted)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Since will be cleaning and combining 2 datasets, one from <em>cars24</em> and other from <em>carwale</em>, we will perform same action twice and handle some special cases in either datasets.</p>
@@ -195,13 +246,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <p>In our data extraction scripts from the <strong>03_CarDetails</strong> folder, you would’ve noticed that while extracting the car attributes, we set the default value to <strong>MISSING</strong> if the value is not available. Thus we know for a fact that <strong>MISSING</strong> indicates a missing value and therefore can be explicitly set to NA while reading the CSV files.</p>
-<p>After a quick manual verification of CSV files, we also understood that some attributes were <em>Not Available</em> can can be considered as <code>NA</code>.</p>
+<p>After a quick manual verification of CSV files, we also understood that some attributes were <em>Not Available</em> or <em>N/A</em> can can be considered as <code>NA</code>.</p>
 <p>The <code>read_csv</code> function from <strong>readr</strong> package allows us to explicitly mention which values to be considered as <code>NA</code> while reading the data.</p>
 </div>
 </div>
 </section>
-<section id="duplicates" class="level3">
-<h3 class="anchored" data-anchor-id="duplicates">Duplicates</h3>
+<section id="duplicates" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="duplicates"><span class="header-section-number">2.2</span> Duplicates</h2>
 <p>First thing we will do is eliminate duplicates. We know there are duplicates since we had to restart our web-scraping scripts couple of times due to various issues.<br>
 We will use the <code>unique</code> function to remove duplicates.</p>
 <div class="cell">
@@ -243,8 +294,8 @@ Total duplicates removed: 409</code></pre>
 </div>
 </div>
 </section>
-<section id="columns-and-data-types" class="level3">
-<h3 class="anchored" data-anchor-id="columns-and-data-types">Columns and Data Types</h3>
+<section id="columns-and-data-types" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="columns-and-data-types"><span class="header-section-number">2.3</span> Columns and Data Types</h2>
 <p>We will now look at the columns and ensure that data types of the columns are correct.</p>
 <div class="cell">
 <details open="" class="code-fold">
@@ -400,8 +451,8 @@ Total duplicates removed: 409</code></pre>
 </div>
 </section>
 </section>
-<section id="combined-data" class="level2">
-<h2 class="anchored" data-anchor-id="combined-data">Combined Data</h2>
+<section id="combined-data" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Combined Data</h1>
 <p>Let us combine the 2 datasets.</p>
 <div class="cell">
 <details open="" class="code-fold">
@@ -415,8 +466,8 @@ Total duplicates removed: 409</code></pre>
 </div>
 </div>
 </section>
-<section id="column-wise-analysis-and-clean-up" class="level2">
-<h2 class="anchored" data-anchor-id="column-wise-analysis-and-clean-up">Column-wise Analysis and clean-up</h2>
+<section id="column-wise-analysis-and-clean-up" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Column-wise Analysis and clean-up</h1>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -442,8 +493,8 @@ registrationYear
 registrationMonth</code></pre>
 </div>
 </div>
-<section id="make" class="level3">
-<h3 class="anchored" data-anchor-id="make">make</h3>
+<section id="make" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="make"><span class="header-section-number">4.1</span> make</h2>
 <p>Car24 has 15 values for <code>make</code> column whereas Carwale has 35 values. They are as follows:</p>
 <div class="cell">
 <details open="" class="code-fold">
@@ -473,15 +524,15 @@ registrationMonth</code></pre>
 [33] "Fiat"          "Ssangyong"     "Bentley"      </code></pre>
 </div>
 </div>
-<section id="observations" class="level4">
-<h4 class="anchored" data-anchor-id="observations">Observations</h4>
+<section id="observations" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="observations"><span class="header-section-number">4.1.1</span> Observations</h3>
 <ul>
 <li>Even though Carwale has fewer records, it has more variation in terms of <code>make</code> of the used cars.</li>
 <li>A few <code>make</code> values like KIA, Maruti Suzuki need to be made similar to the corresponding values in Cars24 dataset.</li>
 </ul>
 </section>
-<section id="data-cleaning" class="level4">
-<h4 class="anchored" data-anchor-id="data-cleaning">Data Cleaning</h4>
+<section id="data-cleaning" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="data-cleaning"><span class="header-section-number">4.1.2</span> Data Cleaning</h3>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -497,7 +548,7 @@ registrationMonth</code></pre>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="4200"></p>
+<p><img src="used_cars_EDA_files/figure-html/make-1.png" class="img-fluid figure-img" width="4200"></p>
 <figcaption>Car Brands (Make)</figcaption>
 </figure>
 </div>
@@ -505,17 +556,17 @@ registrationMonth</code></pre>
 </div>
 </section>
 </section>
-<section id="model" class="level3">
-<h3 class="anchored" data-anchor-id="model">model</h3>
+<section id="model" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="model"><span class="header-section-number">4.2</span> model</h2>
 <p>Car24 has 118 values for <code>model</code> column whereas Carwale has 552 values.</p>
-<section id="observations-1" class="level4">
-<h4 class="anchored" data-anchor-id="observations-1">Observations</h4>
+<section id="observations-1" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="observations-1"><span class="header-section-number">4.2.1</span> Observations</h3>
 <ul>
 <li>The <code>model</code> values in Carwale includes the start and end year of the model. We can remove this to make it more consistent with Cars24 data. There are also a few corrections (Letter case related) which we will perform here.</li>
 </ul>
 </section>
-<section id="data-cleaning-1" class="level4">
-<h4 class="anchored" data-anchor-id="data-cleaning-1">Data Cleaning</h4>
+<section id="data-cleaning-1" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="data-cleaning-1"><span class="header-section-number">4.2.2</span> Data Cleaning</h3>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -538,7 +589,7 @@ registrationMonth</code></pre>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="4200"></p>
+<p><img src="used_cars_EDA_files/figure-html/model-1.png" class="img-fluid figure-img" width="4200"></p>
 <figcaption>Car Models</figcaption>
 </figure>
 </div>
@@ -546,25 +597,25 @@ registrationMonth</code></pre>
 </div>
 </section>
 </section>
-<section id="variant" class="level3">
-<h3 class="anchored" data-anchor-id="variant">variant</h3>
+<section id="variant" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="variant"><span class="header-section-number">4.3</span> variant</h2>
 <p>Car24 has 908 values for <code>variant</code> column whereas Carwale has 1523 values.</p>
-<section id="observations-2" class="level4">
-<h4 class="anchored" data-anchor-id="observations-2">Observations</h4>
+<section id="observations-2" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="observations-2"><span class="header-section-number">4.3.1</span> Observations</h3>
 <ul>
 <li>The <code>variant</code> values in Carwale includes the start and end year of the model. We can remove this to make it more consistent with Cars24 data</li>
 <li>The <code>variant</code> value sometimes indicate the Engine Capacity, Transmission Type and Fuel Type.</li>
 </ul>
 </section>
-<section id="data-cleaning-2" class="level4">
-<h4 class="anchored" data-anchor-id="data-cleaning-2">Data Cleaning</h4>
+<section id="data-cleaning-2" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="data-cleaning-2"><span class="header-section-number">4.3.2</span> Data Cleaning</h3>
 <p>No need for any cleaning in <code>variant</code> column.</p>
 <p>A quick look at the top 20 most famous car <code>variant</code>s</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="4200"></p>
+<p><img src="used_cars_EDA_files/figure-html/variant-1.png" class="img-fluid figure-img" width="4200"></p>
 <figcaption>Car Variants</figcaption>
 </figure>
 </div>
@@ -572,8 +623,8 @@ registrationMonth</code></pre>
 </div>
 </section>
 </section>
-<section id="year" class="level3">
-<h3 class="anchored" data-anchor-id="year">year</h3>
+<section id="year" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="year"><span class="header-section-number">4.4</span> year</h2>
 <p>Car24 has 15 values for <code>year</code> column whereas Carwale has 23 values. They are as follows:</p>
 <div class="cell">
 <details open="" class="code-fold">
@@ -594,21 +645,21 @@ registrationMonth</code></pre>
 [16] 2017 2018 2019 2020 2021 2022 2023 2024</code></pre>
 </div>
 </div>
-<section id="observations-3" class="level4">
-<h4 class="anchored" data-anchor-id="observations-3">Observations</h4>
+<section id="observations-3" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="observations-3"><span class="header-section-number">4.4.1</span> Observations</h3>
 <ul>
 <li>Even though Carwale has fewer records, it has more variation in terms of <code>year</code> of the used cars.</li>
 </ul>
 </section>
-<section id="data-cleaning-3" class="level4">
-<h4 class="anchored" data-anchor-id="data-cleaning-3">Data Cleaning</h4>
+<section id="data-cleaning-3" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="data-cleaning-3"><span class="header-section-number">4.4.2</span> Data Cleaning</h3>
 <p>No data cleaning required for <code>year</code> column.</p>
 <p>A quick look at the frequency of <code>year</code> values</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="4200"></p>
+<p><img src="used_cars_EDA_files/figure-html/year-1.png" class="img-fluid figure-img" width="4200"></p>
 <figcaption>Year of the Car Model/Variant</figcaption>
 </figure>
 </div>
@@ -616,18 +667,18 @@ registrationMonth</code></pre>
 </div>
 </section>
 </section>
-<section id="transmission" class="level3">
-<h3 class="anchored" data-anchor-id="transmission">transmission</h3>
+<section id="transmission" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="transmission"><span class="header-section-number">4.5</span> transmission</h2>
 <p>Car24 has 2 values for <code>transmission</code> column whereas Carwale has 119 values.</p>
-<section id="observations-4" class="level4">
-<h4 class="anchored" data-anchor-id="observations-4">Observations</h4>
+<section id="observations-4" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="observations-4"><span class="header-section-number">4.5.1</span> Observations</h3>
 <ul>
 <li>Even though Carwale has fewer records, it has more variation in terms of <code>trasmission</code> of the used cars.</li>
 <li>Additional information about the type of transmission in Automatic is available in Carwale dataset but not available in Cars24.</li>
 </ul>
 </section>
-<section id="data-cleaning-4" class="level4">
-<h4 class="anchored" data-anchor-id="data-cleaning-4">Data Cleaning</h4>
+<section id="data-cleaning-4" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="data-cleaning-4"><span class="header-section-number">4.5.2</span> Data Cleaning</h3>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -641,7 +692,7 @@ registrationMonth</code></pre>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="4200"></p>
+<p><img src="used_cars_EDA_files/figure-html/transmission-1.png" class="img-fluid figure-img" width="4200"></p>
 <figcaption>Car Transmission</figcaption>
 </figure>
 </div>
@@ -649,8 +700,8 @@ registrationMonth</code></pre>
 </div>
 </section>
 </section>
-<section id="bodytype" class="level3">
-<h3 class="anchored" data-anchor-id="bodytype">bodyType</h3>
+<section id="bodytype" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="bodytype"><span class="header-section-number">4.6</span> bodyType</h2>
 <p>Car24 has 3 values for <code>bodyType</code> column whereas Carwale has 12 values. They are as follows:</p>
 <div class="cell">
 <details open="" class="code-fold">
@@ -672,14 +723,14 @@ registrationMonth</code></pre>
  [9] "Truck"         "Convertible"   "Minivan/Van"   "Minivan"      </code></pre>
 </div>
 </div>
-<section id="observations-5" class="level4">
-<h4 class="anchored" data-anchor-id="observations-5">Observations</h4>
+<section id="observations-5" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="observations-5"><span class="header-section-number">4.6.1</span> Observations</h3>
 <ul>
 <li>There are very few <code>NA</code> values which we will impute manually.</li>
 </ul>
 </section>
-<section id="data-cleaning-5" class="level4">
-<h4 class="anchored" data-anchor-id="data-cleaning-5">Data Cleaning</h4>
+<section id="data-cleaning-5" class="level3" data-number="4.6.2">
+<h3 data-number="4.6.2" class="anchored" data-anchor-id="data-cleaning-5"><span class="header-section-number">4.6.2</span> Data Cleaning</h3>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -697,7 +748,7 @@ registrationMonth</code></pre>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="4200"></p>
+<p><img src="used_cars_EDA_files/figure-html/bodyType-1.png" class="img-fluid figure-img" width="4200"></p>
 <figcaption>Car Body Type</figcaption>
 </figure>
 </div>
@@ -705,8 +756,8 @@ registrationMonth</code></pre>
 </div>
 </section>
 </section>
-<section id="fueltype" class="level3">
-<h3 class="anchored" data-anchor-id="fueltype">fuelType</h3>
+<section id="fueltype" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="fueltype"><span class="header-section-number">4.7</span> fuelType</h2>
 <p>Car24 has 4 values for <code>fuelType</code> column whereas Carwale has 14 values. They are as follows:</p>
 <div class="cell">
 <details open="" class="code-fold">
@@ -732,14 +783,14 @@ registrationMonth</code></pre>
 [13] "Diesel + LPG"                       "Diesel + CNG"                      </code></pre>
 </div>
 </div>
-<section id="observations-6" class="level4">
-<h4 class="anchored" data-anchor-id="observations-6">Observations</h4>
+<section id="observations-6" class="level3" data-number="4.7.1">
+<h3 data-number="4.7.1" class="anchored" data-anchor-id="observations-6"><span class="header-section-number">4.7.1</span> Observations</h3>
 <ul>
 <li>Even though Carwale has fewer records, it has more variation in terms of <code>fuelType</code> of the used cars.</li>
 </ul>
 </section>
-<section id="data-cleaning-6" class="level4">
-<h4 class="anchored" data-anchor-id="data-cleaning-6">Data Cleaning</h4>
+<section id="data-cleaning-6" class="level3" data-number="4.7.2">
+<h3 data-number="4.7.2" class="anchored" data-anchor-id="data-cleaning-6"><span class="header-section-number">4.7.2</span> Data Cleaning</h3>
 <p>A few cars have <code>NA</code> values for fuelType column. We will use an external file to map the correct fuelType values. For the sake of simplicity, we will combine a few of these fuel types into groups.</p>
 <div class="cell">
 <details open="" class="code-fold">
@@ -761,7 +812,7 @@ registrationMonth</code></pre>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid figure-img" width="4200"></p>
+<p><img src="used_cars_EDA_files/figure-html/fuelType-1.png" class="img-fluid figure-img" width="4200"></p>
 <figcaption>Car Fuel Type</figcaption>
 </figure>
 </div>
@@ -769,8 +820,8 @@ registrationMonth</code></pre>
 </div>
 </section>
 </section>
-<section id="ownernumber" class="level3">
-<h3 class="anchored" data-anchor-id="ownernumber">ownerNumber</h3>
+<section id="ownernumber" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="ownernumber"><span class="header-section-number">4.8</span> ownerNumber</h2>
 <p>Car24 has 3 values for <code>ownerNumber</code> column whereas Carwale has 5 values. They are as follows:</p>
 <div class="cell">
 <details open="" class="code-fold">
@@ -790,15 +841,15 @@ registrationMonth</code></pre>
 <pre><code>[1]  1  2  3 NA  4</code></pre>
 </div>
 </div>
-<section id="observations-7" class="level4">
-<h4 class="anchored" data-anchor-id="observations-7">Observations</h4>
+<section id="observations-7" class="level3" data-number="4.8.1">
+<h3 data-number="4.8.1" class="anchored" data-anchor-id="observations-7"><span class="header-section-number">4.8.1</span> Observations</h3>
 <ul>
 <li>Even though Carwale has fewer records, it has more variation in terms of <code>ownerNumber</code> of the used cars.</li>
 <li>There are 60 missing values for <code>ownerNumber</code> column.</li>
 </ul>
 </section>
-<section id="data-cleaning-7" class="level4">
-<h4 class="anchored" data-anchor-id="data-cleaning-7">Data Cleaning</h4>
+<section id="data-cleaning-7" class="level3" data-number="4.8.2">
+<h3 data-number="4.8.2" class="anchored" data-anchor-id="data-cleaning-7"><span class="header-section-number">4.8.2</span> Data Cleaning</h3>
 <p>There are 60 missing values for <code>ownerNumber</code> column. We will impute them in such a way that overall proportion remains the same.</p>
 <div class="cell">
 <details open="" class="code-fold">
@@ -824,7 +875,7 @@ registrationMonth</code></pre>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid figure-img" width="4200"></p>
+<p><img src="used_cars_EDA_files/figure-html/ownerNumber-1.png" class="img-fluid figure-img" width="4200"></p>
 <figcaption>Number of Previous Owners</figcaption>
 </figure>
 </div>
@@ -832,50 +883,87 @@ registrationMonth</code></pre>
 </div>
 </section>
 </section>
-<section id="odometerreading" class="level3">
-<h3 class="anchored" data-anchor-id="odometerreading">odometerReading</h3>
+<section id="odometerreading" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="odometerreading"><span class="header-section-number">4.9</span> odometerReading</h2>
 <p><code>odometerReading</code> is the distance the used car has travelled in kilometers.</p>
-<section id="observations-8" class="level4">
-<h4 class="anchored" data-anchor-id="observations-8">Observations</h4>
+<section id="observations-8" class="level3" data-number="4.9.1">
+<h3 data-number="4.9.1" class="anchored" data-anchor-id="observations-8"><span class="header-section-number">4.9.1</span> Observations</h3>
 <ul>
-<li>Even though Carwale has fewer records, it has more variation in terms of <code>ownerNumber</code> of the used cars.</li>
-<li>There are 60 missing values for <code>ownerNumber</code> column.</li>
+<li>TODO</li>
 </ul>
 </section>
-<section id="data-cleaning-8" class="level4">
-<h4 class="anchored" data-anchor-id="data-cleaning-8">Data Cleaning</h4>
-<p>There are 60 missing values for <code>ownerNumber</code> column. We will impute them in such a way that overall proportion remains the same.</p>
-<div class="cell">
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>non_missing_owners <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ownerNumber)) <span class="sc">|&gt;</span> <span class="fu">nrow</span>()</span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>props <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ownerNumber)) <span class="sc">|&gt;</span> <span class="fu">summarise</span>(<span class="at">p =</span> <span class="fu">n</span>()<span class="sc">/</span>non_missing_owners, <span class="at">.by =</span> ownerNumber) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">split60 =</span> <span class="fu">round</span>(<span class="dv">60</span> <span class="sc">*</span> p))</span>
-<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>na_indices <span class="ot">&lt;-</span> <span class="fu">which</span>(<span class="fu">is.na</span>(usedcars<span class="sc">$</span>ownerNumber))</span>
-<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>new_owner_numbers <span class="ot">&lt;-</span> <span class="fu">sample</span>(</span>
-<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>  props<span class="sc">$</span>ownerNumber,</span>
-<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>(na_indices),</span>
-<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">replace =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">prob =</span> props<span class="sc">$</span>p <span class="sc">/</span> <span class="fu">sum</span>(props<span class="sc">$</span>p)</span>
-<span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb51-13"><a href="#cb51-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-14"><a href="#cb51-14" aria-hidden="true" tabindex="-1"></a>usedcars<span class="sc">$</span>ownerNumber[na_indices] <span class="ot">&lt;-</span> new_owner_numbers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>A quick look at the frequency of <code>ownerNumber</code> values</p>
+<section id="data-cleaning-8" class="level3" data-number="4.9.2">
+<h3 data-number="4.9.2" class="anchored" data-anchor-id="data-cleaning-8"><span class="header-section-number">4.9.2</span> Data Cleaning</h3>
+<p>No data cleaning needed for <code>odometerReading</code> column.</p>
+<p>A quick look at the frequency of <code>odometerReading</code> values</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid figure-img" width="4200"></p>
+<p><img src="used_cars_EDA_files/figure-html/odometerReading-1.png" class="img-fluid figure-img" width="4200"></p>
 <figcaption>Distance Travelled</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
+</section>
+<section id="cityrto" class="level2" data-number="4.10">
+<h2 data-number="4.10" class="anchored" data-anchor-id="cityrto"><span class="header-section-number">4.10</span> cityRto</h2>
+<p>Car24 has 411 values for <code>cityRto</code> column whereas Carwale has 3553 values.</p>
+<section id="observations-9" class="level3" data-number="4.10.1">
+<h3 data-number="4.10.1" class="anchored" data-anchor-id="observations-9"><span class="header-section-number">4.10.1</span> Observations</h3>
+<ul>
+<li>The column <code>cityRto</code> in the cars24 dataset displays the RTO number where the car was registered. The same column in carwale dataset displays the actual registration number.</li>
+<li>There are 125 used cars without a <code>cityRto</code> value.</li>
+</ul>
+</section>
+<section id="data-cleaning-9" class="level3" data-number="4.10.2">
+<h3 data-number="4.10.2" class="anchored" data-anchor-id="data-cleaning-9"><span class="header-section-number">4.10.2</span> Data Cleaning</h3>
+<p>We can extract only the first 4 characters from the <code>cityRto</code> column to make the values uniform across the full dataset</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">cityRto =</span> <span class="fu">str_sub</span>(cityRto,<span class="dv">1</span>,<span class="dv">4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>A quick look at the frequency of <code>cityRto</code> values</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="used_cars_EDA_files/figure-html/cityRto-1.png" class="img-fluid figure-img" width="4200"></p>
+<figcaption>Registration (RTO)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="listingprice" class="level2" data-number="4.11">
+<h2 data-number="4.11" class="anchored" data-anchor-id="listingprice"><span class="header-section-number">4.11</span> listingPrice</h2>
+<p><code>listingPrice</code> is the amount in Indian Rupees (₹) quoted for the used car.</p>
+<section id="observations-10" class="level3" data-number="4.11.1">
+<h3 data-number="4.11.1" class="anchored" data-anchor-id="observations-10"><span class="header-section-number">4.11.1</span> Observations</h3>
+<ul>
+<li>TODO</li>
+</ul>
+</section>
+<section id="data-cleaning-10" class="level3" data-number="4.11.2">
+<h3 data-number="4.11.2" class="anchored" data-anchor-id="data-cleaning-10"><span class="header-section-number">4.11.2</span> Data Cleaning</h3>
+<p>No data cleaning needed for <code>listingPrice</code> column.</p>
+<p>A quick look at the frequency of <code>listingPrice</code> values</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="used_cars_EDA_files/figure-html/listingPrice-1.png" class="img-fluid figure-img" width="4200"></p>
+<figcaption>Car Price</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 </section>
 </section>

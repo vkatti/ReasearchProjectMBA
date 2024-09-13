@@ -10,12 +10,14 @@ format:
     number-sections: true
     fig-numbering: true
     fig-align: center
-    toc: true
+    toc: true 
+    lot: true
+    lof: true
     fig.width: 8
     fig.height: 5
     fig-dpi: 600
   pdf:
-    orientation: landscape
+    fontfamily: dejavu
     toc: true 
     lot: true
     lof: true
@@ -25,13 +27,14 @@ format:
     fig-align: center
     fig-dpi: 600
 editor: visual
+fig_caption_style: "numbered"
 ---
 
 # Introduction
 
 After the web-scraping activity is completed, we will now perform exploratory data analysis on the used cars details.
 
-## Data Sources
+# Data Sources
 
 We have 2 CSV files in the **04_CarDetailsConsolidated** which we will ingest.
 
@@ -39,7 +42,7 @@ We have 2 CSV files in the **04_CarDetailsConsolidated** which we will ingest.
 ![CSV files to be ingested](images/clipboard-4217870750.png)
 :::
 
-### Ingestion
+## Ingestion
 
 First we load the required R libraries and create a utility function `f`
 
@@ -55,6 +58,18 @@ library(glue)       # To enable fancy printing
 
 f <- function(x) { print(glue(x))}
 
+format_indian <- function(x) {
+  x_str <- as.character(x)
+  rev_x_str <- rev(strsplit(x_str, "")[[1]])
+  first_three <- c(rev_x_str[1:3],",")
+  all_others <- rev_x_str[4:length(rev_x_str)]
+  grouped <- paste(all_others, collapse = "") 
+  grouped <- gsub("([0-9]{2})(?=[0-9])", "\\1,", grouped, perl = TRUE) 
+  first_three <- paste(first_three, collapse = "")
+  final <- paste0(first_three,grouped, collapse = "")
+  formatted <- paste(rev(strsplit(final, "")[[1]]), collapse = "")
+  return(formatted)
+}
 ```
 
 Since will be cleaning and combining 2 datasets, one from *cars24* and other from *carwale*, we will perform same action twice and handle some special cases in either datasets.
@@ -73,12 +88,12 @@ carwale <- read_csv("../04_CarDetailsConsolidated/carwale.csv",
 
 In our data extraction scripts from the **03_CarDetails** folder, you would've noticed that while extracting the car attributes, we set the default value to **MISSING** if the value is not available. Thus we know for a fact that **MISSING** indicates a missing value and therefore can be explicitly set to NA while reading the CSV files.
 
-After a quick manual verification of CSV files, we also understood that some attributes were *Not Available* can can be considered as `NA`.
+After a quick manual verification of CSV files, we also understood that some attributes were *Not Available* or *N/A* can can be considered as `NA`.
 
 The `read_csv` function from **readr** package allows us to explicitly mention which values to be considered as `NA` while reading the data.
 :::
 
-### Duplicates
+## Duplicates
 
 First thing we will do is eliminate duplicates. We know there are duplicates since we had to restart our web-scraping scripts couple of times due to various issues.\
 We will use the `unique` function to remove duplicates.
@@ -109,7 +124,7 @@ After removing duplicates: {nrow(carwale)}
 Total duplicates removed: {preDup - nrow(carwale)}")
 ```
 
-### Columns and Data Types
+## Columns and Data Types
 
 We will now look at the columns and ensure that data types of the columns are correct.
 
@@ -162,29 +177,32 @@ str(carwale)
 Comparing the datatypes of the two datasets using waldo::compare function confirms that both datasets have same columns and datatypes and thus, can be combined together for futher clean-up.
 
 ```{r}
+#| label: Compare
 waldo::compare(sapply(cars24, typeof), sapply(carwale,typeof))
 waldo::compare(sapply(cars24, class), sapply(carwale,class))
 waldo::compare(colnames(cars24), colnames(carwale))
 
 ```
 
-## Combined Data
+# Combined Data
 
 Let us combine the 2 datasets.
 
 ```{r}
+#| label: Combine
 usedcars <- bind_rows(cars24, carwale)
 
 f("Number of Rows: {nrow(usedcars)}")
 ```
 
-## Column-wise Analysis and clean-up
+# Column-wise Analysis and clean-up
 
 ```{r}
+#| label: print column names
 cat(names(usedcars), sep = "\n")
 ```
 
-### make
+## make
 
 Car24 has `r length(unique(cars24$make))` values for `make` column whereas Carwale has `r length(unique(carwale$make))` values. They are as follows:
 
@@ -196,14 +214,15 @@ unique(cars24$make)
 unique(carwale$make)
 ```
 
-#### Observations
+### Observations
 
 -   Even though Carwale has fewer records, it has more variation in terms of `make` of the used cars.
 -   A few `make` values like KIA, Maruti Suzuki need to be made similar to the corresponding values in Cars24 dataset.
 
-#### Data Cleaning
+### Data Cleaning
 
 ```{r}
+#| label: make data cleaning
 usedcars <- usedcars |> 
   mutate(make = case_match(make,
                            "Kia" ~ "KIA",
@@ -213,8 +232,8 @@ usedcars <- usedcars |>
 
 A quick look at the frequency of `make` values
 
-
 ```{r}
+#| label: make 
 #| fig-cap: Car Brands (Make)
 #| echo: false
 usedcars |> 
@@ -235,15 +254,15 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
-### model
+## model
 
 Car24 has `r length(unique(cars24$model))` values for `model` column whereas Carwale has `r length(unique(carwale$model))` values.
 
-#### Observations
+### Observations
 
 -   The `model` values in Carwale includes the start and end year of the model. We can remove this to make it more consistent with Cars24 data. There are also a few corrections (Letter case related) which we will perform here.
 
-#### Data Cleaning
+### Data Cleaning
 
 ```{r}
 usedcars <- usedcars |> 
@@ -264,6 +283,7 @@ usedcars <- usedcars |>
 A quick look at the top 20 most famous car `model`s
 
 ```{r}
+#| label: model
 #| fig-cap: Car Models
 #| echo: false
 usedcars |> 
@@ -284,22 +304,23 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
-### variant
+## variant
 
 Car24 has `r length(unique(cars24$variant))` values for `variant` column whereas Carwale has `r length(unique(carwale$variant))` values.
 
-#### Observations
+### Observations
 
 -   The `variant` values in Carwale includes the start and end year of the model. We can remove this to make it more consistent with Cars24 data
 -   The `variant` value sometimes indicate the Engine Capacity, Transmission Type and Fuel Type.
 
-#### Data Cleaning
+### Data Cleaning
 
 No need for any cleaning in `variant` column.
 
 A quick look at the top 20 most famous car `variant`s
 
 ```{r}
+#| label: variant
 #| fig-cap: Car Variants
 #| echo: false
 usedcars |> 
@@ -321,7 +342,7 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
-### year
+## year
 
 Car24 has `r length(unique(cars24$year))` values for `year` column whereas Carwale has `r length(unique(carwale$year))` values. They are as follows:
 
@@ -333,17 +354,18 @@ sort(unique(cars24$year))
 sort(unique(carwale$year))
 ```
 
-#### Observations
+### Observations
 
 -   Even though Carwale has fewer records, it has more variation in terms of `year` of the used cars.
 
-#### Data Cleaning
+### Data Cleaning
 
 No data cleaning required for `year` column.
 
 A quick look at the frequency of `year` values
 
 ```{r}
+#| label: year
 #| fig-cap: Year of the Car Model/Variant
 #| echo: false
 
@@ -368,16 +390,16 @@ ggplot() +
         axis.line.y = element_blank()) 
 ```
 
-### transmission
+## transmission
 
 Car24 has `r length(unique(cars24$transmission))` values for `transmission` column whereas Carwale has `r length(unique(carwale$transmission))` values.
 
-#### Observations
+### Observations
 
 -   Even though Carwale has fewer records, it has more variation in terms of `trasmission` of the used cars.
 -   Additional information about the type of transmission in Automatic is available in Carwale dataset but not available in Cars24.
 
-#### Data Cleaning
+### Data Cleaning
 
 ```{r}
 usedcars <- usedcars |> 
@@ -388,6 +410,7 @@ usedcars <- usedcars |>
 A quick look at the frequency of `transmission` values
 
 ```{r}
+#| label: transmission
 #| fig-cap: Car Transmission
 #| echo: false
 usedcars |> 
@@ -407,7 +430,7 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
-### bodyType
+## bodyType
 
 Car24 has `r length(unique(cars24$bodyType))` values for `bodyType` column whereas Carwale has `r length(unique(carwale$bodyType))` values. They are as follows:
 
@@ -419,11 +442,11 @@ unique(cars24$bodyType)
 unique(carwale$bodyType)
 ```
 
-#### Observations
+### Observations
 
 -   There are very few `NA` values which we will impute manually.
 
-#### Data Cleaning
+### Data Cleaning
 
 ```{r}
 usedcars <- usedcars |> 
@@ -438,6 +461,7 @@ usedcars <- usedcars |>
 A quick look at the frequency of `bodyType` values
 
 ```{r}
+#| label: bodyType
 #| fig-cap: Car Body Type
 #| echo: false
 usedcars |> 
@@ -458,7 +482,7 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
-### fuelType
+## fuelType
 
 Car24 has `r length(unique(cars24$fuelType))` values for `fuelType` column whereas Carwale has `r length(unique(carwale$fuelType))` values. They are as follows:
 
@@ -470,11 +494,11 @@ unique(cars24$fuelType)
 unique(carwale$fuelType)
 ```
 
-#### Observations
+### Observations
 
 -   Even though Carwale has fewer records, it has more variation in terms of `fuelType` of the used cars.
 
-#### Data Cleaning
+### Data Cleaning
 
 A few cars have `NA` values for fuelType column. We will use an external file to map the correct fuelType values. For the sake of simplicity, we will combine a few of these fuel types into groups.
 
@@ -496,6 +520,7 @@ usedcars <- usedcars |>
 A quick look at the frequency of `fuelType` values
 
 ```{r}
+#| label: fuelType
 #| fig-cap: Car Fuel Type
 #| echo: false
 usedcars |> 
@@ -516,7 +541,7 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
-### ownerNumber
+## ownerNumber
 
 Car24 has `r length(unique(cars24$ownerNumber))` values for `ownerNumber` column whereas Carwale has `r length(unique(carwale$ownerNumber))` values. They are as follows:
 
@@ -528,13 +553,12 @@ unique(cars24$ownerNumber)
 unique(carwale$ownerNumber)
 ```
 
-#### Observations
+### Observations
 
- - Even though Carwale has fewer records, it has more variation in terms of `ownerNumber` of the used cars.
- - There are 60 missing values for `ownerNumber` column.
+-   Even though Carwale has fewer records, it has more variation in terms of `ownerNumber` of the used cars.
+-   There are 60 missing values for `ownerNumber` column.
 
-
-#### Data Cleaning
+### Data Cleaning
 
 There are 60 missing values for `ownerNumber` column. We will impute them in such a way that overall proportion remains the same.
 
@@ -555,12 +579,10 @@ new_owner_numbers <- sample(
 usedcars$ownerNumber[na_indices] <- new_owner_numbers
 ```
 
-
-
-
 A quick look at the frequency of `ownerNumber` values
 
 ```{r}
+#| label: ownerNumber
 #| fig-cap: Number of Previous Owners
 #| echo: false
 usedcars |> 
@@ -580,58 +602,140 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
-
-
-### odometerReading
+## odometerReading
 
 `odometerReading` is the distance the used car has travelled in kilometers.
 
+### Observations
 
-#### Observations
+-   TODO
 
- - Even though Carwale has fewer records, it has more variation in terms of `ownerNumber` of the used cars.
- - There are 60 missing values for `ownerNumber` column.
+### Data Cleaning
 
+No data cleaning needed for `odometerReading` column.
 
-#### Data Cleaning
-
-There are 60 missing values for `ownerNumber` column. We will impute them in such a way that overall proportion remains the same.
-
-```{r}
-non_missing_owners <- usedcars |> filter(!is.na(ownerNumber)) |> nrow()
-
-props <- usedcars |> filter(!is.na(ownerNumber)) |> summarise(p = n()/non_missing_owners, .by = ownerNumber) |> mutate(split60 = round(60 * p))
-
-na_indices <- which(is.na(usedcars$ownerNumber))
-
-new_owner_numbers <- sample(
-  props$ownerNumber,
-  length(na_indices),
-  replace = TRUE,
-  prob = props$p / sum(props$p)
-)
-
-usedcars$ownerNumber[na_indices] <- new_owner_numbers
-```
-
-
-
-
-A quick look at the frequency of `ownerNumber` values
+A quick look at the frequency of `odometerReading` values
 
 ```{r}
+#| label: odometerReading
 #| fig-cap: Distance Travelled
 #| echo: false
-usedcars |> 
-  count(ownerNumber, sort = TRUE) |> 
-ggplot() + 
-  geom_col(aes(x = fct_reorder(factor(ownerNumber),n, .desc = TRUE), y = n, fill = n)) +
-  geom_text(aes(x = fct_reorder(factor(ownerNumber),n, .desc = TRUE), y = n, label = n), size = 4, nudge_y = 150) + 
-  labs(title = "Most used cars have only 1 previous owner.",
-       subtitle = "Available used cars by number of previous owners between May 2024 till Sep 2024",
+
+median_odo <- round(median(usedcars$odometerReading),0)
+mean_odo <- round(mean(usedcars$odometerReading),0)
+
+ggplot(usedcars) + 
+  geom_histogram(aes(x = odometerReading), fill = "royalblue", bins = 100) + 
+  geom_vline(xintercept = median_odo, linetype = "dashed", color = "red") +
+  annotate("text", x = median_odo - 40000, y = 750, color = "red",
+  label = glue("Median Odo Reading
+               {median_odo} Kms")) + 
+  geom_vline(xintercept = mean_odo, linetype = "dashed", color = "blue") +
+  annotate("text", x = mean_odo + 200000, y = 750, color = "blue",
+  label = glue("Average Odo Reading
+               {mean_odo} Kms")) + 
+  scale_x_log10() + 
+  coord_cartesian(ylim = c(0, 900), expand = FALSE) +
+  labs(title = "Most used cars have travelled less than 1 Lakh Kms!",
+       subtitle = "Available used cars by odometer reading between May 2024 till Sep 2024",
        y = "Number of Used Cars",
-       x = "Number of Previous Owners") + 
-  coord_cartesian(ylim = c(0, 8200), expand = FALSE) +
+       x = "Odometer Reading (in Kms [Log 10 Scale])") + 
+  theme_minimal() +
+  theme(plot.title.position = "plot",
+        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        legend.position = "none",
+        axis.line.y = element_blank())
+```
+
+## cityRto
+
+Car24 has `r length(unique(cars24$cityRto))` values for `cityRto` column whereas Carwale has `r length(unique(carwale$cityRto))` values.
+
+### Observations
+
+-   The column `cityRto` in the cars24 dataset displays the RTO number where the car was registered. The same column in carwale dataset displays the actual registration number.
+-   There are 125 used cars without a `cityRto` value.
+
+### Data Cleaning
+
+We can extract only the first 4 characters from the `cityRto` column to make the values uniform across the full dataset
+
+```{r}
+#| label: cityRto data cleaning
+usedcars <- usedcars |> 
+  mutate(cityRto = str_sub(cityRto,1,4))
+```
+
+A quick look at the frequency of `cityRto` values
+
+```{r}
+#| label: cityRto 
+#| fig-cap: Registration (RTO)
+#| echo: false
+usedcars |> 
+  count(cityRto, sort = TRUE) |> 
+  slice_head(n=20) |>  
+ggplot() + 
+  geom_col(aes(x = fct_reorder(cityRto,n), y = n, fill = n)) +
+  geom_text(aes(x = fct_reorder(cityRto,n), y = n, label = n), size = 2, nudge_y = 10) + 
+  labs(title = "Cars from MH12 Pune have maximum availability",
+       subtitle = "Top 20 RTOs between May 2024 till Sep 2024",
+       y = "Number of Used Cars",
+       x = "RTO Number") + 
+  coord_flip(ylim = c(0, 510), expand = FALSE) +
+  theme_minimal() +
+  theme(plot.title.position = "plot",
+        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        legend.position = "none",
+        axis.line.y = element_blank())
+```
+
+## listingPrice
+
+`listingPrice` is the amount in Indian Rupees (₹) quoted for the used car.
+
+### Observations
+
+-   TODO
+
+### Data Cleaning
+
+No data cleaning needed for `listingPrice` column.
+
+A quick look at the frequency of `listingPrice` values
+
+```{r}
+#| label: listingPrice
+#| fig-cap: Car Price
+#| echo: false
+
+median_price <- round(median(usedcars$listingPrice),0)
+mean_price <- round(mean(usedcars$listingPrice),0)
+min_price <- round(min(usedcars$listingPrice),0)
+max_price <- round(max(usedcars$listingPrice),0)
+
+ggplot(usedcars) + 
+  geom_histogram(aes(x = listingPrice), fill = "royalblue", bins = 100) + 
+  geom_vline(xintercept = median_price, linetype = "dashed", color = "red") +
+  annotate("text", x = median_price - 300000, y = 750, color = "red",
+  label = glue("Median Price
+               ₹ {format_indian(median_price)}/-")) + 
+  geom_vline(xintercept = mean_price, linetype = "dashed", color = "blue") +
+  annotate("text", x = mean_price + 1E6, y = 750, color = "blue",
+  label = glue("Average Price
+               ₹ {format_indian(mean_price)}/-")) + 
+  annotate("text", x = min_price + 9*1E4, y = 250,
+  label = glue("Min. Price
+               ₹ {format_indian(min_price)}/-")) + 
+  annotate("text", x = max_price - 2*1E7, y = 250,
+  label = glue("Max. Price
+               ₹ {format_indian(max_price)}/-")) + 
+  scale_x_log10() + 
+  coord_cartesian(ylim = c(0, 900), expand = FALSE) +
+  labs(title = "Most cars are priced around 5-7 Lakhs!",
+       subtitle = "Available used cars by price between May 2024 till Sep 2024",
+       y = "Number of Used Cars",
+       x = "Listing Price (in ₹) [Log10 Scale]") + 
   theme_minimal() +
   theme(plot.title.position = "plot",
         plot.title = element_text(face = "bold", size = 20, color = "royalblue"),

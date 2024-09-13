@@ -44,7 +44,7 @@ We have 2 CSV files in the **04_CarDetailsConsolidated** which we will ingest.
 
 ## Ingestion
 
-First we load the required R libraries and create a utility function `f`
+First we load the required R libraries and create two utility function `f` and `format_indian`
 
 ```{r}
 #| label: Load Libraries
@@ -56,9 +56,9 @@ library(lubridate)  # To manage dates and times
 library(janitor)    # To ensure consistent naming and other utilities
 library(glue)       # To enable fancy printing
 
-f <- function(x) { print(glue(x))}
+f <- function(x) { print(glue(x))} # quick printing
 
-format_indian <- function(x) {
+format_indian <- function(x) { #   #,##,##,### format
   x_str <- as.character(x)
   rev_x_str <- rev(strsplit(x_str, "")[[1]])
   first_three <- c(rev_x_str[1:3],",")
@@ -742,3 +742,261 @@ ggplot(usedcars) +
         legend.position = "none",
         axis.line.y = element_blank())
 ```
+
+## fitnessUpto
+
+Every car gets a fitness certificate which is valid for 15 years. After the fitness certificate is expired, a new one has to be issued which is an expensive and time-consuming activity.
+
+
+Car24 has `r nrow(cars24[!is.na(cars24$fitnessUpto), ])` rows with  `fitnessUpto` column whereas Carwale has `r nrow(carwale[!is.na(carwale$fitnessUpto), ])` rows with valid `fitnessUpto` values.
+
+### Observations
+
+-   Even though Carwale has fewer records, it has more variation in terms of `make` of the used cars.
+-   A few `make` values like KIA, Maruti Suzuki need to be made similar to the corresponding values in Cars24 dataset.
+
+### Data Cleaning
+
+No data cleaning is needed
+
+A quick look at the frequency of `fitnessUpto` values
+
+```{r}
+#| label: fitnessUpto 
+#| fig-cap: Car Fitness Validity
+#| echo: false
+usedcars |> mutate(Valid = year(fitnessUpto) - 2024) |> 
+  count(Valid, sort = TRUE) |> 
+  mutate(Valid = if_else(is.na(Valid),-1,Valid)) |> 
+  slice_head(n=20) |>  
+ggplot() + 
+  geom_col(aes(x = Valid, y = n, fill = n)) +
+  geom_text(aes(x = Valid, y = n, label = n), size = 3, nudge_y = 100) + 
+  annotate("text", x = 3, y = 4000, label = "Carwale does not provide Fitness info") +
+  labs(title = "Most cars have adequate validity!",
+       subtitle = "Fitness validity of used cars between May 2024 till Sep 2024",
+       y = "Number of Used Cars",
+       x = "Car Fitness (in Years)") + 
+  coord_cartesian(ylim = c(0, 5000), expand = FALSE) +
+  theme_minimal() +
+  theme(plot.title.position = "plot",
+        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        legend.position = "none",
+        axis.line.y = element_blank())
+```
+
+## insuranceType
+
+Car24 has `r length(unique(cars24$insuranceType))` values for `insuranceType` column whereas Carwale has `r length(unique(carwale$insuranceType))` values. They are as follows:
+
+```{r}
+unique(cars24$insuranceType)
+```
+
+```{r}
+unique(carwale$insuranceType)
+```
+
+### Observations
+
+-   Car24 does not have any cars that is not covered under insurance, unlike Carwale.
+
+
+### Data Cleaning
+
+```{r}
+#| label: insuranceType data cleaning
+usedcars <- usedcars |> 
+  mutate(insuranceType = case_match(insuranceType,
+                           "Insurance Expired" ~ "Expired",
+                           "3rd Party" ~ "Third Party",
+                           NA_character_ ~ "No Insurance",
+                           .default = insuranceType))
+```
+
+A quick look at the frequency of `insuranceType` values
+
+```{r}
+#| label: insuranceType 
+#| fig-cap: Insurance Coverage
+#| echo: false
+usedcars |> 
+  count(insuranceType, sort = TRUE) |> 
+  slice_head(n=20) |>  
+ggplot() + 
+  geom_col(aes(x = fct_reorder(insuranceType,n), y = n, fill = if_else(insuranceType %in% c("Comprehensive","Third Party", "Zero Depreciation"),"yes","no"))) +
+  geom_text(aes(x = fct_reorder(insuranceType,n), y = n, label = n), size = 3, nudge_y = 120) + 
+  labs(title = "Most used cars have insurance!",
+       subtitle = "Insurance status of used cars between May 2024 till Sep 2024",
+       y = "Number of Used Cars",
+       x = "Insurance Type") + 
+  coord_flip(ylim = c(0, 4800), expand = FALSE) + 
+  scale_fill_manual(values = c("yes" = "royalblue4", "no" = "salmon")) +
+  theme_minimal() +
+  theme(plot.title.position = "plot",
+        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        legend.position = "none",
+        axis.line.y = element_blank())
+```
+
+## duplicateKey
+
+Car24 has `r length(unique(cars24$duplicateKey))` values for `duplicateKey` column whereas Carwale has `r length(unique(carwale$duplicateKey))` values. They are as follows:
+
+```{r}
+unique(cars24$duplicateKey)
+```
+
+```{r}
+unique(carwale$duplicateKey)
+```
+
+### Observations
+
+-   Carwale does not provide `duplicateKey` availability info.
+-   Only around 40% records has non-missing value for `duplicateKey`.
+
+### Data Cleaning
+
+No data cleaning required for `duplicateKey`.
+
+A quick look at the frequency of `make` values
+
+```{r}
+#| label: duplicateKey 
+#| fig-cap: Duplicate Key Availability
+#| echo: false
+usedcars |> 
+  count(duplicateKey, sort = TRUE) |> 
+  mutate(duplicateKey = if_else(duplicateKey,"Available", "Not Available", "Don't Know" )) |> 
+ggplot() + 
+  geom_col(aes(x = fct_reorder(duplicateKey,n), y = n, fill = duplicateKey)) +
+  geom_text(aes(x = fct_reorder(duplicateKey,n), y = n, label = n), size = 3, nudge_y = 200) + 
+  labs(title = "Carwale has no duplicate key availability info",
+       subtitle = "Duplicate Key availability between May 2024 till Sep 2024",
+       y = "Number of Used Cars",
+       x = "Duplicate Key Availability") + 
+  coord_flip(ylim = c(0, 6500), expand = FALSE) +
+  scale_fill_manual(values = c("Available" = "royalblue4", 
+                               "Not Available" = "salmon",
+                               "Don't Know"  = "grey50")) +
+  theme_minimal() +
+  theme(plot.title.position = "plot",
+        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        legend.position = "none",
+        axis.line.y = element_blank())
+```
+
+## city
+
+Car24 has `r length(unique(cars24$city))` values for `city` column whereas Carwale has `r length(unique(carwale$city))` values. They are as follows:
+
+```{r}
+unique(cars24$city)
+```
+
+```{r}
+unique(carwale$city)
+```
+
+### Observations
+
+-   Even though Carwale has fewer records, it has more variation in terms of `city` of the used cars.
+-   A few `city` values like KIA, Maruti Suzuki need to be made similar to the corresponding values in Cars24 dataset.
+
+### Data Cleaning
+
+```{r}
+#| label: city data cleaning
+usedcars <- usedcars |> 
+  mutate(city = case_match(city,
+                           "Delhi" ~ "New Delhi",
+                           "Bangalore" ~ "Bengaluru",
+                           .default = city))
+```
+
+A quick look at the frequency of `city` values
+
+```{r}
+#| label: city 
+#| fig-cap: City (Available in)
+#| echo: false
+usedcars |> 
+  count(city, sort = TRUE) |> 
+  slice_head(n=20) |>  
+ggplot() + 
+  geom_col(aes(x = fct_reorder(city,n), y = n, fill = n)) +
+  geom_text(aes(x = fct_reorder(city,n), y = n, label = n), size = 3, nudge_y = 50) + 
+  labs(title = "Bengaluru leads the way!",
+       subtitle = "Top 20 cities with used cars availability between May 2024 till Sep 2024",
+       y = "Number of Available Used Cars",
+       x = element_blank()) + 
+  coord_flip(ylim = c(0, 1750), expand = FALSE) +
+  theme_minimal() +
+  theme(plot.title.position = "plot",
+        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        legend.position = "none",
+        axis.line.y = element_blank())
+```
+
+## registrationYear
+
+Car24 has `r length(unique(cars24$registrationYear))` values for `registrationYear` column whereas Carwale has `r length(unique(carwale$registrationYear))` values. They are as follows:
+
+```{r}
+sort(unique(cars24$registrationYear))
+```
+
+```{r}
+sort(unique(carwale$registrationYear))
+```
+
+### Observations
+
+-   Even though Carwale has fewer records, it has more variation in terms of `registrationYear` of the used cars.
+
+### Data Cleaning
+
+There is one car with registrationYear = 2025. This needs to be made 2024
+
+```{r}
+usedcars <- usedcars |> 
+  mutate(registrationYear = if_else(registrationYear==2025, 2024, registrationYear))
+```
+
+
+A quick look at the frequency of `registrationYear` values
+
+```{r}
+#| label: registrationYear
+#| fig-cap: Year of Registration of the Car
+#| echo: false
+
+mean_age <- mean(2024 - usedcars$registrationYear, na.rm = TRUE)
+median_age <- median(2024 - usedcars$registrationYear, na.rm = TRUE)
+
+usedcars |> 
+  count(registrationYear) |> 
+ggplot() + 
+  geom_col(aes(x = factor(registrationYear), y = n, fill = registrationYear)) +
+  geom_text(aes(x = factor(registrationYear), y = n, label = n), size = 2, nudge_y = 50) + 
+  geom_vline(xintercept = factor(2024 - median_age), color = "red", linetype="dashed") + 
+  annotate("text",x = factor(2022 - median_age), y = 1400, label = "Median Age", color = "red") +
+  annotate("text",x = factor(2022), y = 3000, label = "Carwale does not provide
+  Registration year info") +
+  labs(title = "Most used cars are 5-7 years olf registrations",
+       subtitle = "Year-wise availability between May 2024 till Sep 2024",
+       y = "Number of Used Cars",
+       x = "Year") + 
+  theme_minimal() +
+  theme(plot.title.position = "plot",
+        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        legend.position = "none",
+        axis.line.y = element_blank()) 
+```
+
+
+
+
+
+

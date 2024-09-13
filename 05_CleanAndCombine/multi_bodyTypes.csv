@@ -1,0 +1,144 @@
+make,lmodel,correctmodel,correctbodyType
+Audi,a3,A3,Sedan
+Audi,a6,A6,Sedan
+Audi,a8 l,A8 L,Sedan
+Audi,q3,Q3,SUV
+Audi,q5,Q5,SUV
+Audi,q7,Q7,SUV
+BMW,3 series,3 Series,Sedan
+BMW,3 series gt,3 Series GT,Sedan
+BMW,5 series,5 Series,Sedan
+BMW,6 series gt,6 Series GT,Sedan
+BMW,7 series,7 Series,Sedan
+BMW,x1,X1,SUV
+BMW,x3,X3,SUV
+BMW,x5,X5,SUV
+BMW,x7,X7,SUV
+Datsun,go,Go,Hatchback
+Datsun,go plus,Go Plus,Hatchback
+Force Motors,gurkha,Gurkha,SUV
+Ford,ecosport,EcoSport,SUV
+Ford,figo,Figo,Hatchback
+Ford,freestyle,Freestyle,Hatchback
+Honda,all new city,All New City,Sedan
+Honda,amaze,Amaze,Compact Sedan
+Honda,city,City,Sedan
+Honda,city 4th generation,City 4th Generation,Sedan
+Honda,civic,Civic,Sedan
+Honda,cr-v,CR-V,SUV
+Honda,jazz,Jazz,Hatchback
+Honda,wr-v,WR-V,Compact SUV
+Hyundai,alcazar,Alcazar,SUV
+Hyundai,aura,Aura,Compact Sedan
+Hyundai,creta,Creta,SUV
+Hyundai,elantra,Elantra,Sedan
+Hyundai,elite i20,Elite i20,Hatchback
+Hyundai,eon,Eon,Hatchback
+Hyundai,exter,Exter,Compact SUV
+Hyundai,grand i10,Grand i10,Hatchback
+Hyundai,grand i10 nios,Grand i10 Nios,Hatchback
+Hyundai,i10,i10,Hatchback
+Hyundai,i20,i20,Hatchback
+Hyundai,i20 n line,i20 N Line,Hatchback
+Hyundai,santa fe,Santa Fe,SUV
+Hyundai,tucson,Tucson,SUV
+Hyundai,venue,Venue,Compact SUV
+Hyundai,verna,Verna,Sedan
+Hyundai,xcent,Xcent,Compact Sedan
+Jeep,compass,Compass,SUV
+KIA,carens,Carens,MUV
+KIA,carnival,Carnival,MUV
+KIA,seltos,Seltos,SUV
+KIA,sonet,Sonet,Compact SUV
+Land Rover,discovery,Discovery,SUV
+Land Rover,freelander 2,Freelander 2,SUV
+Land Rover,range rover sport,Range Rover Sport,SUV
+Mahindra,bolero,Bolero,Compact SUV
+Mahindra,bolero neo,Bolero Neo,Compact SUV
+Mahindra,kuv100,Kuv100,SUV
+Mahindra,marazzo,Marazzo,MUV
+Mahindra,scorpio,Scorpio,SUV
+Mahindra,scorpio n,Scorpio N,SUV
+Mahindra,thar,Thar,SUV
+Mahindra,tuv300,TUV300,SUV
+Mahindra,xuv300,XUV300,Compact SUV
+Mahindra,xuv500,XUV500,SUV
+Mahindra,xuv700,XUV700,SUV
+Maruti,alto 800,Alto 800,Hatchback
+Maruti,alto k10,Alto K10,Hatchback
+Maruti,baleno,Baleno,Hatchback
+Maruti,brezza,Brezza,Compact SUV
+Maruti,celerio,Celerio,Hatchback
+Maruti,celerio x,Celerio X,Hatchback
+Maruti,ciaz,Ciaz,Sedan
+Maruti,dzire,Dzire,Compact Sedan
+Maruti,eeco,Eeco,Minivan
+Maruti,ertiga,Ertiga,MUV
+Maruti,ignis,Ignis,Hatchback
+Maruti,omni,Omni,Minivan
+Maruti,ritz,Ritz,Hatchback
+Maruti,s-cross,S-Cross,SUV
+Maruti,s-presso,S-Presso,Hatchback
+Maruti,swift,Swift,Hatchback
+Maruti,swift dzire,Swift Dzire,Compact Sedan
+Maruti,vitara brezza,Vitara Brezza,Compact SUV
+Maruti,wagon r,Wagon R,Hatchback
+Maruti,wagon r 1.0,Wagon R 1.0,Hatchback
+Maruti,xl6,XL6,MUV
+Mercedes-Benz,a-class,A-Class,Hatchback
+Mercedes-Benz,c-class,C-Class,Sedan
+Mercedes-Benz,e-class,E-Class,Sedan
+Mercedes-Benz,eqs,EQS,Sedan
+Mercedes-Benz,gl,GL,SUV
+Mercedes-Benz,gla,GLA,SUV
+Mercedes-Benz,glc,GLC,SUV
+Mercedes-Benz,gle,GLE,SUV
+Mercedes-Benz,gls,GLS,SUV
+MG,astor,Astor,SUV
+MG,gloster,Gloster,SUV
+MG,hector,Hector,SUV
+MG,hector plus,Hector Plus,SUV
+MINI,cooper,Cooper,Hatchback
+Mitsubishi,pajero sport,Pajero Sport,SUV
+Nissan,magnite,Magnite,Compact SUV
+Nissan,sunny,Sunny,Sedan
+Nissan,terrano,Terrano,SUV
+Porsche,cayenne,Cayenne,SUV
+Porsche,cayman,Cayman,Coupe
+Renault,duster,Duster,SUV
+Renault,kiger,Kiger,Compact SUV
+Renault,kwid,Kwid,Hatchback
+Renault,triber,Triber,MUV
+Skoda,kushaq,Kushaq,SUV
+Skoda,octavia,Octavia,Sedan
+Skoda,rapid,Rapid,Sedan
+Skoda,slavia,Slavia,Sedan
+Skoda,superb,Superb,Sedan
+Tata,altroz,Altroz,Hatchback
+Tata,harrier,Harrier,SUV
+Tata,hexa,Hexa,SUV
+Tata,nexon,Nexon,Compact SUV
+Tata,nexon ev,Nexon EV,Compact SUV
+Tata,punch,Punch,Compact SUV
+Tata,safari,Safari,SUV
+Tata,tiago ev,TIAGO EV,Hatchback
+Tata,tiago nrg,Tiago NRG,Hatchback
+Tata,tigor,Tigor,Compact Sedan
+Tata,zest,Zest,Compact Sedan
+Toyota,camry,Camry,Sedan
+Toyota,corolla altis,Corolla Altis,Sedan
+Toyota,etios,Etios,Sedan
+Toyota,etios liva,Etios Liva,Hatchback
+Toyota,fortuner,Fortuner,SUV
+Toyota,innova,Innova,SUV
+Toyota,innova crysta,Innova Crysta,MUV
+Toyota,urban cruiser,Urban Cruiser,Compact SUV
+Toyota,yaris,Yaris,Sedan
+Volkswagen,ameo,Ameo,Compact Sedan
+Volkswagen,cross polo,Cross Polo,Hatchback
+Volkswagen,polo,Polo,Hatchback
+Volkswagen,taigun,Taigun,SUV
+Volkswagen,tiguan,Tiguan,SUV
+Volkswagen,vento,Vento,Sedan
+Volkswagen,virtus,Virtus,Sedan
+Volvo,s90,S90,Sedan

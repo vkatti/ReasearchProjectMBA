@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Vishal Katti">
+<meta name="dcterms.date" content="2024-09-13">
 
 <title>Exploratory Data Analysis (EDA) for Used Cars data.</title>
 <style>
@@ -72,10 +73,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="fullcontent">
+<body>
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#table-of-figures" id="toc-table-of-figures" class="nav-link active" data-scroll-target="#table-of-figures">Table of Figures</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a>
+  <ul class="collapse">
+  <li><a href="#ingestion" id="toc-ingestion" class="nav-link" data-scroll-target="#ingestion">Ingestion</a></li>
+  <li><a href="#duplicates" id="toc-duplicates" class="nav-link" data-scroll-target="#duplicates">Duplicates</a></li>
+  <li><a href="#columns-and-data-types" id="toc-columns-and-data-types" class="nav-link" data-scroll-target="#columns-and-data-types">Columns and Data Types</a></li>
+  </ul></li>
+  <li><a href="#combined-data" id="toc-combined-data" class="nav-link" data-scroll-target="#combined-data">Combined Data</a></li>
+  <li><a href="#column-wise-analysis-and-clean-up" id="toc-column-wise-analysis-and-clean-up" class="nav-link" data-scroll-target="#column-wise-analysis-and-clean-up">Column-wise Analysis and clean-up</a>
+  <ul class="collapse">
+  <li><a href="#make" id="toc-make" class="nav-link" data-scroll-target="#make">make</a></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">model</a></li>
+  <li><a href="#variant" id="toc-variant" class="nav-link" data-scroll-target="#variant">variant</a></li>
+  <li><a href="#year" id="toc-year" class="nav-link" data-scroll-target="#year">year</a></li>
+  <li><a href="#transmission" id="toc-transmission" class="nav-link" data-scroll-target="#transmission">transmission</a></li>
+  <li><a href="#bodytype" id="toc-bodytype" class="nav-link" data-scroll-target="#bodytype">bodyType</a></li>
+  <li><a href="#fueltype" id="toc-fueltype" class="nav-link" data-scroll-target="#fueltype">fuelType</a></li>
+  <li><a href="#ownernumber" id="toc-ownernumber" class="nav-link" data-scroll-target="#ownernumber">ownerNumber</a></li>
+  <li><a href="#odometerreading" id="toc-odometerreading" class="nav-link" data-scroll-target="#odometerreading">odometerReading</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="used_cars_EDA.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -94,6 +125,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </div>
   </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 13, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -103,6 +140,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="table-of-figures" class="level1">
+<h1>Table of Figures</h1>
+<div id="figures">
+
+</div>
+</section>
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
 <p>After the web-scraping activity is completed, we will now perform exploratory data analysis on the used cars details.</p>
@@ -123,15 +166,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)      <span class="co"># To cleanly ingest the CSV files</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)      <span class="co"># To wrangle with the data</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)    <span class="co"># To efficiently work with character strings</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)  <span class="co"># To manage dates and times</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)    <span class="co"># To ensure consistent naming and other utilities</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glue)       <span class="co"># To enable fancy printing</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)    <span class="co"># to visualize the data</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x) { <span class="fu">print</span>(<span class="fu">glue</span>(x))}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)  <span class="co"># To manage dates and times</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)    <span class="co"># To ensure consistent naming and other utilities</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glue)       <span class="co"># To enable fancy printing</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x) { <span class="fu">print</span>(<span class="fu">glue</span>(x))}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Since will be cleaning and combining 2 datasets, one from <em>cars24</em> and other from <em>carwale</em>, we will perform same action twice and handle some special cases in either datasets.</p>
@@ -377,6 +417,466 @@ Total duplicates removed: 409</code></pre>
 </section>
 <section id="column-wise-analysis-and-clean-up" class="level2">
 <h2 class="anchored" data-anchor-id="column-wise-analysis-and-clean-up">Column-wise Analysis and clean-up</h2>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">names</span>(usedcars), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>make
+model
+variant
+year
+transmission
+bodyType
+fuelType
+ownerNumber
+odometerReading
+cityRto
+listingPrice
+fitnessUpto
+insuranceType
+duplicateKey
+city
+registrationYear
+registrationMonth</code></pre>
+</div>
+</div>
+<section id="make" class="level3">
+<h3 class="anchored" data-anchor-id="make">make</h3>
+<p>Car24 has 15 values for <code>make</code> column whereas Carwale has 35 values. They are as follows:</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(cars24<span class="sc">$</span>make)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Hyundai"    "Renault"    "Nissan"     "Maruti"     "Honda"     
+ [6] "Tata"       "Toyota"     "KIA"        "Mahindra"   "Datsun"    
+[11] "Skoda"      "Ford"       "Volkswagen" "MG"         "Jeep"      </code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(carwale<span class="sc">$</span>make)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Mercedes-Benz" "BMW"           "Skoda"         "Renault"      
+ [5] "Toyota"        "Kia"           "Mahindra"      "Maruti Suzuki"
+ [9] "Volvo"         "Honda"         "Ford"          "Volkswagen"   
+[13] "Land Rover"    "Hyundai"       "MG"            "Jeep"         
+[17] "Tata"          "Audi"          "Nissan"        "MINI"         
+[21] "Datsun"        "Jaguar"        "BYD"           "Porsche"      
+[25] "Lexus"         "Citroen"       "Isuzu"         "Mitsubishi"   
+[29] "Force Motors"  "Lamborghini"   "Chevrolet"     "Aston Martin" 
+[33] "Fiat"          "Ssangyong"     "Bentley"      </code></pre>
+</div>
+</div>
+<section id="observations" class="level4">
+<h4 class="anchored" data-anchor-id="observations">Observations</h4>
+<ul>
+<li>Even though Carwale has fewer records, it has more variation in terms of <code>make</code> of the used cars.</li>
+<li>A few <code>make</code> values like KIA, Maruti Suzuki need to be made similar to the corresponding values in Cars24 dataset.</li>
+</ul>
+</section>
+<section id="data-cleaning" class="level4">
+<h4 class="anchored" data-anchor-id="data-cleaning">Data Cleaning</h4>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">make =</span> <span class="fu">case_match</span>(make,</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"Kia"</span> <span class="sc">~</span> <span class="st">"KIA"</span>,</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"Maruti Suzuki"</span> <span class="sc">~</span> <span class="st">"Maruti"</span>,</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>                           <span class="at">.default =</span> make))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>A quick look at the frequency of <code>make</code> values</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="4200"></p>
+<figcaption>Car Brands (Make)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="model" class="level3">
+<h3 class="anchored" data-anchor-id="model">model</h3>
+<p>Car24 has 118 values for <code>model</code> column whereas Carwale has 552 values.</p>
+<section id="observations-1" class="level4">
+<h4 class="anchored" data-anchor-id="observations-1">Observations</h4>
+<ul>
+<li>The <code>model</code> values in Carwale includes the start and end year of the model. We can remove this to make it more consistent with Cars24 data. There are also a few corrections (Letter case related) which we will perform here.</li>
+</ul>
+</section>
+<section id="data-cleaning-1" class="level4">
+<h4 class="anchored" data-anchor-id="data-cleaning-1">Data Cleaning</h4>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">model =</span> <span class="fu">str_remove</span>(model,<span class="st">" ?</span><span class="sc">\\</span><span class="st">[.*</span><span class="sc">\\</span><span class="st">]$"</span>),</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">lmodel  =</span> <span class="fu">str_to_lower</span>(model))</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>model_bodytype_mapping <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"multi_bodyTypes.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(model_bodytype_mapping, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"make"</span>, <span class="st">"lmodel"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">model =</span> <span class="fu">if_else</span>(<span class="sc">!</span><span class="fu">is.na</span>(correctmodel), correctmodel, model),</span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">bodyType =</span> <span class="fu">if_else</span>(<span class="sc">!</span><span class="fu">is.na</span>(correctbodyType), correctbodyType, bodyType),</span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">bodyType =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(bodyType), correctbodyType, bodyType)) <span class="sc">|&gt;</span> </span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>correctmodel, <span class="sc">-</span>correctbodyType, <span class="sc">-</span>lmodel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>A quick look at the top 20 most famous car <code>model</code>s</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="4200"></p>
+<figcaption>Car Models</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="variant" class="level3">
+<h3 class="anchored" data-anchor-id="variant">variant</h3>
+<p>Car24 has 908 values for <code>variant</code> column whereas Carwale has 1523 values.</p>
+<section id="observations-2" class="level4">
+<h4 class="anchored" data-anchor-id="observations-2">Observations</h4>
+<ul>
+<li>The <code>variant</code> values in Carwale includes the start and end year of the model. We can remove this to make it more consistent with Cars24 data</li>
+<li>The <code>variant</code> value sometimes indicate the Engine Capacity, Transmission Type and Fuel Type.</li>
+</ul>
+</section>
+<section id="data-cleaning-2" class="level4">
+<h4 class="anchored" data-anchor-id="data-cleaning-2">Data Cleaning</h4>
+<p>No need for any cleaning in <code>variant</code> column.</p>
+<p>A quick look at the top 20 most famous car <code>variant</code>s</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="4200"></p>
+<figcaption>Car Variants</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="year" class="level3">
+<h3 class="anchored" data-anchor-id="year">year</h3>
+<p>Car24 has 15 values for <code>year</code> column whereas Carwale has 23 values. They are as follows:</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(<span class="fu">unique</span>(cars24<span class="sc">$</span>year))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(<span class="fu">unique</span>(carwale<span class="sc">$</span>year))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 2000 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016
+[16] 2017 2018 2019 2020 2021 2022 2023 2024</code></pre>
+</div>
+</div>
+<section id="observations-3" class="level4">
+<h4 class="anchored" data-anchor-id="observations-3">Observations</h4>
+<ul>
+<li>Even though Carwale has fewer records, it has more variation in terms of <code>year</code> of the used cars.</li>
+</ul>
+</section>
+<section id="data-cleaning-3" class="level4">
+<h4 class="anchored" data-anchor-id="data-cleaning-3">Data Cleaning</h4>
+<p>No data cleaning required for <code>year</code> column.</p>
+<p>A quick look at the frequency of <code>year</code> values</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="4200"></p>
+<figcaption>Year of the Car Model/Variant</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="transmission" class="level3">
+<h3 class="anchored" data-anchor-id="transmission">transmission</h3>
+<p>Car24 has 2 values for <code>transmission</code> column whereas Carwale has 119 values.</p>
+<section id="observations-4" class="level4">
+<h4 class="anchored" data-anchor-id="observations-4">Observations</h4>
+<ul>
+<li>Even though Carwale has fewer records, it has more variation in terms of <code>trasmission</code> of the used cars.</li>
+<li>Additional information about the type of transmission in Automatic is available in Carwale dataset but not available in Cars24.</li>
+</ul>
+</section>
+<section id="data-cleaning-4" class="level4">
+<h4 class="anchored" data-anchor-id="data-cleaning-4">Data Cleaning</h4>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">transmission =</span> <span class="fu">case_when</span>(<span class="fu">str_detect</span>(transmission, <span class="st">"Automatic|AMT"</span>) <span class="sc">~</span> <span class="st">"Automatic"</span>,</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">.default =</span> <span class="st">"Manual"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>A quick look at the frequency of <code>transmission</code> values</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="4200"></p>
+<figcaption>Car Transmission</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="bodytype" class="level3">
+<h3 class="anchored" data-anchor-id="bodytype">bodyType</h3>
+<p>Car24 has 3 values for <code>bodyType</code> column whereas Carwale has 12 values. They are as follows:</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(cars24<span class="sc">$</span>bodyType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "SUV"       "Hatchback" "Sedan"    </code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(carwale<span class="sc">$</span>bodyType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Sedan"         "SUV"           "MUV"           "Hatchback"    
+ [5] "Compact SUV"   "Compact Sedan" NA              "Coupe"        
+ [9] "Truck"         "Convertible"   "Minivan/Van"   "Minivan"      </code></pre>
+</div>
+</div>
+<section id="observations-5" class="level4">
+<h4 class="anchored" data-anchor-id="observations-5">Observations</h4>
+<ul>
+<li>There are very few <code>NA</code> values which we will impute manually.</li>
+</ul>
+</section>
+<section id="data-cleaning-5" class="level4">
+<h4 class="anchored" data-anchor-id="data-cleaning-5">Data Cleaning</h4>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bodyType =</span> <span class="fu">case_match</span>(model,</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Verito"</span> <span class="sc">~</span> <span class="st">"Compact Sedan"</span>,</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>                               <span class="fu">c</span>(<span class="st">"Accord"</span>,<span class="st">"City Hybrid eHEV"</span>) <span class="sc">~</span> <span class="st">"Sedan"</span>,</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Fiesta"</span> <span class="sc">~</span> <span class="st">"Sedan"</span>,</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Countryman"</span> <span class="sc">~</span> <span class="st">"Compact SUV"</span>,</span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>                               <span class="at">.default =</span> bodyType))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>A quick look at the frequency of <code>bodyType</code> values</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="4200"></p>
+<figcaption>Car Body Type</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="fueltype" class="level3">
+<h3 class="anchored" data-anchor-id="fueltype">fuelType</h3>
+<p>Car24 has 4 values for <code>fuelType</code> column whereas Carwale has 14 values. They are as follows:</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(cars24<span class="sc">$</span>fuelType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Petrol"   "Diesel"   "CNG"      "Electric"</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(carwale<span class="sc">$</span>fuelType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Petrol"                             "Diesel"                            
+ [3] "Mild Hybrid(Electric + Petrol)"     "Electric"                          
+ [5] "Hybrid (Electric + Petrol)"         NA                                  
+ [7] "LPG"                                "CNG"                               
+ [9] "CNG + CNG"                          "Petrol + CNG"                      
+[11] "Mild Hybrid (Electric + Diesel)"    "Plug-in Hybrid (Electric + Petrol)"
+[13] "Diesel + LPG"                       "Diesel + CNG"                      </code></pre>
+</div>
+</div>
+<section id="observations-6" class="level4">
+<h4 class="anchored" data-anchor-id="observations-6">Observations</h4>
+<ul>
+<li>Even though Carwale has fewer records, it has more variation in terms of <code>fuelType</code> of the used cars.</li>
+</ul>
+</section>
+<section id="data-cleaning-6" class="level4">
+<h4 class="anchored" data-anchor-id="data-cleaning-6">Data Cleaning</h4>
+<p>A few cars have <code>NA</code> values for fuelType column. We will use an external file to map the correct fuelType values. For the sake of simplicity, we will combine a few of these fuel types into groups.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>fueltype_mapping <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"fuelType.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="st">"correctfuelType"</span> <span class="ot">=</span> <span class="st">"fuelType"</span>) <span class="sc">|&gt;</span> <span class="fu">distinct</span>()</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(fueltype_mapping, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"make"</span>, <span class="st">"model"</span>, <span class="st">"variant"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fuelType =</span> <span class="fu">coalesce</span>(fuelType, correctfuelType),</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">fuelType =</span> <span class="fu">case_when</span>(</span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>           <span class="fu">str_detect</span>(fuelType, <span class="st">"Hybrid ?</span><span class="sc">\\</span><span class="st">(Electric"</span>) <span class="sc">~</span> <span class="st">"Electric Hybrid"</span>,</span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>           <span class="fu">str_detect</span>(fuelType, <span class="st">" </span><span class="sc">\\</span><span class="st">+ "</span>) <span class="sc">~</span> <span class="st">"Flex Fuel"</span>,</span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>           <span class="at">.default =</span> fuelType</span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>         )) <span class="sc">|&gt;</span> </span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>correctfuelType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>A quick look at the frequency of <code>fuelType</code> values</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid figure-img" width="4200"></p>
+<figcaption>Car Fuel Type</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="ownernumber" class="level3">
+<h3 class="anchored" data-anchor-id="ownernumber">ownerNumber</h3>
+<p>Car24 has 3 values for <code>ownerNumber</code> column whereas Carwale has 5 values. They are as follows:</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(cars24<span class="sc">$</span>ownerNumber)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 3</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(carwale<span class="sc">$</span>ownerNumber)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  1  2  3 NA  4</code></pre>
+</div>
+</div>
+<section id="observations-7" class="level4">
+<h4 class="anchored" data-anchor-id="observations-7">Observations</h4>
+<ul>
+<li>Even though Carwale has fewer records, it has more variation in terms of <code>ownerNumber</code> of the used cars.</li>
+<li>There are 60 missing values for <code>ownerNumber</code> column.</li>
+</ul>
+</section>
+<section id="data-cleaning-7" class="level4">
+<h4 class="anchored" data-anchor-id="data-cleaning-7">Data Cleaning</h4>
+<p>There are 60 missing values for <code>ownerNumber</code> column. We will impute them in such a way that overall proportion remains the same.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>non_missing_owners <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ownerNumber)) <span class="sc">|&gt;</span> <span class="fu">nrow</span>()</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>props <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ownerNumber)) <span class="sc">|&gt;</span> <span class="fu">summarise</span>(<span class="at">p =</span> <span class="fu">n</span>()<span class="sc">/</span>non_missing_owners, <span class="at">.by =</span> ownerNumber) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">split60 =</span> <span class="fu">round</span>(<span class="dv">60</span> <span class="sc">*</span> p))</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>na_indices <span class="ot">&lt;-</span> <span class="fu">which</span>(<span class="fu">is.na</span>(usedcars<span class="sc">$</span>ownerNumber))</span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>new_owner_numbers <span class="ot">&lt;-</span> <span class="fu">sample</span>(</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>  props<span class="sc">$</span>ownerNumber,</span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>(na_indices),</span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">replace =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">prob =</span> props<span class="sc">$</span>p <span class="sc">/</span> <span class="fu">sum</span>(props<span class="sc">$</span>p)</span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a>usedcars<span class="sc">$</span>ownerNumber[na_indices] <span class="ot">&lt;-</span> new_owner_numbers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>A quick look at the frequency of <code>ownerNumber</code> values</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid figure-img" width="4200"></p>
+<figcaption>Number of Previous Owners</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="odometerreading" class="level3">
+<h3 class="anchored" data-anchor-id="odometerreading">odometerReading</h3>
+<p><code>odometerReading</code> is the distance the used car has travelled in kilometers.</p>
+<section id="observations-8" class="level4">
+<h4 class="anchored" data-anchor-id="observations-8">Observations</h4>
+<ul>
+<li>Even though Carwale has fewer records, it has more variation in terms of <code>ownerNumber</code> of the used cars.</li>
+<li>There are 60 missing values for <code>ownerNumber</code> column.</li>
+</ul>
+</section>
+<section id="data-cleaning-8" class="level4">
+<h4 class="anchored" data-anchor-id="data-cleaning-8">Data Cleaning</h4>
+<p>There are 60 missing values for <code>ownerNumber</code> column. We will impute them in such a way that overall proportion remains the same.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>non_missing_owners <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ownerNumber)) <span class="sc">|&gt;</span> <span class="fu">nrow</span>()</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>props <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ownerNumber)) <span class="sc">|&gt;</span> <span class="fu">summarise</span>(<span class="at">p =</span> <span class="fu">n</span>()<span class="sc">/</span>non_missing_owners, <span class="at">.by =</span> ownerNumber) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">split60 =</span> <span class="fu">round</span>(<span class="dv">60</span> <span class="sc">*</span> p))</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>na_indices <span class="ot">&lt;-</span> <span class="fu">which</span>(<span class="fu">is.na</span>(usedcars<span class="sc">$</span>ownerNumber))</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>new_owner_numbers <span class="ot">&lt;-</span> <span class="fu">sample</span>(</span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>  props<span class="sc">$</span>ownerNumber,</span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>(na_indices),</span>
+<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">replace =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">prob =</span> props<span class="sc">$</span>p <span class="sc">/</span> <span class="fu">sum</span>(props<span class="sc">$</span>p)</span>
+<span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb51-13"><a href="#cb51-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-14"><a href="#cb51-14" aria-hidden="true" tabindex="-1"></a>usedcars<span class="sc">$</span>ownerNumber[na_indices] <span class="ot">&lt;-</span> new_owner_numbers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>A quick look at the frequency of <code>ownerNumber</code> values</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="used_cars_EDA_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid figure-img" width="4200"></p>
+<figcaption>Distance Travelled</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 </section>
 

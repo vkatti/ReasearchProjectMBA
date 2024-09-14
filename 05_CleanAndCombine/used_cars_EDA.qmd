@@ -1449,3 +1449,9 @@ usedcars |> filter(!is.na(duplicateKey)) |>
           plot.title.position = "plot")
 ```
 
+# Export to RDS
+
+```{r}
+saveRDS(usedcars, "usedcars.rds")
+```
+

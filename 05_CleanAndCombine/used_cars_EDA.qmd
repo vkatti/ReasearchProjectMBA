@@ -2,12 +2,12 @@
 title: "Exploratory Data Analysis (EDA) for Used Cars data."
 author: "Vishal Katti"
 date: today
+cache: true
 format: 
   html:
     theme: darkly
-    code-fold: show
+    code-fold: true
     cap-location: bottom
-    number-sections: true
     fig-numbering: true
     fig-align: center
     toc: true 
@@ -15,16 +15,6 @@ format:
     lof: true
     fig.width: 8
     fig.height: 5
-    fig-dpi: 600
-  pdf:
-    fontfamily: dejavu
-    toc: true 
-    lot: true
-    lof: true
-    fig.width: 8
-    fig.height: 5
-    cap-location: bottom
-    fig-align: center
     fig-dpi: 600
 editor: visual
 fig_caption_style: "numbered"
@@ -55,6 +45,7 @@ library(tidyverse)
 library(lubridate)  # To manage dates and times
 library(janitor)    # To ensure consistent naming and other utilities
 library(glue)       # To enable fancy printing
+library(ggtext)
 
 f <- function(x) { print(glue(x))} # quick printing
 
@@ -192,7 +183,7 @@ Let us combine the 2 datasets.
 #| label: Combine
 usedcars <- bind_rows(cars24, carwale)
 
-f("Number of Rows: {nrow(usedcars)}")
+f("Number of Rows in Combined Dataset: {nrow(usedcars)}")
 ```
 
 # Column-wise Analysis and clean-up
@@ -202,7 +193,12 @@ f("Number of Rows: {nrow(usedcars)}")
 cat(names(usedcars), sep = "\n")
 ```
 
+::: {.panel-tabset .nav-pills}
 ## make
+
+# Car Brand (Make)
+
+The make of the car refers to the name of the brand or the manufacturing company.
 
 Car24 has `r length(unique(cars24$make))` values for `make` column whereas Carwale has `r length(unique(carwale$make))` values. They are as follows:
 
@@ -214,12 +210,9 @@ unique(cars24$make)
 unique(carwale$make)
 ```
 
-### Observations
+**Data Cleaning**
 
--   Even though Carwale has fewer records, it has more variation in terms of `make` of the used cars.
--   A few `make` values like KIA, Maruti Suzuki need to be made similar to the corresponding values in Cars24 dataset.
-
-### Data Cleaning
+There are 2 different values for *Kia* and *Maruti* in Cars24 and Carwale datasets. Let us standardize them so they are considered as the same.
 
 ```{r}
 #| label: make data cleaning
@@ -230,7 +223,7 @@ usedcars <- usedcars |>
                            .default = make))
 ```
 
-A quick look at the frequency of `make` values
+**Visualization**
 
 ```{r}
 #| label: make 
@@ -254,15 +247,22 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
+**Observations**
+
+-   Even though Carwale has fewer records, it has more variation in terms of `make` of the used cars.
+-   Maruti and Hyundai are the most abundant used cars.
+
 ## model
 
-Car24 has `r length(unique(cars24$model))` values for `model` column whereas Carwale has `r length(unique(carwale$model))` values.
+# Model
 
-### Observations
+Every car manufacturer produces more than 1 model of the car. Each model has different attributes catering to different audiences and thus priced accordingly.
 
--   The `model` values in Carwale includes the start and end year of the model. We can remove this to make it more consistent with Cars24 data. There are also a few corrections (Letter case related) which we will perform here.
+Car24 has `r length(unique(cars24$model))` unique `model`s column whereas Carwale has `r length(unique(carwale$model))` unique `model`s.
 
-### Data Cleaning
+**Data Cleaning**
+
+The `model` values in Carwale includes the start and end year of the model. We can remove this to make it more consistent with Cars24 data. There are also a few corrections (Letter case related) which we will perform here.
 
 ```{r}
 usedcars <- usedcars |> 
@@ -280,7 +280,7 @@ usedcars <- usedcars |>
 
 ```
 
-A quick look at the top 20 most famous car `model`s
+**Visualization**
 
 ```{r}
 #| label: model
@@ -304,20 +304,23 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
+**Observations**
+
+-   Maruti Suzuki Baleno and Hyundai Grand i10 are most abundant model.
+
 ## variant
 
-Car24 has `r length(unique(cars24$variant))` values for `variant` column whereas Carwale has `r length(unique(carwale$variant))` values.
+# Variant
 
-### Observations
+Every model can have multiple `variant`s, based on fuel type, transmission, internal features or engine capacity.
 
--   The `variant` values in Carwale includes the start and end year of the model. We can remove this to make it more consistent with Cars24 data
--   The `variant` value sometimes indicate the Engine Capacity, Transmission Type and Fuel Type.
+Car24 has `r length(unique(cars24$variant))` unique `variant` values whereas Carwale has `r length(unique(carwale$variant))`.
 
-### Data Cleaning
+**Data Cleaning**
 
-No need for any cleaning in `variant` column.
+The `variant` values sometimes contain additional info like fuel type, gearbox type (transmission), engine capacity. However, this information is already available in other columns. Hence we not perform any data cleaning in `variant` column.
 
-A quick look at the top 20 most famous car `variant`s
+**Visualization**
 
 ```{r}
 #| label: variant
@@ -342,27 +345,23 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
+**Observations**
+
+-   Maruti, Hyundai and Honda cars are most abundant across both the platforms.
+
 ## year
 
-Car24 has `r length(unique(cars24$year))` values for `year` column whereas Carwale has `r length(unique(carwale$year))` values. They are as follows:
+# Year
 
-```{r}
-sort(unique(cars24$year))
-```
+This is the year when this model was launched.
 
-```{r}
-sort(unique(carwale$year))
-```
+Car24 has listed car models from `r min(cars24$year)` whereas Carwale has car models from `r min(carwale$year)`.
 
-### Observations
-
--   Even though Carwale has fewer records, it has more variation in terms of `year` of the used cars.
-
-### Data Cleaning
+**Data Cleaning**
 
 No data cleaning required for `year` column.
 
-A quick look at the frequency of `year` values
+**Visualization**
 
 ```{r}
 #| label: year
@@ -390,16 +389,22 @@ ggplot() +
         axis.line.y = element_blank()) 
 ```
 
+**Observations**
+
+-   Even though Carwale has fewer records, it has more variation in terms of `year` of the used cars.
+-   Most available cars are 5-7 year old models.
+
 ## transmission
 
-Car24 has `r length(unique(cars24$transmission))` values for `transmission` column whereas Carwale has `r length(unique(carwale$transmission))` values.
+# Transmission (aka Gear Type)
 
-### Observations
+This basically indicates what type of gear system the car has. It could have Manual gears, Clutchless Manual gears, AMT, AT, CVT, DCT or others. Each of these types have different technology and each have different fuel efficiency, performance and pricing.
 
--   Even though Carwale has fewer records, it has more variation in terms of `trasmission` of the used cars.
--   Additional information about the type of transmission in Automatic is available in Carwale dataset but not available in Cars24.
+Car24 has `r length(unique(cars24$transmission))` different types for `transmission` whereas Carwale has `r length(unique(carwale$transmission))` values.
 
-### Data Cleaning
+**Data Cleaning**
+
+To reduce the number of variations, we will club few values under common name.
 
 ```{r}
 usedcars <- usedcars |> 
@@ -407,7 +412,7 @@ usedcars <- usedcars |>
                                   .default = "Manual"))
 ```
 
-A quick look at the frequency of `transmission` values
+**Visualization**
 
 ```{r}
 #| label: transmission
@@ -430,23 +435,34 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
+**Observations**
+
+-   Even though Carwale has fewer records, it has more variation in terms of `trasmission` of the used cars.
+-   Additional information about the type of transmission in Automatic is available in Carwale dataset but not available in Cars24.
+
+
 ## bodyType
+
+# Body Type
+
+This indicate what type of car is it. Some body types are HatchBack, Sedan, SUV, MUV, Compact SUV etc.
 
 Car24 has `r length(unique(cars24$bodyType))` values for `bodyType` column whereas Carwale has `r length(unique(carwale$bodyType))` values. They are as follows:
 
+Cars24 Body types:
 ```{r}
 unique(cars24$bodyType)
 ```
 
+Carwale Body types:
 ```{r}
 unique(carwale$bodyType)
 ```
 
-### Observations
 
--   There are very few `NA` values which we will impute manually.
+**Data Cleaning**
 
-### Data Cleaning
+There are very few `NA` values which we will impute manually. After some careful examination, we noticed that in some cases, the same make-model-variant combination has mutiple bodytypes which is incorrect. So we created a CSV file with correct body types and used it as a reference to correct the body types. This was done in the Data Cleaning section of the `model` column. A few others were imputed manually below.
 
 ```{r}
 usedcars <- usedcars |> 
@@ -458,7 +474,7 @@ usedcars <- usedcars |>
                                .default = bodyType))
 ```
 
-A quick look at the frequency of `bodyType` values
+**Visualization**
 
 ```{r}
 #| label: bodyType
@@ -482,7 +498,17 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
+**Observations**
+
+-   Hatchbacks are most abundant body type acros both platforms.
+
+
+
 ## fuelType
+
+# Fuel Type
+
+This indicates which fuel is used by the car.
 
 Car24 has `r length(unique(cars24$fuelType))` values for `fuelType` column whereas Carwale has `r length(unique(carwale$fuelType))` values. They are as follows:
 
@@ -494,11 +520,7 @@ unique(cars24$fuelType)
 unique(carwale$fuelType)
 ```
 
-### Observations
-
--   Even though Carwale has fewer records, it has more variation in terms of `fuelType` of the used cars.
-
-### Data Cleaning
+**Data Cleaning**
 
 A few cars have `NA` values for fuelType column. We will use an external file to map the correct fuelType values. For the sake of simplicity, we will combine a few of these fuel types into groups.
 
@@ -517,7 +539,7 @@ usedcars <- usedcars |>
   
 ```
 
-A quick look at the frequency of `fuelType` values
+**Visualization**
 
 ```{r}
 #| label: fuelType
@@ -541,24 +563,20 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
+**Observations**
+
+-   Even though Carwale has fewer records, it has more variation in terms of `fuelType` of the used cars.
+-   Petrol and Diesel cars are still quite abundant across both platforms.
+
+
+
 ## ownerNumber
 
-Car24 has `r length(unique(cars24$ownerNumber))` values for `ownerNumber` column whereas Carwale has `r length(unique(carwale$ownerNumber))` values. They are as follows:
+# Owner Number
 
-```{r}
-unique(cars24$ownerNumber)
-```
+This is the number of previous owners for given car.
 
-```{r}
-unique(carwale$ownerNumber)
-```
-
-### Observations
-
--   Even though Carwale has fewer records, it has more variation in terms of `ownerNumber` of the used cars.
--   There are 60 missing values for `ownerNumber` column.
-
-### Data Cleaning
+**Data Cleaning**
 
 There are 60 missing values for `ownerNumber` column. We will impute them in such a way that overall proportion remains the same.
 
@@ -569,6 +587,7 @@ props <- usedcars |> filter(!is.na(ownerNumber)) |> summarise(p = n()/non_missin
 
 na_indices <- which(is.na(usedcars$ownerNumber))
 
+set.seed(42)
 new_owner_numbers <- sample(
   props$ownerNumber,
   length(na_indices),
@@ -602,19 +621,25 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
+**Observations**
+
+-   There were 60 missing values for `ownerNumber` column which we imputed to maintain the overall proportion.
+-   Most used cars have only 1 previous owner.
+
+
+
+
 ## odometerReading
+
+# Odometer Reading
 
 `odometerReading` is the distance the used car has travelled in kilometers.
 
-### Observations
-
--   TODO
-
-### Data Cleaning
+**Data Cleaning**
 
 No data cleaning needed for `odometerReading` column.
 
-A quick look at the frequency of `odometerReading` values
+**Visualization**
 
 ```{r}
 #| label: odometerReading
@@ -647,16 +672,19 @@ ggplot(usedcars) +
         axis.line.y = element_blank())
 ```
 
+**Observations**
+
+-   Most used cars have travelled less than 1 lakh kilometers.
+
+
+
 ## cityRto
 
-Car24 has `r length(unique(cars24$cityRto))` values for `cityRto` column whereas Carwale has `r length(unique(carwale$cityRto))` values.
+# City RTO
 
-### Observations
+This is the RTO label of the car's registration office.
 
--   The column `cityRto` in the cars24 dataset displays the RTO number where the car was registered. The same column in carwale dataset displays the actual registration number.
--   There are 125 used cars without a `cityRto` value.
-
-### Data Cleaning
+**Data Cleaning**
 
 We can extract only the first 4 characters from the `cityRto` column to make the values uniform across the full dataset
 
@@ -666,7 +694,7 @@ usedcars <- usedcars |>
   mutate(cityRto = str_sub(cityRto,1,4))
 ```
 
-A quick look at the frequency of `cityRto` values
+**Visualization**
 
 ```{r}
 #| label: cityRto 
@@ -690,15 +718,27 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
+**Observations**
+
+-   The column `cityRto` in the cars24 dataset displays the RTO number where the car was registered. The same column in carwale dataset displays the actual registration number.
+-   There are 125 used cars without a `cityRto` value.
+-   Pune, Maharashtra-registered MH12 cars followed by Ahmedabad-Gujarat GJ01 are most abundant across both platforms.
+-   Cars with other-state registrations are also available across all regions.
+
+
+
+
 ## listingPrice
+
+# Listing Price
 
 `listingPrice` is the amount in Indian Rupees (₹) quoted for the used car.
 
-### Observations
+**Observations**
 
 -   TODO
 
-### Data Cleaning
+**Data Cleaning**
 
 No data cleaning needed for `listingPrice` column.
 
@@ -745,21 +785,18 @@ ggplot(usedcars) +
 
 ## fitnessUpto
 
-Every car gets a fitness certificate which is valid for 15 years. After the fitness certificate is expired, a new one has to be issued which is an expensive and time-consuming activity.
+# Fitness Upto
+
+This is the end date of a car's Fitness Certificate. Every car gets a fitness certificate which is valid for 15 years. After the fitness certificate expires, a new one has to be issued which is an expensive and time-consuming activity.
+
+Car24 has `r nrow(cars24[!is.na(cars24$fitnessUpto), ])` cars with `fitnessUpto` dates whereas Carwale has `r nrow(carwale[!is.na(carwale$fitnessUpto), ])` cars with valid `fitnessUpto` dates.
 
 
-Car24 has `r nrow(cars24[!is.na(cars24$fitnessUpto), ])` rows with  `fitnessUpto` column whereas Carwale has `r nrow(carwale[!is.na(carwale$fitnessUpto), ])` rows with valid `fitnessUpto` values.
+**Data Cleaning**
 
-### Observations
+No data cleaning is needed. The datatype conversion was handled earlier in this document.
 
--   Even though Carwale has fewer records, it has more variation in terms of `make` of the used cars.
--   A few `make` values like KIA, Maruti Suzuki need to be made similar to the corresponding values in Cars24 dataset.
-
-### Data Cleaning
-
-No data cleaning is needed
-
-A quick look at the frequency of `fitnessUpto` values
+**Visualization**
 
 ```{r}
 #| label: fitnessUpto 
@@ -785,7 +822,19 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
+
+**Observations**
+
+-   Carwale does not provide Fitness Certificate info upfront.
+-   Most cars have adequate Fitness Validity.
+
+
+
 ## insuranceType
+
+# Insurance Type
+
+The type of Insurance the car is covered under. Some cars which may have been listed for more than a year may have an expired Insurance while some may not insurance at all.
 
 Car24 has `r length(unique(cars24$insuranceType))` values for `insuranceType` column whereas Carwale has `r length(unique(carwale$insuranceType))` values. They are as follows:
 
@@ -797,12 +846,11 @@ unique(cars24$insuranceType)
 unique(carwale$insuranceType)
 ```
 
-### Observations
-
--   Car24 does not have any cars that is not covered under insurance, unlike Carwale.
 
 
-### Data Cleaning
+**Data Cleaning**
+
+Let us standardize the values so we can club them. Here we make this assumption that cars with missing Insurance Type do not have Insurance.
 
 ```{r}
 #| label: insuranceType data cleaning
@@ -814,7 +862,7 @@ usedcars <- usedcars |>
                            .default = insuranceType))
 ```
 
-A quick look at the frequency of `insuranceType` values
+**Visualization**
 
 ```{r}
 #| label: insuranceType 
@@ -839,7 +887,18 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
+**Observations**
+
+-   Car24 does not have any cars that is not covered under insurance, unlike Carwale.
+-   Most of the listed cars have insurance coverage.
+
+
+
 ## duplicateKey
+
+# Duplicate Key
+
+This is an indicator if a duplicate key is available. Some newer models tend to have Electronic Keys which are quite expensive (approx ₹10K or more) and the availability of duplicate keys is a big plus!
 
 Car24 has `r length(unique(cars24$duplicateKey))` values for `duplicateKey` column whereas Carwale has `r length(unique(carwale$duplicateKey))` values. They are as follows:
 
@@ -851,16 +910,11 @@ unique(cars24$duplicateKey)
 unique(carwale$duplicateKey)
 ```
 
-### Observations
-
--   Carwale does not provide `duplicateKey` availability info.
--   Only around 40% records has non-missing value for `duplicateKey`.
-
-### Data Cleaning
+**Data Cleaning**
 
 No data cleaning required for `duplicateKey`.
 
-A quick look at the frequency of `make` values
+**Visualization**
 
 ```{r}
 #| label: duplicateKey 
@@ -887,9 +941,19 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
+**Observations**
+
+-   Carwale does not provide `duplicateKey` availability info.
+-   Only around 36% records have duplicate keys. Unfortunately, we have too many missing records for this indicator to be considered important.
+
+
 ## city
 
-Car24 has `r length(unique(cars24$city))` values for `city` column whereas Carwale has `r length(unique(carwale$city))` values. They are as follows:
+# City
+
+This is the city or location where the car has been listed and is available for sale.
+
+Car24 caters to `r length(unique(cars24$city))` cities/regions whereas Carwale caters to `r length(unique(carwale$city))`. They are as follows:
 
 ```{r}
 unique(cars24$city)
@@ -899,12 +963,9 @@ unique(cars24$city)
 unique(carwale$city)
 ```
 
-### Observations
+**Data Cleaning**
 
--   Even though Carwale has fewer records, it has more variation in terms of `city` of the used cars.
--   A few `city` values like KIA, Maruti Suzuki need to be made similar to the corresponding values in Cars24 dataset.
-
-### Data Cleaning
+We will combined `Delhi` and `New Delhi` under same group and rename `Bangalore` to `Bengaluru`.
 
 ```{r}
 #| label: city data cleaning
@@ -915,7 +976,7 @@ usedcars <- usedcars |>
                            .default = city))
 ```
 
-A quick look at the frequency of `city` values
+**Visualization**
 
 ```{r}
 #| label: city 
@@ -939,31 +1000,25 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
+**Observations**
+
+-   Bengaluru has the maximum number of used cars available.
+
+
 ## registrationYear
 
-Car24 has `r length(unique(cars24$registrationYear))` values for `registrationYear` column whereas Carwale has `r length(unique(carwale$registrationYear))` values. They are as follows:
+# Registration Year
 
-```{r}
-sort(unique(cars24$registrationYear))
-```
+The year when the vehicle was first registered.
 
-```{r}
-sort(unique(carwale$registrationYear))
-```
+**Data Cleaning**
 
-### Observations
-
--   Even though Carwale has fewer records, it has more variation in terms of `registrationYear` of the used cars.
-
-### Data Cleaning
-
-There is one car with registrationYear = 2025. This needs to be made 2024
+There is one car with `registrationYear` = 2025. This needs to be made 2024
 
 ```{r}
 usedcars <- usedcars |> 
   mutate(registrationYear = if_else(registrationYear==2025, 2024, registrationYear))
 ```
-
 
 A quick look at the frequency of `registrationYear` values
 
@@ -984,7 +1039,7 @@ ggplot() +
   annotate("text",x = factor(2022 - median_age), y = 1400, label = "Median Age", color = "red") +
   annotate("text",x = factor(2022), y = 3000, label = "Carwale does not provide
   Registration year info") +
-  labs(title = "Most used cars are 5-7 years olf registrations",
+  labs(title = "Most used cars are 5-7 years old registrations",
        subtitle = "Year-wise availability between May 2024 till Sep 2024",
        y = "Number of Used Cars",
        x = "Year") + 
@@ -995,8 +1050,136 @@ ggplot() +
         axis.line.y = element_blank()) 
 ```
 
+**Observations**
+
+-   Most used cars were registered 5-7 years ago.
+-   Carwale does not provide info about Registration year upfront.
 
 
+:::
 
+# Effects on Price
 
+## Make
 
+::: panel-tabset
+## Ordered By Min Price
+
+```{r}
+#| label: make-minPrice
+#| fig-asp: 1.5
+#| echo: false
+usedcars |> 
+  summarise(minPrice = min(listingPrice),
+            maxPrice = max(listingPrice),
+            medianPrice = median(listingPrice),
+            meanPrice = mean(listingPrice),
+            n = n(),
+            .by = "make") |> 
+  ggplot(aes(x = fct_reorder(make,minPrice))) +
+  geom_segment(aes(y = minPrice, yend = maxPrice)) +
+  geom_point(aes(y = minPrice), color = "red", size=5) +
+  geom_point(aes(y = maxPrice), color = "green", size=4) +
+  geom_point(aes(y = medianPrice), color = "blue", size=3) +
+  geom_point(aes(y = meanPrice), color = "salmon", size=2) + 
+  labs(title = "Car Brands with their <b><span style='color:red'>Min</span></b>, <b><span style='color:blue'>Median</span></b>, <b><span style='color:salmon'>Mean</span></b> and <b><span style='color:green'>Max</span></b> listing prices",
+       subtitle = "Ordered by Min listing price.",
+       x = "Car Brands (Make)",
+       y  = "Listing Price (in ₹)") +
+  scale_y_log10() +
+  coord_flip() +
+  theme_minimal() +
+    theme(title = element_markdown(),
+          plot.title.position = "plot")
+```
+
+## Median Price
+
+```{r}
+#| label: make-medianPrice
+#| fig-asp: 1.5
+#| echo: false
+usedcars |> 
+  summarise(minPrice = min(listingPrice),
+            maxPrice = max(listingPrice),
+            medianPrice = median(listingPrice),
+            meanPrice = mean(listingPrice),
+            n = n(),
+            .by = "make") |> 
+  ggplot(aes(x = fct_reorder(make,medianPrice))) +
+  geom_segment(aes(y = minPrice, yend = maxPrice)) +
+  geom_point(aes(y = minPrice), color = "red", size=5) +
+  geom_point(aes(y = maxPrice), color = "green", size=4) +
+  geom_point(aes(y = medianPrice), color = "blue", size=3) +
+  geom_point(aes(y = meanPrice), color = "salmon", size=2) +
+  labs(title = "Car Brands with their <b><span style='color:red'>Min</span></b>, <b><span style='color:blue'>Median</span></b>, <b><span style='color:salmon'>Mean</span></b> and <b><span style='color:green'>Max</span></b> listing prices",
+       subtitle = "Ordered by Median listing price.",
+       x = "Car Brands (Make)",
+       y  = "Listing Price (in ₹)") +
+  scale_y_log10() +
+  coord_flip() +
+  theme_minimal() +
+    theme(title = element_markdown(),
+          plot.title.position = "plot")
+```
+
+## Mean Price
+
+```{r}
+#| label: make-meanPrice
+#| fig-asp: 1.5
+#| echo: false
+usedcars |> 
+  summarise(minPrice = min(listingPrice),
+            maxPrice = max(listingPrice),
+            medianPrice = median(listingPrice),
+            meanPrice = mean(listingPrice),
+            n = n(),
+            .by = "make") |> 
+  ggplot(aes(x = fct_reorder(make,meanPrice))) +
+  geom_segment(aes(y = minPrice, yend = maxPrice)) +
+  geom_point(aes(y = minPrice), color = "red", size=5) +
+  geom_point(aes(y = maxPrice), color = "green", size=4) +
+  geom_point(aes(y = medianPrice), color = "blue", size=3) +
+  geom_point(aes(y = meanPrice), color = "salmon", size=2) +
+  labs(title = "Car Brands with their <b><span style='color:red'>Min</span></b>, <b><span style='color:blue'>Median</span></b>, <b><span style='color:salmon'>Mean</span></b> and <b><span style='color:green'>Max</span></b> listing prices",
+       subtitle = "Ordered by Mean listing price.",
+       x = "Car Brands (Make)",
+       y  = "Listing Price (in ₹)") +
+  scale_y_log10() +
+  coord_flip() +
+  theme_minimal() +
+    theme(title = element_markdown(),
+          plot.title.position = "plot")
+```
+
+## Max Price
+
+```{r}
+#| label: make-maxPrice
+#| fig-asp: 1.5
+#| echo: false
+usedcars |> 
+  summarise(minPrice = min(listingPrice),
+            maxPrice = max(listingPrice),
+            medianPrice = median(listingPrice),
+            meanPrice = mean(listingPrice),
+            n = n(),
+            .by = "make") |> 
+  ggplot(aes(x = fct_reorder(make,maxPrice))) +
+  geom_segment(aes(y = minPrice, yend = maxPrice)) +
+  geom_point(aes(y = minPrice), color = "red", size=5) +
+  geom_point(aes(y = maxPrice), color = "green", size=4) +
+  geom_point(aes(y = medianPrice), color = "blue", size=3) +
+  geom_point(aes(y = meanPrice), color = "salmon", size=2) +
+  labs(title = "Car Brands with their <b><span style='color:red'>Min</span></b>, <b><span style='color:blue'>Median</span></b>, <b><span style='color:salmon'>Mean</span></b> and <b><span style='color:green'>Max</span></b> listing prices",
+       subtitle = "Ordered by Max listing price.",
+       x = "Car Brands (Make)",
+       y  = "Listing Price (in ₹)") +
+  scale_y_log10() +
+  coord_flip() +
+  theme_minimal() +
+    theme(title = element_markdown(),
+          plot.title.position = "plot")
+```
+:::

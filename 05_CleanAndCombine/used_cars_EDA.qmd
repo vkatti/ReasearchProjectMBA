@@ -242,7 +242,7 @@ ggplot() +
   coord_flip(ylim = c(0, 3100), expand = FALSE) +
   theme_minimal() +
   theme(plot.title.position = "plot",
-        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
         legend.position = "none",
         axis.line.y = element_blank())
 ```
@@ -299,7 +299,7 @@ ggplot() +
   coord_flip(ylim = c(0, 510), expand = FALSE) +
   theme_minimal() +
   theme(plot.title.position = "plot",
-        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
         legend.position = "none",
         axis.line.y = element_blank())
 ```
@@ -340,7 +340,7 @@ ggplot() +
   coord_flip(ylim = c(0, 150), expand = TRUE) +
   theme_minimal() +
   theme(plot.title.position = "plot",
-        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
         legend.position = "none",
         axis.line.y = element_blank())
 ```
@@ -384,7 +384,7 @@ ggplot() +
        x = "Year") + 
   theme_minimal() +
   theme(plot.title.position = "plot",
-        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
         legend.position = "none",
         axis.line.y = element_blank()) 
 ```
@@ -493,7 +493,7 @@ ggplot() +
   coord_flip(ylim = c(0, 4800), expand = FALSE) +
   theme_minimal() +
   theme(plot.title.position = "plot",
-        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
         legend.position = "none",
         axis.line.y = element_blank())
 ```
@@ -558,7 +558,7 @@ ggplot() +
   coord_flip(ylim = c(0, 8200), expand = FALSE) +
   theme_minimal() +
   theme(plot.title.position = "plot",
-        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
         legend.position = "none",
         axis.line.y = element_blank())
 ```
@@ -616,7 +616,7 @@ ggplot() +
   coord_cartesian(ylim = c(0, 8200), expand = FALSE) +
   theme_minimal() +
   theme(plot.title.position = "plot",
-        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
         legend.position = "none",
         axis.line.y = element_blank())
 ```
@@ -667,7 +667,7 @@ ggplot(usedcars) +
        x = "Odometer Reading (in Kms [Log 10 Scale])") + 
   theme_minimal() +
   theme(plot.title.position = "plot",
-        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
         legend.position = "none",
         axis.line.y = element_blank())
 ```
@@ -713,7 +713,7 @@ ggplot() +
   coord_flip(ylim = c(0, 510), expand = FALSE) +
   theme_minimal() +
   theme(plot.title.position = "plot",
-        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
         legend.position = "none",
         axis.line.y = element_blank())
 ```
@@ -778,7 +778,7 @@ ggplot(usedcars) +
        x = "Listing Price (in ₹) [Log10 Scale]") + 
   theme_minimal() +
   theme(plot.title.position = "plot",
-        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
         legend.position = "none",
         axis.line.y = element_blank())
 ```
@@ -817,7 +817,7 @@ ggplot() +
   coord_cartesian(ylim = c(0, 5000), expand = FALSE) +
   theme_minimal() +
   theme(plot.title.position = "plot",
-        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
         legend.position = "none",
         axis.line.y = element_blank())
 ```
@@ -882,7 +882,7 @@ ggplot() +
   scale_fill_manual(values = c("yes" = "royalblue4", "no" = "salmon")) +
   theme_minimal() +
   theme(plot.title.position = "plot",
-        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
         legend.position = "none",
         axis.line.y = element_blank())
 ```
@@ -936,7 +936,7 @@ ggplot() +
                                "Don't Know"  = "grey50")) +
   theme_minimal() +
   theme(plot.title.position = "plot",
-        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
         legend.position = "none",
         axis.line.y = element_blank())
 ```
@@ -995,7 +995,7 @@ ggplot() +
   coord_flip(ylim = c(0, 1750), expand = FALSE) +
   theme_minimal() +
   theme(plot.title.position = "plot",
-        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
         legend.position = "none",
         axis.line.y = element_blank())
 ```
@@ -1045,7 +1045,7 @@ ggplot() +
        x = "Year") + 
   theme_minimal() +
   theme(plot.title.position = "plot",
-        plot.title = element_text(face = "bold", size = 20, color = "royalblue"),
+        plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
         legend.position = "none",
         axis.line.y = element_blank()) 
 ```
@@ -1183,3 +1183,269 @@ usedcars |>
           plot.title.position = "plot")
 ```
 :::
+
+
+
+## Year
+
+
+```{r}
+#| label: year-listingPrice
+#| echo: false
+
+
+usedcars |> 
+  summarise(minPrice = min(listingPrice),
+            maxPrice = max(listingPrice),
+            medianPrice = median(listingPrice),
+            meanPrice = mean(listingPrice),
+            n = n(),
+            .by = "year") |> 
+  ggplot(aes(x = factor(year))) +
+  geom_segment(aes(y = minPrice, yend = maxPrice)) +
+  geom_point(aes(y = minPrice), color = "red", size=5) +
+  geom_point(aes(y = maxPrice), color = "green", size=4) +
+  geom_point(aes(y = medianPrice), color = "blue", size=3) +
+  geom_point(aes(y = meanPrice), color = "salmon", size=2) +
+  labs(title = "Newer Models have highest listing prices",
+       subtitle = "Year with their <b><span style='color:red'>Min</span></b>, <b><span style='color:blue'>Median</span></b>, <b><span style='color:salmon'>Mean</span></b> and <b><span style='color:green'>Max</span></b> listing prices",
+       x = "Year",
+       y  = "Listing Price (in ₹)") +
+  scale_y_log10() +
+  coord_flip() +
+  theme_minimal() +
+    theme(plot.subtitle = element_markdown(),
+          plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
+          plot.title.position = "plot")
+```
+
+
+## Transmission
+
+
+```{r}
+#| label: transmission-listingPrice
+#| echo: false
+
+
+usedcars |> 
+  summarise(minPrice = min(listingPrice),
+            maxPrice = max(listingPrice),
+            medianPrice = median(listingPrice),
+            meanPrice = mean(listingPrice),
+            n = n(),
+            .by = "transmission") |> 
+  ggplot(aes(x = factor(transmission))) +
+  geom_segment(aes(y = minPrice, yend = maxPrice)) +
+  geom_point(aes(y = minPrice), color = "red", size=5) +
+  geom_point(aes(y = maxPrice), color = "green", size=4) +
+  geom_point(aes(y = medianPrice), color = "blue", size=3) +
+  geom_point(aes(y = meanPrice), color = "salmon", size=2) +
+  labs(title = "Cars with Automatic Transmissions cost more!",
+       subtitle = "Transmission with their <b><span style='color:red'>Min</span></b>, <b><span style='color:blue'>Median</span></b>, <b><span style='color:salmon'>Mean</span></b> and <b><span style='color:green'>Max</span></b> listing prices",
+       x = element_blank(),
+       y  = "Listing Price (in ₹)") +
+  scale_y_log10() +
+  coord_flip() +
+  theme_minimal() +
+    theme(plot.subtitle = element_markdown(),
+          plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
+          plot.title.position = "plot")
+```
+
+
+## Body Type
+
+
+```{r}
+#| label: bodyType-listingPrice
+#| echo: false
+
+
+usedcars |> 
+  summarise(minPrice = min(listingPrice),
+            maxPrice = max(listingPrice),
+            medianPrice = median(listingPrice),
+            meanPrice = mean(listingPrice),
+            n = n(),
+            .by = "bodyType") |> 
+  ggplot(aes(x = fct_reorder(factor(bodyType), medianPrice, .desc=TRUE))) +
+  geom_segment(aes(y = minPrice, yend = maxPrice)) +
+  geom_point(aes(y = minPrice), color = "red", size=5) +
+  geom_point(aes(y = maxPrice), color = "green", size=4) +
+  geom_point(aes(y = medianPrice), color = "blue", size=3) +
+  geom_point(aes(y = meanPrice), color = "salmon", size=2) +
+  labs(title = "Minivans, Hatchbacks and Compact Sedans are most affordable!",
+       subtitle = "Cars Body Types with their <b><span style='color:red'>Min</span></b>, <b><span style='color:blue'>Median</span></b>, <b><span style='color:salmon'>Mean</span></b> and <b><span style='color:green'>Max</span></b> listing prices",
+       x = element_blank(),
+       y  = "Listing Price (in ₹)") +
+  scale_y_log10() +
+  coord_flip() +
+  theme_minimal() +
+    theme(plot.subtitle = element_markdown(),
+          plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
+          plot.title.position = "plot")
+```
+
+
+## Fuel Type
+
+
+```{r}
+#| label: fuelType-listingPrice
+#| echo: false
+
+
+usedcars |> 
+  summarise(minPrice = min(listingPrice),
+            maxPrice = max(listingPrice),
+            medianPrice = median(listingPrice),
+            meanPrice = mean(listingPrice),
+            n = n(),
+            .by = "fuelType") |> 
+  ggplot(aes(x = fct_reorder(factor(fuelType), minPrice, .desc=TRUE))) +
+  geom_segment(aes(y = minPrice, yend = maxPrice)) +
+  geom_point(aes(y = minPrice), color = "red", size=5) +
+  geom_point(aes(y = maxPrice), color = "green", size=4) +
+  geom_point(aes(y = medianPrice), color = "blue", size=3) +
+  geom_point(aes(y = meanPrice), color = "salmon", size=2) +
+  labs(title = "Electric and Hybrid cars are most expensive overall!",
+       subtitle = "Cars Fuel Types with their <b><span style='color:red'>Min</span></b>, <b><span style='color:blue'>Median</span></b>, <b><span style='color:salmon'>Mean</span></b> and <b><span style='color:green'>Max</span></b> listing prices",
+       x = element_blank(),
+       y  = "Listing Price (in ₹)") +
+  scale_y_log10() +
+  coord_flip() +
+  theme_minimal() +
+    theme(plot.subtitle = element_markdown(),
+          plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
+          plot.title.position = "plot")
+```
+
+## Owner Number
+
+
+```{r}
+#| label: ownerNumber-listingPrice
+#| echo: false
+
+
+usedcars |> 
+  summarise(minPrice = min(listingPrice),
+            maxPrice = max(listingPrice),
+            medianPrice = median(listingPrice),
+            medianPricefmt = paste0("₹", format_indian(median(listingPrice)),"/-"),
+            meanPrice = mean(listingPrice),
+            n = n(),
+            .by = "ownerNumber") |> 
+  ggplot(aes(x = ownerNumber)) +
+  geom_segment(aes(y = minPrice, yend = maxPrice)) +
+  geom_point(aes(y = minPrice), color = "red", size=5) +
+  geom_point(aes(y = maxPrice), color = "green", size=4) +
+  geom_point(aes(y = medianPrice), color = "blue", size=3) +
+  geom_point(aes(y = meanPrice), color = "salmon", size=2) +
+  geom_path(aes(y = medianPrice), color = "grey40", linetype = "dashed") +
+  geom_text(aes(x = ownerNumber - 0.1, y = minPrice+1E5, label = paste0("N = ", n))) +
+  geom_text(aes(x = ownerNumber + 0.1, y = medianPrice+3*1E5, label = medianPricefmt)) +
+  labs(title = "Listing Price decreases with more previous owners!",
+       subtitle = "Owner Number with their <b><span style='color:red'>Min</span></b>, <b><span style='color:blue'>Median</span></b>, <b><span style='color:salmon'>Mean</span></b> and <b><span style='color:green'>Max</span></b> listing prices",
+       x = element_blank(),
+       y  = "Listing Price (in ₹)") +
+  scale_y_log10() +
+  scale_x_reverse() +
+  coord_flip() +
+  theme_minimal() +
+    theme(plot.subtitle = element_markdown(),
+          plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
+          plot.title.position = "plot")
+```
+
+## Odometer Reading
+
+
+```{r}
+#| label: odometerReading-listingPrice
+#| echo: false
+
+
+usedcars |> filter(make == "Maruti", model=="Baleno", ownerNumber==1) |> 
+  ggplot(aes(x = odometerReading, y = listingPrice)) +
+  geom_point() +
+  geom_smooth(method = 'lm',formula = 'y ~ x') +
+  labs(title = "Cars with High Odometer readings cost less!",
+       subtitle = "This chart shows the trend for Maruti Baleno with 1 Previous Owner\nThis trend stays true for all combinations of Make, Model and OwnerNumber.",
+       x = "Odometer Reading (in Kms)",
+       y  = "Listing Price (in ₹)  [Log10 Scale]") +
+  scale_y_log10(breaks = c(2E5,5E5,7E5,1E6), labels = c("2L","5L","7L","10L")) +
+  theme_minimal() +
+    theme(plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
+          plot.title.position = "plot")
+```
+
+## Insurance Type
+
+
+```{r}
+#| label: insuranceType-listingPrice
+#| echo: false
+
+
+usedcars |> 
+  summarise(minPrice = min(listingPrice),
+            maxPrice = max(listingPrice),
+            medianPrice = median(listingPrice),
+            meanPrice = mean(listingPrice),
+            n = n(),
+            .by = "insuranceType") |> 
+  ggplot(aes(x = fct_reorder(factor(insuranceType), minPrice, .desc=TRUE))) +
+  geom_segment(aes(y = minPrice, yend = maxPrice)) +
+  geom_point(aes(y = minPrice), color = "red", size=5) +
+  geom_point(aes(y = maxPrice), color = "green", size=4) +
+  geom_point(aes(y = medianPrice), color = "blue", size=3) +
+  geom_point(aes(y = meanPrice), color = "salmon", size=2) +
+  labs(title = "Insurance Type doesn't matter!",
+       subtitle = "Cars with or without Insurance with their <b><span style='color:red'>Min</span></b>, <b><span style='color:blue'>Median</span></b>, <b><span style='color:salmon'>Mean</span></b> and <b><span style='color:green'>Max</span></b> listing prices",
+       x = element_blank(),
+       y  = "Listing Price (in ₹)") +
+  scale_y_log10() +
+  coord_flip() +
+  theme_minimal() +
+    theme(plot.subtitle = element_markdown(),
+          plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
+          plot.title.position = "plot")
+```
+
+
+## duplicateKey
+
+
+```{r}
+#| label: duplicateKey-listingPrice
+#| echo: false
+
+
+usedcars |> filter(!is.na(duplicateKey)) |> 
+  summarise(minPrice = min(listingPrice),
+            maxPrice = max(listingPrice),
+            medianPrice = median(listingPrice),
+            meanPrice = mean(listingPrice),
+            n = n(),
+            .by = "duplicateKey") |> 
+  mutate(duplicateKey = if_else(duplicateKey,"Available","Not Available")) |> 
+  ggplot(aes(x = fct_reorder(factor(duplicateKey), minPrice, .desc=TRUE))) +
+  geom_segment(aes(y = minPrice, yend = maxPrice)) +
+  geom_point(aes(y = minPrice), color = "red", size=5) +
+  geom_point(aes(y = maxPrice), color = "green", size=4) +
+  geom_point(aes(y = medianPrice), color = "blue", size=3) +
+  geom_point(aes(y = meanPrice), color = "salmon", size=2) +
+  labs(title = "Duplicate Key availability doesn't matter!",
+       subtitle = "Cars with or without Duplicate Key with their <b><span style='color:red'>Min</span></b>, <b><span style='color:blue'>Median</span></b>, <b><span style='color:salmon'>Mean</span></b> and <b><span style='color:green'>Max</span></b> listing prices",
+       x = element_blank(),
+       y  = "Listing Price (in ₹)") +
+  scale_y_log10() +
+  coord_flip() +
+  theme_minimal() +
+    theme(plot.subtitle = element_markdown(),
+          plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
+          plot.title.position = "plot")
+```
+

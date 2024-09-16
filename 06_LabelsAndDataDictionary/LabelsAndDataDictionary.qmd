@@ -1,0 +1,75 @@
+---
+title: Data Dictionary and Column Labels
+subtitle: Adding descriptive labels to columns using `labelled` package
+author: Vishal katti
+date: today
+format: 
+  html: 
+    theme: darkly
+    toc: true
+    df-print: paged
+---
+
+# Intro
+
+In this document, we will add descriptive, meaningful friendly names to the columns of the `usedcars` dataset.
+
+# Load Packages
+
+```{r}
+#| label: load-packages
+#| warning: false
+#| message: false
+
+library(labelled)
+```
+
+# Add Column Labels
+
+```{r}
+#| label: add-labels
+
+usedcars <- readRDS("../05_CleanAndCombine/usedcars.rds")
+str(usedcars)
+```
+
+```{r}
+
+labels <- c("Car Brand or Manufacturing Company",
+                         "Name of Car Model", "Name of car variant", 
+                         "Year when Car Model was launched", 
+                         "Type of Gear System (Manual/Automatic)", 
+                         "Type of Car (SUV/Sedan/Hactback etc.)",
+                         "Type of Fuel (Petrol/Diesel/Electric etc.)", 
+                         "Number of Previous Owners", "Distance travelled (in Kilometers)", 
+                         "RTO where car is registered", "Price of Car (in ₹)",
+                         "Fitness Certificate Validity End Date", 
+                         "Type of Insurance Coverage", 
+                         "Is Duplicate Key Available?", 
+                         "City/Region where car is available", 
+                         "Year of Registration", 
+                         "Month of Registration")
+
+var_label(usedcars) <- labels
+```
+
+::: {text-align="center"}
+![RStudio shows the labels below the column names when displayed using View()](images/Screenshot%202024-09-14%20201413.png)
+:::
+
+# Data Dictionary
+
+```{r}
+dictionary <- tibble::tibble(columns = names(usedcars),
+                             short_definition = labels,
+                             column_order = seq(1,length(labels)))
+dictionary
+```
+
+```{r}
+#| label: Final Export
+
+saveRDS(dictionary, "dictionary.rds")
+saveRDS(usedcars, "usedcars.rds")
+```
+

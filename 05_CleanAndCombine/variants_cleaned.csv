@@ -1,0 +1,2666 @@
+make,model,variant,model_variant
+Aston Martin,DBX,707,DBX 707
+Aston Martin,Rapide,LUXE,Rapide LUXE
+Aston Martin,Rapide,S V12,Rapide S V12
+Aston Martin,Vantage V8,F1 Edition,Vantage V8 F1 Edition
+Audi,A3,35 TDI Premium,A3 TDI
+Audi,A3,35 TDI Premium + Sunroof,A3 TDI
+Audi,A3,35 TDI Premium Plus + Sunroof,A3 TDI
+Audi,A3,35 TFSI Premium Plus,A3 TFSI
+Audi,A3,35 TFSI Technology,A3 TFSI
+Audi,A4,1.8 TFSI Multitronic Premium Plus,A4 TFSI
+Audi,A4,2.0 TDI (143bhp),A4 TDI
+Audi,A4,2.0 TDI (177bhp) Premium,A4 TDI
+Audi,A4,2.0 TDI (177bhp) Premium Plus,A4 TDI
+Audi,A4,2.0 TDI Sline,A4 TDI
+Audi,A4,30 TFSI Technology Pack,A4 TFSI
+Audi,A4,35 TDI Premium Plus,A4 TDI
+Audi,A4,35 TDI Premium Sport + Sunroof,A4 TDI
+Audi,A4,35 TDI Technology,A4 TDI
+Audi,A4,35 TDI Technology Pack,A4 TDI
+Audi,A4,Premium 40 TFSI,A4 TFSI
+Audi,A4,Premium Plus 40 TFSI,A4 TFSI
+Audi,A4,Technology 40 TFSI [2021-2022],A4 TFSI
+Audi,A6,2.0 TDI Premium,A6 TDI
+Audi,A6,2.0 TDI Premium Plus,A6 TDI
+Audi,A6,2.0 TFSi Premium Plus,A6 TFSI
+Audi,A6,2.7 TDI,A6 TDI
+Audi,A6,3.0 TDI quattro,A6 TDI
+Audi,A6,35 TDI Matrix,A6 TDI
+Audi,A6,35 TDI Premium,A6 TDI
+Audi,A6,35 TFSI,A6 TFSI
+Audi,A6,35 TFSI Matrix,A6 TFSI
+Audi,A6,35 TFSI Premium,A6 TFSI
+Audi,A6,35 TFSI Technology,A6 TFSI
+Audi,A6,Premium Plus 45 TFSI,A6 TFSI
+Audi,A6,Technology 45 TFSI,A6 TFSI
+Audi,A6,Technology 45 TFSI W/O Matrix,A6 TFSI
+Audi,A8 L,3.0 TDI quattro,A8 L TDI
+Audi,A8 L,4.2 TDI quattro,A8 L TDI
+Audi,A8 L,50 TDI,A8 L TDI
+Audi,A8 L,50 TDI Plus,A8 L TDI
+Audi,Q2,Technology 40 TFSI quattro,Q2 TFSI
+Audi,Q3,2.0 TDI Base Grade,Q3 TDI
+Audi,Q3,2.0 TDI S Edition,Q3 TDI
+Audi,Q3,2.0 TDI quattro Premium,Q3 TDI
+Audi,Q3,2.0 TDI quattro Premium Plus,Q3 TDI
+Audi,Q3,30 TDI Premium FWD,Q3 TDI
+Audi,Q3,30 TFSI Premium,Q3 TFSI
+Audi,Q3,35 TDI Premium + Sunroof,Q3 TDI
+Audi,Q3,35 TDI Premium Plus,Q3 TDI
+Audi,Q3,35 TDI Premium Plus + Sunroof,Q3 TDI
+Audi,Q3,35 TDI Technology,Q3 TDI
+Audi,Q3,35 TDI quattro Premium Plus,Q3 TDI
+Audi,Q3,35 TDI quattro Technology,Q3 TDI
+Audi,Q3,40 TFSI Premium Plus,Q3 TFSI
+Audi,Q3,40 TFSI Technology,Q3 TFSI
+Audi,Q3 Sportback,Technology,Q3 Sportback TFSI
+Audi,Q5,2.0 TDI quattro Premium,Q5 TDI
+Audi,Q5,2.0 TDI quattro Premium Plus,Q5 TDI
+Audi,Q5,2.0 TFSI quattro,Q5 TFSI
+Audi,Q5,2.0 TFSI quattro Technology Pack,Q5 TFSI
+Audi,Q5,3.0 TDI quattro Technology Pack,Q5 TDI
+Audi,Q5,30 TDI Design Edition,Q5 TDI
+Audi,Q5,35 TDI Premium Plus,Q5 TDI
+Audi,Q5,35 TDI Technology,Q5 TDI
+Audi,Q5,40 TDI Premium Plus,Q5 TDI
+Audi,Q5,45 TFSI Premium Plus,Q5 TFSI
+Audi,Q5,45 TFSI Technology,Q5 TFSI
+Audi,Q5,Premium Plus 45 TFSI,Q5 TFSI
+Audi,Q5,Technology 45 TFSI,Q5 TFSI
+Audi,Q7,3.0 TDI quattro Premium Plus,Q7 TDI
+Audi,Q7,3.6 FSI quattro,Q7 TFSI
+Audi,Q7,35 TDI Premium + Sunroof,Q7 TDI
+Audi,Q7,35 TDI Premium Plus + Sunroof,Q7 TDI
+Audi,Q7,35 TDI Technology Pack + Sunroof,Q7 TDI
+Audi,Q7,45 TDI Premium Plus,Q7 TDI
+Audi,Q7,45 TDI Technology Pack,Q7 TDI
+Audi,Q7,Premium Plus 55 TFSI,Q7 TFSI
+Audi,Q8,55 TFSI quattro,Q8 TFSI
+Audi,S5 Sportback,3.0 TFSI Quattro,S5 Sportback TFSI
+Audi,e-tron,55,e-tron 
+Bentley,Continental GT,Speed,Continental GT Speed
+BMW,2 Series Gran Coupe,220d Sportline,2 Series Gran Coupe Sport Line
+BMW,3 Series,320d,3 Series 320d
+BMW,3 Series,320d Edition Sport,3 Series Sport Line
+BMW,3 Series,320d Highline Sedan,3 Series Sedan
+BMW,3 Series,320d Luxury Line,3 Series Luxury Line
+BMW,3 Series,320d Prestige,3 Series 320d Prestige
+BMW,3 Series,320d Sport Line,3 Series Sport Line
+BMW,3 Series,320d Sport Line [2016-2018],3 Series Sport Line
+BMW,3 Series,330i M Sport Edition,3 Series Sport Line
+BMW,3 Series GT,320d Luxury Line,3 Series GT Luxury Line
+BMW,3 Series GT,320d Luxury Line [2014-2016],3 Series GT Luxury Line
+BMW,3 Series Gran Limousine,320Ld Luxury Line,3 Series Gran Limousine Luxury Line
+BMW,3 Series Gran Limousine,330Li M Sport First Edition,3 Series Gran Limousine Sport Line
+BMW,3 Series Gran Limousine,330Li M Sport [2023],3 Series Gran Limousine Sport Line
+BMW,5 Series,520d Luxury Line,5 Series Luxury Line
+BMW,5 Series,520d Luxury Line [2017-2019],5 Series Luxury Line
+BMW,5 Series,520d M Sport,5 Series Sport Line
+BMW,5 Series,520d Modern Line,5 Series Modern Line
+BMW,5 Series,520d Sedan,5 Series Sedan
+BMW,5 Series,520d Sport Line,5 Series Sport Line
+BMW,5 Series,525d Sedan,5 Series Sedan
+BMW,5 Series,530d M Sport [2013-2017],5 Series Sport Line
+BMW,5 Series,530d M Sport [2017-2019],5 Series Sport Line
+BMW,5 Series,530i M Sport,5 Series Sport Line
+BMW,5 Series,530i M Sport [2019-2019],5 Series Sport Line
+BMW,5 Series,530i Sport Line,5 Series Sport Line
+BMW,5 Series GT,530d,5 Series GT Sport Line
+BMW,6 Series GT,620d Luxury Line,6 Series GT Luxury Line
+BMW,6 Series GT,620d Luxury Line [2019-2019],6 Series GT Luxury Line
+BMW,6 Series GT,630d M Sport [2018-2019],6 Series GT Sport Line
+BMW,6 Series GT,630i M Sport Signature,6 Series GT Sport Line
+BMW,6 Series GT,630i M Sport [2021-2023],6 Series GT Sport Line
+BMW,6 Series Gran Coupe,640d Gran Coupe,6 Series Gran Coupe 640d Gran
+BMW,7 Series,730Ld,7 Series Sedan
+BMW,7 Series,730Ld DPE Signature,7 Series Signature
+BMW,7 Series,730Ld M Sport,7 Series Sport Line
+BMW,7 Series,730Ld Sedan,7 Series Sedan
+BMW,7 Series,730d Sedan,7 Series Sedan
+BMW,7 Series,740Li DPE Signature,7 Series Signature
+BMW,7 Series,740i [2023],7 Series 740i [2023]
+BMW,M4 Competition,M xDrive Coupe [2022-2023],M4 Competition xDrive
+BMW,M5,Competition,M5 Competition
+BMW,X1,sDrive18d M Sport,X1 sDrive
+BMW,X1,sDrive20d Expedition,X1 sDrive
+BMW,X1,sDrive20d M Sport,X1 sDrive
+BMW,X1,sDrive20d xLine,X1 sDrive
+BMW,X1,sDrive20i Tech Edition,X1 sDrive
+BMW,X1,sDrive20i xLine,X1 sDrive
+BMW,X1,xDrive20d M Sport,X1 xDrive
+BMW,X1,xDrive20d xLine,X1 xDrive
+BMW,X3,xDrive 20d Expedition,X3 xDrive
+BMW,X3,xDrive 20d Luxury Line [2018-2020],X3 xDrive
+BMW,X3,xDrive 30d M Sport [2015-2017],X3 xDrive
+BMW,X3,xDrive 30i Luxury Line,X3 xDrive
+BMW,X3,xDrive-20d xLine,X3 xDrive
+BMW,X3,xDrive20d,X3 xDrive
+BMW,X3,xDrive20d Luxury Edition [2022-2023],X3 xDrive
+BMW,X4,xDrive20d M Sport X [2019-2020],X4 xDrive
+BMW,X5,SAV 3.0d,X5 SAV 3.0d
+BMW,X5,xDrive 30d,X5 xDrive
+BMW,X5,xDrive 30d Expedition,X5 xDrive
+BMW,X5,xDrive 30d M Sport,X5 xDrive
+BMW,X5,xDrive30d Pure Experience (7 Seater),X5 xDrive
+BMW,X5,xDrive30d xLine,X5 xDrive
+BMW,X5,xDrive40i M Sport,X5 xDrive
+BMW,X5,xDrive40i M Sport [2019-2019],X5 xDrive
+BMW,X6,xDrive 40d,X6 xDrive
+BMW,X6,xDrive40i M Sport [2020-2023],X6 xDrive
+BMW,X7,xDrive 40i [2019-2019],X7 xDrive
+BMW,X7,xDrive30d DPE Signature 7STR,X7 xDrive
+BMW,X7,xDrive30d DPE Signature [2019-2020],X7 xDrive
+BMW,X7,xDrive40d M Sport,X7 xDrive
+BMW,X7,xDrive40d M Sport [2023],X7 xDrive
+BMW,XM,Plug-in Hybrid,XM Plug-in Hybrid
+BMW,Z4,sDrive 20i [2019-2023],Z4 sDrive
+BMW,iX,xDrive 40,iX xDrive
+BYD,Atto 3,Extended Range,Atto 3 Extended Range
+Chevrolet,Beat,LS Diesel,Beat LS Diesel
+Chevrolet,Beat,LS Petrol,Beat LS Petrol
+Chevrolet,Cruze,LTZ,Cruze LTZ
+Chevrolet,Cruze,LTZ AT,Cruze LTZ
+Chevrolet,Enjoy,1.4 LT 7 STR,Enjoy 1.4 LT
+Chevrolet,Sail,1.2 Base,Sail 1.2 Base
+Chevrolet,Tavera,Neo 3-10 STR BS-III,Tavera Neo 3-10
+Citroen,C3,Feel 1.2 Turbo Vibe Pack Dual Tone [2022],C3 Feel 1.2
+Citroen,C5 Aircross,Feel,C5 Aircross Feel
+Citroen,C5 Aircross,Shine Dual Tone,C5 Aircross Shine Dual
+Citroen,eC3,Feel,eC3 Feel
+Datsun,GO+,T [2018-2019],GO+ T
+Datsun,GO+,T(O) [2018-2019],GO+ T
+Datsun,Go,ANNIVERSARY EDITION,Go Anniversary Edition
+Datsun,Go,T,Go T
+Datsun,Go,T (O),Go T
+Datsun,Go,T CVT,Go T
+Datsun,Go,T [2018-2019],Go T
+Datsun,Go,T(O),Go T
+Datsun,Go Plus,A(O),Go Plus A
+Datsun,Go Plus,Anniversary Edition,Go Plus Anniversary Edition
+Datsun,Go Plus,T,Go Plus T
+Datsun,Go Plus,T (O),Go Plus T
+Datsun,Go Plus,T(O),Go Plus T
+Datsun,Redi Go,1.0 T(O) AT,Redi Go T
+Datsun,Redi Go,A,Redi Go A
+Datsun,Redi Go,S 1.0,Redi Go S
+Datsun,Redi Go,S 1.0 AMT,Redi Go S
+Datsun,Redi Go,SPORT,Redi Go SPORT
+Datsun,Redi Go,T,Redi Go T
+Datsun,Redi Go,T (O),Redi Go T
+Datsun,Redi Go,T(O),Redi Go T
+Datsun,Redi Go,T(O) 1.0,Redi Go T
+Datsun,Redi Go,T(O) 1.0 AMT,Redi Go T
+Datsun,Redi Go,T(O) 1.0L LIMITED EDITION,Redi Go T
+Datsun,redi-GO,A,redi-GO A
+Datsun,redi-GO,S 1.0,redi-GO S
+Datsun,redi-GO,S 1.0 AMT [2018-2019],redi-GO S
+Datsun,redi-GO,S [2016-2019],redi-GO S
+Datsun,redi-GO,T (O) [2016-2019],redi-GO T
+Datsun,redi-GO,T(O) 1.0,redi-GO T
+Datsun,redi-GO,T(O) 1.0 AMT [2018-2019],redi-GO T
+Datsun,redi-GO,T(O) 1.0 [2017-2019],redi-GO T
+Fiat,Linea,Dynamic 1.4,Linea Dynamic 1.4
+Fiat,Punto,Dynamic 1.3,Punto Dynamic 1.3
+Fiat,Punto,Dynamic 1.4,Punto Dynamic 1.4
+Fiat,Punto Evo,Active Multijet 1.3 [2014-2016],Punto Evo Active Multijet
+Force Motors,Gurkha,4X4 [2021-2023],Gurkha 4X4 [2021-2023]
+Force Motors,Gurkha,Soft Top 4X4,Gurkha Soft Top
+Ford,Endeavour,3.0L 4x4 AT,Endeavour 4x4
+Ford,Figo,Ambiente 1.2 Ti-VCT,Figo Ambiente
+Ford,EcoSport,Ambiente 1.5 TDCi,EcoSport Ambiente
+Ford,EcoSport,AMBIENTE 1.5L DIESEL,EcoSport Ambiente
+Ford,EcoSport,AMBIENTE 1.5L PETROL,EcoSport Ambiente
+Ford,EcoSport,Ambiente 1.5L Ti-VCT,EcoSport Ambiente
+Ford,Figo,Duratec Petrol ZXI 1.2,Figo Duratec Petrol
+Ford,Figo,Duratorq Diesel LXI 1.4,Figo Duratorq Diesel
+Ford,Figo,Duratorq Diesel ZXI 1.4,Figo Duratorq Diesel
+Ford,Freestyle,FLAIR EDITION 1.2 PETROL,Freestyle FLAIR EDITION
+Ford,Mustang,GT Fastback 5.0L v8,Mustang GT Fastback
+Ford,Fiesta,SXi 1.6,Fiesta SX
+Ford,EcoSport,TITANIUM + 1.5L DIESEL,EcoSport Titanium
+Ford,EcoSport,TITANIUM + 1.5L PETROL,EcoSport Titanium
+Ford,EcoSport,TITANIUM + 1.5L PETROL AT,EcoSport Titanium
+Ford,EcoSport,Titanium + 1.5L TDCi,EcoSport Titanium
+Ford,EcoSport,Titanium + 1.5L TDCi [2019-2020],EcoSport Titanium
+Ford,EcoSport,Titanium + 1.5L Ti-VCT,EcoSport Titanium
+Ford,EcoSport,Titanium + 1.5L Ti-VCT AT,EcoSport Titanium
+Ford,EcoSport,Titanium + 1.5L Ti-VCT AT [2019-2020],EcoSport Titanium
+Ford,EcoSport,Titanium 1.0 Ecoboost,EcoSport Titanium
+Ford,EcoSport,TITANIUM 1.0L ECOBOOST (OPT),EcoSport Titanium
+Ford,EcoSport,TITANIUM 1.0L ECOBOOST SPORTS(SUNROOF),EcoSport Titanium
+Ford,Freestyle,TITANIUM 1.2 PETROL,Freestyle Titanium
+Ford,Freestyle,Titanium 1.2 Ti-VCT [2018-2020],Freestyle Titanium
+Ford,Freestyle,TITANIUM 1.5 DIESEL,Freestyle Titanium
+Ford,EcoSport,TITANIUM 1.5 SPORTS(SUNROOF) PETROL,EcoSport Titanium
+Ford,EcoSport,Titanium 1.5 TDCi,EcoSport Titanium
+Ford,EcoSport,Titanium 1.5 TDCi (Opt),EcoSport Titanium
+Ford,Freestyle,Titanium 1.5 TDCi [2018-2020],Freestyle Titanium
+Ford,EcoSport,Titanium 1.5 Ti-VCT,EcoSport Titanium
+Ford,EcoSport,TITANIUM 1.5L DIESEL,EcoSport Titanium
+Ford,EcoSport,TITANIUM 1.5L PETROL,EcoSport Titanium
+Ford,EcoSport,TITANIUM 1.5L PETROL AT,EcoSport Titanium
+Ford,EcoSport,TITANIUM 1.5L SIGNATURE EDITION (SUNROOF) DIESEL,EcoSport Titanium
+Ford,EcoSport,TITANIUM 1.5L SIGNATURE EDITION (SUNROOF) PETROL,EcoSport Titanium
+Ford,EcoSport,Titanium 1.5L TDCi,EcoSport Titanium
+Ford,EcoSport,Titanium 1.5L TDCi [2019-2020],EcoSport Titanium
+Ford,EcoSport,Titanium 1.5L TDCi Black Edition,EcoSport Titanium
+Ford,EcoSport,TITANIUM 1.5L THUNDER EDTION DIESEL,EcoSport Titanium
+Ford,EcoSport,Titanium 1.5L Ti-VCT,EcoSport Titanium
+Ford,EcoSport,Titanium 1.5L Ti-VCT AT,EcoSport Titanium
+Ford,Endeavour,Titanium 3.2 4x4 AT,Endeavour Titanium
+Ford,Freestyle,TITANIUM PLUS 1.2 PETROL,Freestyle Titanium
+Ford,New Figo,TITANIUM PLUS 1.2 PETROL AT,New Figo Titanium
+Ford,Freestyle,Titanium Plus 1.2 Ti-VCT [2018-2020],Freestyle Titanium
+Ford,Freestyle,TITANIUM PLUS 1.5 DIESEL,Freestyle Titanium
+Ford,Endeavour,Titanium Plus 2.0 4x2 AT,Endeavour Titanium
+Ford,Endeavour,Titanium Plus 2.0 4x4 AT,Endeavour Titanium
+Ford,Endeavour,Titanium Plus 3.2 4x4 AT,Endeavour Titanium
+Ford,EcoSport,TITANIUM+ 1.0L ECOBOOST,EcoSport Titanium
+Ford,EcoSport,TITANIUM+ 1.5L DIESEL,EcoSport Titanium
+Ford,EcoSport,Titanium+ 1.5L TDCi,EcoSport Titanium
+Ford,EcoSport,Titanium+ 1.5L TDCi Black Edition,EcoSport Titanium
+Ford,Aspire,Titanium1.5 TDCi,Aspire Titanium
+Ford,EcoSport,TREND + 1.5L PETROL,EcoSport Trend
+Ford,EcoSport,TREND + 1.5L PETROL AT,EcoSport Trend
+Ford,EcoSport,Trend + 1.5L TDCi,EcoSport Trend
+Ford,EcoSport,Trend + 1.5L Ti-VCT AT,EcoSport Trend
+Ford,Freestyle,TREND 1.2 PETROL,Freestyle Trend
+Ford,Figo,Trend 1.2 Ti-VCT [2015-2016],Figo Trend
+Ford,Freestyle,Trend 1.2 Ti-VCT [2018-2019],Freestyle Trend
+Ford,EcoSport,Trend 1.5 Ti-VCT,EcoSport Trend
+Ford,EcoSport,TREND 1.5L DIESEL,EcoSport Trend
+Ford,EcoSport,TREND 1.5L PETROL,EcoSport Trend
+Ford,EcoSport,Trend 1.5L TDCi,EcoSport Trend
+Ford,Figo,Trend 1.5L TDCi [2015-2016],Figo Trend
+Ford,EcoSport,Trend 1.5L Ti-VCT,EcoSport Trend
+Ford,Endeavour,Trend 2.2 4x2 AT,Endeavour Trend
+Ford,Endeavour,Trend 3.2 4x4 AT,Endeavour Trend
+Ford,Freestyle,TREND PLUS 1.2 PETROL,Freestyle Trend
+Ford,EcoSport,TREND+ 1.0L ECOBOOST,EcoSport Trend
+Ford,EcoSport,Trend+ 1.0L EcoBoost,EcoSport Trend
+Ford,EcoSport,TREND+ 1.5L DIESEL,EcoSport Trend
+Ford,EcoSport,Trend+ 1.5L TDCi,EcoSport Trend
+Honda,Accord,2.4 AT,Accord Base
+Honda,All New City,V CVT Petrol,All New City V
+Honda,All New City,V Petrol,All New City V
+Honda,All New City,ZX CVT Petrol,All New City ZX
+Honda,All New City,ZX Petrol,All New City ZX
+Honda,Amaze,1.2 E i-VTEC,Amaze E
+Honda,Amaze,1.2 S AT i-VTEC,Amaze S
+Honda,Amaze,1.2 S CVT Petrol [2018-2020],Amaze S
+Honda,Amaze,1.2 S MT Petrol [2018-2020],Amaze S
+Honda,Amaze,1.2 S i-VTEC,Amaze S
+Honda,Amaze,1.2 SX i-VTEC,Amaze SX
+Honda,Amaze,1.2 V CVT Petrol [2018-2020],Amaze V
+Honda,Amaze,1.2 V MT Petrol [2018-2020],Amaze V
+Honda,Amaze,1.2 VX CVT Petrol [2019-2020],Amaze VX
+Honda,Amaze,1.2 VX MT Petrol [2018-2020],Amaze VX
+Honda,Amaze,1.2 VX i-VTEC,Amaze VX
+Honda,Amaze,1.2L I-VTEC E,Amaze E
+Honda,Amaze,1.2L I-VTEC EX,Amaze EX
+Honda,Amaze,1.2L I-VTEC S,Amaze S
+Honda,Amaze,1.2L I-VTEC S AT,Amaze S
+Honda,Amaze,1.2L I-VTEC S CVT,Amaze S
+Honda,Amaze,1.2L I-VTEC S OPT,Amaze S
+Honda,Amaze,1.2L I-VTEC SX,Amaze SX
+Honda,Amaze,1.2L I-VTEC V,Amaze V
+Honda,Amaze,1.2L I-VTEC V CVT,Amaze V
+Honda,Amaze,1.2L I-VTEC VX,Amaze VX
+Honda,Amaze,1.2L I-VTEC VX AT,Amaze VX
+Honda,Amaze,1.2L I-VTEC VX CVT,Amaze VX
+Honda,Amaze,1.5 E i-DTEC,Amaze E
+Honda,Amaze,1.5 EX i-DTEC,Amaze EX
+Honda,Amaze,1.5 S CVT Diesel [2018-2020],Amaze S
+Honda,Amaze,1.5 S i-DTEC,Amaze S
+Honda,Amaze,1.5 SX i-DTEC,Amaze SX
+Honda,Amaze,1.5 V CVT Diesel,Amaze V
+Honda,Amaze,1.5 VX i-DTEC,Amaze VX
+Honda,Amaze,1.5L I-DTEC E,Amaze E
+Honda,Amaze,1.5L I-DTEC EX,Amaze EX
+Honda,Amaze,1.5L I-DTEC S,Amaze S
+Honda,Amaze,1.5L I-DTEC S CVT,Amaze S
+Honda,Amaze,1.5L I-DTEC S OPT,Amaze S
+Honda,Amaze,1.5L I-DTEC V,Amaze V
+Honda,Amaze,1.5L I-DTEC V CVT,Amaze V
+Honda,Amaze,1.5L I-DTEC VX,Amaze VX
+Honda,Amaze,VX CVT 1.2 Petrol [2021],Amaze VX
+Honda,BR-V,1.5L I- DTEC VX,BR-V VX
+Honda,BR-V,1.5L I-VTEC S,BR-V S
+Honda,BR-V,1.5L I-VTEC V,BR-V V
+Honda,BR-V,1.5L I-VTEC V CVT,BR-V V
+Honda,BR-V,1.5L I-VTEC VX,BR-V VX
+Honda,Brio,E MT,Brio E MT
+Honda,Brio,EX MT,Brio EX
+Honda,Brio,S (O)MT,Brio S
+Honda,Brio,S MT,Brio S
+Honda,Brio,S(O) MT,Brio S
+Honda,Brio,S(O)MT,Brio S
+Honda,Brio,V MT,Brio V
+Honda,Brio,VX AT,Brio VX
+Honda,Brio,VX MT,Brio VX
+Honda,CR-V,2.0L 2WD AT,CR-V 2WD
+Honda,City,1.5 E MT,City E
+Honda,City,1.5 S AT,City S
+Honda,City,1.5 S MT,City S
+Honda,City,1.5 V MT,City V
+Honda,City,1.5L I-DTEC E,City E
+Honda,City,1.5L I-DTEC SV,City SV
+Honda,City,1.5L I-DTEC V,City V
+Honda,City,1.5L I-DTEC ZX,City ZX
+Honda,City,1.5L I-VTE V CVT,City V
+Honda,City,1.5L I-VTEC CORPORATE MT,City Corporate
+Honda,City,1.5L I-VTEC E MT,City E
+Honda,City,1.5L I-VTEC S AT,City S
+Honda,City,1.5L I-VTEC S MT,City S
+Honda,City,1.5L I-VTEC SV,City SV
+Honda,City,1.5L I-VTEC SV CVT,City SV
+Honda,City,1.5L I-VTEC SV EDGE EDITION,City SV
+Honda,City,1.5L I-VTEC V AT,City V
+Honda,City,1.5L I-VTEC V MT,City V
+Honda,City,1.5L I-VTEC V MT 4TH GEN,City V
+Honda,City,1.5L I-VTEC V MT 5TH GEN,City V
+Honda,City,1.5L I-VTEC V MT SUNROOF,City V
+Honda,City,1.5L I-VTEC VX,City VX
+Honda,City,1.5L I-VTEC VX CVT,City VX
+Honda,City,1.5L I-VTEC ZX,City ZX
+Honda,City,1.5L I-VTEC ZX CVT,City ZX
+Honda,City,E Diesel,City E Diesel
+Honda,City,E [2013-2016],City E
+Honda,City,S,City S
+Honda,City,S Diesel,City S
+Honda,City,SV,City SV
+Honda,City,SV CVT,City SV
+Honda,City,SV Diesel,City SV
+Honda,City,V,City V
+Honda,City,V Diesel,City V
+Honda,City,VX,City VX
+Honda,City,VX (O) MT,City VX
+Honda,City,VX (O) MT Diesel,City VX
+Honda,City,VX CVT,City VX
+Honda,City,VX Diesel,City VX
+Honda,City,ZX Petrol CVT,City ZX
+Honda,City 4th Generation,Anniversary Edition Diesel,City 4th Generation Anniversary Edition
+Honda,City 4th Generation,SV Petrol [2017-2019],City 4th Generation SV
+Honda,City 4th Generation,SV Petrol [2019-2020],City 4th Generation SV
+Honda,City 4th Generation,V CVT Petrol [2017-2019],City 4th Generation V
+Honda,City 4th Generation,V Petrol,City 4th Generation V
+Honda,City 4th Generation,V Petrol [2017-2019],City 4th Generation V
+Honda,City 4th Generation,V Petrol [2019-2020],City 4th Generation V
+Honda,City 4th Generation,VX CVT Petrol,City 4th Generation VX
+Honda,City 4th Generation,VX CVT Petrol [2017-2019],City 4th Generation VX
+Honda,City 4th Generation,VX Petrol,City 4th Generation VX
+Honda,City 4th Generation,VX Petrol [2017-2019],City 4th Generation VX
+Honda,City 4th Generation,ZX CVT Petrol,City 4th Generation ZX
+Honda,City 4th Generation,ZX CVT Petrol [2017-2019],City 4th Generation ZX
+Honda,City 4th Generation,ZX Petrol,City 4th Generation ZX
+Honda,City 4th Generation,ZX Petrol [2019-2019],City 4th Generation ZX
+Honda,City Hybrid eHEV,ZX eHEV,City Hybrid eHEV ZX
+Honda,City ZX,GXi,City ZX ZX
+Honda,Civic,1.6L I-DTEC ZX MT,Civic ZX
+Honda,Civic,1.8E MT,Civic E
+Honda,Civic,1.8L I-VTEC V CVT,Civic V
+Honda,Civic,1.8L I-VTEC ZX CVT,Civic ZX
+Honda,Civic,1.8V AT,Civic V
+Honda,Civic,1.8V MT Sunroof,Civic V
+Honda,Civic,VX CVT Petrol [2019-2020],Civic VX
+Honda,Civic,VX Diesel [2019-2020],Civic VX
+Honda,Civic,ZX CVT Petrol [2019-2020],Civic ZX
+Honda,Jazz,1.2 L I-VTEC SELECT,Jazz Select Edition
+Honda,Jazz,1.2L I-VTEC BASE,Jazz Base
+Honda,Jazz,1.2L I-VTEC E,Jazz E
+Honda,Jazz,1.2L I-VTEC S,Jazz S
+Honda,Jazz,1.2L I-VTEC S AT,Jazz S
+Honda,Jazz,1.2L I-VTEC SV,Jazz SV
+Honda,Jazz,1.2L I-VTEC V,Jazz V
+Honda,Jazz,1.2L I-VTEC V AT,Jazz V
+Honda,Jazz,1.2L I-VTEC V CVT,Jazz V
+Honda,Jazz,1.2L I-VTEC VX,Jazz VX
+Honda,Jazz,1.2L I-VTEC VX AT,Jazz VX
+Honda,Jazz,1.2L I-VTEC VX CVT,Jazz VX
+Honda,Jazz,1.2L I-VTEC VX EXCLUSIVE EDITION CVT,Jazz VX
+Honda,Jazz,1.2L I-VTEC X,Jazz X
+Honda,Jazz,1.2L I-VTEC ZX,Jazz ZX
+Honda,Jazz,1.2L I-VTEC ZX CVT,Jazz ZX
+Honda,Jazz,1.5L I-DTEC VX,Jazz VX
+Honda,Jazz,Base Old,Jazz Base
+Honda,Jazz,S AT [2015-2016],Jazz S
+Honda,Jazz,S Diesel,Jazz S
+Honda,Jazz,S MT [2015-2016],Jazz S
+Honda,Jazz,S Petrol,Jazz S
+Honda,Jazz,SV Petrol,Jazz SV
+Honda,Jazz,Select Edition Old,Jazz Select Edition
+Honda,Jazz,V AT Petrol,Jazz V
+Honda,Jazz,V CVT Petrol,Jazz V
+Honda,Jazz,V Petrol,Jazz V
+Honda,Jazz,VX CVT Petrol,Jazz VX
+Honda,Jazz,VX Diesel,Jazz VX
+Honda,Jazz,VX Petrol,Jazz VX
+Honda,Jazz,X,Jazz X
+Honda,Jazz,X Old,Jazz X
+Honda,Jazz,ZX,Jazz ZX
+Honda,Jazz,ZX CVT,Jazz ZX
+Honda,Mobilio,S Petrol,Mobilio S
+Honda,WR-V,1.2L I-VTEC EDGE EDITION,WR-V Edge Edition
+Honda,WR-V,1.2L I-VTEC S MT,WR-V S
+Honda,WR-V,1.2L I-VTEC SV MT,WR-V SV
+Honda,WR-V,1.2L I-VTEC VX MT,WR-V VX
+Honda,WR-V,1.5L I-DTEC SV MT,WR-V SV
+Honda,WR-V,1.5L I-DTEC VX MT,WR-V VX
+Honda,WR-V,Edge Edition Petrol [2018-2019],WR-V Edge Edition
+Honda,WR-V,Exclusive Edition Petrol,WR-V 
+Honda,WR-V,S MT Petrol,WR-V S
+Honda,WR-V,SV MT Petrol,WR-V SV
+Honda,WR-V,VX MT Diesel,WR-V VX
+Honda,WR-V,VX MT Petrol,WR-V VX
+Hyundai,Genesis,3.8,Genesis 
+Hyundai,Eon,1.0 Kappa Magna (O) AirBag,Eon Magna
+Hyundai,Eon,1.0 Kappa Magna + [2014-2016],Eon Magna
+Hyundai,Getz Prime,1.1 GVS,Getz Prime 
+Hyundai,i10,1.1L iRDE ERA Special Edition,i10 ERA
+Hyundai,i10,1.1L iRDE Magna Special Edition,i10 Magna
+Hyundai,i20 Active,1.2 Base,i20 Active Base
+Hyundai,i20 Active,1.2 S,i20 Active S
+Hyundai,Creta,1.4 Base [2015-2016],Creta Base
+Hyundai,Verna,1.4 EX PETROL,Verna EX
+Hyundai,Creta,1.4 S,Creta S
+Hyundai,Creta,1.4 S Plus,Creta S
+Hyundai,Verna,1.4 VTVT,Verna Base
+Hyundai,Alcazar,1.5 SIGNATURE (O) AT 6STR,Alcazar Signature
+Hyundai,Creta,1.6 Base Petrol,Creta Base
+Hyundai,Creta,1.6 E Petrol,Creta E
+Hyundai,Verna,1.6 EX CRDI,Verna EX
+Hyundai,Creta,1.6 S Petrol,Creta S
+Hyundai,Verna,1.6 VTVT S,Verna S
+Hyundai,Verna,1.6 VTVT S AT,Verna S
+Hyundai,New Elantra,2.0 S PETROL,New Elantra S
+Hyundai,Alcazar,2.0 SIGNATURE (O) AT 7STR,Alcazar Signature
+Hyundai,Sonata,2.4 GDi AT,Sonata GDI
+Hyundai,Santa Fe,2WD AT [2014-2017],Santa Fe 2WD
+Hyundai,Tucson,2WD AT GLS Diesel,Tucson 2WD
+Hyundai,Tucson,2WD MT PETROL,Tucson 2WD
+Hyundai,Tucson,2WD MT Petrol,Tucson 2WD
+Hyundai,Santa Fe,4 WD (AT),Santa Fe 4 WD
+Hyundai,Elite i20,ASTA (O) CVT,Elite i20 Asta
+Hyundai,Grand i10,ASTA (O) 1.2 KAPPA VTVT,Grand i10 Asta
+Hyundai,Grand i10,ASTA (O) AT 1.2 KAPPA VTVT,Grand i10 Asta
+Hyundai,i20,Asta (O) 1.0 Turbo DCT [2020-2023],i20 Asta
+Hyundai,i20,Asta (O) 1.2 MT [2020-2023],i20 Asta
+Hyundai,NEW I20,ASTA (O) 1.0 TURBO GDI DCT,NEW I20 Asta
+Hyundai,NEW I20,ASTA (O) 1.2 AT,NEW I20 Asta
+Hyundai,NEW I20,ASTA (O) 1.2 MT,NEW I20 Asta
+Hyundai,NEW I20,ASTA (O) 1.5 CRDI MT,NEW I20 Asta
+Hyundai,Santro,Asta [2018-2020],Santro Asta
+Hyundai,i20,Asta 1.0 Turbo IMT,i20 Asta
+Hyundai,NEW I20,ASTA 1.0 TURBO IMT DUAL TONE,NEW I20 Asta
+Hyundai,NEW I20,Asta 1.0 GDI Turbo IMT,NEW I20 Asta
+Hyundai,Grand i10,ASTA 1.1 CRDI,Grand i10 Asta
+Hyundai,Elite i20,ASTA 1.2,Elite i20 Asta
+Hyundai,Elite i20,ASTA 1.2  CVT,Elite i20 Asta
+Hyundai,Elite i20,ASTA 1.2 (O),Elite i20 Asta
+Hyundai,Elite i20,ASTA 1.2 DUAL TONE,Elite i20 Asta
+Hyundai,Elite i20,Asta 1.2,Elite i20 Asta
+Hyundai,Elite i20,Asta 1.2 (O),Elite i20 Asta
+Hyundai,Elite i20,Asta 1.2 (O) CVT [2019-2020],Elite i20 Asta
+Hyundai,Elite i20,Asta 1.2 (O) [2016],Elite i20 Asta
+Hyundai,Elite i20,Asta 1.2 (O) [2019-2020],Elite i20 Asta
+Hyundai,Elite i20,Asta 1.2 AT,Elite i20 Asta
+Hyundai,Grand i10,ASTA 1.2 KAPPA VTVT,Grand i10 Asta
+Hyundai,Grand i10,Asta 1.2 Kappa VTVT,Grand i10 Asta
+Hyundai,Grand i10,Asta 1.2 Kappa VTVT (O) [2013-2017],Grand i10 Asta
+Hyundai,Grand i10,Asta 1.2 Kappa VTVT [2013-2016],Grand i10 Asta
+Hyundai,Grand i10 Nios,ASTA 1.2 KAPPA VTVT,Grand i10 Nios Asta
+Hyundai,Grand i10 Nios,Asta 1.2 Kappa VTVT,Grand i10 Nios Asta
+Hyundai,i10,ASTA 1.2,i10 Asta
+Hyundai,i20,ASTA 1.2,i20 Asta
+Hyundai,i20,Asta 1.2,i20 Asta
+Hyundai,i20,Asta 1.2 MT [2020-2023],i20 Asta
+Hyundai,NEW I20,ASTA 1.2 AT,NEW I20 Asta
+Hyundai,NEW I20,ASTA 1.2 MT,NEW I20 Asta
+Hyundai,Elite i20,ASTA 1.4 CRDI,Elite i20 Asta
+Hyundai,Elite i20,ASTA 1.4 CRDI (O),Elite i20 Asta
+Hyundai,Elite i20,Asta 1.4 (O) CRDi,Elite i20 Asta
+Hyundai,Elite i20,Asta 1.4 CRDi,Elite i20 Asta
+Hyundai,i20,ASTA 1.4 CRDI,i20 Asta
+Hyundai,i20,Asta 1.4 CRDI with AVN 6 Speed,i20 Asta
+Hyundai,Grand i10 Nios,ASTA AMT 1.2 KAPPA VTVT,Grand i10 Nios Asta
+Hyundai,Grand i10 Nios,Asta AMT 1.2 Kappa VTVT,Grand i10 Nios Asta
+Hyundai,NEW SANTRO,ASTA AMT,NEW SANTRO Asta
+Hyundai,Grand i10,ASTA AT 1.2 KAPPA VTVT,Grand i10 Asta
+Hyundai,Grand i10,Asta AT 1.2 Kappa VTVT (O) [2016-2017],Grand i10 Asta
+Hyundai,Grand i10,Asta AT 1.2 Kappa VTVT [2013-2016],Grand i10 Asta
+Hyundai,NEW SANTRO,ASTA MT,NEW SANTRO Asta
+Hyundai,NEW I20,ASTA(O) 1.0TURBO DCT DUAL TONE,NEW I20 Asta
+Hyundai,Xcent,BASE 1.2,Xcent Base
+Hyundai,Xcent,Base 1.2,Xcent Base
+Hyundai,Creta,BASE 1.4 DIESEL,Creta Base
+Hyundai,Creta,BASE 1.6 PETROL,Creta Base
+Hyundai,Accent,CNG,Accent CNG
+Hyundai,Eon,D-Lite +,Eon Dlite
+Hyundai,i10,D-Lite 1.1 iRDE2,i10 Dlite
+Hyundai,Eon,D-LITE+,Eon Dlite
+Hyundai,Venue,E 1.2 Petrol [2019-2020],Venue E
+Hyundai,Verna,E 1.4 VTVT,Verna E
+Hyundai,Creta,E 1.5 Diesel [2020-2022],Creta E
+Hyundai,Creta,E 1.6 PETROL,Creta E
+Hyundai,Xcent,E CRDi,Xcent E
+Hyundai,Creta,E PLUS 1.4 DIESEL,Creta E
+Hyundai,Creta,E PLUS 1.6 PETROL,Creta E
+Hyundai,Creta,E Plus 1.4 CRDI,Creta E
+Hyundai,Creta,E Plus 1.6 Petrol,Creta E
+Hyundai,Xcent,E Plus,Xcent E
+Hyundai,Xcent,E+,Xcent E
+Hyundai,Eon,ERA,Eon ERA
+Hyundai,Eon,ERA +,Eon ERA
+Hyundai,Eon,Era +,Eon ERA
+Hyundai,Eon,Era + AirBag,Eon ERA
+Hyundai,i10,ERA 1.1,i10 ERA
+Hyundai,i10,Era 1.1 iRDE2 [2010-2017],i10 ERA
+Hyundai,Elite i20,ERA 1.2,Elite i20 ERA
+Hyundai,Elite i20,Era 1.2,Elite i20 ERA
+Hyundai,Grand i10,ERA 1.2 KAPPA VTVT,Grand i10 ERA
+Hyundai,Grand i10,Era 1.2 Kappa VTVT,Grand i10 ERA
+Hyundai,NEW SANTRO,ERA EXECUTIVE,NEW SANTRO ERA
+Hyundai,Santro,Era Executive,Santro ERA
+Hyundai,Santro,Era Executive [2019-2020],Santro ERA
+Hyundai,Eon,ERA PLUS (O),Eon ERA
+Hyundai,Verna,EX 1.4 VTVT,Verna EX
+Hyundai,Creta,EX 1.5 Diesel [2020-2022],Creta EX
+Hyundai,Creta,EX 1.5 PETROL,Creta EX
+Hyundai,Creta,EX 1.5 Petrol [2020-2022],Creta EX
+Hyundai,Verna,EX 1.6 CRDi [2017-2018],Verna EX
+Hyundai,Verna,EX 1.6 VTVT AT [2017-2018],Verna EX
+Hyundai,Verna,EX 1.6 VTVT [2017-2018],Verna EX
+Hyundai,Verna,Fluidic 1.4 CRDi,Verna Base
+Hyundai,Verna,Fluidic 1.4 CRDi EX,Verna EX
+Hyundai,Verna,FLUIDIC 1.4 VTVT,Verna Base
+Hyundai,Verna,Fluidic 1.4 VTVT,Verna Base
+Hyundai,Verna,Fluidic 1.6 CRDi,Verna Base
+Hyundai,Verna,FLUIDIC 1.6 CRDI S 4S,Verna SX
+Hyundai,Verna,FLUIDIC 1.6 CRDI SX,Verna SX
+Hyundai,Verna,Fluidic 1.6 CRDi SX,Verna SX
+Hyundai,Verna,Fluidic 1.6 VTVT,Verna Base
+Hyundai,Verna,FLUIDIC 1.6 VTVT EX,Verna EX
+Hyundai,Santro Xing,GL,Santro Xing GL
+Hyundai,Tucson,GL 2WD AT Petrol,Tucson GL
+Hyundai,Santro Xing,GL PLUS,Santro Xing GL
+Hyundai,Santro Xing,GL Plus,Santro Xing GL
+Hyundai,Santro Xing,GLS,Santro Xing GLS
+Hyundai,Santro Xing,GLS PLUS AUDIO,Santro Xing GLS
+Hyundai,Getz,GVS,Getz GVS
+Hyundai,i10,Magna,i10 Magna
+Hyundai,NEW SANTRO,MAGNA,NEW SANTRO Magna
+Hyundai,i20,MAGNA (O) 1.2,i20 Magna
+Hyundai,i20,MAGNA (O) 1.4 CRDI,i20 Magna
+Hyundai,i20,Magna (O) 1.2,i20 Magna
+Hyundai,i20,Magna (O) 1.4 CRDI,i20 Magna
+Hyundai,Santro,Magna [2018-2020],Santro Magna
+Hyundai,Eon,MAGNA +,Eon Magna
+Hyundai,Eon,Magna +,Eon Magna
+Hyundai,Grand i10,MAGNA 1.1 CRDI,Grand i10 Magna
+Hyundai,Grand i10,Magna 1.1 CRDi [2013-2016],Grand i10 Magna
+Hyundai,Grand i10,Magna 1.1 CRDi [2016-2017],Grand i10 Magna
+Hyundai,i10,MAGNA 1.1,i10 Magna
+Hyundai,i10,Magna 1.1 LPG,i10 Magna
+Hyundai,i10,Magna 1.1 iRDE2 [2010-2017],i10 Magna
+Hyundai,NEW SANTRO,MAGNA 1.1 CORPORATE EDITION,NEW SANTRO Magna
+Hyundai,Elite i20,MAGNA 1.2,Elite i20 Magna
+Hyundai,Elite i20,Magna 1.2,Elite i20 Magna
+Hyundai,Elite i20,Magna 1.2 [2016-2017],Elite i20 Magna
+Hyundai,Grand i10,MAGNA 1.2 KAPPA VTVT,Grand i10 Magna
+Hyundai,Grand i10,Magna 1.2 Kappa VTVT,Grand i10 Magna
+Hyundai,Grand i10,Magna 1.2 Kappa VTVT CNG,Grand i10 Magna
+Hyundai,Grand i10,Magna 1.2 Kappa VTVT CNG [2019-2020],Grand i10 Magna
+Hyundai,Grand i10,Magna 1.2 Kappa VTVT [2013-2016],Grand i10 Magna
+Hyundai,Grand i10,Magna 1.2 Kappa VTVT [2016-2017],Grand i10 Magna
+Hyundai,Grand i10 Nios,MAGNA 1.2 KAPPA VTVT,Grand i10 Nios Magna
+Hyundai,Grand i10 Nios,Magna 1.2 Kappa VTVT,Grand i10 Nios Magna
+Hyundai,i10,MAGNA 1.2,i10 Magna
+Hyundai,i10,Magna 1.2,i10 Magna
+Hyundai,i10,Magna 1.2 Kappa2,i10 Magna
+Hyundai,i20,MAGNA 1.2,i20 Magna
+Hyundai,i20,Magna 1.2,i20 Magna
+Hyundai,i20,Magna 1.2 MT,i20 Magna
+Hyundai,i20,Magna 1.2 MT [2020-2023],i20 Magna
+Hyundai,Elite i20,Magna 1.4 CRDI,Elite i20 Magna
+Hyundai,i20,Magna 1.4 CRDI,i20 Magna
+Hyundai,NEW SANTRO,MAGNA AMT,NEW SANTRO Magna
+Hyundai,Grand i10,MAGNA AT 1.2 KAPPA VTVT,Grand i10 Magna
+Hyundai,NEW SANTRO,MAGNA CNG,NEW SANTRO Magna
+Hyundai,Grand i10 Nios,MAGNA CORPORATE EDITION 1.2 KAPPA VTVT,Grand i10 Nios Magna
+Hyundai,Elite i20,MAGNA EXECUTIVE 1.2,Elite i20 Magna
+Hyundai,Elite i20,MAGNA PLUS 1.2,Elite i20 Magna
+Hyundai,Elite i20,MAGNA PLUS 1.4 CRDI,Elite i20 Magna
+Hyundai,Elite i20,Magna Plus 1.2 [2019-2020],Elite i20 Magna
+Hyundai,Elite i20,Magna Plus 1.4 CRDi,Elite i20 Magna
+Hyundai,Grand i10,MAGNA U2 1.2 CRDI,Grand i10 Magna
+Hyundai,i20 N Line,N6 1.0 Turbo iMT,i20 N Line N6
+Hyundai,NEW I20 N LINE,N6 1.0 TURBO GDI IMT,NEW I20 N LINE N6
+Hyundai,i20 N Line,N8 1.0 Turbo DCT,i20 N Line N8
+Hyundai,i20 N Line,N8 1.0 Turbo iMT Dual Tone,i20 N Line N8
+Hyundai,NEW I20 N LINE,N8 1.0 TURBO GDI DCT,NEW I20 N LINE N8
+Hyundai,NEW I20 N LINE,N8 1.0 TURBO GDI IMT,NEW I20 N LINE N8
+Hyundai,Alcazar,Platinum (O) 6 STR 2.0 Petrol AT,Alcazar Platinum
+Hyundai,Alcazar,PLATINUM 1.5 MT 7STR,Alcazar Platinum
+Hyundai,Tucson,Platinum 2.0 AT Petrol [2022-2023],Tucson Platinum
+Hyundai,Kona Electric,Premium,Kona Electric Premium
+Hyundai,Alcazar,PRESTIGE (O) 6STR 2.0 AT,Alcazar Prestige
+Hyundai,Alcazar,Prestige (O) 7 STR 1.5 Diesel AT,Alcazar Prestige
+Hyundai,Venue,S (O) 1.0 TURBO IMT,Venue S
+Hyundai,Venue,S (O) 1.0 Turbo DCT,Venue S
+Hyundai,Venue,S (O) 1.2 Petrol,Venue S
+Hyundai,Xcent,S (O) 1.2,Xcent S
+Hyundai,Venue,S 1.0 TURBO DCT,Venue S
+Hyundai,Venue,S 1.0 TURBO IMT,Venue S
+Hyundai,Venue,S 1.0 Turbo DCT,Venue S
+Hyundai,Aura,S 1.2,Aura S
+Hyundai,Aura,S 1.2 CNG,Aura S
+Hyundai,Aura,S 1.2 Petrol,Aura S
+Hyundai,Venue,S 1.2,Venue S
+Hyundai,Venue,S 1.2 Petrol,Venue S
+Hyundai,Venue,S 1.2 Petrol [2019-2020],Venue S
+Hyundai,Xcent,S 1.2,Xcent S
+Hyundai,Xcent,S 1.2 (O),Xcent S
+Hyundai,Xcent,S 1.2 Special Edition,Xcent S
+Hyundai,Creta,S 1.4 CRDI,Creta S
+Hyundai,Creta,S 1.4 DIESEL,Creta S
+Hyundai,Venue,S 1.4 CRDI,Venue S
+Hyundai,Creta,S 1.5 PETROL,Creta S
+Hyundai,Creta,S 1.5 Petrol [2020-2022],Creta S
+Hyundai,Creta,S 1.6 AT CRDi,Creta S
+Hyundai,Creta,S 1.6 PETROL,Creta S
+Hyundai,Xcent,S AT 1.2,Xcent S
+Hyundai,Xcent,S AT 1.2 (O),Xcent S
+Hyundai,Creta,S PLUS 1.4 DIESEL,Creta S
+Hyundai,Creta,S Plus 1.4 CRDI,Creta S
+Hyundai,Venue,S Plus 1.2 Petrol,Venue S
+Hyundai,Verna,S Plus 1.5 CRDi,Verna S
+Hyundai,Verna,S Plus 1.5 VTVT,Verna S
+Hyundai,Venue,S(O) 1.2,Venue S
+Hyundai,Venue,S+ 1.2,Venue S
+Hyundai,Alcazar,Signature (O) 6 STR 1.5 Diesel AT,Alcazar Signature
+Hyundai,Alcazar,Signature (O) 7 Seater 2.0 Petrol AT,Alcazar Signature
+Hyundai,Alcazar,Signature 6 STR 2.0 Petrol,Alcazar Signature
+Hyundai,Grand i10,Sports Edition 1.2L Kappa VTVT,Grand i10 Sportz
+Hyundai,Eon,SPORTZ,Eon Sportz
+Hyundai,Eon,Sportz,Eon Sportz
+Hyundai,Santro,Sportz,Santro Sportz
+Hyundai,Grand i10,SPORTZ (O) 1.2 KAPPA VTVT,Grand i10 Sportz
+Hyundai,Grand i10,SPORTZ (O) AT 1.2 KAPPA VTVT,Grand i10 Sportz
+Hyundai,Grand i10,Sportz (O) 1.2 Kappa VTVT [2017-2018],Grand i10 Sportz
+Hyundai,Grand i10,Sportz (O) AT 1.2 Kappa VTVT [2017-2018],Grand i10 Sportz
+Hyundai,Grand i10,Sportz (O) U2 1.2 CRDi [2017-2018],Grand i10 Sportz
+Hyundai,i20,SPORTZ (O) 1.2,i20 Sportz
+Hyundai,NEW I20,Sportz (O) 1.2 IVT,NEW I20 Sportz
+Hyundai,Santro,Sportz [2018-2020],Santro Sportz
+Hyundai,Grand i10 Nios,SPORTZ 1.0 TURBO GDI,Grand i10 Nios Sportz
+Hyundai,i20,Sportz 1.0 Turbo IMT,i20 Sportz
+Hyundai,NEW I20,SPORTZ 1.0T GDI IMT,NEW I20 Sportz
+Hyundai,NEW I20,SPORTZ 1.0TURBO DCT,NEW I20 Sportz
+Hyundai,i10,SPORTZ 1.1,i10 Sportz
+Hyundai,i10,Sportz 1.1 LPG [2010-2017],i10 Sportz
+Hyundai,i10,Sportz 1.1 iRDE2 [2010--2017],i10 Sportz
+Hyundai,Elite i20,SPORTZ 1.2,Elite i20 Sportz
+Hyundai,Elite i20,SPORTZ 1.2 (O),Elite i20 Sportz
+Hyundai,Elite i20,Sportz 1.2,Elite i20 Sportz
+Hyundai,Elite i20,Sportz 1.2 (O),Elite i20 Sportz
+Hyundai,Elite i20,Sportz 1.2 [2016-2017],Elite i20 Sportz
+Hyundai,Grand i10,SPORTZ 1.2 KAPPA VTVT,Grand i10 Sportz
+Hyundai,Grand i10,SPORTZ 1.2 KAPPA VTVT DUAL TONE,Grand i10 Sportz
+Hyundai,Grand i10,Sportz 1.2 Kappa VTVT,Grand i10 Sportz
+Hyundai,Grand i10,Sportz 1.2 Kappa VTVT [2013-2016],Grand i10 Sportz
+Hyundai,Grand i10,Sportz 1.2 Kappa VTVT [2016-2017],Grand i10 Sportz
+Hyundai,Grand i10 Nios,SPORTZ 1.2 KAPPA VTVT,Grand i10 Nios Sportz
+Hyundai,Grand i10 Nios,SPORTZ 1.2 KAPPA VTVT CNG,Grand i10 Nios Sportz
+Hyundai,Grand i10 Nios,SPORTZ 1.2 KAPPA VTVT DUAL TONE,Grand i10 Nios Sportz
+Hyundai,Grand i10 Nios,Sportz 1.2 Kappa VTVT,Grand i10 Nios Sportz
+Hyundai,Grand i10 Nios,Sportz 1.2 Kappa VTVT CNG,Grand i10 Nios Sportz
+Hyundai,Grand i10 Nios,Sportz 1.2 Kappa VTVT [2023],Grand i10 Nios Sportz
+Hyundai,i10,SPORTZ 1.2,i10 Sportz
+Hyundai,i10,SPORTZ 1.2 AT,i10 Sportz
+Hyundai,i10,Sportz 1.2,i10 Sportz
+Hyundai,i10,Sportz 1.2 AT,i10 Sportz
+Hyundai,i10,Sportz 1.2 AT Kappa2,i10 Sportz
+Hyundai,i10,Sportz 1.2 Kappa2,i10 Sportz
+Hyundai,i20,SPORTZ 1.2,i20 Sportz
+Hyundai,i20,Sportz 1.2,i20 Sportz
+Hyundai,i20,Sportz 1.2 (O),i20 Sportz
+Hyundai,i20,Sportz 1.2 BS-IV,i20 Sportz
+Hyundai,i20,Sportz 1.2 IVT Dual Tone,i20 Sportz
+Hyundai,i20,Sportz 1.2 IVT [2020-2023],i20 Sportz
+Hyundai,i20,Sportz 1.2 MT [2020-2023],i20 Sportz
+Hyundai,NEW I20,SPORTZ 1.2 AT,NEW I20 Sportz
+Hyundai,NEW I20,SPORTZ 1.2 MT,NEW I20 Sportz
+Hyundai,NEW I20,SPORTZ 1.2 MT DUAL TONE,NEW I20 Sportz
+Hyundai,Elite i20,SPORTZ 1.4 CRDI,Elite i20 Sportz
+Hyundai,Elite i20,Sportz 1.4 (O),Elite i20 Sportz
+Hyundai,i20,SPORTZ 1.4 AT,i20 Sportz
+Hyundai,i20,SPORTZ 1.4 CRDI,i20 Sportz
+Hyundai,i20,Sportz 1.4 CRDI,i20 Sportz
+Hyundai,i20,Sportz 1.4 CRDI 6 Speed BS-IV,i20 Sportz
+Hyundai,NEW I20,SPORTZ 1.5 MT,NEW I20 Sportz
+Hyundai,Grand i10 Nios,SPORTZ AMT 1.2 KAPPA VTVT,Grand i10 Nios Sportz
+Hyundai,Grand i10 Nios,Sportz AMT 1.2 Kappa VTVT,Grand i10 Nios Sportz
+Hyundai,NEW SANTRO,SPORTZ AMT,NEW SANTRO Sportz
+Hyundai,Santro,Sportz AMT,Santro Sportz
+Hyundai,Santro,Sportz AMT [2018-2020],Santro Sportz
+Hyundai,Grand i10,SPORTZ AT 1.2 KAPPA VTVT,Grand i10 Sportz
+Hyundai,Grand i10,Sportz AT 1.2 Kappa VTVT,Grand i10 Sportz
+Hyundai,NEW SANTRO,SPORTZ CNG,NEW SANTRO Sportz
+Hyundai,Santro,Sportz CNG [2018-2020],Santro Sportz
+Hyundai,NEW SANTRO,SPORTZ EXECUTIVE MT CNG,NEW SANTRO Sportz
+Hyundai,NEW SANTRO,SPORTZ MT,NEW SANTRO Sportz
+Hyundai,Elite i20,SPORTZ PLUS  1.2 CVT,Elite i20 Sportz
+Hyundai,Elite i20,SPORTZ PLUS 1.2,Elite i20 Sportz
+Hyundai,Elite i20,SPORTZ PLUS 1.4 CRDI,Elite i20 Sportz
+Hyundai,Elite i20,Sportz Plus 1.4 CRDi,Elite i20 Sportz
+Hyundai,Grand i10,Sportz U2 1.2 CRDi,Grand i10 Sportz
+Hyundai,Grand i10 Nios,SPORTZ U2 1.2 CRDI,Grand i10 Nios Sportz
+Hyundai,Grand i10 Nios,SPORTZ U2 AMT 1.2 CRDI,Grand i10 Nios Sportz
+Hyundai,Grand i10 Nios,Sportz U2 1.2 CRDi [2020-2020],Grand i10 Nios Sportz
+Hyundai,Creta,1.6 CRDI SX PLUS AUTO,Creta SX
+Hyundai,Verna,1.6 CRDI SX,Verna SX
+Hyundai,Verna,1.6 CRDI SX (O),Verna SX
+Hyundai,Verna,1.6 CRDI SX (O) AT,Verna SX
+Hyundai,Fluidic Verna 4S,1.6 VTVT SX,Fluidic Verna 4S SX
+Hyundai,Verna,1.6 VTVT SX,Verna SX
+Hyundai,Verna,1.6 VTVT SX (O) AT,Verna SX
+Hyundai,Verna,1.6 VTVT SX + AT,Verna SX
+Hyundai,Verna,1.6 VTVT SX AT,Verna SX
+Hyundai,Verna,1.6 VTVT SX O,Verna SX
+Hyundai,Verna,FLUIDIC 1.6 VTVT SX,Verna SX
+Hyundai,Verna,Fluidic 1.6 VTVT SX,Verna SX
+Hyundai,Verna,FLUIDIC 1.6 VTVT SX AT,Verna SX
+Hyundai,Verna,Fluidic 1.6 VTVT SX AT,Verna SX
+Hyundai,Verna,FLUIDIC 1.6 VTVT SX OPT,Verna SX
+Hyundai,Verna,Fluidic 1.6 VTVT SX Opt,Verna SX
+Hyundai,Verna,FLUIDIC 4S 1.6 VTVT S,Verna S
+Hyundai,Verna,FLUIDIC 4S 1.6 VTVT S(O),Verna S
+Hyundai,i20 Active,1.2 SX,i20 Active SX
+Hyundai,i20 Active,1.4 SX,i20 Active SX
+Hyundai,Creta,1.6 SX,Creta SX
+Hyundai,Creta,1.6 SX (O),Creta SX
+Hyundai,Creta,1.6 SX Plus,Creta SX
+Hyundai,Creta,1.6 SX Plus AT,Creta SX
+Hyundai,Creta,1.6 SX Plus AT Petrol,Creta SX
+Hyundai,Creta,1.6 SX Plus Petrol,Creta SX
+Hyundai,Creta,1.6 SX Plus Special Edition,Creta SX
+Hyundai,Elantra,1.6 SX (O),Elantra SX
+Hyundai,Elantra,1.6 SX (O) AT,Elantra SX
+Hyundai,Elantra,1.6 SX MT,Elantra SX
+Hyundai,New Elantra,1.6 SX (O) AT DIESEL,New Elantra SX
+Hyundai,Verna,1.6 SX (O) CRDI MT,Verna SX
+Hyundai,Elantra,1.8 SX MT,Elantra SX
+Hyundai,Elantra,2.0 SX (O),Elantra SX
+Hyundai,Elantra,2.0 SX (O) AT,Elantra SX
+Hyundai,Elantra,2.0 SX MT,Elantra SX
+Hyundai,New Elantra,2.0 SX AT PETROL,New Elantra SX
+Hyundai,New Elantra,2.0 SX MT PETROL,New Elantra SX
+Hyundai,New Elantra,2.0 SX(O) AT PETROL,New Elantra SX
+Hyundai,Creta,SX (O) 1.4 TURBO DCT,Creta SX
+Hyundai,Creta,SX (O) 1.4 TURBO DCT DUAL TONE,Creta SX
+Hyundai,Creta,SX (O) 1.4 Turbo 7 DCT Dual Tone [2022-2022],Creta SX
+Hyundai,Creta,SX (O) 1.4 Turbo 7 DCT [2020-2022],Creta SX
+Hyundai,Creta,SX (O) 1.5 DIESEL,Creta SX
+Hyundai,Creta,SX (O) 1.5 Diesel Automatic [2020-2022],Creta SX
+Hyundai,Creta,SX (O) 1.5 Diesel [2020-2022],Creta SX
+Hyundai,Creta,SX (O) 1.5 Petrol CVT,Creta SX
+Hyundai,Creta,SX (O) 1.5 Petrol CVT [2020-2022],Creta SX
+Hyundai,Creta,SX (O) 1.6 DIESEL,Creta SX
+Hyundai,Creta,SX (O) 1.6 PETROL,Creta SX
+Hyundai,Creta,SX (O) AT 1.5 DIESEL,Creta SX
+Hyundai,Creta,SX (O) EXECUTIVE 1.6 PETROL,Creta SX
+Hyundai,Creta,SX (O) IVT 1.5 PETROL,Creta SX
+Hyundai,Creta,SX (O) IVT KNIGHT 1.5 PETROL,Creta SX
+Hyundai,Elantra,SX (O) 2.0 AT,Elantra SX
+Hyundai,Exter,SX (O) Connect 1.2 MT,Exter SX
+Hyundai,Venue,SX (O) 1.0 TURBO DCT,Venue SX
+Hyundai,Venue,SX (O) 1.0 Turbo,Venue SX
+Hyundai,Venue,SX (O) 1.0 Turbo iMT,Venue SX
+Hyundai,Venue,SX (O) 1.5 CRDI,Venue SX
+Hyundai,Verna,SX (O) 1.5 CRDI AT,Verna SX
+Hyundai,Verna,SX (O) 1.5 Petrol IVT,Verna SX
+Hyundai,Verna,SX (O) 1.5 VTVT IVT,Verna SX
+Hyundai,Verna,SX (O) 1.6 CRDi  AT,Verna SX
+Hyundai,Verna,SX (O) AT Anniversary Edition 1.6 VTVT,Verna SX
+Hyundai,Verna,SX (O) Anniversary Edition 1.6 CRDi,Verna SX
+Hyundai,Verna,SX (O)1.5 MPi,Verna SX
+Hyundai,Verna,SX (O)1.5 VTVT,Verna SX
+Hyundai,Venue,SX 1.0 (O) TURBO,Venue SX
+Hyundai,Venue,SX 1.0 (O) TURBO IMT,Venue SX
+Hyundai,Venue,SX 1.0 Petrol [2019-2020],Venue SX
+Hyundai,Venue,SX 1.0 TURBO,Venue SX
+Hyundai,Venue,SX 1.0 TURBO IMT,Venue SX
+Hyundai,Venue,SX 1.0 Turbo,Venue SX
+Hyundai,Venue,SX 1.0 Turbo iMT,Venue SX
+Hyundai,Aura,SX 1.2,Aura SX
+Hyundai,Aura,SX 1.2 (O),Aura SX
+Hyundai,Aura,SX 1.2 (O) Petrol,Aura SX
+Hyundai,Aura,SX 1.2 CNG,Aura SX
+Hyundai,Exter,SX 1.2 MT,Exter SX
+Hyundai,Venue,SX 1.2 PETROL,Venue SX
+Hyundai,Venue,SX 1.2 PETROL DUAL TONE,Venue SX
+Hyundai,Venue,SX 1.2 Petrol,Venue SX
+Hyundai,Xcent,SX 1.2,Xcent SX
+Hyundai,Xcent,SX 1.2 (O),Xcent SX
+Hyundai,Creta,SX 1.4 Turbo 7 DCT,Creta SX
+Hyundai,Venue,SX 1.4 (O) CRDi,Venue SX
+Hyundai,Creta,SX 1.5 DIESEL,Creta SX
+Hyundai,Creta,SX 1.5 Diesel Automatic,Creta SX
+Hyundai,Creta,SX 1.5 Diesel Executive,Creta SX
+Hyundai,Creta,SX 1.5 Diesel [2020-2022],Creta SX
+Hyundai,Creta,SX 1.5 PETROL,Creta SX
+Hyundai,Creta,SX 1.5 Petrol CVT [2020-2022],Creta SX
+Hyundai,Creta,SX 1.5 Petrol [2020-2022],Creta SX
+Hyundai,Venue,SX 1.5 (O) EXECUTIVE CRDI,Venue SX
+Hyundai,Venue,SX 1.5 CRDI,Venue SX
+Hyundai,Venue,SX 1.5 CRDi,Venue SX
+Hyundai,Verna,SX 1.5 CRDi AT,Verna SX
+Hyundai,Verna,SX 1.5 Turbo Petrol DCT,Verna SX
+Hyundai,Verna,SX 1.5 VTVT,Verna SX
+Hyundai,Verna,SX 1.5 VTVT IVT,Verna SX
+Hyundai,Verna,SX 1.5 l MPI,Verna SX
+Hyundai,Creta,SX 1.6 (O) Petrol,Creta SX
+Hyundai,Creta,SX 1.6 AT CRDi,Creta SX
+Hyundai,Creta,SX 1.6 AT Petrol,Creta SX
+Hyundai,Creta,SX 1.6 CRDI,Creta SX
+Hyundai,Creta,SX 1.6 CRDi,Creta SX
+Hyundai,Creta,SX 1.6 CRDi (O),Creta SX
+Hyundai,Creta,SX 1.6 DIESEL,Creta SX
+Hyundai,Creta,SX 1.6 DIESEL DUAL TONE,Creta SX
+Hyundai,Creta,SX 1.6 Dual Tone Petrol,Creta SX
+Hyundai,Creta,SX 1.6 PETROL,Creta SX
+Hyundai,Creta,SX 1.6 PETROL DUAL TONE,Creta SX
+Hyundai,Creta,SX 1.6 Petrol,Creta SX
+Hyundai,Verna,SX 1.6 CRDi,Verna SX
+Hyundai,Elantra,SX 2.0 AT,Elantra SX
+Hyundai,Creta,SX AT 1.5 DIESEL,Creta SX
+Hyundai,Creta,SX AT 1.6 DIESEL,Creta SX
+Hyundai,Creta,SX AT 1.6 PETROL,Creta SX
+Hyundai,Xcent,SX AT 1.2 (O),Xcent SX
+Hyundai,Creta,SX IVT 1.5 PETROL,Creta SX
+Hyundai,Aura,SX PLUS 1.2 AMT,Aura SX
+Hyundai,Aura,SX PLUS 1.2 AMT CRDI,Aura SX
+Hyundai,Aura,SX Plus 1.2 AMT Petrol,Aura SX
+Hyundai,Creta,SX PLUS  ANNIVERSARY EDITION 1.6 PETROL,Creta SX
+Hyundai,Creta,SX PLUS 1.6 DIESEL,Creta SX
+Hyundai,Creta,SX PLUS 1.6 DIESEL DUAL TONE,Creta SX
+Hyundai,Creta,SX PLUS 1.6 PETROL,Creta SX
+Hyundai,Creta,SX PLUS 1.6 PETROL DUAL TONE,Creta SX
+Hyundai,Creta,SX PLUS AT 1.6 DIESEL,Creta SX
+Hyundai,Creta,SX PLUS AT 1.6 PETROL,Creta SX
+Hyundai,Creta,SX Plus 1.6  Petrol,Creta SX
+Hyundai,Creta,SX Plus 1.6 AT CRDI,Creta SX
+Hyundai,Creta,SX Plus 1.6 CRDI,Creta SX
+Hyundai,Creta,SX Plus 1.6 CRDI Dual Tone,Creta SX
+Hyundai,Venue,SX PLUS 1.0 TURBO DCT,Venue SX
+Hyundai,Venue,SX PLUS 1.0 TURBO DCT DUAL TONE,Venue SX
+Hyundai,Venue,SX Plus 1.0 AT Petrol [2019-2020],Venue SX
+Hyundai,Venue,SX Plus 1.0 Turbo DCT,Venue SX
+Hyundai,Verna,SX Plus 1.6 CRDi AT,Verna SX
+Hyundai,Verna,SX Plus 1.6 VTVT AT,Verna SX
+Hyundai,Aura,SX+ 1.0 TURBO GDI MT,Aura SX
+Hyundai,XCENT PRIME,T+ CNG,XCENT PRIME 
+Hyundai,Santro Xing,XE,Santro Xing XE
+Hyundai,Santro Xing,XL eRLX - Euro II,Santro Xing XL
+Isuzu,D-Max V-Cross,4x4,D-Max V-Cross 4x4
+Jaguar,F-Pace,Prestige,F-Pace F-Pace
+Jaguar,XE,Portfolio,XE XE
+Jaguar,XF,2.2 Diesel,XF XF
+Jaguar,XF,2.2 Diesel Luxury,XF XF
+Jaguar,XF,3.0 V6 Premium Luxury,XF XF
+Jaguar,XF,Portfolio Petrol CBU,XF XF
+Jaguar,XF,Prestige Diesel CBU,XF XF
+Jaguar,XJ L,3.0 V6 Portfolio,XJ L XJ L
+Jaguar,XJ L,3.0 V6 premium-luxury,XJ L XJ L
+Jeep,Compass,80 Anniversary 1.4 Petrol DCT,Compass 80 Anniversary
+Jeep,Compass,LIMITED (O) 1.4 PETROL AT,Compass Limited
+Jeep,Compass,LIMITED (O) 1.4 PETROL AT BLACK PACK,Compass Limited
+Jeep,Compass,LIMITED (O) 2.0 DIESEL,Compass Limited
+Jeep,Compass,LIMITED (O) 2.0 DIESEL 4X4,Compass Limited
+Jeep,Compass,LIMITED 1.4 PETROL AT,Compass Limited
+Jeep,Compass,LIMITED 2.0 DIESEL,Compass Limited
+Jeep,Compass,LIMITED PLUS DIESEL,Compass Limited
+Jeep,Compass,LIMITED PLUS PETROL AT,Compass Limited
+Jeep,Compass,LONGITUDE (O) 1.4 PETROL AT,Compass Longitude
+Jeep,Compass,LONGITUDE (O) 2.0 DIESEL,Compass Longitude
+Jeep,Compass,LONGITUDE 2.0 DIESEL,Compass Longitude
+Jeep,Compass,LONGITUDE PLUS 1.4 PETROL AT,Compass Longitude
+Jeep,Compass,Limited (O) 1.4 Petrol AT [2017-2020],Compass Limited
+Jeep,Compass,Limited (O) 1.4 Petrol DCT [2021],Compass Limited
+Jeep,Compass,Limited (O) 2.0 Diesel 4x4 AT [2021],Compass Limited
+Jeep,Compass,Limited (O) 2.0 Diesel 4x4 Black Pack [2019-2020],Compass Limited
+Jeep,Compass,Limited (O) 2.0 Diesel 4x4 [2017-2020],Compass Limited
+Jeep,Compass,Limited (O) 2.0 Diesel [2017-2020],Compass Limited
+Jeep,Compass,Limited 1.4 Petrol AT [2017-2020],Compass Limited
+Jeep,Compass,Limited 2.0 Diesel [2017-2020],Compass Limited
+Jeep,Compass,Limited Plus 2.0 Diesel 4x4 AT [2020-2020],Compass Limited
+Jeep,Compass,Limited Plus Diesel 4x4,Compass Limited
+Jeep,Compass,Limited Plus Diesel 4x4 [2018-2020],Compass Limited
+Jeep,Compass,Limited Plus Diesel [2018-2020],Compass Limited
+Jeep,Compass,Limited Plus Petrol AT,Compass Limited
+Jeep,Compass,Limited Plus Petrol AT [2018-2020],Compass Limited
+Jeep,Compass,Longitude (O) 1.4 Petrol AT [2019-2020],Compass Longitude
+Jeep,Compass,Longitude (O) 2.0 Diesel [2017-2020],Compass Longitude
+Jeep,Compass,Longitude 2.0 Diesel [2017-2020],Compass Longitude
+Jeep,Compass,Model S (O) 1.4 Petrol DCT [2021],Compass Model S
+Jeep,Compass,Model S (O) Diesel 4x4 AT [2021],Compass Model S
+Jeep,Compass,SPORT 1.4 PETROL,Compass SPORT 1.4
+Jeep,Compass,SPORT 1.4 PETROL DCT,Compass SPORT 1.4
+Jeep,Compass,SPORT 2.0 DIESEL,Compass SPORT 2.0
+Jeep,Compass,SPORT PLUS 1.4 PETROL,Compass SPORT PLUS
+Jeep,Compass,SPORT PLUS 2.0 DIESEL,Compass SPORT PLUS
+Jeep,Compass,Sport 1.4 Petrol,Compass Sport 1.4
+Jeep,Compass,Sport 2.0 Diesel,Compass Sport 2.0
+Jeep,Compass,Sport Plus 1.4 Petrol [2019-2020],Compass Sport Plus
+Jeep,Compass,Sport Plus 2.0 Diesel,Compass Sport Plus
+Jeep,Compass,Trailhawk (O) 2.0 4x4,Compass Trailhawk (O)
+Jeep,Meridian,Limited (O) 4X2 MT [2022],Meridian Limited
+Jeep,Meridian,Limited (O) 4X4 AT [2022],Meridian Limited
+KIA,Carens,LUXURY 1.4 PETROL 7 STR,Carens Luxury
+KIA,Carens,LUXURY PLUS 1.4 PETROL 6 STR,Carens Luxury
+KIA,Carens,LUXURY PLUS 1.4 PETROL 7 STR,Carens Luxury
+KIA,Carens,LUXURY PLUS 1.5 DIESEL AT 6 STR,Carens Luxury
+KIA,Carens,Luxury 1.4 Petrol 7 STR,Carens Luxury
+KIA,Carens,Luxury 1.5 Diesel 7 STR,Carens Luxury
+KIA,Carens,Luxury Plus 1.4 Petrol 6 STR,Carens Luxury
+KIA,Carens,Luxury Plus 1.4 Petrol 7 STR,Carens Luxury
+KIA,Carens,Luxury Plus 1.4 Petrol DCT 6 STR,Carens Luxury
+KIA,Carens,Luxury Plus 1.5 Diesel 7 STR,Carens Luxury
+KIA,Carens,Luxury Plus 1.5 Diesel AT 6 STR,Carens Luxury
+KIA,Carens,Luxury Plus 1.5 Diesel AT 7 STR,Carens Luxury
+KIA,Carens,PREMIUM 1.4 PETROL 7 STR,Carens PREMIUM 1.4
+KIA,Carens,PRESTIGE PLUS 1.4 PETROL 7 STR,Carens PRESTIGE PLUS
+KIA,Carens,Prestige 1.5 Petrol MT 7 STR,Carens Prestige 1.5
+KIA,Carens,Prestige Plus 1.4 Petrol MT 7 STR,Carens Prestige Plus
+KIA,Carnival,Limousine Plus 7 STR,Carnival Limousine Plus
+KIA,Carnival,PREMIUM 2.2 7 STR,Carnival PREMIUM 2.2
+KIA,Carnival,Prestige 7 STR,Carnival Prestige 7
+KIA,Carnival,Prestige 9 STR,Carnival Prestige 9
+KIA,EV6,GT Line AWD,EV6 GT Line
+KIA,Seltos,GTK 1.4 PETROL,Seltos GTK 1.4
+KIA,Seltos,GTX (O) 1.4,Seltos GTX
+KIA,Seltos,GTX 1.4,Seltos GTX
+KIA,Seltos,GTX 1.4 PETROL,Seltos GTX
+KIA,Seltos,GTX 1.4 PETROL DUAL TONE,Seltos GTX
+KIA,Seltos,GTX AT 1.4,Seltos GTX
+KIA,Seltos,GTX AT 1.4 PETROL,Seltos GTX
+KIA,Seltos,GTX PLUS 1.4,Seltos GTX
+KIA,Seltos,GTX PLUS 1.4 PETROL,Seltos GTX
+KIA,Seltos,GTX PLUS 1.4 PETROL DCT DUAL TONE,Seltos GTX
+KIA,Seltos,GTX PLUS 1.4 PETROL DUAL TONE,Seltos GTX
+KIA,Seltos,GTX PLUS 1.5 DIESEL AT,Seltos GTX
+KIA,Seltos,GTX PLUS AT 1.5 DIESEL,Seltos GTX
+KIA,Seltos,GTX PLUS DCT 1.4 PETROL,Seltos GTX
+KIA,Seltos,GTX Plus 1.4 DCT,Seltos GTX
+KIA,Seltos,GTX Plus 1.4 [2020-2021],Seltos GTX
+KIA,Seltos,GTX Plus 1.5 Diesel AT,Seltos GTX
+KIA,Seltos,GTX Plus AT 1.4 [2019-2020],Seltos GTX
+KIA,Seltos,GTX Plus AT 1.5 Diesel [2019-2020],Seltos GTX
+KIA,Seltos,HTE 1.5,Seltos HTE
+KIA,Seltos,HTE 1.5 DIESEL,Seltos HTE
+KIA,Seltos,HTE 1.5 Diesel,Seltos HTE
+KIA,Seltos,HTE 1.5 PETROL,Seltos HTE
+KIA,Seltos,HTK 1.5 PETROL,Seltos HTK
+KIA,Seltos,HTK 1.5 [2019-2020],Seltos HTK
+KIA,Seltos,HTK 1.5 [2020-2021],Seltos HTK
+KIA,Seltos,HTK PLUS 1.5,Seltos HTK
+KIA,Seltos,HTK PLUS 1.5 DIESEL,Seltos HTK
+KIA,Seltos,HTK PLUS 1.5 IMT,Seltos HTK
+KIA,Seltos,HTK PLUS AT 1.5 DIESEL,Seltos HTK
+KIA,Seltos,HTK Plus 1.5 Diesel AT,Seltos HTK
+KIA,Seltos,HTK Plus 1.5 Diesel [2019-2020],Seltos HTK
+KIA,Seltos,HTK Plus 1.5 Diesel iMT,Seltos HTK
+KIA,Seltos,HTK Plus 1.5 Petrol MT,Seltos HTK
+KIA,Seltos,HTK Plus 1.5 [2019-2020],Seltos HTK
+KIA,Seltos,HTK Plus 1.5 iMT,Seltos HTK
+KIA,Seltos,HTX 1.5 CVT PETROL,Seltos HTX
+KIA,Seltos,HTX 1.5 DIESEL,Seltos HTX
+KIA,Seltos,HTX 1.5 Dual Tone [2019-2020],Seltos HTX
+KIA,Seltos,HTX 1.5 IVT,Seltos HTX
+KIA,Seltos,HTX 1.5 PETROL,Seltos HTX
+KIA,Seltos,HTX 1.5 [2020-2021],Seltos HTX
+KIA,Seltos,HTX IVT 1.5 PETROL,Seltos HTX
+KIA,Seltos,HTX IVT 1.5 [2019-2020],Seltos HTX
+KIA,Seltos,HTX PETROL 1.5,Seltos HTX
+KIA,Seltos,HTX PLUS 1.5 DIESEL,Seltos HTX
+KIA,Seltos,HTX PLUS AT1.5 DIESEL,Seltos HTX
+KIA,Seltos,HTX Plus 1.5 Diesel [2020-2021],Seltos HTX
+KIA,Seltos,HTX Plus AT 1.5 Diesel [2019-2020],Seltos HTX
+KIA,Seltos,X LINE 1.5 DIESEL AT,Seltos X LINE
+KIA,Seltos,X Line 1.4 DCT,Seltos X Line
+KIA,Sonet,GTX PLUS 1.0 DCT,Sonet GTX
+KIA,Sonet,GTX PLUS 1.0 IMT,Sonet GTX
+KIA,Sonet,GTX PLUS 1.0 IMT DUAL TONE,Sonet GTX
+KIA,Sonet,GTX PLUS 1.5,Sonet GTX
+KIA,Sonet,GTX PLUS 1.5 AT,Sonet GTX
+KIA,Sonet,GTX PLUS 1.5 IMT,Sonet GTX
+KIA,Sonet,GTX PLUS 1.5D  AT,Sonet GTX
+KIA,Sonet,GTX Plus 1.0 DCT [2020-2021],Sonet GTX
+KIA,Sonet,GTX Plus 1.0 iMT,Sonet GTX
+KIA,Sonet,GTX Plus 1.0 iMT [2020-2021],Sonet GTX
+KIA,Sonet,GTX Plus 1.5 AT Dual Tone,Sonet GTX
+KIA,Sonet,GTX Plus 1.5 AT [2020-2021],Sonet GTX
+KIA,Sonet,GTX Plus 1.5 Diesel AT,Sonet GTX
+KIA,Sonet,GTX Plus 1.5 Dual Tone,Sonet GTX
+KIA,Sonet,GTX Plus 1.5 [2020-2021],Sonet GTX
+KIA,Sonet,HTE 1.2,Sonet HTE
+KIA,Sonet,HTE 1.5,Sonet HTE
+KIA,Sonet,HTK 1.2,Sonet HTK
+KIA,Sonet,HTK 1.2 [2020-2021],Sonet HTK
+KIA,Sonet,HTK 1.5,Sonet HTK
+KIA,Sonet,HTK PLUS 1.0 DCT,Sonet HTK
+KIA,Sonet,HTK PLUS 1.0 IMT,Sonet HTK
+KIA,Sonet,HTK PLUS 1.2,Sonet HTK
+KIA,Sonet,HTK PLUS 1.2 PETROL MT,Sonet HTK
+KIA,Sonet,HTK PLUS 1.5,Sonet HTK
+KIA,Sonet,HTK PLUS 1.5 AT,Sonet HTK
+KIA,Sonet,HTK Plus 1.0 iMT [2020-2021],Sonet HTK
+KIA,Sonet,HTK Plus 1.5 AT,Sonet HTK
+KIA,Sonet,HTK Plus 1.5 [2020-2021],Sonet HTK
+KIA,Sonet,HTX 1.0 IMT,Sonet HTK
+KIA,Sonet,HTX 1.0 iMT [2020-2021],Sonet HTK
+KIA,Sonet,HTX 1.5 AT,Sonet HTK
+KIA,Sonet,HTX 1.5 [2020-2021],Sonet HTK
+KIA,Sonet,HTX ANNIVERSARY EDITION 1.0 DCT,Sonet HTK
+KIA,Sonet,HTX ANNIVERSARY EDITION 1.5,Sonet HTK
+KIA,Sonet,HTX PLUS 1.0 IMT,Sonet HTK
+KIA,Sonet,HTX Plus 1.0 iMT [2020-2021],Sonet HTK
+Lamborghini,Urus,Twin-Turbo V8,Urus Twin-Turbo V8
+Land Rover,Defender,110 HSE 2.0 Petrol,Defender 110 HSE
+Land Rover,Discovery,2.0 S 4WD Diesel,Discovery 2.0 S
+Land Rover,Discovery,2.0 SE 4WD Diesel,Discovery 2.0 SE
+Land Rover,Discovery,3.0 HSE Diesel,Discovery 3.0 HSE
+Land Rover,Discovery,3.0 HSE Luxury Petrol,Discovery 3.0 HSE
+Land Rover,Discovery,3.0 SE Petrol,Discovery 3.0 SE
+Land Rover,Discovery,HSE,Discovery HSE
+Land Rover,Discovery Sport,HSE,Discovery Sport HSE
+Land Rover,Discovery Sport,HSE 7-Seater,Discovery Sport HSE 7-Seater
+Land Rover,Discovery Sport,HSE Luxury,Discovery Sport HSE Luxury
+Land Rover,Discovery Sport,HSE Luxury 7-Seater,Discovery Sport HSE Luxury
+Land Rover,Discovery Sport,HSE Petrol,Discovery Sport HSE Petrol
+Land Rover,Discovery Sport,SE R-Dynamic,Discovery Sport SE R-Dynamic
+Land Rover,Discovery Sport,SE R-Dynamic [2023-2024],Discovery Sport SE R-Dynamic
+Land Rover,Freelander 2,HSE SD4,Freelander 2 HSE SD4
+Land Rover,Freelander 2,SE,Freelander 2 SE
+Land Rover,Freelander 2,SE TD4,Freelander 2 SE TD4
+Land Rover,Range Rover,3.6 TDV8 Vogue SE Diesel,Range Rover 3.6 TDV8
+Land Rover,Range Rover,4.4 SDV8 Vogue SE,Range Rover 4.4 SDV8
+Land Rover,Range Rover,5.0 Supercharged V8 Petrol,Range Rover 5.0 Supercharged
+Land Rover,Range Rover Evoque,Dynamic SD4,Range Rover Evoque Dynamic SD4
+Land Rover,Range Rover Evoque,HSE,Range Rover Evoque HSE
+Land Rover,Range Rover Evoque,HSE Dynamic,Range Rover Evoque HSE Dynamic
+Land Rover,Range Rover Evoque,Prestige SD4,Range Rover Evoque Prestige SD4
+Land Rover,Range Rover Evoque,SE,Range Rover Evoque SE
+Land Rover,Range Rover Evoque,SE Dynamic,Range Rover Evoque SE Dynamic
+Land Rover,Range Rover Evoque,SE R-Dynamic,Range Rover Evoque SE R-Dynamic
+Land Rover,Range Rover Evoque,SE R-Dynamic Diesel [2022-2023],Range Rover Evoque SE R-Dynamic
+Land Rover,Range Rover Evoque,SE R-Dynamic Petrol [2021-2023],Range Rover Evoque SE R-Dynamic
+Land Rover,Range Rover Sport,3.0 TDV6,Range Rover Sport 3.0 TDV6
+Land Rover,Range Rover Sport,SDV6 HSE,Range Rover Sport SDV6 HSE
+Land Rover,Range Rover Sport,SDV6 SE,Range Rover Sport SDV6 SE
+Land Rover,Range Rover Sport,SDV8 HSE,Range Rover Sport SDV8 HSE
+Land Rover,Range Rover Sport,SE 2.0 Petrol,Range Rover Sport SE 2.0
+Land Rover,Range Rover Sport,SE 3.0 Diesel [2018-2020],Range Rover Sport SE 3.0
+Land Rover,Range Rover Velar,2.0 R-Dynamic S Petrol 250 [2017-2020],Range Rover Velar 2.0 R-Dynamic
+Land Rover,Range Rover Velar,2.0 S Petrol 250,Range Rover Velar 2.0 S
+Lexus,ES,300h Luxury,ES 300h Luxury
+Lexus,ES,300h Luxury [2020-2021],ES 300h Luxury
+Lexus,ES,300h [2018-2020],ES 300h [2018-2020]
+Lexus,NX,300h Luxury [2017-2020],NX 300h Luxury
+Lexus,NX,350h Luxury,NX 350h Luxury
+Lexus,RX,Luxury,RX Luxury
+Mahindra,Alturas G4,4WD AT,Alturas G4 4WD
+Mahindra,Alturas G4,4WD AT [2018-2020],Alturas G4 4WD
+Mahindra,Bolero,B4,Bolero B
+Mahindra,Bolero,B6,Bolero B
+Mahindra,Bolero,B6 (O),Bolero B
+Mahindra,Bolero,B6 (O) [2022],Bolero B
+Mahindra,Bolero,B6 [2022],Bolero B
+Mahindra,Bolero,DI BS III,Bolero DI BS
+Mahindra,Bolero,Plus AC BS IV,Bolero Plus AC
+Mahindra,Bolero,Power Plus ZLX [2016-2019],Bolero ZLX BS
+Mahindra,Bolero,ZLX BS IV,Bolero ZLX BS
+Mahindra,Bolero Neo,N 10 (O),Bolero Neo N
+Mahindra,Bolero Neo,N 8,Bolero Neo N
+Mahindra,Bolero Neo,N10,Bolero Neo N
+Mahindra,Bolero Neo,N10 R,Bolero Neo N
+Mahindra,Bolero Neo,N4,Bolero Neo N
+Mahindra,Bolero Neo,N8,Bolero Neo N
+Mahindra,KUV 100 NXT,K2 P 6 STR,KUV 100 NXT K
+Mahindra,KUV 100 NXT,K2+ P 6 STR,KUV 100 NXT K
+Mahindra,KUV 100 NXT,K4+ P 6 STR,KUV 100 NXT K
+Mahindra,KUV 100 NXT,K6+ P 6 STR,KUV 100 NXT K
+Mahindra,KUV 100 NXT,K8 P 6 STR,KUV 100 NXT K
+Mahindra,KUV 100 NXT,K8 P 6 STR DUAL TONE,KUV 100 NXT K
+Mahindra,KUV100 NXT,K2 Plus 6 STR [2017-2020],KUV100 NXT K
+Mahindra,KUV100 NXT,K4 Plus 5 STR,KUV100 NXT K
+Mahindra,KUV100 NXT,K4 Plus 6 STR [2017-2020],KUV100 NXT K
+Mahindra,KUV100 NXT,K6 Plus D 6 STR,KUV100 NXT K
+Mahindra,Kuv100,K2 PLUS D 6 STR,Kuv100 K
+Mahindra,Kuv100,K4 6 STR,Kuv100 K
+Mahindra,Kuv100,K6 PLUS D 6 STR,Kuv100 K
+Mahindra,Kuv100,K8 6 STR,Kuv100 K
+Mahindra,Marazzo,M6 7 STR,Marazzo M
+Mahindra,Marazzo,M6 8 STR,Marazzo M
+Mahindra,Marazzo,M6 Plus 7 STR [2020],Marazzo M
+Mahindra,Marazzo,M8 7 STR,Marazzo M
+Mahindra,SCORPIO-N,Z8 L DIESEL MT 4WD 7 STR,SCORPIO-N Z
+Mahindra,SCORPIO-N,Z8 L PETROL MT 7 STR,SCORPIO-N Z
+Mahindra,Scorpio,S10,Scorpio S
+Mahindra,Scorpio,S10 AT,Scorpio S
+Mahindra,Scorpio,S11 2WD,Scorpio S
+Mahindra,Scorpio,S11 MT 7S,Scorpio S
+Mahindra,Scorpio,S4,Scorpio S
+Mahindra,Scorpio,S4 Plus,Scorpio S
+Mahindra,Scorpio,S5,Scorpio S
+Mahindra,Scorpio,S6 Plus 1.99 [2016-2017],Scorpio S
+Mahindra,Scorpio,S8,Scorpio S
+Mahindra,Scorpio,S9,Scorpio S
+Mahindra,Scorpio 2021,S11,Scorpio 2021 S
+Mahindra,Scorpio 2021,S11 2WD 7 STR,Scorpio 2021 S
+Mahindra,Scorpio 2021,S5 2WD 7 STR,Scorpio 2021 S
+Mahindra,Scorpio 2021,S9 2WD 7 STR,Scorpio 2021 S
+Mahindra,Scorpio N,Z6 Diesel MT 2WD 7 STR [2022],Scorpio N Z
+Mahindra,Scorpio N,Z8 Diesel AT 2WD 7 STR [2022],Scorpio N Z
+Mahindra,Scorpio N,Z8 Diesel MT 2WD 7 STR [2022],Scorpio N Z
+Mahindra,Scorpio N,Z8 L Diesel AT 2WD 7 STR [2022],Scorpio N Z
+Mahindra,Scorpio N,Z8 L Diesel MT 2WD 7 STR [2022],Scorpio N Z
+Mahindra,Scorpio N,Z8 L Petrol MT 7 STR [2022],Scorpio N Z
+Mahindra,TUV300,T10,TUV300 T
+Mahindra,TUV300,T4 Plus,TUV300 T
+Mahindra,TUV300,T6 PLUS,TUV300 T
+Mahindra,TUV300,T6 Plus,TUV300 T
+Mahindra,TUV300,T8,TUV300 T
+Mahindra,TUV300,T8 AMT,TUV300 T
+Mahindra,Thar,CRDe 4x4 ABS,Thar 4WD
+Mahindra,Thar,CRDe 4x4 AC,Thar 4WD
+Mahindra,Thar,CRDe 4x4 AC1,Thar 4WD
+Mahindra,Thar,CRDe 4x4 Non AC,Thar 4WD
+Mahindra,Thar,LX  P 4WD AT CONVERTIBLE,Thar LX 
+Mahindra,Thar,LX Convertible Diesel AT,Thar LX 
+Mahindra,Thar,LX Convertible Top Diesel AT 4WD,Thar LX 
+Mahindra,Thar,LX D 4WD AT CONVERTIBLE,Thar LX 
+Mahindra,Thar,LX Hard Top Diesel AT,Thar LX 
+Mahindra,Thar,LX Hard Top Diesel AT 4WD [2023],Thar LX 
+Mahindra,Thar,LX Hard Top Diesel MT,Thar LX 
+Mahindra,Thar,LX Hard Top Diesel MT 4WD,Thar LX 
+Mahindra,Thar,LX Hard Top Diesel MT RWD,Thar LX 
+Mahindra,Thar,LX Hard Top Petrol AT,Thar LX 
+Mahindra,Thar,LX Hard Top Petrol MT,Thar LX 
+Mahindra,Thar,LX Hard Top Petrol MT 4WD,Thar LX 
+Mahindra,Thar,LX PETROL HT 4WD AT,Thar LX 
+Mahindra,Verito,1.5 D6 BS-III,Verito D
+Mahindra,Verito Vibe CS,1.5 D6,Verito Vibe CS D
+Mahindra,XUV300,1.5 W4 [2019-2020],XUV300 W
+Mahindra,XUV300,1.5 W6 [2019-2020],XUV300 W
+Mahindra,XUV300,1.5 W8 (O) [2019-2020],XUV300 W
+Mahindra,XUV300,W4 1.2 PETROL,XUV300 W
+Mahindra,XUV300,W4 1.5 DIESEL,XUV300 W
+Mahindra,XUV300,W4 1.5 Diesel [2020],XUV300 W
+Mahindra,XUV300,W6 1.2 PETROL,XUV300 W
+Mahindra,XUV300,W6 1.2 PETROL AMT,XUV300 W
+Mahindra,XUV300,W6 1.2 Petrol,XUV300 W
+Mahindra,XUV300,W6 1.2 Petrol AMT [2021],XUV300 W
+Mahindra,XUV300,W6 1.5 DIESEL,XUV300 W
+Mahindra,XUV300,W6 1.5 DIESEL AMT,XUV300 W
+Mahindra,XUV300,W6 1.5 Diesel AMT [2020],XUV300 W
+Mahindra,XUV300,W8 (O) 1.2 PETROL,XUV300 W
+Mahindra,XUV300,W8 (O) 1.2 PETROL AMT,XUV300 W
+Mahindra,XUV300,W8 (O) 1.2 Petrol,XUV300 W
+Mahindra,XUV300,W8 (O) 1.2 Petrol AMT,XUV300 W
+Mahindra,XUV300,W8 (O) 1.2 Petrol [2019],XUV300 W
+Mahindra,XUV300,W8 (O) 1.5 DIESEL,XUV300 W
+Mahindra,XUV300,W8 (O) 1.5 DIESEL AMT,XUV300 W
+Mahindra,XUV300,W8 (O) 1.5 Diesel AMT,XUV300 W
+Mahindra,XUV300,W8 (O) 1.5 Diesel [2020],XUV300 W
+Mahindra,XUV300,W8 1.2 PETROL,XUV300 W
+Mahindra,XUV300,W8 1.2 Petrol [2019],XUV300 W
+Mahindra,XUV300,W8 1.5 DIESEL,XUV300 W
+Mahindra,XUV300,W8 1.5 Diesel [2020],XUV300 W
+Mahindra,XUV300,W8(O) 1.2 PETROL DUAL TONE,XUV300 W
+Mahindra,XUV300,W8(O) 1.5 Diesel Dual Tone [2020],XUV300 W
+Mahindra,XUV500,W10,XUV500 W
+Mahindra,XUV500,W10 1.99,XUV500 W
+Mahindra,XUV500,W10 AT,XUV500 W
+Mahindra,XUV500,W10 AT 1.99,XUV500 W
+Mahindra,XUV500,W10 AWD,XUV500 W
+Mahindra,XUV500,W10 AWD AT,XUV500 W
+Mahindra,XUV500,W11,XUV500 W
+Mahindra,XUV500,W11 (O) AT,XUV500 W
+Mahindra,XUV500,W11 (O) AWD,XUV500 W
+Mahindra,XUV500,W11 (O) AWD AT,XUV500 W
+Mahindra,XUV500,W11 AT,XUV500 W
+Mahindra,XUV500,W11(O),XUV500 W
+Mahindra,XUV500,W11(O) [2018-2020],XUV500 W
+Mahindra,XUV500,W4 [2015-2016],XUV500 W
+Mahindra,XUV500,W5,XUV500 W
+Mahindra,XUV500,W5 [2018-2020],XUV500 W
+Mahindra,XUV500,W6,XUV500 W
+Mahindra,XUV500,W6 AT,XUV500 W
+Mahindra,XUV500,W7,XUV500 W
+Mahindra,XUV500,W7 AT,XUV500 W
+Mahindra,XUV500,W7 AT [2018-2020],XUV500 W
+Mahindra,XUV500,W7 [2018-2020],XUV500 W
+Mahindra,XUV500,W8,XUV500 W
+Mahindra,XUV500,W8 2013,XUV500 W
+Mahindra,XUV500,W8 AT [2015-2017],XUV500 W
+Mahindra,XUV500,W8 [2015-2017],XUV500 W
+Mahindra,XUV500,W9,XUV500 W
+Mahindra,XUV500,W9 AT,XUV500 W
+Mahindra,XUV500,W9 [2018-2020],XUV500 W
+Mahindra,XUV700,AX 3 Diesel AT 5 STR [2021],XUV700 AX
+Mahindra,XUV700,AX 5 Diesel AT 5 STR [2021],XUV700 AX
+Mahindra,XUV700,AX 5 Diesel MT 7 STR [2021],XUV700 AX
+Mahindra,XUV700,AX 5 P AT 5 STR,XUV700 AX
+Mahindra,XUV700,AX 5 Petrol AT 5 STR [2021],XUV700 AX
+Mahindra,XUV700,AX 7 Diesel  AT Luxury Pack 7 STR [2021],XUV700 AX
+Mahindra,XUV700,AX 7 Diesel AT 7 STR [2021],XUV700 AX
+Mahindra,XUV700,AX 7 Diesel AT AWD 7 STR [2021],XUV700 AX
+Mahindra,XUV700,AX 7 Diesel AT AWD Luxury Pack 7 STR [2021],XUV700 AX
+Mahindra,XUV700,AX 7 Diesel MT Luxury Pack 7 STR [2021],XUV700 AX
+Mahindra,XUV700,AX 7 LUXURY D AWD AT 7 STR,XUV700 AX
+Mahindra,XUV700,AX 7 P AT 7 STR,XUV700 AX
+Mahindra,XUV700,AX 7 Petrol AT Luxury Pack 7 STR [2021],XUV700 AX
+Mahindra,XUV700,MX Petrol MT 5 STR [2021],XUV700 MX Petrol
+Mahindra,Xylo,E4 BS-III,Xylo E4 BS-III
+Maruti,A Star,LXI,A Star LX
+Maruti,A Star,VXI,A Star VX
+Maruti,A Star,VXI (ABS) AT,A Star VX
+Maruti,Alto,LX,Alto LX
+Maruti,Alto,LXI,Alto LX
+Maruti,Alto,LXi BS-III,Alto LX
+Maruti,Alto,LXi BS-IV,Alto LX
+Maruti,Alto,LXI CNG,Alto LX
+Maruti,Alto,LXI O,Alto LX
+Maruti,Alto,LXI OPT CNG,Alto LX
+Maruti,Alto,VXI,Alto VX
+Maruti,Alto,VXI PLUS,Alto VX
+Maruti,Alto 800,LXI,Alto 800 LX
+Maruti,Alto 800,Lxi,Alto 800 LX
+Maruti,Alto 800,LXi (O),Alto 800 LX
+Maruti,Alto 800,LXI ANNIVERSARY EDITION,Alto 800 LX
+Maruti,Alto 800,LXI CNG,Alto 800 LX
+Maruti,Alto 800,LXI CNG O,Alto 800 LX
+Maruti,Alto 800,Lxi CNG,Alto 800 LX
+Maruti,Alto 800,LXI O,Alto 800 LX
+Maruti,Alto 800,LXI UTSAV LIMITED EDITION,Alto 800 LX
+Maruti,Alto 800,Tour H1,Alto 800 Tour H1
+Maruti,Alto 800,VXI,Alto 800 VX
+Maruti,Alto 800,VXi,Alto 800 VX
+Maruti,Alto 800,Vxi,Alto 800 VX
+Maruti,Alto 800,VXi (O),Alto 800 VX
+Maruti,Alto 800,Vxi Plus,Alto 800 VX
+Maruti,Alto K10,LXI,Alto K10 LX
+Maruti,Alto K10,LXi,Alto K10 LX
+Maruti,Alto K10,LXi [2022-2023],Alto K10 LX
+Maruti,Alto K10,LXI CNG (AIRBAG),Alto K10 LX
+Maruti,Alto K10,LXi CNG (Airbag) [2014-2019],Alto K10 LX
+Maruti,Alto K10,VXI,Alto K10 VX
+Maruti,Alto K10,VXi,Alto K10 VX
+Maruti,Alto K10,VXI (O),Alto K10 VX
+Maruti,Alto K10,VXI (O) AMT,Alto K10 VX
+Maruti,Alto K10,VXi (O),Alto K10 VX
+Maruti,Alto K10,VXi (O) [2014-2019],Alto K10 VX
+Maruti,Alto K10,VXi [2014-2019],Alto K10 VX
+Maruti,Alto K10,VXi [2022-2023],Alto K10 VX
+Maruti,Alto K10,VXi [2023-2024],Alto K10 VX
+Maruti,Alto K10,VXI AMT,Alto K10 VX
+Maruti,Alto K10,VXi AMT (Airbag) [2014-2019],Alto K10 VX
+Maruti,Alto K10,VXi AMT [2014-2018],Alto K10 VX
+Maruti,Alto K10,VXI PLUS,Alto K10 VX
+Maruti,Alto K10,VXI PLUS AMT,Alto K10 VX
+Maruti,A-Star,Lxi,A-Star LX
+Maruti,A-Star,Vxi,A-Star VX
+Maruti,Baleno,Alpha (O) 1.2 AT,Baleno Alpha
+Maruti,Baleno,ALPHA 1.2 AGS,Baleno Alpha
+Maruti,Baleno,Alpha 1.2,Baleno Alpha
+Maruti,Baleno,Alpha 1.2 AT,Baleno Alpha
+Maruti,Baleno,Alpha 1.3,Baleno Alpha
+Maruti,Baleno,Alpha AGS [2022-2023],Baleno Alpha
+Maruti,Baleno,Alpha Automatic,Baleno Alpha
+Maruti,Baleno,ALPHA CVT PETROL 1.2,Baleno Alpha
+Maruti,Baleno,ALPHA DIESEL 1.3,Baleno Alpha
+Maruti,Baleno,Alpha MT [2022-2023],Baleno Alpha
+Maruti,Baleno,ALPHA PETROL 1.2,Baleno Alpha
+Maruti,Baleno,DELTA 1.2 AGS,Baleno Delta
+Maruti,Baleno,Delta 1.2,Baleno Delta
+Maruti,Baleno,Delta 1.2 AT,Baleno Delta
+Maruti,Baleno,Delta 1.3,Baleno Delta
+Maruti,Baleno,DELTA CVT PETROL 1.2,Baleno Delta
+Maruti,Baleno,DELTA DIESEL 1.3,Baleno Delta
+Maruti,Baleno,Delta MT [2022-2023],Baleno Delta
+Maruti,Baleno,DELTA PETROL 1.2,Baleno Delta
+Maruti,Baleno,RS 1.0,Baleno RS 1.0
+Maruti,Baleno,RS 1.0 PETROL,Baleno RS 1.0
+Maruti,Baleno,Sigma 1.2,Baleno Sigma
+Maruti,Baleno,SIGMA PETROL 1.2,Baleno Sigma
+Maruti,Baleno,Zeta,Baleno Zeta
+Maruti,Baleno,Zeta 1.2,Baleno Zeta
+Maruti,Baleno,Zeta 1.2 AT,Baleno Zeta
+Maruti,Baleno,Zeta 1.3,Baleno Zeta
+Maruti,Baleno,Zeta Automatic,Baleno Zeta
+Maruti,Baleno,ZETA CVT PETROL 1.2,Baleno Zeta
+Maruti,Baleno,ZETA DIESEL 1.3,Baleno Zeta
+Maruti,Baleno,Zeta MT [2022-2023],Baleno Zeta
+Maruti,Baleno,ZETA PETROL 1.2,Baleno Zeta
+Maruti,Brezza,VXi,Brezza VX
+Maruti,Brezza,VXi [2022-2023],Brezza VX
+Maruti,Brezza,VXI SMART HYBRID,Brezza VX
+Maruti,Brezza,ZXi,Brezza ZX
+Maruti,Brezza,ZXI + SMART HYBRID DUAL TONE,Brezza ZX
+Maruti,Brezza,Zxi Dual Tone,Brezza ZX
+Maruti,Brezza,ZXi Plus,Brezza ZX
+Maruti,Brezza,ZXi Plus AT,Brezza ZX
+Maruti,Brezza,ZXI SMART HYBRID,Brezza ZX
+Maruti,Brezza,ZXI SMART HYBRID DUAL TONE,Brezza ZX
+Maruti,Celerio,LDi [2015-2017],Celerio LD
+Maruti,Celerio,LDi ABS [2015-2017],Celerio LD
+Maruti,Celerio,LXI,Celerio LX
+Maruti,Celerio,LXi,Celerio LX
+Maruti,Celerio,LXI (O),Celerio LX
+Maruti,Celerio,VDi [2015-2017],Celerio VD
+Maruti,Celerio,VXI,Celerio VX
+Maruti,Celerio,VXi,Celerio VX
+Maruti,Celerio,VXI (O),Celerio VX
+Maruti,Celerio,VXI (O) CNG,Celerio VX
+Maruti,Celerio,VXi (O) CNG,Celerio VX
+Maruti,Celerio,VXi (O) CNG [2017-2019],Celerio VX
+Maruti,Celerio,VXi (O) [2017-2019],Celerio VX
+Maruti,Celerio,VXi [2017-2019],Celerio VX
+Maruti,Celerio,VXI AMT,Celerio VX
+Maruti,Celerio,VXI AMT (O),Celerio VX
+Maruti,Celerio,VXi AMT,Celerio VX
+Maruti,Celerio,VXi AMT [2019-2020],Celerio VX
+Maruti,Celerio,VXI CNG,Celerio VX
+Maruti,Celerio,VXi CNG,Celerio VX
+Maruti,Celerio,VXi CNG [2017-2019],Celerio VX
+Maruti,Celerio,VXi CNG [2019-2020],Celerio VX
+Maruti,Celerio,ZXI,Celerio ZX
+Maruti,Celerio,ZXi,Celerio ZX
+Maruti,Celerio,ZXI (O),Celerio ZX
+Maruti,Celerio,ZXi (O) AMT [2017-2019],Celerio ZX
+Maruti,Celerio,ZXi (O) AMT [2019-2020],Celerio ZX
+Maruti,Celerio,ZXi [2017-2019],Celerio ZX
+Maruti,Celerio,ZXi [2019-2020],Celerio ZX
+Maruti,Celerio,ZXI AMT,Celerio ZX
+Maruti,Celerio,ZXI AMT (O),Celerio ZX
+Maruti,Celerio,ZXi AMT,Celerio ZX
+Maruti,Celerio,ZXi AMT ABS,Celerio ZX
+Maruti,Celerio,ZXi AMT [2017-2019],Celerio ZX
+Maruti,Celerio,ZXi AMT [2019-2020],Celerio ZX
+Maruti,Celerio,ZXI PLUS,Celerio ZX
+Maruti,Celerio,ZXI PLUS AGS,Celerio ZX
+Maruti,Celerio,ZXi Plus [2021-2023],Celerio ZX
+Maruti,Celerio X,VXI (O),Celerio X VX
+Maruti,Celerio X,VXI (O) AMT,Celerio X VX
+Maruti,Celerio X,ZXI,Celerio X ZX
+Maruti,Celerio X,Zxi,Celerio X ZX
+Maruti,Celerio X,ZXI (O),Celerio X ZX
+Maruti,Celerio X,ZXI (O) AMT,Celerio X ZX
+Maruti,Celerio X,ZXi (O) AMT,Celerio X ZX
+Maruti,Celerio X,Zxi (O) AMT [2017-2019],Celerio X ZX
+Maruti,Celerio X,Zxi [2017-2019],Celerio X ZX
+Maruti,Celerio X,ZXI AMT,Celerio X ZX
+Maruti,Celerio X,ZXi AMT,Celerio X ZX
+Maruti,Celerio X,Zxi AMT [2017-2019],Celerio X ZX
+Maruti,Ciaz,ALPHA  AT 1.4  PETROL,Ciaz Alpha
+Maruti,Ciaz,ALPHA  AT 1.5 SHVS PETROL,Ciaz Alpha
+Maruti,Ciaz,Alpha 1.3 Hybrid,Ciaz Alpha
+Maruti,Ciaz,ALPHA 1.4 PETROL,Ciaz Alpha
+Maruti,Ciaz,Alpha 1.4 MT,Ciaz Alpha
+Maruti,Ciaz,ALPHA 1.5 SHVS PETROL,Ciaz Alpha
+Maruti,Ciaz,Alpha 1.5 [2020-2023],Ciaz Alpha
+Maruti,Ciaz,ALPHA DIESEL 1.3,Ciaz Alpha
+Maruti,Ciaz,Alpha Hybrid 1.5 AT [2018-2020],Ciaz Alpha
+Maruti,Ciaz,Alpha Hybrid 1.5 [2018-2020],Ciaz Alpha
+Maruti,Ciaz,Delta 1.3 Hybrid,Ciaz Delta
+Maruti,Ciaz,DELTA 1.4 MT PETROL,Ciaz Delta
+Maruti,Ciaz,Delta 1.4 MT,Ciaz Delta
+Maruti,Ciaz,DELTA 1.5 SHVS MT PETROL,Ciaz Delta
+Maruti,Ciaz,Delta 1.5 [2020-2023],Ciaz Delta
+Maruti,Ciaz,DELTA AT 1.5 SHVS PETROL,Ciaz Delta
+Maruti,Ciaz,DELTA DIESEL 1.5,Ciaz Delta
+Maruti,Ciaz,Delta Hybrid 1.5 AT [2018-2020],Ciaz Delta
+Maruti,Ciaz,SIGMA 1.4 MT PETROL,Ciaz Sigma
+Maruti,Ciaz,Sigma 1.4 MT,Ciaz Sigma
+Maruti,Ciaz,SIGMA 1.5 SHVS MT  PETROL,Ciaz Sigma
+Maruti,Ciaz,SIGMA DIESEL 1.3,Ciaz Sigma
+Maruti,Ciaz,VDI,Ciaz VD
+Maruti,Ciaz,VDI (O) SHVS,Ciaz VD
+Maruti,Ciaz,VDi (O) SHVS,Ciaz VD
+Maruti,Ciaz,VDi [2014-2015],Ciaz VD
+Maruti,Ciaz,VDi SHVS,Ciaz VD
+Maruti,Ciaz,VDi+ SHVS,Ciaz VD
+Maruti,Ciaz,VXI,Ciaz VX
+Maruti,Ciaz,VXi,Ciaz VX
+Maruti,Ciaz,VXI+,Ciaz VX
+Maruti,Ciaz,VXi+,Ciaz VX
+Maruti,Ciaz,VXi+ AT,Ciaz VX
+Maruti,Ciaz,ZDi [2014-2015],Ciaz ZD
+Maruti,Ciaz,ZDI SHVS,Ciaz ZD
+Maruti,Ciaz,ZDi+ SHVS,Ciaz ZD
+Maruti,Ciaz,Zeta 1.3 Hybrid,Ciaz Zeta
+Maruti,Ciaz,ZETA 1.4  AT PETROL,Ciaz Zeta
+Maruti,Ciaz,ZETA 1.4  MT PETROL,Ciaz Zeta
+Maruti,Ciaz,Zeta 1.4 AT,Ciaz Zeta
+Maruti,Ciaz,Zeta 1.4 MT,Ciaz Zeta
+Maruti,Ciaz,ZETA 1.5 SHVS MT PETROL,Ciaz Zeta
+Maruti,Ciaz,ZETA AT 1.5  SHVS PETROL,Ciaz Zeta
+Maruti,Ciaz,ZETA DIESEL 1.3,Ciaz Zeta
+Maruti,Ciaz,ZXI,Ciaz ZX
+Maruti,Ciaz,ZXi,Ciaz ZX
+Maruti,Ciaz,ZXi  AT,Ciaz ZX
+Maruti,Ciaz,ZXI AT,Ciaz ZX
+Maruti,Ciaz,ZXI+,Ciaz ZX
+Maruti,Ciaz,ZXI+ AT,Ciaz ZX
+Maruti,Ciaz,ZXI+ RS,Ciaz ZX
+Maruti,Dzire,LXI,Dzire LX
+Maruti,Dzire,LXi,Dzire LX
+Maruti,Dzire,LXi [2020-2023],Dzire LX
+Maruti,Dzire,VDI,Dzire VD
+Maruti,Dzire,VDi,Dzire VD
+Maruti,Dzire,VDI AMT,Dzire VD
+Maruti,Dzire,VDi AMT,Dzire VD
+Maruti,Dzire,VXI,Dzire VX
+Maruti,Dzire,VXi,Dzire VX
+Maruti,Dzire,VXi [2020-2023],Dzire VX
+Maruti,Dzire,VXI AMT,Dzire VX
+Maruti,Dzire,VXi AMT,Dzire VX
+Maruti,Dzire,VXi CNG,Dzire VX
+Maruti,Dzire,ZDI AMT,Dzire ZD
+Maruti,Dzire,ZDi AMT,Dzire ZD
+Maruti,Dzire,ZDI PLUS,Dzire ZD
+Maruti,Dzire,ZDI PLUS AMT,Dzire ZD
+Maruti,Dzire,ZXI,Dzire ZX
+Maruti,Dzire,ZXi [2020-2023],Dzire ZX
+Maruti,Dzire,ZXi AGS [2020-2023],Dzire ZX
+Maruti,Dzire,ZXI AMT,Dzire ZX
+Maruti,Dzire,ZXi AMT,Dzire ZX
+Maruti,Dzire,ZXI PLUS AMT,Dzire ZX
+Maruti,Dzire,ZXI Plus,Dzire ZX
+Maruti,Dzire,ZXI Plus AMT,Dzire ZX
+Maruti,Dzire,ZXi Plus,Dzire ZX
+Maruti,Dzire,ZXi Plus AGS [2020-2023],Dzire ZX
+Maruti,Dzire,ZXi Plus AMT,Dzire ZX
+Maruti,Eeco,5 STR AC,Eeco 5 STR
+Maruti,Eeco,5 STR AC (O),Eeco 5 STR
+Maruti,Eeco,5 STR AC CNG,Eeco 5 STR
+Maruti,Eeco,5 STR WITH A/C+HTR,Eeco 5 STR
+Maruti,Eeco,5 STR WITH A/C+HTR CNG,Eeco 5 STR
+Maruti,Eeco,5 STR [2014-2019],Eeco 5 STR
+Maruti,Eeco,7 STR STD [2022-2023],Eeco 7 STR
+Maruti,Ertiga,LXI,Ertiga LX
+Maruti,Ertiga,VDI,Ertiga VD
+Maruti,Ertiga,VDi,Ertiga VD
+Maruti,Ertiga,VDI SHVS,Ertiga VD
+Maruti,Ertiga,VXI,Ertiga VX
+Maruti,Ertiga,VXi,Ertiga VX
+Maruti,Ertiga,VXi (O) CNG [2022-2023],Ertiga VX
+Maruti,Ertiga,VXI ABS,Ertiga VX
+Maruti,Ertiga,VXI AT,Ertiga VX
+Maruti,Ertiga,VXI AT SHVS,Ertiga VX
+Maruti,Ertiga,VXi AT,Ertiga VX
+Maruti,Ertiga,VXI CNG,Ertiga VX
+Maruti,Ertiga,VXI SHVS,Ertiga VX
+Maruti,Ertiga,ZDI,Ertiga ZD
+Maruti,Ertiga,ZDi,Ertiga ZD
+Maruti,Ertiga,ZDI + SHVS,Ertiga ZD
+Maruti,Ertiga,ZDi 1.3 Diesel,Ertiga ZD
+Maruti,Ertiga,ZDi Plus 1.5 Diesel,Ertiga ZD
+Maruti,Ertiga,ZDI SHVS,Ertiga ZD
+Maruti,Ertiga,ZXI,Ertiga ZX
+Maruti,Ertiga,ZXi,Ertiga ZX
+Maruti,Ertiga,ZXI (O) CNG,Ertiga ZX
+Maruti,Ertiga,ZXI AT SHVS,Ertiga ZX
+Maruti,Ertiga,ZXi AT,Ertiga ZX
+Maruti,Ertiga,ZXi Plus,Ertiga ZX
+Maruti,Ertiga,ZXI+,Ertiga ZX
+Maruti,Ertiga,ZXI+ AT SHVS,Ertiga ZX
+Maruti,Ertiga,ZXI+ SHVS,Ertiga ZX
+Maruti,Estilo,LXi BS-IV,Estilo LX
+Maruti,Grand Vitara,ALPHA SMART HYBRID ALLGRIP,Grand Vitara Alpha
+Maruti,Grand Vitara,Alpha Smart Hybrid AT [2022-2023],Grand Vitara Alpha
+Maruti,Grand Vitara,Delta Smart Hybrid,Grand Vitara Delta
+Maruti,Grand Vitara,SIGMA SMART HYBRID,Grand Vitara Sigma
+Maruti,Grand Vitara,Zeta Smart Hybrid AT,Grand Vitara Zeta
+Maruti,Grand Vitara,Zeta Smart Hybrid AT [2022-2023],Grand Vitara Zeta
+Maruti,Ignis,ALPHA 1.2,Ignis Alpha
+Maruti,Ignis,ALPHA 1.2 AMT,Ignis Alpha
+Maruti,Ignis,Alpha 1.2 MT,Ignis Alpha
+Maruti,Ignis,DELTA 1.2,Ignis Delta
+Maruti,Ignis,DELTA 1.2 AMT,Ignis Delta
+Maruti,Ignis,Delta 1.2 AMT,Ignis Delta
+Maruti,Ignis,Delta 1.2 MT,Ignis Delta
+Maruti,Ignis,Delta 1.2 MT [2023],Ignis Delta
+Maruti,Ignis,DELTA 1.3,Ignis Delta
+Maruti,Ignis,SIGMA 1.2,Ignis Sigma
+Maruti,Ignis,Sigma 1.2 MT,Ignis Sigma
+Maruti,Ignis,ZETA 1.2,Ignis Zeta
+Maruti,Ignis,ZETA 1.2 AMT,Ignis Zeta
+Maruti,Ignis,ZETA 1.2 AMT DUAL TONE,Ignis Zeta
+Maruti,Ignis,Zeta 1.2 AMT,Ignis Zeta
+Maruti,Ignis,Zeta 1.2 MT,Ignis Zeta
+Maruti,Ignis,Zeta 1.3 AMT Diesel [2017-2018],Ignis Zeta
+Maruti,Jimny,Zeta AT,Jimny Zeta
+Maruti,New Wagon-R,LXI (O) 1.0,New Wagon-R LX
+Maruti,New Wagon-R,LXI 1.0,New Wagon-R LX
+Maruti,New Wagon-R,LXI CNG (O) 1.0,New Wagon-R LX
+Maruti,New Wagon-R,LXI CNG 1.0,New Wagon-R LX
+Maruti,New Wagon-R,VXI (O) 1.0,New Wagon-R VX
+Maruti,New Wagon-R,VXI (O) 1.2,New Wagon-R VX
+Maruti,New Wagon-R,VXI (O) 1.2 AMT,New Wagon-R VX
+Maruti,New Wagon-R,VXI 1.0,New Wagon-R VX
+Maruti,New Wagon-R,VXI 1.0 AMT,New Wagon-R VX
+Maruti,New Wagon-R,VXI 1.2,New Wagon-R VX
+Maruti,New Wagon-R,VXI 1.2 AMT,New Wagon-R VX
+Maruti,New Wagon-R,VXI CNG 1.0,New Wagon-R VX
+Maruti,New Wagon-R,ZXI 1.2,New Wagon-R ZX
+Maruti,New Wagon-R,ZXI 1.2 AMT,New Wagon-R ZX
+Maruti,New Wagon-R,ZXI PLUS 1.2 AMT,New Wagon-R ZX
+Maruti,Omni,5 STR,Omni 5 STR
+Maruti,Omni,5 STR BS-IV,Omni 5 STR
+Maruti,Omni,Cargo BS-IV,Omni Cargo BS-IV
+Maruti,OMNI E,8 STR,OMNI E 8 STR
+Maruti,OMNI E,STD,OMNI E STD
+Maruti,Ritz,GENUS VXI,Ritz GENUS VXI
+Maruti,Ritz,Ldi BS-IV,Ritz LD
+Maruti,Ritz,VDI,Ritz VD
+Maruti,Ritz,Vdi BS-IV,Ritz VD
+Maruti,Ritz,VXI,Ritz VX
+Maruti,Ritz,VXI BS-IV,Ritz VX
+Maruti,Ritz,Vxi BS-IV,Ritz VX
+Maruti,Ritz,Zdi BS-IV,Ritz ZD
+Maruti,Ritz,ZXI,Ritz ZX
+Maruti,S Cross,ALPHA AT SMART HYBRID,S Cross Alpha
+Maruti,S Cross,DELTA 1.3,S Cross Delta
+Maruti,S Cross,SIGMA 1.5,S Cross Sigma
+Maruti,S Cross,ZETA 1.3,S Cross Zeta
+Maruti,S PRESSO,LXI,S PRESSO LX
+Maruti,S PRESSO,LXI (O),S PRESSO LX
+Maruti,S PRESSO,VXI,S PRESSO VX
+Maruti,S PRESSO,VXI (O),S PRESSO VX
+Maruti,S PRESSO,VXI (O) AMT,S PRESSO VX
+Maruti,S PRESSO,VXI (O) CNG,S PRESSO VX
+Maruti,S PRESSO,VXI AMT,S PRESSO VX
+Maruti,S PRESSO,VXI CNG,S PRESSO VX
+Maruti,S PRESSO,VXI PLUS (O) AMT,S PRESSO VX
+Maruti,S PRESSO,VXI PLUS AMT,S PRESSO VX
+Maruti,S PRESSO,VXI+,S PRESSO VX
+Maruti,S-Cross,Alpha 1.3,S-Cross Alpha
+Maruti,S-Cross,Delta 1.3,S-Cross Delta
+Maruti,S-Cross,Delta 1.6,S-Cross Delta
+Maruti,S-Cross,Sigma 1.3,S-Cross Sigma
+Maruti,S-Cross,Zeta 1.3,S-Cross Zeta
+Maruti,S-Cross,Zeta 1.6,S-Cross Zeta
+Maruti,S-Cross 2020,Alpha AT,S-Cross 2020 Alpha
+Maruti,S-Cross 2020,Zeta,S-Cross 2020 Zeta
+Maruti,S-Presso,VXi,S-Presso VX
+Maruti,S-Presso,VXi (O),S-Presso VX
+Maruti,S-Presso,VXi AMT,S-Presso VX
+Maruti,S-Presso,VXi Plus,S-Presso VX
+Maruti,S-Presso,VXi Plus (O) AMT [2022-2023],S-Presso VX
+Maruti,Swift,LDI,Swift LD
+Maruti,Swift,LDi,Swift LD
+Maruti,Swift,LXI,Swift LX
+Maruti,Swift,LXi,Swift LX
+Maruti,Swift,LXI (O),Swift LX
+Maruti,Swift,LXi (O),Swift LX
+Maruti,Swift,Lxi (O) [2014-2017],Swift LX
+Maruti,Swift,VDI,Swift VD
+Maruti,Swift,VDi,Swift VD
+Maruti,Swift,VDi [2014-2017],Swift VD
+Maruti,Swift,VDI ABS,Swift VD
+Maruti,Swift,VDi ABS,Swift VD
+Maruti,Swift,VDi ABS [2014-2017],Swift VD
+Maruti,Swift,VDI AMT,Swift VD
+Maruti,Swift,VXI,Swift VX
+Maruti,Swift,VXi,Swift VX
+Maruti,Swift,VXi [2014-2017],Swift VX
+Maruti,Swift,VXi [2021-2023],Swift VX
+Maruti,Swift,VXI ABS,Swift VX
+Maruti,Swift,VXi ABS,Swift VX
+Maruti,Swift,VXI AMT,Swift VX
+Maruti,Swift,VXi AMT,Swift VX
+Maruti,Swift,VXi AMT [2018-2019],Swift VX
+Maruti,Swift,VXi AMT [2021-2023],Swift VX
+Maruti,Swift,VXI O,Swift VX
+Maruti,Swift,ZDI,Swift ZD
+Maruti,Swift,ZDi,Swift ZD
+Maruti,Swift,ZDI AMT,Swift ZD
+Maruti,Swift,ZDi Plus AMT,Swift ZD
+Maruti,Swift,ZXI,Swift ZX
+Maruti,Swift,ZXi,Swift ZX
+Maruti,Swift,ZXI AMT,Swift ZX
+Maruti,Swift,ZXi AMT [2018-2019],Swift ZX
+Maruti,Swift,ZXI PLUS,Swift ZX
+Maruti,Swift,ZXI PLUS AMT,Swift ZX
+Maruti,Swift,ZXI PLUS AMT DUAL TONE,Swift ZX
+Maruti,Swift,ZXI PLUS DUAL TONE,Swift ZX
+Maruti,Swift,ZXi Plus AMT Dual Tone [2021-2023],Swift ZX
+Maruti,Swift,ZXi Plus AMT [2018-2019],Swift ZX
+Maruti,Swift,ZXi Plus [2018-2019],Swift ZX
+Maruti,Swift,ZXi Plus [2021-2023],Swift ZX
+Maruti,Swift Dzire,LDI,Swift Dzire LD
+Maruti,Swift Dzire,LXI,Swift Dzire LX
+Maruti,Swift Dzire,LXI (O),Swift Dzire LX
+Maruti,Swift Dzire,VDI,Swift Dzire VD
+Maruti,Swift Dzire,VDI ABS,Swift Dzire VD
+Maruti,Swift Dzire,VXI,Swift Dzire VX
+Maruti,Swift Dzire,VXi,Swift Dzire VX
+Maruti,Swift Dzire,VXI (O),Swift Dzire VX
+Maruti,Swift Dzire,VXI AT,Swift Dzire VX
+Maruti,Swift Dzire,VXI REGAL EDITION,Swift Dzire VX
+Maruti,Swift Dzire,ZDI,Swift Dzire ZD
+Maruti,Swift Dzire,ZDI AMT,Swift Dzire ZD
+Maruti,Swift Dzire,ZXI,Swift Dzire ZX
+Maruti,SX4,ZXi,SX4 ZX
+Maruti,Vitara Brezza,LXI,Vitara Brezza LX
+Maruti,Vitara Brezza,VDI,Vitara Brezza VD
+Maruti,Vitara Brezza,VDi,Vitara Brezza VD
+Maruti,Vitara Brezza,VDI (O),Vitara Brezza VD
+Maruti,Vitara Brezza,VDi (O) [2016-2018],Vitara Brezza VD
+Maruti,Vitara Brezza,VDi AGS,Vitara Brezza VD
+Maruti,Vitara Brezza,VDI AMT,Vitara Brezza VD
+Maruti,Vitara Brezza,VXI,Vitara Brezza VX
+Maruti,Vitara Brezza,VXi,Vitara Brezza VX
+Maruti,Vitara Brezza,VXI AT SHVS,Vitara Brezza VX
+Maruti,Vitara Brezza,VXi AT SHVS,Vitara Brezza VX
+Maruti,Vitara Brezza,ZDI,Vitara Brezza ZD
+Maruti,Vitara Brezza,ZDi,Vitara Brezza ZD
+Maruti,Vitara Brezza,ZDi AGS,Vitara Brezza ZD
+Maruti,Vitara Brezza,ZDI AMT,Vitara Brezza ZD
+Maruti,Vitara Brezza,ZDI PLUS,Vitara Brezza ZD
+Maruti,Vitara Brezza,ZDI PLUS DUAL TONE,Vitara Brezza ZD
+Maruti,Vitara Brezza,ZDi Plus,Vitara Brezza ZD
+Maruti,Vitara Brezza,ZDi Plus AGS,Vitara Brezza ZD
+Maruti,Vitara Brezza,ZDi Plus Dual Tone AGS,Vitara Brezza ZD
+Maruti,Vitara Brezza,ZDi+ Dual Tone [2017-2018],Vitara Brezza ZD
+Maruti,Vitara Brezza,ZXI,Vitara Brezza ZX
+Maruti,Vitara Brezza,ZXI PLUS,Vitara Brezza ZX
+Maruti,Vitara Brezza,ZXI PLUS AT DUAL TONE SHVS,Vitara Brezza ZX
+Maruti,Vitara Brezza,ZXI PLUS AT SHVS,Vitara Brezza ZX
+Maruti,Vitara Brezza,ZXI PLUS DUAL TONE,Vitara Brezza ZX
+Maruti,Vitara Brezza,ZXi Plus,Vitara Brezza ZX
+Maruti,Vitara Brezza,ZXi Plus AT SHVS,Vitara Brezza ZX
+Maruti,Wagon R,LXi (O) 1.0 CNG [2019-2020],Wagon R LX
+Maruti,Wagon R,LXi 1.0 CNG,Wagon R LX
+Maruti,Wagon R,LXi 1.0 CNG [2019-2020],Wagon R LX
+Maruti,Wagon R,LXi 1.0 [2019-2019],Wagon R LX
+Maruti,Wagon R,LXi BS-III,Wagon R LX
+Maruti,Wagon R,VXi (O) 1.0,Wagon R VX
+Maruti,Wagon R,VXi (O) 1.0 AMT,Wagon R VX
+Maruti,Wagon R,VXi (O) 1.2,Wagon R VX
+Maruti,Wagon R,VXi (O) 1.2 AMT,Wagon R VX
+Maruti,Wagon R,VXi 1.0 AMT [2019-2019],Wagon R VX
+Maruti,Wagon R,VXi 1.0 [2019-2019],Wagon R VX
+Maruti,Wagon R,VXi 1.2,Wagon R VX
+Maruti,Wagon R,ZXi 1.2,Wagon R ZX
+Maruti,Wagon R,ZXi 1.2 AMT,Wagon R ZX
+Maruti,Wagon R,ZXI Plus 1.2 Dual Tone [2022-2023],Wagon R ZX
+Maruti,Wagon R,ZXI Plus 1.2 [2022-2023],Wagon R ZX
+Maruti,Wagon R 1.0,LX,Wagon R 1.0 LX
+Maruti,Wagon R 1.0,LXI,Wagon R 1.0 LX
+Maruti,Wagon R 1.0,LXi,Wagon R 1.0 LX
+Maruti,Wagon R 1.0,LXI CNG,Wagon R 1.0 LX
+Maruti,Wagon R 1.0,LXI CNG (O),Wagon R 1.0 LX
+Maruti,Wagon R 1.0,LXi CNG,Wagon R 1.0 LX
+Maruti,Wagon R 1.0,VXI,Wagon R 1.0 VX
+Maruti,Wagon R 1.0,VXi,Wagon R 1.0 VX
+Maruti,Wagon R 1.0,Vxi (ABS-Airbag),Wagon R 1.0 VX
+Maruti,Wagon R 1.0,VXI (O) AMT,Wagon R 1.0 VX
+Maruti,Wagon R 1.0,VXI AMT,Wagon R 1.0 VX
+Maruti,Wagon R 1.0,VXI AMT (O),Wagon R 1.0 VX
+Maruti,Wagon R 1.0,VXI OPT,Wagon R 1.0 VX
+Maruti,Wagon R 1.0,VXI+,Wagon R 1.0 VX
+Maruti,Wagon R 1.0,VXI+ (O),Wagon R 1.0 VX
+Maruti,Wagon R 1.0,VXI+ (O) MT,Wagon R 1.0 VX
+Maruti,Wagon R 1.0,VXI+ AMT,Wagon R 1.0 VX
+Maruti,Wagon R Stingray,VXI,Wagon R Stingray VX
+Maruti,XL6,ALPHA AT,XL6 Alpha
+Maruti,XL6,Alpha AT Petrol,XL6 Alpha
+Maruti,XL6,ALPHA PLUS AT,XL6 Alpha
+Maruti,XL6,ALPHA PLUS MT,XL6 Alpha
+Maruti,XL6,Alpha Plus MT Petrol Dual Tone [2022-2023],XL6 Alpha
+Maruti,XL6,Alpha Plus MT Petrol [2022-2023],XL6 Alpha
+Maruti,XL6,ZETA AT,XL6 Zeta
+Maruti,XL6,Zeta AT Petrol,XL6 Zeta
+Maruti,XL6,ZETA MT,XL6 Zeta
+Maruti,XL6,Zeta MT Petrol,XL6 Zeta
+Maruti,Zen,LX,Zen LX
+Maruti,Zen Estilo,VXI,Zen Estilo VX
+Mercedes-Benz,A-Class,A 180 CDI Style,A-Class A-Class
+Mercedes-Benz,A-Class,A 200d,A-Class A-Class
+Mercedes-Benz,A-Class Limousine,200,A-Class Limousine A-Class Limousine
+Mercedes-Benz,A-Class Limousine,200d,A-Class Limousine A-Class Limousine
+Mercedes-Benz,AMG GLE Coupe,53 4Matic Plus [2020-2023],AMG GLE Coupe AMG GLE Coupe
+Mercedes-Benz,B-Class,B 200 Sport CDI,B-Class B-Class
+Mercedes-Benz,B-Class,B180,B-Class B-Class
+Mercedes-Benz,B-Class,B180 CDI,B-Class B-Class
+Mercedes-Benz,C-Class,200 CGI Avantgarde,C-Class C-Class
+Mercedes-Benz,C-Class,200 CGI Elegance,C-Class C-Class
+Mercedes-Benz,C-Class,220 BlueEfficiency,C-Class C-Class
+Mercedes-Benz,C-Class,220 CDI Elegance AT,C-Class C-Class
+Mercedes-Benz,C-Class,220 CDI Sport,C-Class C-Class
+Mercedes-Benz,C-Class,250 Avantgarde,C-Class C-Class
+Mercedes-Benz,C-Class,250 CDI,C-Class C-Class
+Mercedes-Benz,C-Class,250 CDI Elegance,C-Class C-Class
+Mercedes-Benz,C-Class,C 200 Avantgarde,C-Class C-Class
+Mercedes-Benz,C-Class,C 200 Progressive [2018-2020],C-Class C-Class
+Mercedes-Benz,C-Class,C 200 [2022-2023],C-Class C-Class
+Mercedes-Benz,C-Class,C 220 CDI Avantgarde,C-Class C-Class
+Mercedes-Benz,C-Class,C 220 CDI Style,C-Class C-Class
+Mercedes-Benz,C-Class,C 220d Progressive [2018-2019],C-Class C-Class
+Mercedes-Benz,C-Class,C 220d [2022-2023],C-Class C-Class
+Mercedes-Benz,C-Class,C 250 CDI BlueEFFICIENCY,C-Class C-Class
+Mercedes-Benz,C-Class,C 250 d,C-Class C-Class
+Mercedes-Benz,C-Class,C200 Progressive,C-Class C-Class
+Mercedes-Benz,C-Class,C220d Prime,C-Class C-Class
+Mercedes-Benz,C-Class,C220d Progressive,C-Class C-Class
+Mercedes-Benz,C-Class,Edition C,C-Class C-Class
+Mercedes-Benz,C-Coupe,43 AMG 4MATIC,C-Coupe C-Coupe
+Mercedes-Benz,CLA,200 CDI Sport,CLA CLA
+Mercedes-Benz,CLA,200 CDI Sport (CBU),CLA CLA
+Mercedes-Benz,CLA,200 D Urban Sport,CLA CLA
+Mercedes-Benz,CLA,200 Petrol Sport,CLA CLA
+Mercedes-Benz,CLA,200 Urban Sport,CLA CLA
+Mercedes-Benz,CLS,500,CLS CLS
+Mercedes-Benz,E-Class,200 K Elegance,E-Class E-Class
+Mercedes-Benz,E-Class,220 CDI AT,E-Class E-Class
+Mercedes-Benz,E-Class,220 CDI MT,E-Class E-Class
+Mercedes-Benz,E-Class,240 V6 AT,E-Class E-Class
+Mercedes-Benz,E-Class,250 D (W124),E-Class E-Class
+Mercedes-Benz,E-Class,280 Elegance,E-Class E-Class
+Mercedes-Benz,E-Class,E 200,E-Class E-Class
+Mercedes-Benz,E-Class,E 200 Avantgarde,E-Class E-Class
+Mercedes-Benz,E-Class,E 200 Exclusive [2019-2019],E-Class E-Class
+Mercedes-Benz,E-Class,E 200 Expression,E-Class E-Class
+Mercedes-Benz,E-Class,E 220 d Avantgarde,E-Class E-Class
+Mercedes-Benz,E-Class,E 220d Exclusive,E-Class E-Class
+Mercedes-Benz,E-Class,E 220d Exclusive [2019-2019],E-Class E-Class
+Mercedes-Benz,E-Class,E 220d Expression,E-Class E-Class
+Mercedes-Benz,E-Class,E 220d Expression [2019-2019],E-Class E-Class
+Mercedes-Benz,E-Class,E 250 CDI Avantgarde,E-Class E-Class
+Mercedes-Benz,E-Class,E 250 CDI Edition E,E-Class E-Class
+Mercedes-Benz,E-Class,E 350 CDI Edition E,E-Class E-Class
+Mercedes-Benz,E-Class,E 350 d Exclusive [2017-2019],E-Class E-Class
+Mercedes-Benz,E-Class,E 350d AMG Line,E-Class E-Class
+Mercedes-Benz,E-Class,E 63 AMG,E-Class E-Class
+Mercedes-Benz,E-Class,E200,E-Class E-Class
+Mercedes-Benz,E-Class,E220 CDI Blue Efficiency,E-Class E-Class
+Mercedes-Benz,E-Class,E250 CDI Avantgarde,E-Class E-Class
+Mercedes-Benz,E-Class,E250 CDI BlueEfficiency,E-Class E-Class
+Mercedes-Benz,E-Class,E250 CDI Classic,E-Class E-Class
+Mercedes-Benz,E-Class,E250 CDI Launch Edition,E-Class E-Class
+Mercedes-Benz,EQB,350 4MATIC,EQB EQB
+Mercedes-Benz,EQE SUV,500 4MATIC,EQE SUV EQE SUV
+Mercedes-Benz,EQS,580 4MATIC,EQS EQS
+Mercedes-Benz,G-Class,G 350d 4MATIC,G-Class G-Class
+Mercedes-Benz,G-Class,G 63 AMG,G-Class G-Class
+Mercedes-Benz,GL,350 CDI,GL GL
+Mercedes-Benz,GLA,200 CDI Sport,GLA GLA
+Mercedes-Benz,GLA,200 Sport,GLA GLA
+Mercedes-Benz,GLA,200 [2021-2023],GLA GLA
+Mercedes-Benz,GLA,200 d Sport,GLA GLA
+Mercedes-Benz,GLA,200 d Style,GLA GLA
+Mercedes-Benz,GLA,220d 4MATIC [2021-2023],GLA GLA
+Mercedes-Benz,GLB,200 Progressive Line [2022-2023],GLB GLB
+Mercedes-Benz,GLB,220d Progressive Line [2022-2023],GLB GLB
+Mercedes-Benz,GLC,200 Progressive,GLC GLC
+Mercedes-Benz,GLC,200 Progressive [2019-2021],GLC GLC
+Mercedes-Benz,GLC,220 d CBU,GLC GLC
+Mercedes-Benz,GLC,220 d Progressive,GLC GLC
+Mercedes-Benz,GLC,220 d Sport,GLC GLC
+Mercedes-Benz,GLC,220d 4MATIC,GLC GLC
+Mercedes-Benz,GLC,220d 4MATIC Progressive,GLC GLC
+Mercedes-Benz,GLC,220d 4MATIC Progressive [2019-2021],GLC GLC
+Mercedes-Benz,GLC,300 4MATIC,GLC GLC
+Mercedes-Benz,GLC,300 Progressive,GLC GLC
+Mercedes-Benz,GLC,43 AMG,GLC GLC
+Mercedes-Benz,GLC,Celebration Edition Diesel,GLC GLC
+Mercedes-Benz,GLC Coupe,300d 4MATIC [2020-2023],GLC Coupe GLC Coupe
+Mercedes-Benz,GLE,250 d,GLE GLE
+Mercedes-Benz,GLE,300d 4MATIC LWB [2020-2023],GLE GLE
+Mercedes-Benz,GLE,350 d,GLE GLE
+Mercedes-Benz,GLE Coupe,43 4MATIC [2017-2019],GLE Coupe GLE Coupe
+Mercedes-Benz,GLE Coupe,53 AMG 4Matic Plus,GLE Coupe GLE Coupe
+Mercedes-Benz,GLS,350 d,GLS GLS
+Mercedes-Benz,GLS,400 4MATIC,GLS GLS
+Mercedes-Benz,GLS,400d 4MATIC [2020-2023],GLS GLS
+Mercedes-Benz,M-Class,350 CDI,M-Class M-Class
+Mercedes-Benz,M-Class,ML 250 CDI,M-Class M-Class
+Mercedes-Benz,M-Class,ML 350 CDI,M-Class M-Class
+Mercedes-Benz,S-Class,320 CDI,S-Class S-Class
+Mercedes-Benz,S-Class,350 CDI Long Blue-Efficiency,S-Class S-Class
+Mercedes-Benz,S-Class,S 350 CDI,S-Class S-Class
+Mercedes-Benz,S-Class,S 500,S-Class S-Class
+Mercedes-Benz,S-Class (W222),S 350D [2018-2020],S-Class (W222) S-Class (W222)
+Mercedes-Benz,S-Class (W222),S 350d Maestro Edition,S-Class (W222) S-Class (W222)
+Mercedes-Benz,SLK,350,SLK SLK
+Mercedes-Benz,V-Class,Expression ELWB [2019-2020],V-Class V-Class
+MG,Astor,SHARP 1.3 TURBO AT,Astor SHARP 1.3
+MG,Astor,SUPER 1.5 MT,Astor SUPER 1.5
+MG,Astor,Savvy 1.5 CVT [2021-2023],Astor Savvy 1.5
+MG,Astor,Sharp 1.5 CVT Old Generation [2021-2023],Astor Sharp 1.5
+MG,Astor,Sharp 1.5 MT [2021-2023],Astor Sharp 1.5
+MG,Astor,Smart 1.5 MT [2021-2023],Astor Smart 1.5
+MG,Astor,Super 1.5 MT [2021-2023],Astor Super 1.5
+MG,Astor,Super EX 1.5 MT [2021-2023],Astor Super EX
+MG,Gloster,Blackstorm 7 STR 2.0 Twin Turbo 4WD,Gloster Blackstorm 7
+MG,Gloster,Savvy 6 STR 2.0 Twin Turbo 4WD,Gloster Savvy 6
+MG,Gloster,Savvy 7 STR 2.0 Twin Turbo 4WD [2022-2023],Gloster Savvy 7
+MG,Gloster,Sharp 7 STR 2.0 Twin Turbo 4WD,Gloster Sharp 7
+MG,Hector,SHARP 1.5 DCT PETROL,Hector SHARP 1.5
+MG,Hector,SHARP 1.5 DCT PETROL DUAL TONE,Hector SHARP 1.5
+MG,Hector,SHARP 1.5 PETROL CVT,Hector SHARP 1.5
+MG,Hector,SHARP 2.0 DIESEL,Hector SHARP 2.0
+MG,Hector,SHARP 2.0 DIESEL DUAL TONE,Hector SHARP 2.0
+MG,Hector,SHARP DCT PETROL,Hector SHARP DCT
+MG,Hector,SHARP HYBRID 1.5 PETROL,Hector SHARP HYBRID
+MG,Hector,SHARP PRO 1.5 PETROL TURBO CVT PETROL,Hector SHARP PRO
+MG,Hector,SHARP PRO 1.5 TURBO MT PETROL,Hector SHARP PRO
+MG,Hector,SHINE 1.5 PETROL TURBO MT,Hector SHINE 1.5
+MG,Hector,SMART 1.5 DCT PETROL,Hector SMART 1.5
+MG,Hector,SMART 2.0 DIESEL,Hector SMART 2.0
+MG,Hector,SMART HYBRID 1.5 PETROL,Hector SMART HYBRID
+MG,Hector,STYLE 1.5 PETROL,Hector STYLE 1.5
+MG,Hector,SUPER 1.5 PETROL,Hector SUPER 1.5
+MG,Hector,Savvy Pro 1.5 Turbo CVT 7 STR,Hector Savvy Pro
+MG,Hector,Sharp 1.5 DCT Petrol,Hector Sharp 1.5
+MG,Hector,Sharp 1.5 DCT Petrol [2019-2020],Hector Sharp 1.5
+MG,Hector,Sharp 1.5 Petrol CVT,Hector Sharp 1.5
+MG,Hector,Sharp 1.5 Petrol Turbo DCT,Hector Sharp 1.5
+MG,Hector,Sharp 2.0 Diesel Dual Tone,Hector Sharp 2.0
+MG,Hector,Sharp 2.0 Diesel Turbo MT,Hector Sharp 2.0
+MG,Hector,Sharp 2.0 Diesel [2019-2020],Hector Sharp 2.0
+MG,Hector,Sharp Hybrid 1.5 Petrol [2019-2020],Hector Sharp Hybrid
+MG,Hector,Sharp Pro 2.0 Turbo Diesel [2023],Hector Sharp Pro
+MG,Hector,Smart 2.0 Diesel [2019-2020],Hector Smart 2.0
+MG,Hector,Smart Hybrid 1.5 Petrol,Hector Smart Hybrid
+MG,Hector,Style 1.5 Petrol,Hector Style 1.5
+MG,Hector Plus,SELECT 2.0 DIESEL TURBO MT 7-STR,Hector Plus SELECT 2.0
+MG,Hector Plus,SHARP 1.5 PETROL TURBO DCT 6-STR,Hector Plus SHARP 1.5
+MG,Hector Plus,SHARP 1.5 PETROL TURBO HYBRID MT 6-STR,Hector Plus SHARP 1.5
+MG,Hector Plus,SHARP 2.0 DIESEL TURBO MT 6-STR DUAL TONE,Hector Plus SHARP 2.0
+MG,Hector Plus,SUPER 2.0 DIESEL TURBO MT 7-STR,Hector Plus SUPER 2.0
+MG,Hector Plus,Savvy Pro 1.5 Turbo Petrol CVT 7 STR,Hector Plus Savvy Pro
+MG,Hector Plus,Select 2.0 Diesel Turbo MT 7-STR,Hector Plus Select 2.0
+MG,Hector Plus,Sharp 1.5 Petrol Turbo CVT 6-STR,Hector Plus Sharp 1.5
+MG,Hector Plus,Sharp 1.5 Petrol Turbo DCT 6-STR,Hector Plus Sharp 1.5
+MG,Hector Plus,Sharp 2.0 Diesel,Hector Plus Sharp 2.0
+MG,Hector Plus,Sharp Hybrid 1.5 Petrol,Hector Plus Sharp Hybrid
+MG,Hector Plus,Sharp Pro 1.5 Turbo Petrol CVT 7 STR [2023],Hector Plus Sharp Pro
+MG,Hector Plus,Sharp Pro 2.0 Turbo Diesel 7 STR [2023],Hector Plus Sharp Pro
+MG,ZS EV,Exclusive,ZS EV Exclusive
+MINI,Cooper,D 3 Door,Cooper D 3
+MINI,Cooper,S,Cooper S
+MINI,Cooper,S 3 Door [2018-2020],Cooper S 3
+MINI,Cooper Convertible,1.6,Cooper Convertible 1.6
+MINI,Cooper Countryman,Cooper D,Cooper Countryman Cooper D
+MINI,Countryman,Cooper S JCW Inspired,Countryman Cooper S
+Mitsubishi,Pajero Sport,2.5 AT,Pajero Sport 2.5 AT
+Mitsubishi,Pajero Sport,2.5 MT,Pajero Sport 2.5 MT
+Nissan,Teana,230JM,Teana 230JM
+Nissan,Magnite,XE,Magnite XE
+Nissan,Magnite,XE  [2020],Magnite XE 
+Nissan,Magnite,XL,Magnite XL
+Nissan,Micra Active,XL,Micra Active XL
+Nissan,Sunny,XL,Sunny XL
+Nissan,Terrano,XL (D),Terrano XL
+Nissan,Micra,XL (O) CVT,Micra XL
+Nissan,Terrano,XL (P),Terrano XL
+Nissan,Magnite,XL [2020],Magnite XL
+Nissan,Micra,XL CVT,Micra XL
+Nissan,Terrano,XL D PLUS,Terrano XL
+Nissan,Terrano,XL D Plus,Terrano XL
+Nissan,Sunny,XL Diesel,Sunny XL
+Nissan,Micra Active,XL O,Micra Active XL
+Nissan,Terrano,XL O (D),Terrano XL
+Nissan,Magnite,XL TURBO,Magnite XL
+Nissan,Magnite,XL TURBO CVT,Magnite XL
+Nissan,Micra Active,XV,Micra Active XV
+Nissan,Magnite,XV [2020],Magnite XV
+Nissan,Micra,XV CVT,Micra XV
+Nissan,Micra,XV CVT [2016-2017],Micra XV
+Nissan,Sunny,XV CVT,Sunny XV
+Nissan,Terrano,XV D PREMIUM AMT,Terrano XV
+Nissan,Terrano,XV D THP 110 PS,Terrano XV
+Nissan,Sunny,XV Diesel,Sunny XV
+Nissan,Magnite,XV DUAL TONE,Magnite XV
+Nissan,Magnite,XV MT,Magnite XV
+Nissan,Kicks,XV Pre (O) 1.5 D [2019],Kicks XV
+Nissan,Magnite,XV PREMIUM,Magnite XV
+Nissan,Magnite,XV PREMIUM DUAL TONE,Magnite XV
+Nissan,Magnite,XV PREMIUM TURBO,Magnite XV
+Nissan,Magnite,XV PREMIUM TURBO CVT,Magnite XV
+Nissan,Magnite,XV PREMIUM TURBO CVT DUAL TONE,Magnite XV
+Nissan,Magnite,XV Premium Turbo CVT Dual Tone [2020],Magnite XV
+Nissan,Magnite,XV Premium Turbo CVT [2020],Magnite XV
+Nissan,Magnite,XV Premium Turbo [2020],Magnite XV
+Nissan,Magnite,XV Premium [2020],Magnite XV
+Nissan,Micra Active,XV SAFETY PACK,Micra Active XV
+Nissan,Magnite,XV TURBO,Magnite XV
+Nissan,Magnite,XV TURBO CVT,Magnite XV
+Nissan,Magnite,XV TURBO CVT DUAL TONE,Magnite XV
+Nissan,Magnite,XV TURBO DUAL TONE,Magnite XV
+Nissan,Magnite,XV Turbo CVT Dual Tone [2020],Magnite XV
+Nissan,Magnite,XV Turbo [2020],Magnite XV
+Porsche,Cayenne,Base [2020-2023],Cayenne Base [2020-2023]
+Porsche,Cayenne,Diesel,Cayenne Diesel
+Porsche,Cayenne,Platinum Edition,Cayenne Platinum Edition
+Porsche,Cayenne,Platinum Edition Diesel,Cayenne Platinum Edition
+Porsche,Cayenne,S,Cayenne S
+Porsche,Cayenne,Turbo,Cayenne Turbo
+Porsche,Cayenne Coupe,Platinum Edition [2022-2023],Cayenne Coupe Platinum Edition
+Porsche,Cayman,Base Tiptronic,Cayman Base Tiptronic
+Porsche,Cayman,S Tiptronic,Cayman S Tiptronic
+Porsche,Macan,R4,Macan R4
+Porsche,Macan,S [2019-2020],Macan S [2019-2020]
+Porsche,Panamera,3.0 Diesel,Panamera 3.0 Diesel
+Porsche,Panamera,Platinum Edition [2022-2023],Panamera Platinum Edition
+Porsche,Taycan,4S [2021-2023],Taycan 4S [2021-2023]
+Renault,Captur,Platine Mono Diesel,Captur Platine Mono
+Renault,Captur,RXE Diesel,Captur RXE Diesel
+Renault,Captur,RXE Petrol,Captur RXE Petrol
+Renault,Captur,RXT Diesel Dual Tone,Captur RXT Diesel
+Renault,Duster,110 PS RXL 4X2 AMT,Duster 110 PS
+Renault,Duster,110 PS RXL 4X2 AMT [2016-2017],Duster 110 PS
+Renault,Duster,110 PS RXL ADVENTURE,Duster 110 PS
+Renault,Duster,110 PS RXL DIESEL,Duster 110 PS
+Renault,Duster,110 PS RXS 4X2 AMT DIESEL,Duster 110 PS
+Renault,Duster,110 PS RXS 4X2 AMT Diesel,Duster 110 PS
+Renault,Duster,110 PS RXS MT DIESEL,Duster 110 PS
+Renault,Duster,110 PS RXZ 4X2 AMT DIESEL,Duster 110 PS
+Renault,Duster,110 PS RXZ 4X2 AMT Diesel,Duster 110 PS
+Renault,Duster,110 PS RXZ 4X4 MT DIESEL,Duster 110 PS
+Renault,Duster,110 PS RXZ 4X4 MT Diesel,Duster 110 PS
+Renault,Duster,110 PS RXZ DIESEL,Duster 110 PS
+Renault,Duster,110 PS RXZ DIESEL PLUS,Duster 110 PS
+Renault,Duster,110 PS RXZ MT DIESEL,Duster 110 PS
+Renault,Duster,110 PS RXZ MT Diesel,Duster 110 PS
+Renault,Duster,110 PS RxL Diesel,Duster 110 PS
+Renault,Duster,110 PS RxZ AWD,Duster 110 PS
+Renault,Duster,110 PS RxZ AWD Diesel,Duster 110 PS
+Renault,Duster,110 PS RxZ Diesel,Duster 110 PS
+Renault,Duster,110 PS RxZ Diesel (Opt),Duster 110 PS
+Renault,Duster,110 PS Sandstorm Edition Diesel,Duster 110 PS
+Renault,Duster,85 PS RXE DIESEL,Duster 85 PS
+Renault,Duster,85 PS RXE DIESEL ADVENTURE,Duster 85 PS
+Renault,Duster,85 PS RXL DIESEL,Duster 85 PS
+Renault,Duster,85 PS RXS 4X2 MT Diesel,Duster 85 PS
+Renault,Duster,85 PS RXS MT DIESEL,Duster 85 PS
+Renault,Duster,85 PS RXZ 4X2 MT Diesel (Opt),Duster 85 PS
+Renault,Duster,85 PS RXZ DIESEL,Duster 85 PS
+Renault,Duster,85 PS RxE,Duster 85 PS
+Renault,Duster,85 PS RxE Diesel ADVENTURE,Duster 85 PS
+Renault,Duster,85 PS RxL Diesel,Duster 85 PS
+Renault,Duster,85 PS RxL Diesel (Opt),Duster 85 PS
+Renault,Duster,85 PS RxL Diesel Plus,Duster 85 PS
+Renault,Duster,RXE PETROL,Duster RXE PETROL
+Renault,Duster,RXL 1.6 PETROL,Duster RXL 1.6
+Renault,Duster,RXL PETROL,Duster RXL PETROL
+Renault,Duster,RXL Petrol,Duster RXL Petrol
+Renault,Duster,RXS 1.5 PETROL MT,Duster RXS 1.5
+Renault,Duster,RXS CVT,Duster RXS CVT
+Renault,Duster,RXS OPT CVT,Duster RXS OPT
+Renault,Duster,RXS Opt CVT,Duster RXS Opt
+Renault,Duster,RXS PETROL,Duster RXS PETROL
+Renault,Duster,RXZ 1.3 TURBO PETROL CVT,Duster RXZ 1.3
+Renault,Duster,RXZ 1.3 TURBO PETROL MT,Duster RXZ 1.3
+Renault,Duster,RXZ 1.3 Turbo Petrol MT [2020-2021],Duster RXZ 1.3
+Renault,Duster,RXZ 1.5 PETROL MT,Duster RXZ 1.5
+Renault,Duster,RXZ 1.5 Petrol MT [2020-2021],Duster RXZ 1.5
+Renault,Kiger,RXE MT,Kiger RXE MT
+Renault,Kiger,RXL MT,Kiger RXL MT
+Renault,Kiger,RXT AMT DUAL TONE,Kiger RXT AMT
+Renault,Kiger,RXZ 1.0 Turbo MT Dual Tone,Kiger RXZ 1.0
+Renault,Kiger,RXZ AMT,Kiger RXZ AMT
+Renault,Kiger,RXZ MT,Kiger RXZ MT
+Renault,Kiger,RXZ TURBO MT,Kiger RXZ TURBO
+Renault,Kiger,RXZ Turbo CVT,Kiger RXZ Turbo
+Renault,Kwid,1.0 MARVEL IRON MAN EDITION,Kwid 1.0 MARVEL
+Renault,Kwid,1.0 MARVEL IRON MAN EDITION AMT,Kwid 1.0 MARVEL
+Renault,Kwid,1.0 RXL AMT [2017-2019],Kwid 1.0 RXL
+Renault,Kwid,1.0 RXL [2017-2019],Kwid 1.0 RXL
+Renault,Kwid,1.0 RXT 02 Anniversary Edition,Kwid 1.0 RXT
+Renault,Kwid,1.0 RXT AMT Opt,Kwid 1.0 RXT
+Renault,Kwid,1.0 RXT Opt,Kwid 1.0 RXT
+Renault,Kwid,1.0 RXT Opt [2016-2019],Kwid 1.0 RXT
+Renault,Kwid,1.0 RXT [2016-2019],Kwid 1.0 RXT
+Renault,Kwid,CLIMBER (O) 1.0 Dual Tone,Kwid CLIMBER (O)
+Renault,Kwid,CLIMBER 1.0,Kwid CLIMBER 1.0
+Renault,Kwid,CLIMBER 1.0 (O),Kwid CLIMBER 1.0
+Renault,Kwid,CLIMBER 1.0 (O) DUAL TONE,Kwid CLIMBER 1.0
+Renault,Kwid,CLIMBER 1.0 AMT,Kwid CLIMBER 1.0
+Renault,Kwid,CLIMBER 1.0 AMT (O),Kwid CLIMBER 1.0
+Renault,Kwid,CLIMBER 1.0 AMT (O) DUAL TONE,Kwid CLIMBER 1.0
+Renault,Kwid,CLIMBER 1.0 AMT [2017-2019],Kwid CLIMBER 1.0
+Renault,Kwid,CLIMBER 1.0 [2017-2019],Kwid CLIMBER 1.0
+Renault,Kwid,CLIMBER AMT,Kwid CLIMBER AMT
+Renault,Kwid,CLIMBER AMT 1.0,Kwid CLIMBER AMT
+Renault,Kwid,CLIMBER MT 1.0,Kwid CLIMBER MT
+Renault,Kwid,NEOTECH RXL 0.8,Kwid NEOTECH RXL
+Renault,Kwid,NEOTECH RXL 1.0 AMT,Kwid NEOTECH RXL
+Renault,Kwid,Neotech RXL 1.0  AMT,Kwid Neotech RXL
+Renault,Kwid,RXL,Kwid RXL
+Renault,Kwid,RXL (O) 0.8,Kwid RXL (O)
+Renault,Kwid,RXL 0.8 (O),Kwid RXL 0.8
+Renault,Kwid,RXL 1.0,Kwid RXL 1.0
+Renault,Kwid,RXL 1.0 (O),Kwid RXL 1.0
+Renault,Kwid,RXL 1.0 AMT,Kwid RXL 1.0
+Renault,Kwid,RXL [2015-2019],Kwid RXL [2015-2019]
+Renault,Kwid,RXT 0.8,Kwid RXT 0.8
+Renault,Kwid,RXT 0.8 (O),Kwid RXT 0.8
+Renault,Kwid,RXT 1.0,Kwid RXT 1.0
+Renault,Kwid,RXT 1.0 (O),Kwid RXT 1.0
+Renault,Kwid,RXT 1.0 AMT,Kwid RXT 1.0
+Renault,Kwid,RXT 1.0 AMT (O),Kwid RXT 1.0
+Renault,Kwid,RXT Opt,Kwid RXT Opt
+Renault,Kwid,RXT Opt [2015-2019],Kwid RXT Opt
+Renault,Kwid,RXT [2015-2019],Kwid RXT [2015-2019]
+Renault,Kwid,STD,Kwid STD
+Renault,Lodgy,110 PS RXZ 7 STR [2015-2016],Lodgy 110 PS
+Renault,Lodgy,110 PS RXZ Stepway 7 STR,Lodgy 110 PS
+Renault,Lodgy,85 PS RXL [2015-2016],Lodgy 85 PS
+Renault,Pulse,RX L DIESEL,Pulse RX L
+Renault,Pulse,RxL ABS Diesel [2015-2017],Pulse RxL ABS
+Renault,Pulse,RxL Diesel,Pulse RxL Diesel
+Renault,Scala,RxE Petrol,Scala RxE Petrol
+Renault,Scala,RxL Petrol,Scala RxL Petrol
+Renault,Triber,RXE MT,Triber RXE MT
+Renault,Triber,RXE [2019-2020],Triber RXE [2019-2020]
+Renault,Triber,RXL AMT,Triber RXL AMT
+Renault,Triber,RXL MT,Triber RXL MT
+Renault,Triber,RXL [2019-2020],Triber RXL [2019-2020]
+Renault,Triber,RXT,Triber RXT
+Renault,Triber,RXT AMT,Triber RXT AMT
+Renault,Triber,RXT EASY-R AMT,Triber RXT EASY-R
+Renault,Triber,RXT LIMITED EDITION,Triber RXT LIMITED
+Renault,Triber,RXT [2019-2020],Triber RXT [2019-2020]
+Renault,Triber,RXZ,Triber RXZ
+Renault,Triber,RXZ AMT,Triber RXZ AMT
+Renault,Triber,RXZ AMT DUAL TONE,Triber RXZ AMT
+Renault,Triber,RXZ EASY-R AMT,Triber RXZ EASY-R
+Renault,Triber,RXZ EASY-R AMT Dual Tone,Triber RXZ EASY-R
+Renault,Triber,RXZ [2019-2020],Triber RXZ [2019-2020]
+Skoda,Kodiaq,L&K 2.0 TDI 4x4 AT,Kodiaq L&K 2.0
+Skoda,Kodiaq,L&K 2.0 TSI 4X4,Kodiaq L&K 2.0
+Skoda,Kodiaq,Style 2.0 TDI 4x4 AT,Kodiaq Style 2.0
+Skoda,Kushaq,AMBITION 1.0L TSI AT,Kushaq AMBITION 1.0L
+Skoda,Kushaq,AMBITION 1.0L TSI MT,Kushaq AMBITION 1.0L
+Skoda,Kushaq,Active 1.0 TSI MT,Kushaq Active 1.0
+Skoda,Kushaq,Ambition 1.0 TSI AT,Kushaq Ambition 1.0
+Skoda,Kushaq,Ambition 1.0L TSI AT,Kushaq Ambition 1.0L
+Skoda,Kushaq,ONYX Edition 1.0 TSI,Kushaq ONYX Edition
+Skoda,Kushaq,STYLE 1.0L TSI AT (6 AIRBAGS),Kushaq STYLE 1.0L
+Skoda,Kushaq,STYLE 1.0L TSI MT,Kushaq STYLE 1.0L
+Skoda,Kushaq,STYLE 1.5L TSI MT,Kushaq STYLE 1.5L
+Skoda,Kushaq,Style 1.0L TSI AT,Kushaq Style 1.0L
+Skoda,Kushaq,Style 1.0L TSI AT (6 Airbags),Kushaq Style 1.0L
+Skoda,Kushaq,Style 1.0L TSI MT,Kushaq Style 1.0L
+Skoda,Kushaq,Style 1.5L TSI DSG (6 Airbags),Kushaq Style 1.5L
+Skoda,Laura,Elegance 2.0 TDI CR AT,Laura Elegance 2.0
+Skoda,Laura,Elegance 2.0 TDI CR MT,Laura Elegance 2.0
+Skoda,Octavia,1.8 TSI L&K,Octavia 1.8 TSI
+Skoda,Octavia,1.8 TSI Style Plus AT,Octavia 1.8 TSI
+Skoda,Octavia,1.8 TSI Style Plus AT [2017],Octavia 1.8 TSI
+Skoda,Octavia,2.0 TDI CR Style Plus AT [2017],Octavia 2.0 TDI
+Skoda,Octavia,2.0 TDI L&K,Octavia 2.0 TDI
+Skoda,Octavia,Ambition 2.0 TDI,Octavia Ambition 2.0
+Skoda,Octavia,RS,Octavia RS
+Skoda,Rapid,1.0 AMBITION TSI MT,Rapid 1.0 AMBITION
+Skoda,Rapid,1.5 TDI AT AMBITION,Rapid 1.5 TDI
+Skoda,Rapid,1.5 TDI CR AMBITION PLUS,Rapid 1.5 TDI
+Skoda,Rapid,1.5 TDI CR Active,Rapid 1.5 TDI
+Skoda,Rapid,1.5 TDI CR Ambition AT,Rapid 1.5 TDI
+Skoda,Rapid,1.5 TDI CR ELEGANCE AT,Rapid 1.5 TDI
+Skoda,Rapid,1.5 TDI CR Elegance AT,Rapid 1.5 TDI
+Skoda,Rapid,1.5 TDI MT AMBITION,Rapid 1.5 TDI
+Skoda,Rapid,1.6 MPI Ambition,Rapid 1.6 MPI
+Skoda,Rapid,1.6 MPI STYLE AT,Rapid 1.6 MPI
+Skoda,Rapid,1.6 TDI AMBITION PLUS AT,Rapid 1.6 TDI
+Skoda,Rapid,ACTIVE 1.0 TSI,Rapid ACTIVE 1.0
+Skoda,Rapid,ACTIVE 1.6 MPI MT PLUS,Rapid ACTIVE 1.6
+Skoda,Rapid,AMBITION 1.5 TDI,Rapid AMBITION 1.5
+Skoda,Rapid,AMBITION 1.5 TDI AT,Rapid AMBITION 1.5
+Skoda,Rapid,AMBITION 1.6 MPI AT,Rapid AMBITION 1.6
+Skoda,Rapid,AMBITION 1.6 MPI MT,Rapid AMBITION 1.6
+Skoda,Rapid,AMBITION 1.6 TDI CR MT PLUS,Rapid AMBITION 1.6
+Skoda,Rapid,AMBITION AT TSI,Rapid AMBITION AT
+Skoda,Rapid,AMBITION TSI,Rapid AMBITION TSI
+Skoda,Rapid,Ambition 1.5 TDI,Rapid Ambition 1.5
+Skoda,Rapid,Ambition 1.5 TDI AT,Rapid Ambition 1.5
+Skoda,Rapid,Ambition 1.6 TDI CR MT,Rapid Ambition 1.6
+Skoda,Rapid,ELEGANCE 1.6 MPI MT,Rapid ELEGANCE 1.6
+Skoda,Rapid,Elegance 1.6 MPI MT,Rapid Elegance 1.6
+Skoda,Rapid,MONTE CARLO TSI,Rapid MONTE CARLO
+Skoda,Rapid,STYLE 1.5 TDI AT,Rapid STYLE 1.5
+Skoda,Rapid,STYLE 1.6 MPI,Rapid STYLE 1.6
+Skoda,Rapid,STYLE 1.6 MPI AT,Rapid STYLE 1.6
+Skoda,Rapid,STYLE AT TSI,Rapid STYLE AT
+Skoda,Rapid,STYLE TSI,Rapid STYLE TSI
+Skoda,Rapid,Style 1.5 TDI AT,Rapid Style 1.5
+Skoda,Rapid,Style 1.6 MPI,Rapid Style 1.6
+Skoda,Rapid,Style 1.6 MPI AT,Rapid Style 1.6
+Skoda,Rapid TSI,Active 1.0 TSI MT,Rapid TSI Active 1.0
+Skoda,Rapid TSI,Ambition AT,Rapid TSI Ambition AT
+Skoda,Slavia,ACTIVE 1.0L TSI MT,Slavia ACTIVE 1.0L
+Skoda,Slavia,Ambition 1.0L TSI MT,Slavia Ambition 1.0L
+Skoda,Slavia,STYLE 1.5L TSI DSG,Slavia STYLE 1.5L
+Skoda,Slavia,Style 1.0L TSI AT,Slavia Style 1.0L
+Skoda,Slavia,Style 1.5L TSI DSG,Slavia Style 1.5L
+Skoda,Superb,2.0 TDI PD,Superb 2.0 TDI
+Skoda,Superb,Ambition 2.0 TDI CR AT,Superb Ambition 2.0
+Skoda,Superb,Elegance 2.0 TDI CR AT,Superb Elegance 2.0
+Skoda,Superb,L&K AT,Superb L&K AT
+Skoda,Superb,L&K TDI AT,Superb L&K TDI
+Skoda,Superb,L&K TSI AT,Superb L&K TSI
+Skoda,Superb,Sportline AT,Superb Sportline AT
+Skoda,Superb,Sportline AT [2020-2021],Superb Sportline AT
+Skoda,Superb,Style TSI AT,Superb Style TSI
+Ssangyong,Rexton,RX7,Rexton RX7
+Tata,Tiago,XZA+ DUAL TONE 1.2RTN,Tiago XZA
+Tata,Nexon,XZA PLUS SUNROOF PETROL,Nexon XZA
+Tata,Nexon,XZA PLUS SUNROOF DUAL TONE PETROL,Nexon XZA
+Tata,Nexon,XZA PLUS PETROL DUAL TONE,Nexon XZA
+Tata,Nexon,XZA Plus Petrol Dual Tone,Nexon XZA
+Tata,Altroz,XZA Plus Petrol Dark Edtion [2022-2023],Altroz XZA
+Tata,Nexon,XZA PLUS PETROL DARK EDITION,Nexon XZA
+Tata,Altroz,XZA Plus Petrol [2022-2023],Altroz XZA
+Tata,Nexon,XZA PLUS PETROL,Nexon XZA
+Tata,Nexon,XZA Plus Petrol,Nexon XZA
+Tata,Tiago,XZA PLUS PETROL,Tiago XZA
+Tata,Tigor,XZA PLUS PETROL,Tigor XZA
+Tata,Nexon,XZA PLUS KAZIRANGA PETROL,Nexon XZA
+Tata,Nexon,XZA Plus Kaziranga,Nexon XZA
+Tata,Safari,XZA PLUS KAZIRANGA,Safari XZA
+Tata,Safari,XZA PLUS GOLD 6 S,Safari XZA
+Tata,Safari,XZA Plus Gold 6 S,Safari XZA
+Tata,Safari,XZA PLUS GOLD,Safari XZA
+Tata,Tiago,XZA PLUS DUAL TONE PETROL,Tiago XZA
+Tata,Harrier,XZA Plus Dual Tone,Harrier XZA
+Tata,Nexon,XZA PLUS DIESEL KAZIRANGA,Nexon XZA
+Tata,Nexon,XZA PLUS DIESEL DUAL TONE,Nexon XZA
+Tata,Nexon,XZA Plus Diesel [2020-2023],Nexon XZA
+Tata,Nexon,XZA PLUS DIESEL,Nexon XZA
+Tata,Nexon,XZA Plus Diesel,Nexon XZA
+Tata,Altroz,XZA PLUS DARK EDTION,Altroz XZA
+Tata,Harrier,XZA Plus Dark Edition,Harrier XZA
+Tata,Safari,XZA PLUS DARK EDITION,Safari XZA
+Tata,Safari,XZA Plus Dark Edition,Safari XZA
+Tata,Safari,XZA PLUS ADVENTURE,Safari XZA
+Tata,Safari,XZA PLUS 6S,Safari XZA
+Tata,Harrier,XZA PLUS 2.0L KAZIRANGA,Harrier XZA
+Tata,Harrier,XZA PLUS 2.0L DARK EDITION,Harrier XZA
+Tata,Harrier,XZA PLUS 2.0L,Harrier XZA
+Tata,Nexon,XZA Plus [2020-2023],Nexon XZA
+Tata,Tiago,XZA Plus [2020-2023],Tiago XZA
+Tata,Tigor,XZA Plus [2020-2023],Tigor XZA
+Tata,Nexon,XZA Plus (S),Nexon XZA
+Tata,Nexon,XZA PLUS (O) PETROL DUAL TONE,Nexon XZA
+Tata,Nexon,XZA PLUS (O) PETROL DARK EDITION,Nexon XZA
+Tata,Nexon,XZA PLUS (O) PETROL,Nexon XZA
+Tata,Nexon,XZA PLUS (O) DIESEL,Nexon XZA
+Tata,Nexon,XZA Plus (O) Diesel,Nexon XZA
+Tata,Nexon,XZA Plus (O) Dark Edition,Nexon XZA
+Tata,Nexon,XZA Plus (O),Nexon XZA
+Tata,Nexon,XZA PLUS (L),Nexon XZA
+Tata,Nexon,XZA PLUS (HS) PETROL,Nexon XZA
+Tata,Altroz,XZA PLUS,Altroz XZA
+Tata,Harrier,XZA Plus,Harrier XZA
+Tata,Safari,XZA PLUS,Safari XZA
+Tata,Safari,XZA Plus,Safari XZA
+Tata,Altroz,XZA Petrol [2022-2023],Altroz XZA
+Tata,Tiago,XZA PETROL,Tiago XZA
+Tata,Tigor,XZA PETROL,Tigor XZA
+Tata,Harrier,XZA 2.0L,Harrier XZA
+Tata,Altroz,XZA,Altroz XZA
+Tata,Harrier,XZA,Harrier XZA
+Tata,Nexon,XZ PLUS SUNROOF PETROL DUAL TONE,Nexon XZ
+Tata,Nexon,XZ PLUS PETROL SUNROOF,Nexon XZ
+Tata,Nexon,XZ PLUS PETROL DUAL TONE,Nexon XZ
+Tata,Altroz,XZ PLUS PETROL DARK EDITION,Altroz XZ
+Tata,Altroz,XZ PLUS PETROL,Altroz XZ
+Tata,Nexon,XZ PLUS PETROL,Nexon XZ
+Tata,Tiago,XZ PLUS PETROL,Tiago XZ
+Tata,Tigor,XZ PLUS PETROL,Tigor XZ
+Tata,Safari,XZ Plus New,Safari XZ
+Tata,Nexon EV Max,XZ Plus Lux 7.2 KW Fast Charger [2022-2023],Nexon EV Max XZ
+Tata,Nexon EV,XZ Plus LUX,Nexon EV XZ
+Tata,TIAGO EV,XZ Plus Long Range,TIAGO EV XZ
+Tata,Altroz,XZ Plus i-Turbo Petrol Dark Edition [2021-2023],Altroz XZ
+Tata,Altroz,XZ PLUS I-TURBO PETROL,Altroz XZ
+Tata,Tiago,XZ PLUS DUAL TONE PETROL,Tiago XZ
+Tata,Harrier,XZ Plus Dual Tone,Harrier XZ
+Tata,Nexon,XZ Plus Dual Tone,Nexon XZ
+Tata,Nexon,XZ PLUS DIESEL SUNROOF,Nexon XZ
+Tata,Nexon,XZ PLUS DIESEL KAZIRANGA,Nexon XZ
+Tata,Nexon,XZ PLUS DIESEL,Nexon XZ
+Tata,Nexon,XZ Plus Dark Edition [2021-2023],Nexon XZ
+Tata,Nexon EV,XZ Plus Dark Edition,Nexon EV XZ
+Tata,Tiago,XZ Plus CNG [2022-2023],Tiago XZ
+Tata,Tigor,XZ Plus CNG [2022-2023],Tigor XZ
+Tata,Tiago,XZ PLUS CNG,Tiago XZ
+Tata,Tigor,XZ PLUS CNG,Tigor XZ
+Tata,Safari,XZ PLUS 6S ADVENTURE,Safari XZ
+Tata,Nexon EV Max,XZ Plus 3.3 KW,Nexon EV Max XZ
+Tata,Harrier,XZ PLUS 2.0L DARK EDITION,Harrier XZ
+Tata,Tiago,XZ Plus [2020-2023],Tiago XZ
+Tata,Nexon,XZ PLUS (PREMIUM) PETROL JET,Nexon XZ
+Tata,Nexon,XZ PLUS (PREMIUM) PETROL,Nexon XZ
+Tata,Nexon,XZ PLUS (PREMIUM) DARK EDITION PETROL,Nexon XZ
+Tata,Nexon,XZ PLUS (O) PETROL DUAL TONE,Nexon XZ
+Tata,Nexon,XZ PLUS (O) PETROL DARK EDITION,Nexon XZ
+Tata,Nexon,XZ PLUS (O) PETROL,Nexon XZ
+Tata,Nexon,XZ Plus (O) Dual Tone,Nexon XZ
+Tata,Nexon,XZ PLUS (O) DIESEL DUAL TONE,Nexon XZ
+Tata,Nexon,XZ PLUS (O) DIESEL DARK EDITION,Nexon XZ
+Tata,Nexon,XZ Plus (O) Diesel Dark Edition,Nexon XZ
+Tata,Nexon,XZ PLUS (O) DIESEL,Nexon XZ
+Tata,Nexon,XZ Plus (O),Nexon XZ
+Tata,Nexon,XZ PLUS (L) DARK EDITION,Nexon XZ
+Tata,Nexon,XZ PLUS (HS) PETROL,Nexon XZ
+Tata,Nexon,XZ PLUS (HS) DIESEL DARK EDITION,Nexon XZ
+Tata,Nexon,XZ Plus (HS) Dark Edition,Nexon XZ
+Tata,Harrier,XZ Plus,Harrier XZ
+Tata,Nexon,XZ Plus,Nexon XZ
+Tata,Nexon EV,XZ Plus,Nexon EV XZ
+Tata,Safari,XZ PLUS,Safari XZ
+Tata,Altroz,XZ Petrol [2020-2023],Altroz XZ
+Tata,Altroz,XZ PETROL,Altroz XZ
+Tata,Nexon,XZ PETROL,Nexon XZ
+Tata,Tiago,XZ PETROL,Tiago XZ
+Tata,Tigor,XZ PETROL,Tigor XZ
+Tata,Tiago NRG,XZ MT [2021-2023],Tiago NRG XZ
+Tata,Tiago NRG,XZ MT,Tiago NRG XZ
+Tata,Altroz,XZ I-TURBO PETROL,Altroz XZ
+Tata,Tiago NRG,XZ ICNG,Tiago NRG XZ
+Tata,Altroz,XZ Diesel [2020-2023],Altroz XZ
+Tata,Altroz,XZ DIESEL,Altroz XZ
+Tata,Nexon,XZ DIESEL,Nexon XZ
+Tata,Tiago,XZ DIESEL,Tiago XZ
+Tata,Harrier,XZ Dark Edition,Harrier XZ
+Tata,Tiago NRG,XZ AMT [2021-2023],Tiago NRG XZ
+Tata,Tiago NRG,XZ AMT,Tiago NRG XZ
+Tata,Harrier,XZ 2.0L DARK EDITION,Harrier XZ
+Tata,Harrier,XZ 2.0L,Harrier XZ
+Tata,Harrier,XZ [2019-2020],Harrier XZ
+Tata,Tigor,XZ (O) PETROL,Tigor XZ
+Tata,Harrier,XZ,Harrier XZ
+Tata,Nexon,XZ,Nexon XZ
+Tata,Safari,XZ,Safari XZ
+Tata,Safari,XTA PLUS DARK EDITION,Safari XTA
+Tata,Safari,XTA Plus Dark Edition,Safari XTA
+Tata,Harrier,XTA Plus,Harrier XTA
+Tata,Safari,XTA PLUS,Safari XTA
+Tata,Safari,XTA Plus,Safari XTA
+Tata,Tiago,XTA PETROL,Tiago XTA
+Tata,Zest,XTA F-TRONIC DIESEL,Zest XTA
+Tata,Hexa,XTA 4x2 7 STR,Hexa XTA
+Tata,Tiago,XTA [2021-2023],Tiago XTA
+Tata,Tiago,XT RHYTHM PETROL,Tiago XT
+Tata,Safari,XT PLUS,Safari XT
+Tata,Safari,XT Plus,Safari XT
+Tata,Altroz,XT Petrol [2020-2023],Altroz XT
+Tata,Altroz,XT PETROL,Altroz XT
+Tata,Tiago,XT PETROL,Tiago XT
+Tata,Zest,XT PETROL,Zest XT
+Tata,TIAGO EV,XT LONG RANGE,TIAGO EV XT
+Tata,Tiago,XT LIMITED EDITION PETROL,Tiago XT
+Tata,Altroz,XT Diesel [2020-2023],Altroz XT
+Tata,Tiago,XT CNG,Tiago XT
+Tata,Hexa,XT 4x2 7 STR,Hexa XT
+Tata,Tiago,XT [2020-2023],Tiago XT
+Tata,Harrier,XT [2019-2020],Harrier XT
+Tata,Tiago,XT (O) PETROL,Tiago XT
+Tata,Tiago,XT (O) [2021-2023],Tiago XT
+Tata,Harrier,XT,Harrier XT
+Tata,Safari,XT,Safari XT
+Tata,Bolt,XMS REVOTRON,Bolt XMS
+Tata,Zest,XMS PETROL,Zest XMS
+Tata,Nexon,XMA PLUS SUNROOF PETROL,Nexon XMA
+Tata,Nexon,XMA Plus (S),Nexon XMA
+Tata,Nexon,XMA PETROL,Nexon XMA
+Tata,Nexon,XMA Petrol,Nexon XMA
+Tata,Zest,XMA F-TRONIC DIESEL,Zest XMA
+Tata,Nexon,XMA DIESEL,Nexon XMA
+Tata,Nexon,XMA Diesel,Nexon XMA
+Tata,Hexa,XMA 4x2 7 STR,Hexa XMA
+Tata,Harrier,XMA 2.0L KRYOTEC,Harrier XMA
+Tata,Harrier,XMA,Harrier XMA
+Tata,Safari,XMA,Safari XMA
+Tata,Nexon,XM SUNROOF PETROL,Nexon XM
+Tata,Nexon,XM SUNROOF DIESEL,Nexon XM
+Tata,Altroz,XM Rhytm Plus Style Petrol,Altroz XM
+Tata,Nexon,XM PLUS SUNROOF PETROL,Nexon XM
+Tata,Altroz,XM PLUS PETROL,Altroz XM
+Tata,Altroz,XM PETROL,Altroz XM
+Tata,Nexon,XM PETROL,Nexon XM
+Tata,Tiago,XM PETROL,Tiago XM
+Tata,Tigor,XM PETROL,Tigor XM
+Tata,Zest,XM Petrol,Zest XM
+Tata,Nexon,XM DIESEL,Nexon XM
+Tata,Tiago,XM CNG,Tiago XM
+Tata,Tigor,XM CNG,Tigor XM
+Tata,Hexa,XM 4x2 7 STR,Hexa XM
+Tata,Harrier,XM 2.0L KRYOTEC,Harrier XM
+Tata,Harrier,XM [2019-2020],Harrier XM
+Tata,Nexon,XM (S) Diesel [2020-2023],Nexon XM
+Tata,Nexon,XM (S) [2020-2023],Nexon XM
+Tata,Nexon,XM,Nexon XM
+Tata,Safari,XM,Safari XM
+Tata,Indica V2,Xeta GLX BS-III,Indica V2 Xeta GLX
+Tata,Altroz,XE Petrol [2020-2023],Altroz XE
+Tata,Altroz,XE PETROL,Altroz XE
+Tata,Nexon,XE PETROL,Nexon XE
+Tata,Tiago,XE PETROL,Tiago XE
+Tata,Tigor,XE PETROL,Tigor XE
+Tata,Altroz,XE DIESEL,Altroz XE
+Tata,Nexon,XE DIESEL,Nexon XE
+Tata,Tiago,XE [2020-2023],Tiago XE
+Tata,Tiago,WIZZ EDITION PETROL,Tiago WIZZ EDITION
+Tata,Tiago,Revotron XZA Plus,Tiago XZA
+Tata,Tiago,Revotron XZA [2017-2019],Tiago XZA
+Tata,Tiago,Revotron XZA,Tiago XZA
+Tata,Tigor,Revotron XZA,Tigor XZA
+Tata,Tigor,Revotron XZ+,Tigor XZ
+Tata,Tiago,Revotron XZ w/o Alloy [2018-2019],Tiago XZ
+Tata,Tiago,Revotron XZ Plus Dual Tone,Tiago XZ
+Tata,Tiago,Revotron XZ Plus,Tiago XZ
+Tata,Tigor,Revotron XZ (O),Tigor XZ
+Tata,Tiago,Revotron XZ,Tiago XZ
+Tata,Tiago,Revotron XTA [2017-2019],Tiago XTA
+Tata,Tiago,Revotron XT [2016-2019],Tiago XT
+Tata,Tiago,Revotron XM [2016-2019],Tiago XM
+Tata,Tiago,Revotron XE [2016-2019],Tiago XE
+Tata,Tigor,Revotron XE,Tigor XE
+Tata,Tigor,Revotorq XZ,Tigor XZ
+Tata,Tiago,Revotorq XT [2016-2019],Tiago XT
+Tata,Tiago,Revotorq XM [2016-2019],Tiago XM
+Tata,Punch,PURE MT,Punch PURE MT
+Tata,Tiago NRG,PETROL,Tiago NRG PETROL
+Tata,Indigo eCS,LX TDI BS-III,Indigo eCS LX TDI
+Tata,Indica eV2,LX,Indica eV2 LX
+Tata,Punch,Kaziranga Creative MT,Punch Kaziranga Creative
+Tata,Sumo Gold,GX BS IV,Sumo Gold GX
+Tata,Harrier,Fearless Plus Dark Edition AT,Harrier Fearless Plus
+Tata,Nexon EV,Fearless Plus (S) Long Range,Nexon EV Fearless Plus
+Tata,Tiago NRG,DIESEL,Tiago NRG Base
+Tata,Nano,CX,Nano CX
+Tata,Nexon,Creative Plus (S) 1.2 Petrol 7DCA Dual Tone,Nexon Creative
+Tata,Punch,CREATIVE IRA AMT 1.2 RTN DUAL TONE,Punch Creative
+Tata,Punch,CREATIVE IRA 1.2 RTN DUAL TONE,Punch Creative
+Tata,Punch,Creative Dual Tone AMT [2022-2023],Punch Creative
+Tata,Punch,Creative Dual Tone [2022-2023],Punch Creative
+Tata,Punch,CREATIVE AMT 1.2 RTN DUAL TONE,Punch Creative
+Tata,Punch,Creative AMT [2021-2023],Punch Creative
+Tata,Punch,CREATIVE 1.2 MT KAZIRANGA EDITION,Punch Creative
+Tata,Punch,CREATIVE 1.2 AMT KAZIRANGA EDITION,Punch Creative
+Tata,Punch,CREATIVE  MT,Punch Creative
+Tata,Punch,CREATIVE  iRA PACK MT,Punch Creative
+Tata,Punch,CREATIVE  1.2 RTN DUAL TONE,Punch Creative
+Tata,Punch,Adventure MT [2021-2023],Punch Adventure
+Tata,Punch,ADVENTURE MT,Punch Adventure
+Tata,Punch,Adventure AMT [2021-2023],Punch Adventure
+Tata,Punch,ADVENTURE AMT,Punch Adventure
+Tata,Punch,ACCOMPLISHED MT,Punch Accomplished
+Tata,Punch,ACCOMPLISHED DAZZLE PACK MT,Punch Accomplished
+Tata,Punch,Accomplished Dazzle Pack AMT [2021-2023],Punch Accomplished
+Tata,Punch,ACCOMPLISHED DAZZLE PACK AMT,Punch Accomplished
+Tata,Punch,ACCOMPLISHED AMT,Punch Accomplished
+Tata,Harrier,2021 XZ Plus Dark Edition,Harrier XZ
+Tata,Safari Storme 2019,2.2 LX 4x2,Safari Storme 2019 LX
+Tata,Safari Storme,2.2 EX 4x2,Safari Storme EX
+Toyota,Camry,2.5L AT,Camry 2.5L AT
+Toyota,Camry,Hybrid,Camry Hybrid
+Toyota,Camry,Hybrid [2015-2017],Camry Hybrid
+Toyota,Camry,V4 MT,Camry V4 MT
+Toyota,Corolla,H4 1.8G,Corolla H4 1.8G
+Toyota,Corolla Altis,1.8 G,Corolla Altis 1.8 G
+Toyota,Corolla Altis,G,Corolla Altis G
+Toyota,Corolla Altis,G AT Petrol,Corolla Altis G AT
+Toyota,Corolla Altis,G DIESEL,Corolla Altis G DIESEL
+Toyota,Corolla Altis,G Diesel,Corolla Altis G Diesel
+Toyota,Corolla Altis,G PETROL,Corolla Altis G PETROL
+Toyota,Corolla Altis,G Petrol,Corolla Altis G Petrol
+Toyota,Corolla Altis,GL,Corolla Altis GL
+Toyota,Corolla Altis,J Diesel,Corolla Altis J Diesel
+Toyota,Corolla Altis,VL AT Petrol,Corolla Altis VL AT
+Toyota,Corolla Altis,VL CVT PETROL,Corolla Altis VL CVT
+Toyota,Etios,CROSS 1.2 G,Etios CROSS 1.2
+Toyota,Etios,CROSS 1.4 GD,Etios CROSS 1.4
+Toyota,Etios,G,Etios G
+Toyota,Etios,G SP,Etios G SP
+Toyota,Etios,GD,Etios GD
+Toyota,Etios,V,Etios V
+Toyota,Etios,VX,Etios VX
+Toyota,Etios Cross,1.4 VD,Etios Cross 1.4 VD
+Toyota,Etios Cross,1.5 V,Etios Cross 1.5 V
+Toyota,Etios Liva,G,Etios Liva G
+Toyota,Etios Liva,G SP,Etios Liva G SP
+Toyota,Etios Liva,GD,Etios Liva GD
+Toyota,Etios Liva,VX,Etios Liva VX
+Toyota,Fortuner,2.7 4x2 AT [2016-2020],Fortuner 4x2
+Toyota,Fortuner,2.8 4X2 AT,Fortuner 4x2
+Toyota,Fortuner,2.8 4x2 AT [2016-2020],Fortuner 4x2
+Toyota,Fortuner,2.8 4x2 MT [2016-2020],Fortuner 4x2
+Toyota,Fortuner,2.8 4x4 AT,Fortuner 4x4
+Toyota,Fortuner,2.8 4x4 AT [2016-2020],Fortuner 4x4
+Toyota,Fortuner,2.8 4x4 MT [2016-2020],Fortuner 4x4
+Toyota,Fortuner,3.0 4X2 AT,Fortuner 4x2
+Toyota,Fortuner,3.0 4x2 AT,Fortuner 4x2
+Toyota,Fortuner,3.0 4x2 MT,Fortuner 4x2
+Toyota,Fortuner,3.0 4x4 AT,Fortuner 4x4
+Toyota,Fortuner,3.0 4x4 MT,Fortuner 4x4
+Toyota,Fortuner,3.0 MT,Fortuner 4x2
+Toyota,Fortuner,4X2 AT 2.8 Diesel,Fortuner 4x2
+Toyota,Fortuner,4X4 AT 2.8 Diesel,Fortuner 4x4
+Toyota,Fortuner,4x2 AT,Fortuner 4x2
+Toyota,Fortuner,Sportivo 4x2 AT,Fortuner 4x2
+Toyota,Fortuner Legender,2.8 4X2 AT,Fortuner Legender 4x2
+Toyota,Fortuner Legender,2.8 4X4 AT,Fortuner Legender 4x4
+Toyota,Glanza,G,Glanza G
+Toyota,Glanza,G AMT,Glanza G
+Toyota,Glanza,G CVT,Glanza G
+Toyota,Glanza,G [2022-2023],Glanza G
+Toyota,Glanza,V,Glanza V
+Toyota,Glanza,V AMT,Glanza V
+Toyota,Glanza,V CVT,Glanza V
+Toyota,Innova,2.5 EV PS 7 STR BS-IV,Innova 2.5 EV
+Toyota,Innova,2.5 G 7 STR BS-IV,Innova G
+Toyota,Innova,2.5 G 8 STR BS-IV,Innova G
+Toyota,Innova,2.5 G BS IV 8 STR,Innova G
+Toyota,Innova,2.5 G4 7 STR,Innova G
+Toyota,Innova,2.5 GX 7 STR BS-III,Innova G
+Toyota,Innova,2.5 GX 8 STR,Innova G
+Toyota,Innova,2.5 GX 8 STR BS-IV,Innova G
+Toyota,Innova,2.5 GX BS III 7 STR,Innova G
+Toyota,Innova,2.5 GX BS IV 7 STR,Innova G
+Toyota,Innova,2.5 V 7 STR,Innova V
+Toyota,Innova,2.5 VX 7 STR,Innova V
+Toyota,Innova,2.5 VX 7 STR BS-IV,Innova V
+Toyota,Innova,2.5 VX 8 STR,Innova V
+Toyota,Innova,2.5 VX 8 STR BS-III,Innova V
+Toyota,Innova,2.5 VX 8 STR BS-IV,Innova V
+Toyota,Innova,2.5 VX BS IV 7 STR,Innova V
+Toyota,Innova,2.5 VX BS IV 8 STR,Innova V
+Toyota,Innova,2.5 ZX 7 STR BS-IV,Innova 
+Toyota,Innova,Aero Ltd 7 STR BS IV,Innova 
+Toyota,Innova Crysta,2.4 G 7 STR,Innova Crysta G
+Toyota,Innova Crysta,2.4 G 7 STR [2016-2017],Innova Crysta G
+Toyota,Innova Crysta,2.4 G 8 STR [2016-2017],Innova Crysta G
+Toyota,Innova Crysta,2.4 GX 7 STR [2016-2020],Innova Crysta G
+Toyota,Innova Crysta,2.4 GX 8 STR,Innova Crysta G
+Toyota,Innova Crysta,2.4 GX 8 STR [2016-2020],Innova Crysta G
+Toyota,Innova Crysta,2.4 GX AT 8 STR,Innova Crysta G
+Toyota,Innova Crysta,2.4 V Diesel,Innova Crysta V
+Toyota,Innova Crysta,2.4 VX 7 STR [2016-2020],Innova Crysta V
+Toyota,Innova Crysta,2.4 VX 8 STR,Innova Crysta V
+Toyota,Innova Crysta,2.4 VX 8 STR [2016-2020],Innova Crysta V
+Toyota,Innova Crysta,2.4 ZX 7 STR,Innova Crysta Z
+Toyota,Innova Crysta,2.4 ZX 7 STR [2016-2020],Innova Crysta Z
+Toyota,Innova Crysta,2.7 GX AT 7 STR [2016-2020],Innova Crysta G
+Toyota,Innova Crysta,2.7 ZX AT 7 STR,Innova Crysta Z
+Toyota,Innova Crysta,2.8 GX AT 7 STR [2016-2020],Innova Crysta G
+Toyota,Innova Crysta,2.8 GX AT 8 STR [2016-2020],Innova Crysta G
+Toyota,Innova Crysta,2.8 ZX AT 7 STR [2016-2020],Innova Crysta Z
+Toyota,Innova Crysta,GX 2.4 7 STR,Innova Crysta G
+Toyota,Innova Crysta,GX 2.4 8 STR,Innova Crysta G
+Toyota,Innova Crysta,GX 2.4 AT 7 STR,Innova Crysta G
+Toyota,Innova Crysta,GX 2.4 AT 8 STR,Innova Crysta G
+Toyota,Innova Crysta,TOURING SPORT DIESEL MT,Innova Crysta 
+Toyota,Innova Crysta,ZX 2.4 AT 7 STR,Innova Crysta Z
+Toyota,Innova Crysta,ZX 2.7 AT 7 STR,Innova Crysta Z
+Toyota,Innova Hycross,GX 7 STR,Innova Hycross G
+Toyota,Innova Hycross,VX Hybrid 7 STR,Innova Hycross V
+Toyota,Innova Hycross,ZX (O) Hybrid 7 STR,Innova Hycross Z
+Toyota,Land Cruiser,LC200 VX Premium 2,Land Cruiser V
+Toyota,Land Cruiser Prado,VX,Land Cruiser Prado V
+Toyota,Land Cruiser Prado,VX L,Land Cruiser Prado V
+Toyota,Urban Cruiser,HIGH GRADE AT,Urban Cruiser HIGH GRADE
+Toyota,Urban Cruiser,HIGH GRADE MT,Urban Cruiser HIGH GRADE
+Toyota,Urban Cruiser,High Grade AT,Urban Cruiser HIGH GRADE
+Toyota,Urban Cruiser,MID GRADE MT,Urban Cruiser MID GRADE
+Toyota,Urban Cruiser,PREMIUM GRADE AT,Urban Cruiser PREMIUM GRADE
+Toyota,Urban Cruiser,PREMIUM GRADE MT,Urban Cruiser PREMIUM GRADE
+Toyota,Urban Cruiser,PREMIUM GRADE MT DUAL TONE,Urban Cruiser PREMIUM GRADE
+Toyota,Urban Cruiser,Premium Grade AT,Urban Cruiser PREMIUM GRADE
+Toyota,Urban Cruiser,Premium Grade MT,Urban Cruiser PREMIUM GRADE
+Toyota,Urban Cruiser Hyryder,V Hybrid,Urban Cruiser Hyryder V Hybrid
+Toyota,Urban Cruiser Hyryder,V Hybrid [2022-2023],Urban Cruiser Hyryder V Hybrid
+Toyota,Urban Cruiser Hyryder,V NeoDrive,Urban Cruiser Hyryder V NeoDrive
+Toyota,Vellfire,VIP – Executive Lounge,Vellfire 
+Toyota,Yaris,G CVT,Yaris G
+Toyota,Yaris,G MT,Yaris G
+Toyota,Yaris,G MT [2018-2020],Yaris G
+Toyota,Yaris,J MT,Yaris J
+Toyota,Yaris,V MT,Yaris V
+Toyota,Yaris,VX MT,Yaris V
+Volkswagen,Ameo,COMFORTLINE 1.0L,Ameo Comfortline
+Volkswagen,Ameo,COMFORTLINE 1.2L,Ameo Comfortline
+Volkswagen,Ameo,Comfortline 1.2L (P),Ameo Comfortline
+Volkswagen,Ameo,COMFORTLINE 1.5 AT,Ameo Comfortline
+Volkswagen,Ameo,COMFORTLINE PLUS 1.2L,Ameo Comfortline
+Volkswagen,Ameo,HIGHLINE DSG 1.5 DIESEL,Ameo Highline
+Volkswagen,Ameo,Highline Plus 1.0L (P) 16 Alloy,Ameo Highline
+Volkswagen,Ameo,HIGHLINE PLUS 1.0L 16 ALLOY,Ameo Highline
+Volkswagen,Ameo,Highline Plus 1.5L (D)16 Alloy,Ameo Highline
+Volkswagen,Ameo,Highline Plus 1.5L AT (D)16 Alloy,Ameo Highline
+Volkswagen,Ameo,HIGHLINE PLUS 1.5L AT 16 ALLOY,Ameo Highline
+Volkswagen,Ameo,HIGHLINE1.2L,Ameo Highline
+Volkswagen,Ameo,Highline1.2L (P) [2016-2018],Ameo Highline
+Volkswagen,Ameo,Highline1.2L Plus (P) 16 Alloy [2017-2018],Ameo Highline
+Volkswagen,Ameo,HIGHLINE1.5L,Ameo Highline
+Volkswagen,Ameo,Highline1.5L (D) [2016-2018],Ameo Highline
+Volkswagen,Ameo,TRENDLINE 1.0L,Ameo TrendLine
+Volkswagen,Ameo,Trendline 1.0L (P),Ameo TrendLine
+Volkswagen,Ameo,TRENDLINE 1.2L,Ameo TrendLine
+Volkswagen,Ameo,TRENDLINE 1.5L,Ameo TrendLine
+Volkswagen,Cross Polo,1.2 MPI,Cross Polo 1.2 MPI
+Volkswagen,Jetta,Comfortline TDI,Jetta Comfortline
+Volkswagen,Jetta,Highline TDI AT,Jetta Highline
+Volkswagen,Passat,Highline,Passat Highline
+Volkswagen,Polo,1.0 GT TSI AT,Polo GT
+Volkswagen,Polo,Comfortline 1.0L (P),Polo Comfortline
+Volkswagen,Polo,COMFORTLINE 1.0L MPI,Polo Comfortline
+Volkswagen,Polo,COMFORTLINE 1.0L TSI AT,Polo Comfortline
+Volkswagen,Polo,COMFORTLINE 1.2L,Polo Comfortline
+Volkswagen,Polo,Comfortline 1.2L (D),Polo Comfortline
+Volkswagen,Polo,Comfortline 1.2L (P),Polo Comfortline
+Volkswagen,Polo,COMFORTLINE 1.2L PETROL,Polo Comfortline
+Volkswagen,Polo,GT TSI,Polo GT
+Volkswagen,Polo,GT TSI AT,Polo GT
+Volkswagen,Polo,HIGHLINE PLUS 1.0,Polo Highline
+Volkswagen,Polo,Highline Plus 1.0 (P) 16 Alloy,Polo Highline
+Volkswagen,Polo,HIGHLINE PLUS 1.0 16 ALLOY,Polo Highline
+Volkswagen,Polo,HIGHLINE PLUS 1.0L TSI,Polo Highline
+Volkswagen,Polo,HIGHLINE PLUS 1.0L TSI AT,Polo Highline
+Volkswagen,Polo,Highline Plus 1.2( P)16 Alloy [2017-2018],Polo Highline
+Volkswagen,Polo,Highline Plus 1.5 (D) 16 Alloy,Polo Highline
+Volkswagen,Polo,HIGHLINE1.2L,Polo Highline
+Volkswagen,Polo,Highline1.2L (D),Polo Highline
+Volkswagen,Polo,Highline1.2L (P),Polo Highline
+Volkswagen,Polo,HIGHLINE1.5L,Polo Highline
+Volkswagen,Polo,Highline1.5L (D),Polo Highline
+Volkswagen,Polo,TRENDLINE 1.0L,Polo TrendLine
+Volkswagen,Polo,Trendline 1.0L (P),Polo TrendLine
+Volkswagen,Polo,Trendline 1.0L (P) [2019-2020],Polo TrendLine
+Volkswagen,Polo,Trendline 1.0L MPI,Polo TrendLine
+Volkswagen,Polo,Trendline 1.2L (D),Polo TrendLine
+Volkswagen,Polo,Trendline 1.2L (P),Polo TrendLine
+Volkswagen,Polo,TRENDLINE 1.2L PETROL,Polo TrendLine
+Volkswagen,Taigun,GT PLUS 1.5 TSI DSG,Taigun GT
+Volkswagen,Taigun,GT Plus 1.5 TSI DSG,Taigun GT
+Volkswagen,Taigun,Highline 1.0 TSI AT,Taigun Highline
+Volkswagen,Taigun,Highline 1.0 TSI MT,Taigun Highline
+Volkswagen,Taigun,TOPLINE 1.0 TSI AT,Taigun TopLine
+Volkswagen,Taigun,Topline 1.0 TSI AT,Taigun TopLine
+Volkswagen,Taigun,TOPLINE 1.0 TSI MT,Taigun TopLine
+Volkswagen,Taigun,Topline 1.0 TSI MT,Taigun TopLine
+Volkswagen,Tiguan,Comfortline TDI,Tiguan Comfortline
+Volkswagen,Tiguan,Elegance 2.0 TSI DSG [2021],Tiguan Elegance 2.0
+Volkswagen,Tiguan,Highline TDI,Tiguan Highline
+Volkswagen,Tiguan,HIGHLINE TDI AT,Tiguan Highline
+Volkswagen,Vento,Comfortline 1.2 (P) AT,Vento Comfortline
+Volkswagen,Vento,Comfortline Diesel,Vento Comfortline
+Volkswagen,Vento,Comfortline Diesel [2015-2016],Vento Comfortline
+Volkswagen,Vento,Comfortline Diesel AT,Vento Comfortline
+Volkswagen,Vento,Comfortline Petrol,Vento Comfortline
+Volkswagen,Vento,COMFORTLINE TSI AT PETROL,Vento Comfortline
+Volkswagen,Vento,HIGHLINE 1.0L TSI AT,Vento Highline
+Volkswagen,Vento,Highline 1.2 (P) AT,Vento Highline
+Volkswagen,Vento,HIGHLINE 1.5 AT,Vento Highline
+Volkswagen,Vento,HIGHLINE 1.6 MPI,Vento Highline
+Volkswagen,Vento,Highline Diesel,Vento Highline
+Volkswagen,Vento,HIGHLINE DIESEL 1.5,Vento Highline
+Volkswagen,Vento,HIGHLINE DIESEL 1.6,Vento Highline
+Volkswagen,Vento,Highline Diesel AT,Vento Highline
+Volkswagen,Vento,Highline Diesel AT [2015-2016],Vento Highline
+Volkswagen,Vento,Highline Petrol,Vento Highline
+Volkswagen,Vento,HIGHLINE PETROL AT,Vento Highline
+Volkswagen,Vento,Highline Petrol AT,Vento Highline
+Volkswagen,Vento,HIGHLINE PLUS 1.0L TSI,Vento Highline
+Volkswagen,Vento,Highline Plus 1.0L TSI,Vento Highline
+Volkswagen,Vento,HIGHLINE PLUS 1.0L TSI AT,Vento Highline
+Volkswagen,Vento,Highline Plus 1.0L TSI Automatic,Vento Highline
+Volkswagen,Vento,Highline Plus 1.2 (P) AT 16 Alloy,Vento Highline
+Volkswagen,Vento,HIGHLINE PLUS 1.2 AT,Vento Highline
+Volkswagen,Vento,HIGHLINE PLUS 1.2 AT 16 ALLOY,Vento Highline
+Volkswagen,Vento,Highline Plus 1.5 AT (D) 16 Alloy,Vento Highline
+Volkswagen,Vento,HIGHLINE PLUS 1.5 AT 16 ALLOY,Vento Highline
+Volkswagen,Vento,IPL Edition,Vento IPL Edition
+Volkswagen,Vento,Petrol Style,Vento Petrol Style
+Volkswagen,Vento,TRENDLINE 1.6,Vento TrendLine
+Volkswagen,Vento,Trendline Diesel,Vento TrendLine
+Volkswagen,Vento,Trendline Petrol,Vento TrendLine
+Volkswagen,Vento,TSI,Vento TSI
+Volkswagen,Virtus,Comfortline 1.0 TSI MT,Virtus Comfortline
+Volkswagen,Virtus,COMFORTLINE TSI 1.0 MT,Virtus Comfortline
+Volkswagen,Virtus,GT Plus 1.5 TSI EVO DSG,Virtus GT
+Volkswagen,Virtus,GT PLUS TSI 1.5 EVO DSG,Virtus GT
+Volkswagen,Virtus,Highline 1.0 TSI AT,Virtus Highline
+Volkswagen,Virtus,HIGHLINE TSI 1.0 AT,Virtus Highline
+Volkswagen,Virtus,Topline 1.0 TSI AT,Virtus TopLine
+Volkswagen,Virtus,TOPLINE TSI 1.0 AT,Virtus TopLine
+Volvo,C40 Recharge,E80,C40 Recharge E80
+Volvo,S60,Cross Country Inscription [2016-2020],S60 Cross Country
+Volvo,S60,D4 R,S60 D4 R
+Volvo,S60,Summum D5,S60 Summum D5
+Volvo,S60,T4 Inscription,S60 T4 Inscription
+Volvo,S90,D4 Inscription,S90 D4 Inscription
+Volvo,S90,Momentum D4 [2018-2020],S90 Momentum D4
+Volvo,V40 Cross Country,D3,V40 Cross Country D3
+Volvo,XC40,B4 Ultimate [2022-2023],XC40 B4 Ultimate
+Volvo,XC40,D4 R-Design,XC40 D4 R-Design
+Volvo,XC40,T4 R-Design,XC40 T4 R-Design
+Volvo,XC40 Recharge,Ultimate AWD,XC40 Recharge Ultimate AWD
+Volvo,XC60,B5 Inscription,XC60 B5 Inscription
+Volvo,XC60,Inscription [2017-2020],XC60 Inscription [2017-2020]
+Volvo,XC60,Kinetic D3,XC60 Kinetic D3
+Volvo,XC60,Summum D5,XC60 Summum D5
+Volvo,XC90,B6 Ultimate,XC90 B6 Ultimate
+Volvo,XC90,B6 Ultimate [2022-2023],XC90 B6 Ultimate
+Volvo,XC90,D5 AWD,XC90 D5 AWD
+Volvo,XC90,D5 Inscription,XC90 D5 Inscription
+Volvo,XC90,Excellence [2016-2020],XC90 Excellence [2016-2020]
+Volvo,XC90,Momentum Luxury [2015-2020],XC90 Momentum Luxury

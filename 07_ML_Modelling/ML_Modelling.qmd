@@ -1,0 +1,169 @@
+---
+title: Creating the Machine Learning Model
+subtitle: A comparative study of different models for predicting car prices using UsedCarsIndia data
+cache: true
+format: 
+    html:
+      toc: true
+      df-print: paged
+      theme: darkly
+---
+
+# Introduction
+
+In this section, we will explore a few ML algorithms which one offers the best prediction model.
+First, let us get the usedcars data from the UsedCarsIndia package from github
+
+```{r load_libraries}
+#| label: Load Data Package
+#| warning: false
+#| message: false
+
+library(dplyr)
+
+# Install the package using `devtools::install_github("vkatti/UsedCarsIndia")`
+library(UsedCarsIndia)
+data(usedcars)
+```
+
+A quick summary of the data is as follows:
+
+::: {.column-screen-inset}
+```{r dfSummary}
+print(summarytools::dfSummary(usedcars), method = "render")
+```
+:::
+
+
+To create a machine learning model, we need to split our data into training and testing data. The model will be trained on the training data and then it's performance will be tested on the testing data.
+
+Since we have too many distinct values of `variant`s in the dataset and there are also other categorical values,  to create a well-performing model, we must ensure that all the combinations exist in both training and test datasets. 
+
+```{r full_data}
+full_data <- usedcars |> 
+  filter(complete.cases(select(usedcars,variant,year,transmission,bodyType,fuelType,ownerNumber))) |> 
+  mutate(combined = interaction(variant,year,transmission,bodyType,fuelType,ownerNumber, sep = "-", drop=TRUE, lex.order = TRUE),
+        obs_type = "original")
+```
+
+We will now perform oversampling to ensure that we have equal number of rows for each unique combination. Let us say we want 30 samples for each unique value of `combined`.
+
+```{r samples}
+#| df-print: paged
+samples <- full_data |> 
+  count(combined, sort = TRUE) |> 
+  mutate(num_to_generate = 30 - n)
+samples
+```
+
+Let us create a function that performs random sampling on the full_data and gets `x` samples for given `combined` value.
+
+```{r get_samples}
+get_samples <- function(full_df, sample_count, combined_val, seed = 99) {
+  set.seed(seed)
+  full_df[as.integer(sample(as.character(which(full_df$combined == combined_val)), sample_count, replace = TRUE)),]
+}
+```
+
+Now to get the full_sampled_data
+
+```{r full_sampled_data}
+#| cache: true
+# full_sampled_data <- purrr::map2(samples$num_to_generate, samples$combined,  
+#                                  ~get_samples(full_data, .x, .y))  |> 
+#   bind_rows() |>   
+#   mutate(obs_type = "sampled")
+# 
+# saveRDS(full_sampled_data, "full_sampled_data.rds")
+
+full_sampled_data <- readRDS("full_sampled_data.rds")
+```
+
+Finally, we create the fully bootstrapped dataset by combining the original and sampled datasets
+
+```{r bs_data}
+bs_data <- bind_rows(full_data, full_sampled_data)
+
+bs_data |> count(combined, sort=TRUE)
+
+```
+
+
+
+## Train-Test Split
+
+```{r train_test}
+library(caret)
+
+set.seed(100)
+
+splitter <- createDataPartition(bs_data$combined, p = 0.75, list = FALSE)
+
+train <- bs_data[splitter, ]
+test <- bs_data[-splitter, ]
+
+cat(paste0("
+Rows in Training dataset = ", nrow(train),"
+Rows in Testing dataset  = ", nrow(test)))
+
+```
+
+# Linear Regression Model
+
+First we try the linear regression model with single independent variable 'model'
+
+```{r linear_model}
+system.time(model <- lm(listingPrice ~ variant + year + odometerReading + fuelType + bodyType + transmission, 
+            data = train))
+```
+
+```{r linear_r-squared}
+# Extract R-squared and Adjusted R-squared
+r_squared <- summary(model)$r.squared
+adjusted_r_squared <- summary(model)$adj.r.squared
+
+cat("R-squared: ", r_squared, "\n")
+cat("Adjusted R-squared: ", adjusted_r_squared, "\n")
+```
+
+## Predict Values from Test dataset
+
+```{r linear-rmse}
+predictions <- predict(model, newdata = test)
+lm_rmse <- sqrt(mean((test$listingPrice - predictions)^2))
+cat("Linear Regression RMSE: ", lm_rmse, "\n")
+```
+
+
+
+# Random Forest
+
+Let's try a Random Forest model
+
+
+```{r load_rf_package}
+#| message: false
+#| warning: false 
+library(randomForest)
+```
+
+
+```{r rf_model}
+set.seed(99)
+system.time(model <- randomForest(listingPrice ~ variant + year + odometerReading + fuelType + bodyType + transmission, 
+            data = train, mtry = 4, ntree = 300))
+model
+```
+
+```{r rf_rmse}
+predictions <- predict(model, newdata = test)
+rf_rmse <- sqrt(mean((test$listingPrice - predictions)^2))
+cat("Random Forest RMSE: ", rf_rmse, "\n")
+```
+
+We will export the Random Forest model as an rds file and use it in a shiny app for people to interact with it.
+
+```{r export_model}
+saveRDS(model, file = "rf_model.rds")
+```
+

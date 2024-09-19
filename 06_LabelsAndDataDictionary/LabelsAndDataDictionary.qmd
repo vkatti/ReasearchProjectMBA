@@ -30,7 +30,7 @@ library(labelled)
 #| label: add-labels
 
 usedcars <- readRDS("../05_CleanAndCombine/usedcars.rds")
-str(usedcars)
+dplyr::glimpse(usedcars)
 ```
 
 ```{r}

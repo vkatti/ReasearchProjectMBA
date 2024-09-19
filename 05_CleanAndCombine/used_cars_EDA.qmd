@@ -16,7 +16,6 @@ format:
     fig.width: 8
     fig.height: 5
     fig-dpi: 600
-editor: visual
 fig_caption_style: "numbered"
 ---
 
@@ -122,7 +121,7 @@ We will now look at the columns and ensure that data types of the columns are co
 ```{r}
 #| label: Columns and Data Types - Cars24
 
-str(cars24)
+glimpse(cars24)
 ```
 
 In above, we can see that `fitnessUpto` column has character datatype instead of date. We also note that the utility of the `websiteUrl` column is complete and we can remove this column from the dataset.
@@ -133,12 +132,12 @@ cars24 <- cars24 |>
   select(-websiteUrl) |> 
   mutate(fitnessUpto  = dmy(fitnessUpto))
 
-str(cars24)
+glimpse(cars24)
 ```
 
 ```{r}
 #| label: Columns and Data Types - Carwale
-str(carwale)
+glimpse(carwale)
 ```
 
 In above, we can see that `fitnessUpto` column has character datatype instead of date. We also note that the utility of the `websiteUrl` column is complete and we can remove this column from the dataset. Additionally, the `ownerNumber`, `registrationYear` and `registrationMonth` columns do not match the data type in the `cars24` dataset. Let's fix this.
@@ -162,7 +161,7 @@ carwale <- carwale |>
                                   .default = NA_integer_)
          )
 
-str(carwale)
+glimpse(carwale)
 ```
 
 Comparing the datatypes of the two datasets using waldo::compare function confirms that both datasets have same columns and datatypes and thus, can be combined together for futher clean-up.
@@ -181,7 +180,7 @@ Let us combine the 2 datasets.
 
 ```{r}
 #| label: Combine
-usedcars <- bind_rows(cars24, carwale)
+usedcars <- bind_rows(cars24, carwale) |> distinct()
 
 f("Number of Rows in Combined Dataset: {nrow(usedcars)}")
 ```
@@ -318,7 +317,22 @@ Car24 has `r length(unique(cars24$variant))` unique `variant` values whereas Car
 
 **Data Cleaning**
 
-The `variant` values sometimes contain additional info like fuel type, gearbox type (transmission), engine capacity. However, this information is already available in other columns. Hence we not perform any data cleaning in `variant` column.
+The `variant` values sometimes contain additional info like fuel type, gearbox type (transmission), engine capacity. However, this information is already available in other columns. Hence we will try to standardize the values in the `variant` column.
+
+```{r}
+clean_variants <- read_csv("./variants_cleaned.csv", show_col_types = FALSE) |> distinct()
+```
+
+
+```{r}
+usedcars <- usedcars |> 
+  mutate(make = if_else(make == "redi-GO", "Redi GO", make)) |> 
+  left_join(clean_variants, by=c("make","model","variant")) |> 
+  select(-variant) |> 
+  rename("variant" = "model_variant") |> 
+  select(make, model, variant, everything())
+
+```
 
 **Visualization**
 
@@ -328,16 +342,16 @@ The `variant` values sometimes contain additional info like fuel type, gearbox t
 #| echo: false
 usedcars |> 
   count(make, model, variant, sort = TRUE) |> 
-  mutate(mmv = paste(make, model, variant)) |> 
+  mutate(mv = paste(make, variant)) |> 
   slice_head(n = 20) |> 
 ggplot() + 
-  geom_col(aes(x = fct_reorder(mmv,n), y = n, fill = n)) +
-  geom_text(aes(x = fct_reorder(mmv,n), y = n, label = n), size = 2, nudge_y = 5) + 
+  geom_col(aes(x = fct_reorder(mv,n), y = n, fill = n)) +
+  geom_text(aes(x = fct_reorder(mv,n), y = n, label = n), size = 2, nudge_y = 5) + 
   labs(title = "Maruti, Hyundai and Honda rule the roost!",
        subtitle = "Top 20 most available used cars variants between May 2024 till Sep 2024",
        y = "Number of Used Cars",
        x = "Car Variant") + 
-  coord_flip(ylim = c(0, 150), expand = TRUE) +
+  coord_flip(ylim = c(0, 310), expand = TRUE) +
   theme_minimal() +
   theme(plot.title.position = "plot",
         plot.title = element_text(face = "bold", size = 15, color = "royalblue"),
@@ -440,7 +454,6 @@ ggplot() +
 -   Even though Carwale has fewer records, it has more variation in terms of `trasmission` of the used cars.
 -   Additional information about the type of transmission in Automatic is available in Carwale dataset but not available in Cars24.
 
-
 ## bodyType
 
 # Body Type
@@ -450,15 +463,16 @@ This indicate what type of car is it. Some body types are HatchBack, Sedan, SUV,
 Car24 has `r length(unique(cars24$bodyType))` values for `bodyType` column whereas Carwale has `r length(unique(carwale$bodyType))` values. They are as follows:
 
 Cars24 Body types:
+
 ```{r}
 unique(cars24$bodyType)
 ```
 
 Carwale Body types:
+
 ```{r}
 unique(carwale$bodyType)
 ```
-
 
 **Data Cleaning**
 
@@ -501,8 +515,6 @@ ggplot() +
 **Observations**
 
 -   Hatchbacks are most abundant body type acros both platforms.
-
-
 
 ## fuelType
 
@@ -568,8 +580,6 @@ ggplot() +
 -   Even though Carwale has fewer records, it has more variation in terms of `fuelType` of the used cars.
 -   Petrol and Diesel cars are still quite abundant across both platforms.
 
-
-
 ## ownerNumber
 
 # Owner Number
@@ -626,9 +636,6 @@ ggplot() +
 -   There were 60 missing values for `ownerNumber` column which we imputed to maintain the overall proportion.
 -   Most used cars have only 1 previous owner.
 
-
-
-
 ## odometerReading
 
 # Odometer Reading
@@ -675,8 +682,6 @@ ggplot(usedcars) +
 **Observations**
 
 -   Most used cars have travelled less than 1 lakh kilometers.
-
-
 
 ## cityRto
 
@@ -725,18 +730,11 @@ ggplot() +
 -   Pune, Maharashtra-registered MH12 cars followed by Ahmedabad-Gujarat GJ01 are most abundant across both platforms.
 -   Cars with other-state registrations are also available across all regions.
 
-
-
-
 ## listingPrice
 
 # Listing Price
 
 `listingPrice` is the amount in Indian Rupees (₹) quoted for the used car.
-
-**Observations**
-
--   TODO
 
 **Data Cleaning**
 
@@ -783,6 +781,12 @@ ggplot(usedcars) +
         axis.line.y = element_blank())
 ```
 
+**Observations**
+
+-   Most cars are priced around 5-7 Lakhs
+-   Average is more than Median due to presence of ultra-high Luxury brands.
+
+
 ## fitnessUpto
 
 # Fitness Upto
@@ -790,7 +794,6 @@ ggplot(usedcars) +
 This is the end date of a car's Fitness Certificate. Every car gets a fitness certificate which is valid for 15 years. After the fitness certificate expires, a new one has to be issued which is an expensive and time-consuming activity.
 
 Car24 has `r nrow(cars24[!is.na(cars24$fitnessUpto), ])` cars with `fitnessUpto` dates whereas Carwale has `r nrow(carwale[!is.na(carwale$fitnessUpto), ])` cars with valid `fitnessUpto` dates.
-
 
 **Data Cleaning**
 
@@ -822,13 +825,10 @@ ggplot() +
         axis.line.y = element_blank())
 ```
 
-
 **Observations**
 
 -   Carwale does not provide Fitness Certificate info upfront.
 -   Most cars have adequate Fitness Validity.
-
-
 
 ## insuranceType
 
@@ -845,8 +845,6 @@ unique(cars24$insuranceType)
 ```{r}
 unique(carwale$insuranceType)
 ```
-
-
 
 **Data Cleaning**
 
@@ -891,8 +889,6 @@ ggplot() +
 
 -   Car24 does not have any cars that is not covered under insurance, unlike Carwale.
 -   Most of the listed cars have insurance coverage.
-
-
 
 ## duplicateKey
 
@@ -945,7 +941,6 @@ ggplot() +
 
 -   Carwale does not provide `duplicateKey` availability info.
 -   Only around 36% records have duplicate keys. Unfortunately, we have too many missing records for this indicator to be considered important.
-
 
 ## city
 
@@ -1004,7 +999,6 @@ ggplot() +
 
 -   Bengaluru has the maximum number of used cars available.
 
-
 ## registrationYear
 
 # Registration Year
@@ -1054,8 +1048,6 @@ ggplot() +
 
 -   Most used cars were registered 5-7 years ago.
 -   Carwale does not provide info about Registration year upfront.
-
-
 :::
 
 # Effects on Price
@@ -1184,10 +1176,7 @@ usedcars |>
 ```
 :::
 
-
-
 ## Year
-
 
 ```{r}
 #| label: year-listingPrice
@@ -1219,9 +1208,7 @@ usedcars |>
           plot.title.position = "plot")
 ```
 
-
 ## Transmission
-
 
 ```{r}
 #| label: transmission-listingPrice
@@ -1253,9 +1240,7 @@ usedcars |>
           plot.title.position = "plot")
 ```
 
-
 ## Body Type
-
 
 ```{r}
 #| label: bodyType-listingPrice
@@ -1287,9 +1272,7 @@ usedcars |>
           plot.title.position = "plot")
 ```
 
-
 ## Fuel Type
-
 
 ```{r}
 #| label: fuelType-listingPrice
@@ -1322,7 +1305,6 @@ usedcars |>
 ```
 
 ## Owner Number
-
 
 ```{r}
 #| label: ownerNumber-listingPrice
@@ -1361,7 +1343,6 @@ usedcars |>
 
 ## Odometer Reading
 
-
 ```{r}
 #| label: odometerReading-listingPrice
 #| echo: false
@@ -1382,7 +1363,6 @@ usedcars |> filter(make == "Maruti", model=="Baleno", ownerNumber==1) |>
 ```
 
 ## Insurance Type
-
 
 ```{r}
 #| label: insuranceType-listingPrice
@@ -1414,9 +1394,7 @@ usedcars |>
           plot.title.position = "plot")
 ```
 
-
 ## duplicateKey
-
 
 ```{r}
 #| label: duplicateKey-listingPrice
@@ -1452,6 +1430,5 @@ usedcars |> filter(!is.na(duplicateKey)) |>
 # Export to RDS
 
 ```{r}
-saveRDS(usedcars, "usedcars.rds")
+usedcars |> distinct() |> saveRDS("usedcars.rds")
 ```
-

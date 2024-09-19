@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Vishal Katti">
-<meta name="dcterms.date" content="2024-09-14">
+<meta name="dcterms.date" content="2024-09-17">
 
 <title>Exploratory Data Analysis (EDA) for Used Cars data.</title>
 <style>
@@ -127,7 +127,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 14, 2024</p>
+      <p class="date">September 17, 2024</p>
     </div>
   </div>
   
@@ -257,28 +257,29 @@ Total duplicates removed: 409</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(cars24)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(cars24)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>tibble [5,889 × 18] (S3: tbl_df/tbl/data.frame)
- $ make             : chr [1:5889] "Hyundai" "Renault" "Nissan" "Hyundai" ...
- $ model            : chr [1:5889] "Creta" "Kwid" "Micra" "Eon" ...
- $ variant          : chr [1:5889] "SX PLUS AT 1.6 PETROL" "1.0 MARVEL IRON MAN EDITION AMT" "XV CVT" "ERA PLUS (O)" ...
- $ year             : num [1:5889] 2017 2018 2017 2017 2012 ...
- $ transmission     : chr [1:5889] "Automatic" "Automatic" "Automatic" "Manual" ...
- $ bodyType         : chr [1:5889] "SUV" "Hatchback" "Hatchback" "Hatchback" ...
- $ fuelType         : chr [1:5889] "Petrol" "Petrol" "Petrol" "Petrol" ...
- $ ownerNumber      : num [1:5889] 1 1 2 2 1 1 1 1 2 2 ...
- $ odometerReading  : num [1:5889] 98493 19178 35474 33963 64557 ...
- $ cityRto          : chr [1:5889] "KA03" "KA03" "KA03" "KA05" ...
- $ listingPrice     : num [1:5889] 973000 407000 528000 381000 463000 ...
- $ fitnessUpto      : chr [1:5889] "29-Feb-2032" "01-Jun-2033" "06-Nov-2032" "15-Jun-2032" ...
- $ insuranceType    : chr [1:5889] "Comprehensive" "Insurance Expired" "Comprehensive" "3rd Party" ...
- $ duplicateKey     : logi [1:5889] FALSE FALSE NA NA TRUE FALSE ...
- $ city             : chr [1:5889] "Bangalore" "Bangalore" "Bangalore" "Bangalore" ...
- $ registrationYear : num [1:5889] 2017 2018 2017 2017 2012 ...
- $ registrationMonth: num [1:5889] 3 6 11 6 4 7 11 11 6 10 ...
- $ websiteUrl       : chr [1:5889] "https://cars24.com/buy-used-Hyundai-Creta-2017-cars-Bangalore-10250432716" "https://cars24.com/buy-used-Renault-Kwid-2018-cars-Bangalore-10263789707" "https://cars24.com/buy-used-Nissan-Micra-2017-cars-Bangalore-10273636750" "https://cars24.com/buy-used-Hyundai-Eon-2017-cars-Bangalore-11139232750" ...</code></pre>
+<pre><code>Rows: 5,889
+Columns: 18
+$ make              &lt;chr&gt; "Hyundai", "Renault", "Nissan", "Hyundai", "Maruti",…
+$ model             &lt;chr&gt; "Creta", "Kwid", "Micra", "Eon", "Swift", "Creta", "…
+$ variant           &lt;chr&gt; "SX PLUS AT 1.6 PETROL", "1.0 MARVEL IRON MAN EDITIO…
+$ year              &lt;dbl&gt; 2017, 2018, 2017, 2017, 2012, 2019, 2023, 2017, 2017…
+$ transmission      &lt;chr&gt; "Automatic", "Automatic", "Automatic", "Manual", "Ma…
+$ bodyType          &lt;chr&gt; "SUV", "Hatchback", "Hatchback", "Hatchback", "Hatch…
+$ fuelType          &lt;chr&gt; "Petrol", "Petrol", "Petrol", "Petrol", "Petrol", "D…
+$ ownerNumber       &lt;dbl&gt; 1, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 3, 1, 2, 1, 1, 2, 1…
+$ odometerReading   &lt;dbl&gt; 98493, 19178, 35474, 33963, 64557, 43987, 3996, 4728…
+$ cityRto           &lt;chr&gt; "KA03", "KA03", "KA03", "KA05", "KA41", "KA03", "KA0…
+$ listingPrice      &lt;dbl&gt; 973000, 407000, 528000, 381000, 463000, 1152000, 631…
+$ fitnessUpto       &lt;chr&gt; "29-Feb-2032", "01-Jun-2033", "06-Nov-2032", "15-Jun…
+$ insuranceType     &lt;chr&gt; "Comprehensive", "Insurance Expired", "Comprehensive…
+$ duplicateKey      &lt;lgl&gt; FALSE, FALSE, NA, NA, TRUE, FALSE, TRUE, NA, TRUE, F…
+$ city              &lt;chr&gt; "Bangalore", "Bangalore", "Bangalore", "Bangalore", …
+$ registrationYear  &lt;dbl&gt; 2017, 2018, 2017, 2017, 2012, 2019, 2023, 2017, 2017…
+$ registrationMonth &lt;dbl&gt; 3, 6, 11, 6, 4, 7, 11, 11, 6, 10, 9, 2, 6, 10, 9, 11…
+$ websiteUrl        &lt;chr&gt; "https://cars24.com/buy-used-Hyundai-Creta-2017-cars…</code></pre>
 </div>
 </div>
 <p>In above, we can see that <code>fitnessUpto</code> column has character datatype instead of date. We also note that the utility of the <code>websiteUrl</code> column is complete and we can remove this column from the dataset.</p>
@@ -289,54 +290,56 @@ Total duplicates removed: 409</code></pre>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>websiteUrl) <span class="sc">|&gt;</span> </span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fitnessUpto  =</span> <span class="fu">dmy</span>(fitnessUpto))</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(cars24)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(cars24)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>tibble [5,889 × 17] (S3: tbl_df/tbl/data.frame)
- $ make             : chr [1:5889] "Hyundai" "Renault" "Nissan" "Hyundai" ...
- $ model            : chr [1:5889] "Creta" "Kwid" "Micra" "Eon" ...
- $ variant          : chr [1:5889] "SX PLUS AT 1.6 PETROL" "1.0 MARVEL IRON MAN EDITION AMT" "XV CVT" "ERA PLUS (O)" ...
- $ year             : num [1:5889] 2017 2018 2017 2017 2012 ...
- $ transmission     : chr [1:5889] "Automatic" "Automatic" "Automatic" "Manual" ...
- $ bodyType         : chr [1:5889] "SUV" "Hatchback" "Hatchback" "Hatchback" ...
- $ fuelType         : chr [1:5889] "Petrol" "Petrol" "Petrol" "Petrol" ...
- $ ownerNumber      : num [1:5889] 1 1 2 2 1 1 1 1 2 2 ...
- $ odometerReading  : num [1:5889] 98493 19178 35474 33963 64557 ...
- $ cityRto          : chr [1:5889] "KA03" "KA03" "KA03" "KA05" ...
- $ listingPrice     : num [1:5889] 973000 407000 528000 381000 463000 ...
- $ fitnessUpto      : Date[1:5889], format: "2032-02-29" "2033-06-01" ...
- $ insuranceType    : chr [1:5889] "Comprehensive" "Insurance Expired" "Comprehensive" "3rd Party" ...
- $ duplicateKey     : logi [1:5889] FALSE FALSE NA NA TRUE FALSE ...
- $ city             : chr [1:5889] "Bangalore" "Bangalore" "Bangalore" "Bangalore" ...
- $ registrationYear : num [1:5889] 2017 2018 2017 2017 2012 ...
- $ registrationMonth: num [1:5889] 3 6 11 6 4 7 11 11 6 10 ...</code></pre>
+<pre><code>Rows: 5,889
+Columns: 17
+$ make              &lt;chr&gt; "Hyundai", "Renault", "Nissan", "Hyundai", "Maruti",…
+$ model             &lt;chr&gt; "Creta", "Kwid", "Micra", "Eon", "Swift", "Creta", "…
+$ variant           &lt;chr&gt; "SX PLUS AT 1.6 PETROL", "1.0 MARVEL IRON MAN EDITIO…
+$ year              &lt;dbl&gt; 2017, 2018, 2017, 2017, 2012, 2019, 2023, 2017, 2017…
+$ transmission      &lt;chr&gt; "Automatic", "Automatic", "Automatic", "Manual", "Ma…
+$ bodyType          &lt;chr&gt; "SUV", "Hatchback", "Hatchback", "Hatchback", "Hatch…
+$ fuelType          &lt;chr&gt; "Petrol", "Petrol", "Petrol", "Petrol", "Petrol", "D…
+$ ownerNumber       &lt;dbl&gt; 1, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 3, 1, 2, 1, 1, 2, 1…
+$ odometerReading   &lt;dbl&gt; 98493, 19178, 35474, 33963, 64557, 43987, 3996, 4728…
+$ cityRto           &lt;chr&gt; "KA03", "KA03", "KA03", "KA05", "KA41", "KA03", "KA0…
+$ listingPrice      &lt;dbl&gt; 973000, 407000, 528000, 381000, 463000, 1152000, 631…
+$ fitnessUpto       &lt;date&gt; 2032-02-29, 2033-06-01, 2032-11-06, 2032-06-15, 202…
+$ insuranceType     &lt;chr&gt; "Comprehensive", "Insurance Expired", "Comprehensive…
+$ duplicateKey      &lt;lgl&gt; FALSE, FALSE, NA, NA, TRUE, FALSE, TRUE, NA, TRUE, F…
+$ city              &lt;chr&gt; "Bangalore", "Bangalore", "Bangalore", "Bangalore", …
+$ registrationYear  &lt;dbl&gt; 2017, 2018, 2017, 2017, 2012, 2019, 2023, 2017, 2017…
+$ registrationMonth &lt;dbl&gt; 3, 6, 11, 6, 4, 7, 11, 11, 6, 10, 9, 2, 6, 10, 9, 11…</code></pre>
 </div>
 </div>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(carwale)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(carwale)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>tibble [4,355 × 18] (S3: tbl_df/tbl/data.frame)
- $ make             : chr [1:4355] "Mercedes-Benz" "BMW" "Mercedes-Benz" "BMW" ...
- $ model            : chr [1:4355] "E-Class [2017-2021]" "6 Series GT" "GLA [2017-2020]" "X7 [2019-2023]" ...
- $ variant          : chr [1:4355] "E 200 Exclusive [2019-2019]" "630i M Sport [2021-2023]" "200 Sport" "xDrive30d DPE Signature [2019-2020]" ...
- $ year             : num [1:4355] 2023 2021 2019 2021 2013 ...
- $ transmission     : chr [1:4355] "Automatic - 9 Gears, Paddle Shift, Sport Mode" "Automatic (TC) - 8 Gears, Manual Override &amp; Paddle Shift, Sport Mode" "Automatic - 7 Gears, Paddle Shift, Sport Mode" "Automatic - 8 Gears, Manual Override &amp; Paddle Shift, Sport Mode" ...
- $ bodyType         : chr [1:4355] "Sedan" "Sedan" "SUV" "SUV" ...
- $ fuelType         : chr [1:4355] "Petrol" "Petrol" "Petrol" "Diesel" ...
- $ ownerNumber      : chr [1:4355] "First" "First" "First" "First" ...
- $ odometerReading  : num [1:4355] 1630 29000 25000 37500 82000 ...
- $ cityRto          : chr [1:4355] "DL14C0018" "GJ1233444" "MH0000000" "HR269200" ...
- $ listingPrice     : num [1:4355] 7350000 6500000 2750000 9800000 555000 ...
- $ fitnessUpto      : logi [1:4355] NA NA NA NA NA NA ...
- $ insuranceType    : chr [1:4355] NA "Comprehensive" "Expired" "Expired" ...
- $ duplicateKey     : logi [1:4355] NA NA NA NA NA NA ...
- $ city             : chr [1:4355] "Delhi" "Delhi" "Delhi" "Delhi" ...
- $ registrationYear : chr [1:4355] "01/01/0001 00:00:00" "01/01/0001 00:00:00" "01/01/0001 00:00:00" "01/01/0001 00:00:00" ...
- $ registrationMonth: logi [1:4355] NA NA NA NA NA NA ...
- $ websiteUrl       : chr [1:4355] "https://www.carwale.com/used-cars/delhi/mercedes-benz-e-class/zzjgvoyd/" "https://www.carwale.com/used-cars/delhi/bmw-6-series-gt/fklf1i6m/" "https://www.carwale.com/used-cars/delhi/mercedes-benz-gla/ncv9atp4/" "https://www.carwale.com/used-cars/delhi/bmw-x7/70grqq3u/" ...</code></pre>
+<pre><code>Rows: 4,355
+Columns: 18
+$ make              &lt;chr&gt; "Mercedes-Benz", "BMW", "Mercedes-Benz", "BMW", "BMW…
+$ model             &lt;chr&gt; "E-Class [2017-2021]", "6 Series GT", "GLA [2017-202…
+$ variant           &lt;chr&gt; "E 200 Exclusive [2019-2019]", "630i M Sport [2021-2…
+$ year              &lt;dbl&gt; 2023, 2021, 2019, 2021, 2013, 2018, 2024, 2019, 2018…
+$ transmission      &lt;chr&gt; "Automatic - 9 Gears, Paddle Shift, Sport Mode", "Au…
+$ bodyType          &lt;chr&gt; "Sedan", "Sedan", "SUV", "SUV", "Sedan", "Sedan", "S…
+$ fuelType          &lt;chr&gt; "Petrol", "Petrol", "Petrol", "Diesel", "Diesel", "P…
+$ ownerNumber       &lt;chr&gt; "First", "First", "First", "First", "First", "Second…
+$ odometerReading   &lt;dbl&gt; 1630, 29000, 25000, 37500, 82000, 100000, 4058, 3469…
+$ cityRto           &lt;chr&gt; "DL14C0018", "GJ1233444", "MH0000000", "HR269200", N…
+$ listingPrice      &lt;dbl&gt; 7350000, 6500000, 2750000, 9800000, 555000, 2800000,…
+$ fitnessUpto       &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+$ insuranceType     &lt;chr&gt; NA, "Comprehensive", "Expired", "Expired", NA, "Comp…
+$ duplicateKey      &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+$ city              &lt;chr&gt; "Delhi", "Delhi", "Delhi", "Delhi", "Delhi", "Delhi"…
+$ registrationYear  &lt;chr&gt; "01/01/0001 00:00:00", "01/01/0001 00:00:00", "01/01…
+$ registrationMonth &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+$ websiteUrl        &lt;chr&gt; "https://www.carwale.com/used-cars/delhi/mercedes-be…</code></pre>
 </div>
 </div>
 <p>In above, we can see that <code>fitnessUpto</code> column has character datatype instead of date. We also note that the utility of the <code>websiteUrl</code> column is complete and we can remove this column from the dataset. Additionally, the <code>ownerNumber</code>, <code>registrationYear</code> and <code>registrationMonth</code> columns do not match the data type in the <code>cars24</code> dataset. Let’s fix this.</p>
@@ -359,27 +362,28 @@ Total duplicates removed: 409</code></pre>
 <span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">.default =</span> <span class="cn">NA_integer_</span>)</span>
 <span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>         )</span>
 <span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(carwale)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(carwale)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>tibble [4,355 × 17] (S3: tbl_df/tbl/data.frame)
- $ make             : chr [1:4355] "Mercedes-Benz" "BMW" "Mercedes-Benz" "BMW" ...
- $ model            : chr [1:4355] "E-Class [2017-2021]" "6 Series GT" "GLA [2017-2020]" "X7 [2019-2023]" ...
- $ variant          : chr [1:4355] "E 200 Exclusive [2019-2019]" "630i M Sport [2021-2023]" "200 Sport" "xDrive30d DPE Signature [2019-2020]" ...
- $ year             : num [1:4355] 2023 2021 2019 2021 2013 ...
- $ transmission     : chr [1:4355] "Automatic - 9 Gears, Paddle Shift, Sport Mode" "Automatic (TC) - 8 Gears, Manual Override &amp; Paddle Shift, Sport Mode" "Automatic - 7 Gears, Paddle Shift, Sport Mode" "Automatic - 8 Gears, Manual Override &amp; Paddle Shift, Sport Mode" ...
- $ bodyType         : chr [1:4355] "Sedan" "Sedan" "SUV" "SUV" ...
- $ fuelType         : chr [1:4355] "Petrol" "Petrol" "Petrol" "Diesel" ...
- $ ownerNumber      : num [1:4355] 1 1 1 1 1 2 1 1 2 1 ...
- $ odometerReading  : num [1:4355] 1630 29000 25000 37500 82000 ...
- $ cityRto          : chr [1:4355] "DL14C0018" "GJ1233444" "MH0000000" "HR269200" ...
- $ listingPrice     : num [1:4355] 7350000 6500000 2750000 9800000 555000 ...
- $ fitnessUpto      : Date[1:4355], format: NA NA ...
- $ insuranceType    : chr [1:4355] NA "Comprehensive" "Expired" "Expired" ...
- $ duplicateKey     : logi [1:4355] NA NA NA NA NA NA ...
- $ city             : chr [1:4355] "Delhi" "Delhi" "Delhi" "Delhi" ...
- $ registrationYear : num [1:4355] NA NA NA NA NA ...
- $ registrationMonth: num [1:4355] NA NA NA NA NA NA 12 12 6 NA ...</code></pre>
+<pre><code>Rows: 4,355
+Columns: 17
+$ make              &lt;chr&gt; "Mercedes-Benz", "BMW", "Mercedes-Benz", "BMW", "BMW…
+$ model             &lt;chr&gt; "E-Class [2017-2021]", "6 Series GT", "GLA [2017-202…
+$ variant           &lt;chr&gt; "E 200 Exclusive [2019-2019]", "630i M Sport [2021-2…
+$ year              &lt;dbl&gt; 2023, 2021, 2019, 2021, 2013, 2018, 2024, 2019, 2018…
+$ transmission      &lt;chr&gt; "Automatic - 9 Gears, Paddle Shift, Sport Mode", "Au…
+$ bodyType          &lt;chr&gt; "Sedan", "Sedan", "SUV", "SUV", "Sedan", "Sedan", "S…
+$ fuelType          &lt;chr&gt; "Petrol", "Petrol", "Petrol", "Diesel", "Diesel", "P…
+$ ownerNumber       &lt;dbl&gt; 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+$ odometerReading   &lt;dbl&gt; 1630, 29000, 25000, 37500, 82000, 100000, 4058, 3469…
+$ cityRto           &lt;chr&gt; "DL14C0018", "GJ1233444", "MH0000000", "HR269200", N…
+$ listingPrice      &lt;dbl&gt; 7350000, 6500000, 2750000, 9800000, 555000, 2800000,…
+$ fitnessUpto       &lt;date&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
+$ insuranceType     &lt;chr&gt; NA, "Comprehensive", "Expired", "Expired", NA, "Comp…
+$ duplicateKey      &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+$ city              &lt;chr&gt; "Delhi", "Delhi", "Delhi", "Delhi", "Delhi", "Delhi"…
+$ registrationYear  &lt;dbl&gt; NA, NA, NA, NA, NA, NA, 2024, 2019, 2018, NA, NA, 20…
+$ registrationMonth &lt;dbl&gt; NA, NA, NA, NA, NA, NA, 12, 12, 6, NA, NA, 11, NA, N…</code></pre>
 </div>
 </div>
 <p>Comparing the datatypes of the two datasets using waldo::compare function confirms that both datasets have same columns and datatypes and thus, can be combined together for futher clean-up.</p>
@@ -414,12 +418,12 @@ Total duplicates removed: 409</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(cars24, carwale)</span>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(cars24, carwale) <span class="sc">|&gt;</span> <span class="fu">distinct</span>()</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(<span class="st">"Number of Rows in Combined Dataset: {nrow(usedcars)}"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Number of Rows in Combined Dataset: 10244</code></pre>
+<pre><code>Number of Rows in Combined Dataset: 10234</code></pre>
 </div>
 </div>
 </section>
@@ -563,7 +567,24 @@ registrationMonth</code></pre>
 <p>Every model can have multiple <code>variant</code>s, based on fuel type, transmission, internal features or engine capacity.</p>
 <p>Car24 has 908 unique <code>variant</code> values whereas Carwale has 1523.</p>
 <p><strong>Data Cleaning</strong></p>
-<p>The <code>variant</code> values sometimes contain additional info like fuel type, gearbox type (transmission), engine capacity. However, this information is already available in other columns. Hence we not perform any data cleaning in <code>variant</code> column.</p>
+<p>The <code>variant</code> values sometimes contain additional info like fuel type, gearbox type (transmission), engine capacity. However, this information is already available in other columns. Hence we will try to standardize the values in the <code>variant</code> column.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>clean_variants <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"./variants_cleaned.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> <span class="fu">distinct</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">make =</span> <span class="fu">if_else</span>(make <span class="sc">==</span> <span class="st">"redi-GO"</span>, <span class="st">"Redi GO"</span>, make)) <span class="sc">|&gt;</span> </span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(clean_variants, <span class="at">by=</span><span class="fu">c</span>(<span class="st">"make"</span>,<span class="st">"model"</span>,<span class="st">"variant"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>variant) <span class="sc">|&gt;</span> </span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">"variant"</span> <span class="ot">=</span> <span class="st">"model_variant"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(make, model, variant, <span class="fu">everything</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <p><strong>Visualization</strong></p>
 <div class="cell">
 <div class="cell-output-display">
@@ -616,9 +637,9 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">transmission =</span> <span class="fu">case_when</span>(<span class="fu">str_detect</span>(transmission, <span class="st">"Automatic|AMT"</span>) <span class="sc">~</span> <span class="st">"Automatic"</span>,</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">.default =</span> <span class="st">"Manual"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">transmission =</span> <span class="fu">case_when</span>(<span class="fu">str_detect</span>(transmission, <span class="st">"Automatic|AMT"</span>) <span class="sc">~</span> <span class="st">"Automatic"</span>,</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">.default =</span> <span class="st">"Manual"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><strong>Visualization</strong></p>
@@ -648,7 +669,7 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(cars24<span class="sc">$</span>bodyType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(cars24<span class="sc">$</span>bodyType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "SUV"       "Hatchback" "Sedan"    </code></pre>
@@ -658,7 +679,7 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(carwale<span class="sc">$</span>bodyType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(carwale<span class="sc">$</span>bodyType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Sedan"         "SUV"           "MUV"           "Hatchback"    
@@ -671,13 +692,13 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bodyType =</span> <span class="fu">case_match</span>(model,</span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Verito"</span> <span class="sc">~</span> <span class="st">"Compact Sedan"</span>,</span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>                               <span class="fu">c</span>(<span class="st">"Accord"</span>,<span class="st">"City Hybrid eHEV"</span>) <span class="sc">~</span> <span class="st">"Sedan"</span>,</span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Fiesta"</span> <span class="sc">~</span> <span class="st">"Sedan"</span>,</span>
-<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Countryman"</span> <span class="sc">~</span> <span class="st">"Compact SUV"</span>,</span>
-<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>                               <span class="at">.default =</span> bodyType))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bodyType =</span> <span class="fu">case_match</span>(model,</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Verito"</span> <span class="sc">~</span> <span class="st">"Compact Sedan"</span>,</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>                               <span class="fu">c</span>(<span class="st">"Accord"</span>,<span class="st">"City Hybrid eHEV"</span>) <span class="sc">~</span> <span class="st">"Sedan"</span>,</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Fiesta"</span> <span class="sc">~</span> <span class="st">"Sedan"</span>,</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Countryman"</span> <span class="sc">~</span> <span class="st">"Compact SUV"</span>,</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>                               <span class="at">.default =</span> bodyType))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><strong>Visualization</strong></p>
@@ -705,7 +726,7 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(cars24<span class="sc">$</span>fuelType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(cars24<span class="sc">$</span>fuelType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Petrol"   "Diesel"   "CNG"      "Electric"</code></pre>
@@ -714,7 +735,7 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(carwale<span class="sc">$</span>fuelType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(carwale<span class="sc">$</span>fuelType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Petrol"                             "Diesel"                            
@@ -731,16 +752,16 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>fueltype_mapping <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"fuelType.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="st">"correctfuelType"</span> <span class="ot">=</span> <span class="st">"fuelType"</span>) <span class="sc">|&gt;</span> <span class="fu">distinct</span>()</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(fueltype_mapping, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"make"</span>, <span class="st">"model"</span>, <span class="st">"variant"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fuelType =</span> <span class="fu">coalesce</span>(fuelType, correctfuelType),</span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">fuelType =</span> <span class="fu">case_when</span>(</span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>           <span class="fu">str_detect</span>(fuelType, <span class="st">"Hybrid ?</span><span class="sc">\\</span><span class="st">(Electric"</span>) <span class="sc">~</span> <span class="st">"Electric Hybrid"</span>,</span>
-<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>           <span class="fu">str_detect</span>(fuelType, <span class="st">" </span><span class="sc">\\</span><span class="st">+ "</span>) <span class="sc">~</span> <span class="st">"Flex Fuel"</span>,</span>
-<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>           <span class="at">.default =</span> fuelType</span>
-<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>         )) <span class="sc">|&gt;</span> </span>
-<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>correctfuelType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>fueltype_mapping <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"fuelType.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="st">"correctfuelType"</span> <span class="ot">=</span> <span class="st">"fuelType"</span>) <span class="sc">|&gt;</span> <span class="fu">distinct</span>()</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(fueltype_mapping, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"make"</span>, <span class="st">"model"</span>, <span class="st">"variant"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fuelType =</span> <span class="fu">coalesce</span>(fuelType, correctfuelType),</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">fuelType =</span> <span class="fu">case_when</span>(</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>           <span class="fu">str_detect</span>(fuelType, <span class="st">"Hybrid ?</span><span class="sc">\\</span><span class="st">(Electric"</span>) <span class="sc">~</span> <span class="st">"Electric Hybrid"</span>,</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>           <span class="fu">str_detect</span>(fuelType, <span class="st">" </span><span class="sc">\\</span><span class="st">+ "</span>) <span class="sc">~</span> <span class="st">"Flex Fuel"</span>,</span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>           <span class="at">.default =</span> fuelType</span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>         )) <span class="sc">|&gt;</span> </span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>correctfuelType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><strong>Visualization</strong></p>
@@ -770,21 +791,21 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>non_missing_owners <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ownerNumber)) <span class="sc">|&gt;</span> <span class="fu">nrow</span>()</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>props <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ownerNumber)) <span class="sc">|&gt;</span> <span class="fu">summarise</span>(<span class="at">p =</span> <span class="fu">n</span>()<span class="sc">/</span>non_missing_owners, <span class="at">.by =</span> ownerNumber) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">split60 =</span> <span class="fu">round</span>(<span class="dv">60</span> <span class="sc">*</span> p))</span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>na_indices <span class="ot">&lt;-</span> <span class="fu">which</span>(<span class="fu">is.na</span>(usedcars<span class="sc">$</span>ownerNumber))</span>
-<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
-<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>new_owner_numbers <span class="ot">&lt;-</span> <span class="fu">sample</span>(</span>
-<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>  props<span class="sc">$</span>ownerNumber,</span>
-<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>(na_indices),</span>
-<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">replace =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">prob =</span> props<span class="sc">$</span>p <span class="sc">/</span> <span class="fu">sum</span>(props<span class="sc">$</span>p)</span>
-<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a>usedcars<span class="sc">$</span>ownerNumber[na_indices] <span class="ot">&lt;-</span> new_owner_numbers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>non_missing_owners <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ownerNumber)) <span class="sc">|&gt;</span> <span class="fu">nrow</span>()</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>props <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ownerNumber)) <span class="sc">|&gt;</span> <span class="fu">summarise</span>(<span class="at">p =</span> <span class="fu">n</span>()<span class="sc">/</span>non_missing_owners, <span class="at">.by =</span> ownerNumber) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">split60 =</span> <span class="fu">round</span>(<span class="dv">60</span> <span class="sc">*</span> p))</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>na_indices <span class="ot">&lt;-</span> <span class="fu">which</span>(<span class="fu">is.na</span>(usedcars<span class="sc">$</span>ownerNumber))</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>new_owner_numbers <span class="ot">&lt;-</span> <span class="fu">sample</span>(</span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>  props<span class="sc">$</span>ownerNumber,</span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>(na_indices),</span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">replace =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">prob =</span> props<span class="sc">$</span>p <span class="sc">/</span> <span class="fu">sum</span>(props<span class="sc">$</span>p)</span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a>usedcars<span class="sc">$</span>ownerNumber[na_indices] <span class="ot">&lt;-</span> new_owner_numbers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>A quick look at the frequency of <code>ownerNumber</code> values</p>
@@ -837,8 +858,8 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">cityRto =</span> <span class="fu">str_sub</span>(cityRto,<span class="dv">1</span>,<span class="dv">4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">cityRto =</span> <span class="fu">str_sub</span>(cityRto,<span class="dv">1</span>,<span class="dv">4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><strong>Visualization</strong></p>
@@ -865,10 +886,6 @@ registrationMonth</code></pre>
 <section id="listing-price" class="level1">
 <h1>Listing Price</h1>
 <p><code>listingPrice</code> is the amount in Indian Rupees (₹) quoted for the used car.</p>
-<p><strong>Observations</strong></p>
-<ul>
-<li>TODO</li>
-</ul>
 <p><strong>Data Cleaning</strong></p>
 <p>No data cleaning needed for <code>listingPrice</code> column.</p>
 <p>A quick look at the frequency of <code>listingPrice</code> values</p>
@@ -882,6 +899,11 @@ registrationMonth</code></pre>
 </div>
 </div>
 </div>
+<p><strong>Observations</strong></p>
+<ul>
+<li>Most cars are priced around 5-7 Lakhs</li>
+<li>Average is more than Median due to presence of ultra-high Luxury brands.</li>
+</ul>
 </section>
 </div>
 <div id="tabset-1-12" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-12-tab">
@@ -917,7 +939,7 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(cars24<span class="sc">$</span>insuranceType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(cars24<span class="sc">$</span>insuranceType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Comprehensive"     "Insurance Expired" "3rd Party"        
@@ -927,7 +949,7 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(carwale<span class="sc">$</span>insuranceType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(carwale<span class="sc">$</span>insuranceType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] NA                  "Comprehensive"     "Expired"          
@@ -939,12 +961,12 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">insuranceType =</span> <span class="fu">case_match</span>(insuranceType,</span>
-<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"Insurance Expired"</span> <span class="sc">~</span> <span class="st">"Expired"</span>,</span>
-<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"3rd Party"</span> <span class="sc">~</span> <span class="st">"Third Party"</span>,</span>
-<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>                           <span class="cn">NA_character_</span> <span class="sc">~</span> <span class="st">"No Insurance"</span>,</span>
-<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>                           <span class="at">.default =</span> insuranceType))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">insuranceType =</span> <span class="fu">case_match</span>(insuranceType,</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"Insurance Expired"</span> <span class="sc">~</span> <span class="st">"Expired"</span>,</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"3rd Party"</span> <span class="sc">~</span> <span class="st">"Third Party"</span>,</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>                           <span class="cn">NA_character_</span> <span class="sc">~</span> <span class="st">"No Insurance"</span>,</span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>                           <span class="at">.default =</span> insuranceType))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><strong>Visualization</strong></p>
@@ -973,7 +995,7 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(cars24<span class="sc">$</span>duplicateKey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(cars24<span class="sc">$</span>duplicateKey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE    NA  TRUE</code></pre>
@@ -982,7 +1004,7 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(carwale<span class="sc">$</span>duplicateKey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(carwale<span class="sc">$</span>duplicateKey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] NA</code></pre>
@@ -1016,7 +1038,7 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(cars24<span class="sc">$</span>city)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(cars24<span class="sc">$</span>city)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Bangalore"  "Mysore"     "New Delhi"  "Ghaziabad"  "Gurgaon"   
@@ -1029,7 +1051,7 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(carwale<span class="sc">$</span>city)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(carwale<span class="sc">$</span>city)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Delhi"        "Bangalore"    "Chennai"      "Hyderabad"    "Kolkata"     
@@ -1043,11 +1065,11 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">city =</span> <span class="fu">case_match</span>(city,</span>
-<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"Delhi"</span> <span class="sc">~</span> <span class="st">"New Delhi"</span>,</span>
-<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"Bangalore"</span> <span class="sc">~</span> <span class="st">"Bengaluru"</span>,</span>
-<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>                           <span class="at">.default =</span> city))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">city =</span> <span class="fu">case_match</span>(city,</span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"Delhi"</span> <span class="sc">~</span> <span class="st">"New Delhi"</span>,</span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"Bangalore"</span> <span class="sc">~</span> <span class="st">"Bengaluru"</span>,</span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a>                           <span class="at">.default =</span> city))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><strong>Visualization</strong></p>
@@ -1076,8 +1098,8 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">registrationYear =</span> <span class="fu">if_else</span>(registrationYear<span class="sc">==</span><span class="dv">2025</span>, <span class="dv">2024</span>, registrationYear))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="ot">&lt;-</span> usedcars <span class="sc">|&gt;</span> </span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">registrationYear =</span> <span class="fu">if_else</span>(registrationYear<span class="sc">==</span><span class="dv">2025</span>, <span class="dv">2024</span>, registrationYear))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>A quick look at the frequency of <code>registrationYear</code> values</p>
@@ -1257,7 +1279,7 @@ registrationMonth</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(usedcars, <span class="st">"usedcars.rds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>usedcars <span class="sc">|&gt;</span> <span class="fu">distinct</span>() <span class="sc">|&gt;</span> <span class="fu">saveRDS</span>(<span class="st">"usedcars.rds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
